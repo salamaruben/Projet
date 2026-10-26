@@ -1,0 +1,672 @@
+<title>Bâtonnat de Paris 2027</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: sand hero and blush body, chocolate framed countdown, terracotta accents, Montserrat in tight heavy caps with small letter-spaced labels, as in the reference identity. Candidate colours stay distinct. */
+:root {
+  --bg: #f6eae0; --bg2: #efe0cb; --surface: #fbf5ee; --ink: #2b1710; --muted: #6b5446; --line: #dcc8b0;
+  --accent: #bb4e2e; --on-accent: #ffffff; --deep: #3b1f17; --on-deep: #f6eae0; --deep-line: #6a4638; --seat: #dcc8b0; --seat-deep: #5d3a2d;
+  --on-c: #ffffff;
+  --c-saada: #0f766e; --c-bouyssou: #2457c5; --c-fabiani: #a8650f; --c-surin: #a3194f;
+  color-scheme: light;
+  --f: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { background-color: var(--bg); color: var(--ink); font-family: var(--f); font-size: 16px; line-height: 1.65; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.c-saada { --c: var(--c-saada); } .c-bouyssou { --c: var(--c-bouyssou); } .c-fabiani { --c: var(--c-fabiani); } .c-surin { --c: var(--c-surin); }
+.glow { background: linear-gradient(155deg, color-mix(in srgb, var(--c) 20%, var(--surface)), var(--surface) 75%); }
+h1, h2, h3 { margin: 0; font-family: var(--f); font-weight: 800; text-wrap: balance; }
+h2 { font-size: clamp(30px, 5vw, 54px); line-height: .98; letter-spacing: -.04em; text-transform: uppercase; }
+h3 { font-weight: 700; font-size: 17px; line-height: 1.35; letter-spacing: -.01em; }
+.lab { display: flex; justify-content: space-between; gap: 16px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding-top: 14px; border-top: 2px solid var(--ink); margin-bottom: 36px; }
+.lab span:last-child { font-weight: 500; color: var(--muted); letter-spacing: .1em; }
+.note { font-size: 15px; color: var(--muted); max-width: 66ch; margin: 0; }
+.sec { margin-top: 112px; }
+.sec > h2 { margin-bottom: 14px; }
+
+/* Header and hero (sand band) */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg2); z-index: 20; }
+header.hero { background: var(--bg2); }
+header.hero .wrap { padding-block: 28px 56px; }
+.hero-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 32px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.hero-top span:last-child { color: var(--muted); font-weight: 500; }
+.hero-main { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px 64px; align-items: center; margin-top: 56px; }
+@media (max-width: 900px) { .hero-main { grid-template-columns: minmax(0, 1fr); } }
+.hero h1 { font-size: clamp(42px, 6.6vw, 88px); line-height: .92; letter-spacing: -.05em; text-transform: uppercase; }
+.hero h1 span { display: block; color: var(--accent); }
+.lede { margin: 32px 0 0; max-width: 50ch; font-size: 17px; color: var(--muted); }
+.btn-pdf { margin-top: 24px; display: inline-flex; align-items: center; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 16px 26px; border: 0; border-radius: 999px; background: var(--accent); color: #fff; cursor: pointer; text-align: left; }
+.btn-pdf:hover { text-decoration: underline; text-underline-offset: 3px; }
+.btn-pdf:disabled { opacity: .6; cursor: progress; }
+.pdf-msg { margin: 10px 0 0; min-height: 1.4em; font-size: 14px; color: var(--muted); }
+.frame { margin: 0; background: var(--deep); color: var(--on-deep); padding: 14px; }
+.frame-in { border: 1px solid var(--deep-line); padding: clamp(20px, 4vw, 40px) clamp(12px, 3vw, 32px) 24px; }
+.cf { display: grid; place-content: center; text-align: center; min-height: 280px; gap: 18px; }
+.cf-n { font-size: clamp(76px, 11vw, 140px); font-weight: 800; letter-spacing: -.05em; line-height: .9; font-variant-numeric: tabular-nums; }
+.cf-l { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+
+/* Nav */
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+nav.tabs .row { display: flex; gap: 4px; overflow-x: auto; padding-block: 10px; scrollbar-width: thin; }
+nav.tabs a { flex: none; text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: .02em; padding: 9px 18px; border-radius: 999px; white-space: nowrap; color: var(--ink); }
+nav.tabs a:hover { background: var(--line); }
+nav.tabs a[aria-current="page"] { background: var(--deep); color: var(--on-deep); }
+nav.tabs a .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); margin-right: 8px; }
+main { padding-block: 72px 112px; }
+.view[hidden] { display: none; }
+
+/* Candidate columns */
+.strip { display: flex; gap: 14px; }
+@media (max-width: 900px) { .strip { flex-direction: column; } }
+.panel { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; min-height: 540px; padding: 28px 24px; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-top: 6px solid var(--c); }
+@media (max-width: 900px) { .panel { min-height: 0; flex: none; } }
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) { .panel { transition: flex-grow .35s ease; } .strip:hover .panel:hover, .strip:focus-within .panel:focus-visible { flex-grow: 1.4; } }
+.panel h3 { font-size: clamp(24px, 2.4vw, 30px); font-weight: 800; line-height: 1.02; letter-spacing: -.04em; text-transform: uppercase; }
+.panel .slogan { font-size: 16px; font-weight: 600; margin: 0; line-height: 1.4; }
+.panel .pos { font-size: 14px; color: var(--muted); margin: 0; }
+.panel .stats { display: flex; gap: 8px 22px; flex-wrap: wrap; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
+.panel .stats b { display: block; font-size: 32px; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.panel .stats span { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.panel .go { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: var(--c); color: var(--on-c); padding: 10px 18px; border-radius: 999px; }
+.panel:hover .go { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Election rail */
+.rail-box { margin-top: 28px; padding: 32px clamp(20px, 4vw, 44px) 36px; background: var(--deep); color: var(--on-deep); }
+.rail { position: relative; height: 10px; margin: 44px 12px 0; background: var(--seat-deep); border-radius: 5px; }
+.rail .done { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 5px; }
+.rail .tick { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--deep); border: 3px solid var(--on-deep); }
+.rail .tick.past { border-color: var(--accent); background: var(--accent); }
+.rail .tick.vote { border-color: var(--on-deep); background: var(--on-deep); width: 24px; height: 24px; margin: -12px 0 0 -12px; }
+.rail .now { position: absolute; top: -36px; transform: translateX(-50%); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+.rail .now::after { content: ""; display: block; width: 2px; height: 18px; background: var(--on-deep); margin: 4px auto 0; }
+.steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; }
+.steps li { font-size: 14px; line-height: 1.45; }
+.steps .d { display: block; font-size: 20px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.steps .t { display: block; color: #cdb8a6; font-size: 13px; margin-top: 4px; }
+.steps li.past { opacity: .55; }
+.steps li.next .d::after { content: "Prochaine étape"; display: block; width: fit-content; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: var(--accent); color: #fff; padding: 3px 10px; margin: 6px 0; border-radius: 999px; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+@media (max-width: 900px) { .cols { grid-template-columns: minmax(0, 1fr); gap: 80px; } }
+.feed { display: flex; flex-direction: column; }
+.item { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
+.item:first-child { border-top: 0; padding-top: 0; }
+.date { font-size: 13px; font-weight: 700; color: var(--accent); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.who { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+.who::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.item p { margin: 4px 0 0; color: var(--muted); font-size: 15px; max-width: 66ch; }
+.pill-new { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--accent); color: #fff; padding: 3px 9px; margin-left: 8px; border-radius: 999px; vertical-align: 2px; }
+.tag-t { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--muted); padding: 2px 9px; margin-left: 8px; vertical-align: 2px; border-radius: 999px; display: inline-block; }
+.stamp { font-size: 13px; }
+.stamp a, .fig small a, .sources a, .note a { color: var(--accent); font-weight: 600; }
+.stamp time { font-weight: 600; color: var(--ink); }
+.aside { display: flex; flex-direction: column; gap: 72px; }
+.aside h2 { font-size: 30px; margin-bottom: 22px; }
+.agenda { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.agenda li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; font-size: 15px; }
+.agenda li.past { opacity: .5; }
+.agenda .d { font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.fig { padding-block: 20px; border-top: 1px solid var(--line); }
+.fig b { display: block; font-size: 48px; font-weight: 800; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.fig span { display: block; margin-top: 8px; font-size: 15px; color: var(--muted); }
+.fig small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* Candidate view */
+.cand-head { padding: clamp(28px, 6vw, 72px); display: grid; gap: 20px; border: 1px solid var(--line); border-top: 8px solid var(--c); }
+.cand-head h2 { font-size: clamp(40px, 8vw, 96px); line-height: .92; letter-spacing: -.05em; }
+.cand-head .slogan { font-size: clamp(20px, 3vw, 30px); font-weight: 700; letter-spacing: -.02em; margin: 0; max-width: 28ch; line-height: 1.15; }
+.cand-head .pos { font-size: 16px; color: var(--muted); margin: 0; max-width: 60ch; }
+.btn { display: inline-flex; width: fit-content; font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 15px 28px; background: var(--c); color: var(--on-c); text-decoration: none; }
+.btn:hover { text-decoration: underline; }
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-top: 16px; }
+.person { background: var(--surface); padding: 28px; border: 1px solid var(--line); }
+.person .role { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.person h3 { font-size: 28px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; margin: 8px 0 10px; text-transform: uppercase; }
+.person p { margin: 0; font-size: 15px; color: var(--muted); }
+details { background: var(--surface); border: 1px solid var(--line); }
+details + details { margin-top: 8px; }
+summary { cursor: pointer; padding: 20px 24px; font-size: 18px; font-weight: 700; letter-spacing: -.02em; line-height: 1.25; list-style: none; display: flex; align-items: center; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+.st { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.rs { font-size: 14px; font-weight: 500; letter-spacing: 0; line-height: 1.5; color: var(--muted); }
+abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
+summary .n { margin-left: auto; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+summary::after { content: "+"; width: 34px; height: 34px; flex: none; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 20px; font-weight: 400; line-height: 1; }
+details[open] summary::after { content: "−"; background: var(--deep); border-color: var(--deep); color: var(--on-deep); }
+details ul { margin: 0; padding: 0 28px 24px 46px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; max-width: 72ch; }
+details li::marker { color: var(--accent); }
+.sources { margin-top: 24px; padding: 22px 26px; background: var(--bg2); }
+.sources ul { margin: 10px 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
+.sources li span { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-size: 14px; border: 1px solid var(--line); background: var(--surface); padding: 6px 16px; border-radius: 999px; }
+.limits { margin-top: 64px; padding: 20px 24px; border: 1px dashed var(--muted); font-size: 15px; color: var(--muted); max-width: 72ch; }
+
+/* Comparison */
+.tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 32px 0 8px; }
+.tools input[type="search"] { font: inherit; font-size: 15px; padding: 12px 20px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); min-width: 0; flex: 1 1 240px; max-width: 360px; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 13px; font-weight: 700; padding: 10px 18px; border: 1px solid var(--c); border-radius: 999px; background: color-mix(in srgb, var(--c) 14%, var(--surface)); color: var(--ink); cursor: pointer; }
+.toggle::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.toggle[aria-pressed="false"] { background: transparent; border-color: var(--line); color: var(--muted); }
+.toggle[aria-pressed="false"]::before { background: transparent; border: 2px solid var(--muted); }
+.theme-block { padding-block: 28px 8px; border-top: 2px solid var(--ink); margin-top: 32px; }
+.theme-block h3 { font-size: clamp(22px, 3vw, 30px); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; text-transform: uppercase; margin-bottom: 18px; }
+.theme-cells { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+.cell { padding: 18px 20px; font-size: 15px; border: 1px solid var(--line); border-top: 4px solid var(--c); }
+.cell .nm { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+.cell .nm::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.cell.empty { background: transparent; border: 1px dashed var(--line); color: var(--muted); }
+.err { padding: 40px 0; color: var(--muted); }
+footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56px; font-size: 13px; }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top"><span>Ordre des avocats de Paris</span><span>Mandature 2028-2029</span></div>
+    <div class="hero-main">
+      <div>
+        <h1>Bâtonnat<span>de Paris 2027</span></h1>
+        <p class="lede" id="contexte">Chargement des programmes…</p>
+        <button type="button" class="btn-pdf" id="pdf" hidden>Télécharger le programme de tous les candidats (PDF)</button>
+        <p class="pdf-msg" id="pdf-msg" role="status"></p>
+      </div>
+      <figure class="frame" id="countdown" hidden><div class="frame-in cf">
+        <div class="cf-n" id="cd-n"></div>
+        <div class="cf-l" id="cd-l"></div>
+      </div></figure>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Sections"><div class="wrap"><div class="row" id="tabs"></div></div></nav>
+<main><div class="wrap" id="views"><div class="err" id="loading">Chargement…</div></div></main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+(function () {
+  var DATA = null;
+  var TABS = [{ id: "apercu", label: "Aperçu" }];
+  var tabsEl = document.getElementById("tabs");
+  var viewsEl = document.getElementById("views");
+  var shown = {};
+  
+  function h(tag, attrs, kids) {
+    var el = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "class") el.className = attrs[k];
+      else if (k === "text") el.textContent = attrs[k];
+      else el.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(function (c) { if (c) el.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return el;
+  }
+  function fmt(d, withYear) {
+    var o = { day: "numeric", month: "short", timeZone: "UTC" };
+    if (withYear) o.year = "numeric";
+    return new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", o);
+  }
+  function todayISO() {
+    try { return new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" }); } catch (e) { return new Date().toISOString().slice(0, 10); }
+  }
+  function shift(iso, days) { var d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
+  function dayDiff(a, b) { return Math.round((new Date(b + "T12:00:00Z") - new Date(a + "T12:00:00Z")) / 86400000); }
+  function byDateDesc(a, b) { return a.date < b.date ? 1 : -1; }
+  function candById(id) { return DATA.candidats.filter(function (c) { return c.id === id; })[0]; }
+  function nMesures(c) { return c.programme.reduce(function (s, a) { return s + a.mesures.length; }, 0); }
+
+  var GLOSS = {
+    "CARPA": "Caisse des règlements pécuniaires des avocats : elle gère les fonds que les avocats détiennent pour leurs clients",
+    "CNB": "Conseil national des barreaux : l'instance qui représente tous les avocats de France",
+    "EFB": "École de formation du barreau : l'école des futurs avocats",
+    "AGEFIPH": "Association pour l'insertion professionnelle des personnes handicapées",
+    "RIN": "Règlement intérieur national de la profession d'avocat",
+    "RIBP": "Règlement intérieur du barreau de Paris",
+    "RSE": "Responsabilité sociétale des entreprises",
+    "RGPD": "Règlement général sur la protection des données personnelles",
+    "URSSAF": "Organisme qui collecte les cotisations sociales",
+    "EHPAD": "Établissement d'hébergement pour personnes âgées dépendantes"
+  };
+  var GLOSS_RE = new RegExp("\\b(" + Object.keys(GLOSS).join("|") + ")\\b", "g");
+  function abbr(text) {
+    var out = [], last = 0, m;
+    text = String(text || "");
+    GLOSS_RE.lastIndex = 0;
+    while ((m = GLOSS_RE.exec(text))) {
+      if (m.index > last) out.push(text.slice(last, m.index));
+      out.push(h("abbr", { title: GLOSS[m[1]], text: m[1] }));
+      last = m.index + m[1].length;
+    }
+    if (last < text.length) out.push(text.slice(last));
+    return out;
+  }
+  function host(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return "source"; } }
+  function srcLink(u, prefix) { return u ? h("a", { href: u, target: "_blank", rel: "noopener", text: host(u) }) : null; }
+  function stampTime(e) {
+    var t = "Daté du " + fmt(e.date, true);
+    var c = e.constat || e.date;
+    t += " · Constaté le " + fmt(c, true) + (e.constat_heure ? " à " + e.constat_heure : "");
+    return t;
+  }
+  function newsItem(n, cand, showWho, isNew) {
+    var title = h("h3", { text: n.titre });
+    if (isNew) title.appendChild(h("span", { class: "pill-new", text: "Nouveau" }));
+    var body = h("div", null, [showWho ? h("span", { class: "who", text: cand.binome }) : null, title, n.resume ? h("p", { text: n.resume }) : null,
+      (n.source || n.heure) ? h("p", { class: "stamp" }, [n.heure ? fmt(n.date, true) + " à " + n.heure + ". " : "", n.source ? "Source : " : "", srcLink(n.source)]) : null]);
+    return h("div", { class: "item c-" + cand.id }, [h("div", { class: "date", text: fmt(n.date) }), body]);
+  }
+  function evoItem(e, cand, showWho) {
+    var body = h("div", null, [
+      showWho ? h("span", { class: "who", text: cand.binome }) : null,
+      h("h3", null, [e.titre, h("span", { class: "tag-t", text: e.type })]),
+      e.detail ? h("p", null, abbr(e.detail)) : null,
+      h("p", { class: "stamp" }, [h("time", { datetime: e.date, text: stampTime(e) })]),
+      e.source ? h("p", { class: "stamp" }, ["Source : ", srcLink(e.source)]) : null
+    ]);
+    return h("div", { class: "item c-" + cand.id }, [h("div", { class: "date", text: fmt(e.date, true) }), body]);
+  }
+
+  function countdown() {
+    var cal = DATA.calendrier || [];
+    var first = cal.filter(function (e) { return e.label === "1er tour"; })[0];
+    if (!first) return;
+    var days = dayDiff(todayISO(), first.date);
+    if (days < 0) return;
+    document.getElementById("cd-n").textContent = days === 0 ? "Aujourd'hui" : "J-" + days;
+    document.getElementById("cd-l").textContent = days === 0 ? "1er tour du scrutin" : "avant le 1er tour, le " + fmt(first.date, true);
+    document.getElementById("countdown").hidden = false;
+  }
+
+  function railBlock() {
+    var cal = DATA.calendrier || [];
+    var today = todayISO();
+    var start = cal[0].date;
+    var last = cal.filter(function (e) { return e.label === "2e tour"; })[0];
+    var end = last ? last.date : cal[cal.length - 1].date;
+    var span = Math.max(1, dayDiff(start, end));
+    function pct(d) { return Math.min(100, Math.max(0, dayDiff(start, d) / span * 100)); }
+    var rail = h("div", { class: "rail" }, [h("div", { class: "done", style: "width:" + pct(today) + "%" })]);
+    cal.forEach(function (e) {
+      rail.appendChild(h("span", { class: "tick" + (e.date < today ? " past" : "") + (/tour/.test(e.label) ? " vote" : ""), style: "left:" + pct(e.date) + "%", title: e.label }));
+    });
+    if (today >= start && today <= end) rail.appendChild(h("span", { class: "now", style: "left:" + pct(today) + "%", text: "Aujourd'hui" }));
+    var nextIdx = -1;
+    cal.forEach(function (e, i) { if (nextIdx < 0 && e.date >= today) nextIdx = i; });
+    var steps = h("ol", { class: "steps" }, cal.map(function (e, i) {
+      return h("li", { class: e.date < today ? "past" : (i === nextIdx ? "next" : "") }, [
+        h("span", { class: "d", text: fmt(e.date) }), e.label, e.detail ? h("span", { class: "t", text: e.detail }) : null
+      ]);
+    }));
+    return h("div", { class: "rail-box" }, [rail, steps]);
+  }
+
+  function viewApercu() {
+    var today = todayISO();
+    var all = [];
+    DATA.candidats.forEach(function (c) { (c.nouveautes || []).forEach(function (n) { all.push({ n: n, c: c }); }); });
+    all.sort(function (a, b) { return a.n.date < b.n.date ? 1 : -1; });
+
+    var strip = h("div", { class: "strip" }, DATA.candidats.map(function (c) {
+      return h("a", { class: "panel glow c-" + c.id, href: "#" + c.id, "aria-label": "Voir le programme de " + c.binome }, [
+        h("div", { class: "sw" }), h("h3", { text: c.binome }),
+        h("p", { class: "slogan", text: "« " + c.slogan + " »" }),
+        h("p", { class: "pos", text: c.positionnement }),
+        h("div", { class: "stats" }, [
+          h("div", null, [h("b", { text: String(nMesures(c)) }), h("span", { text: "mesures" })]),
+          h("div", null, [h("b", { text: String((c.nouveautes || []).length) }), h("span", { text: "actualités" })]),
+          h("div", null, [h("b", { text: String((c.evolutions || []).length) }), h("span", { text: "évolutions" })])
+        ]),
+        h("span", { class: "go", text: "Voir le programme" })
+      ]);
+    }));
+
+    var feed = h("div", { class: "feed" }, all.slice(0, 12).map(function (x) {
+      return newsItem(x.n, x.c, true, DATA.maj && x.n.date >= shift(DATA.maj, -3));
+    }));
+    var evos = [];
+    DATA.candidats.forEach(function (c) { (c.evolutions || []).forEach(function (e) { evos.push({ e: e, c: c }); }); });
+    evos.sort(function (a, b) { return a.e.date < b.e.date ? 1 : -1; });
+    var agenda = h("ul", { class: "agenda" }, (DATA.agenda || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; }).map(function (a) {
+      var c = candById(a.qui);
+      return h("li", { class: "c-" + a.qui + (a.date < today ? " past" : "") }, [
+        h("div", { class: "d", text: fmt(a.date) }),
+        h("div", null, [a.label, h("div", { class: "who", style: "margin:2px 0 0", text: c ? c.binome : "" })])
+      ]);
+    }));
+    var figs = h("div", null, (DATA.chiffres || []).map(function (f) {
+      return h("div", { class: "fig" }, [h("b", { text: f.valeur }), h("span", { text: f.label }), h("small", null, ["Source : ", (function () { var m = DATA.candidats.filter(function (c) { return c.binome === f.source; })[0]; return m && m.site ? h("a", { href: m.site, target: "_blank", rel: "noopener", text: f.source }) : f.source; })()])]);
+    }));
+    return h("section", { class: "view", id: "v-apercu" }, [
+      h("div", { class: "lab" }, [h("span", { text: "01 — Les binômes" }), h("span", { text: "Mandature 2028–2029" })]),
+      h("h2", { text: "Quatre binômes en lice", style: "margin-bottom:36px" }),
+      strip,
+      h("div", { class: "sec" }, [
+        h("div", { class: "lab" }, [h("span", { text: "02 — Le calendrier" }), h("span", { text: "Décembre 2026" })]),
+        h("h2", { text: "Le calendrier du scrutin" }),
+        h("p", { class: "note", style: "margin-top:12px" }, ["Source : "].concat((DATA.sources_calendrier || []).map(function (s, i) {
+          return [i ? " · " : "", h("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label })];
+        }).reduce(function (a, b) { return a.concat(b); }, []))),
+        railBlock()
+      ]),
+      h("div", { class: "sec" }, [h("div", { class: "lab" }, [h("span", { text: "03 — L'actualité" }), h("span", { text: "Mise à jour quotidienne" })])]),
+      h("div", { class: "cols" }, [
+        h("div", null, [
+          h("h2", { text: "Dernières actualités", style: "margin-bottom:32px" }), feed,
+          h("div", { class: "sec" }, [
+            h("h2", { text: "Évolutions des programmes" }),
+            h("p", { class: "note", text: "Chaque nouvelle mesure, modification ou retrait est daté du jour où le candidat l'a publié, ou du jour où nous l'avons constaté quand la date n'est pas indiquée." }),
+            h("div", { class: "feed", style: "margin-top:32px" }, evos.slice(0, 8).map(function (x) { return evoItem(x.e, x.c, true); }))
+          ]),
+          h("div", { class: "sec" }, [
+            h("h2", { text: "Historique des mises à jour", style: "margin-bottom:32px" }),
+            h("div", { class: "feed" }, (DATA.journal || []).slice().sort(byDateDesc).map(function (j) {
+              return h("div", { class: "item" }, [h("div", { class: "date", text: fmt(j.date, true) }), h("div", null, [h("p", { text: j.resume, style: "margin:0" })])]);
+            }))
+          ])
+        ]),
+        h("div", { class: "aside" }, [
+          h("div", null, [h("h2", { text: "Repères" }), figs]),
+          h("div", null, [h("h2", { text: "Rencontres annoncées" }), agenda])
+        ])
+      ])
+    ]);
+  }
+
+  function viewCand(c) {
+    var head = h("div", { class: "cand-head glow" }, [
+      h("div", { class: "sw" }), h("h2", { text: c.binome }),
+      h("p", { class: "slogan", text: "« " + c.slogan + " »" }),
+      h("p", { class: "pos", text: c.positionnement }),
+      h("a", { class: "btn", href: c.site, target: "_blank", rel: "noopener", text: "Site de campagne" })
+    ]);
+    var people = h("div", { class: "people" }, c.personnes.map(function (p) {
+      return h("div", { class: "person" }, [h("div", { class: "role", text: p.role }), h("h3", { text: p.nom }), h("p", { text: p.bio })]);
+    }));
+    var prog = h("div", { class: "sec" }, [h("h2", { text: "Programme", style: "margin-bottom:28px" })].concat(c.programme.map(function (a, i) {
+      var d = h("details", null, [
+        h("summary", null, [h("span", { class: "st" }, [h("span", { class: "tt", text: a.titre }), a.resume ? h("span", { class: "rs" }, abbr(a.resume)) : null]), h("span", { class: "n", text: a.mesures.length + (a.mesures.length > 1 ? " mesures" : " mesure") })]),
+        h("ul", null, a.mesures.map(function (m) { return h("li", null, abbr(m)); }))
+      ]);
+      if (i === 0) d.open = true;
+      return d;
+    })));
+    prog.appendChild(h("div", { class: "sources" }, [
+      h("h3", { text: "Sources du programme" }),
+      h("ul", null, (c.sources || []).map(function (s) {
+        return h("li", null, [h("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label }), h("span", { text: " (" + s.type + ")" })]);
+      })),
+      h("p", { class: "note", text: "Consultées le " + fmt(DATA.maj, true) + ". Le programme est repris tel que le candidat le présente." })
+    ]));
+    var evo = h("div", { class: "sec" }, [h("h2", { text: "Évolutions du programme", style: "margin-bottom:32px" })]);
+    if ((c.evolutions || []).length) evo.appendChild(h("div", { class: "feed" }, c.evolutions.slice().sort(byDateDesc).map(function (e) { return evoItem(e, c, false); })));
+    else evo.appendChild(h("p", { class: "note", text: "Aucune modification constatée depuis le début du suivi." }));
+    var news = h("div", { class: "sec" }, [h("h2", { text: "Actualités", style: "margin-bottom:32px" })]);
+    if ((c.nouveautes || []).length) news.appendChild(h("div", { class: "feed" }, c.nouveautes.slice().sort(byDateDesc).map(function (n) {
+      return newsItem(n, c, false, DATA.maj && n.date >= shift(DATA.maj, -3));
+    })));
+    else news.appendChild(h("p", { class: "note", text: "Aucune actualité datée n'a été trouvée." }));
+    if ((c.tribunes || []).length) {
+      news.appendChild(h("h3", { text: "Tribunes", style: "margin-top:40px" }));
+      news.appendChild(h("div", { class: "feed", style: "margin-top:16px" }, c.tribunes.map(function (t) {
+        return h("div", { class: "item" }, [h("div", { class: "date", text: fmt(t.date) }), h("div", null, [h("h3", { text: t.titre })])]);
+      })));
+    }
+    var sup = h("div", { class: "sec" }, [h("h2", { text: "Soutiens : " + c.soutiens.nombre, style: "margin-bottom:24px" })]);
+    if ((c.soutiens.notables || []).length) sup.appendChild(h("div", { class: "chips" }, c.soutiens.notables.map(function (s) { return h("span", { class: "chip", text: s }); })));
+    var lim = c.limites ? h("div", { class: "limits", text: "Limites de cette fiche : " + c.limites }) : null;
+    return h("section", { class: "view c-" + c.id, id: "v-" + c.id }, [head, people, prog, evo, news, sup, lim]);
+  }
+
+  function viewComparatif() {
+    var q = h("input", { type: "search", id: "cmp-q", placeholder: "Filtrer par thème (cotisations, IA…)", "aria-label": "Filtrer par thème" });
+    var tools = h("div", { class: "tools" }, [q]);
+    var out = h("div", { id: "cmp-out" });
+    DATA.candidats.forEach(function (c) {
+      shown[c.id] = true;
+      var b = h("button", { type: "button", class: "toggle c-" + c.id, "aria-pressed": "true", text: c.binome });
+      b.addEventListener("click", function () {
+        shown[c.id] = !shown[c.id];
+        b.setAttribute("aria-pressed", shown[c.id] ? "true" : "false");
+        render();
+      });
+      tools.appendChild(b);
+    });
+    function render() {
+      var term = q.value.trim().toLowerCase();
+      out.textContent = "";
+      var rows = DATA.comparatif.filter(function (r) { return !term || r.theme.toLowerCase().indexOf(term) >= 0; });
+      if (!rows.length) { out.appendChild(h("p", { class: "note", style: "margin-top:32px", text: "Aucun thème ne correspond. Effacez le filtre pour tout afficher." })); return; }
+      rows.forEach(function (r) {
+        var cells = DATA.candidats.filter(function (c) { return shown[c.id]; }).map(function (c) {
+          var t = r.items[c.id];
+          return h("div", { class: "cell c-" + c.id + (t ? " glow" : " empty") }, [h("div", { class: "nm", text: c.binome }), t || "Non précisé"]);
+        });
+        out.appendChild(h("div", { class: "theme-block" }, [h("h3", { text: r.theme }), h("div", { class: "theme-cells" }, cells)]));
+      });
+    }
+    q.addEventListener("input", render);
+    render();
+    return h("section", { class: "view", id: "v-comparatif" }, [
+      h("h2", { text: "Comparer les programmes" }),
+      h("p", { class: "note", style: "margin-top:14px", text: "Les mesures sont reprises telles que les candidats les présentent. « Non précisé » signifie qu'aucune mesure n'a été trouvée sur ce thème." }),
+      tools, out
+    ]);
+  }
+
+  /* ---------- PDF export ---------- */
+  var PDF_COL = { saada: "#0f766e", bouyssou: "#2457c5", fabiani: "#a8650f", surin: "#a3194f" };
+  function rgb(hex) { var n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function pt(t) {
+    return String(t == null ? "" : t).replace(/[\u00a0\u202f\u2009]/g, " ").replace(/\u2212/g, "-").replace(/\u2192/g, "->")
+      .replace(/[^\n\u0020-\u007e\u00a1-\u00ff\u0152\u0153\u2013\u2014\u2018\u2019\u201c\u201d\u2022\u2026\u20ac]/g, "");
+  }
+  function ctxText(data) { return String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, ""); }
+
+  function buildPdf(data, jsPDF) {
+    var doc = new jsPDF({ unit: "mm", format: "a4" });
+    var W = 210, H = 297, M = 18, CW = W - 2 * M, y = M;
+    var INK = [43, 23, 16], MUTED = [107, 84, 70], DEEP = [59, 31, 23], SAND = [239, 224, 203], ACC = [187, 78, 46], LINK = [36, 64, 200];
+    function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
+    function newPage() { doc.addPage(); y = M; }
+    function ensure(h) { if (y + h > H - 20) newPage(); }
+    function para(text, o) {
+      o = o || {};
+      var size = o.size || 10, lh = size * 0.3528 * 1.45, indent = o.indent || 0, x = M + indent;
+      doc.setFont("helvetica", o.style || "normal"); doc.setFontSize(size); color(o.color || INK);
+      var ls = doc.splitTextToSize(pt(text), CW - indent);
+      ls.forEach(function (l, i) {
+        ensure(lh);
+        if (o.bullet && i === 0) { doc.setFillColor(o.dot[0], o.dot[1], o.dot[2]); doc.circle(x - 3, y + lh * 0.55, 0.6, "F"); }
+        doc.text(l, x, y + lh * 0.8); y += lh;
+      });
+      y += o.after == null ? 1.6 : o.after;
+    }
+    function heading(text, size, col) { ensure(size * 0.5 + 6); y += 3; para(text, { size: size, style: "bold", color: col || INK, after: 2 }); }
+    function link(label, url, x, size) {
+      doc.setFont("helvetica", "normal"); doc.setFontSize(size || 9.5); color(LINK);
+      doc.textWithLink(pt(label), x, y + 3.6, { url: url });
+      return doc.getTextWidth(pt(label));
+    }
+    var maj = data.maj || todayISO();
+
+    /* Cover */
+    doc.setFillColor(DEEP[0], DEEP[1], DEEP[2]); doc.rect(0, 0, W, 136, "F");
+    doc.setFont("helvetica", "normal"); doc.setFontSize(9); color([205, 184, 166]);
+    doc.text("ORDRE DES AVOCATS DE PARIS  -  MANDATURE 2028-2029", M, 30);
+    doc.setFont("helvetica", "bold"); doc.setFontSize(46); color(SAND);
+    doc.text("BÂTONNAT", M, 70);
+    color([228, 126, 86]); doc.text("DE PARIS 2027", M, 88);
+    doc.setFont("helvetica", "normal"); doc.setFontSize(13); color(SAND);
+    doc.text("Les programmes des quatre binômes candidats", M, 108);
+    doc.setFontSize(10.5); color([205, 184, 166]);
+    doc.text("Édition du " + pt(fmt(maj, true)) + "  -  scrutin les 15 et 17 décembre 2026", M, 116);
+    y = 150;
+    para(ctxText(data), { size: 10.5, color: MUTED, after: 6 });
+    heading("Les binômes", 13, ACC);
+    data.candidats.forEach(function (c) {
+      var col = rgb(PDF_COL[c.id] || "#3b1f17");
+      ensure(7); doc.setFillColor(col[0], col[1], col[2]); doc.rect(M, y + 0.8, 3.2, 3.2, "F");
+      doc.setFont("helvetica", "bold"); doc.setFontSize(10.5); color(INK); doc.text(pt(c.binome), M + 6, y + 3.6);
+      doc.setFont("helvetica", "normal"); color(MUTED); doc.text(pt(c.slogan), M + 10 + doc.getTextWidth(pt(c.binome)), y + 3.6);
+      y += 6.5;
+    });
+    if ((data.calendrier || []).length) {
+      heading("Calendrier du scrutin", 13, ACC);
+      data.calendrier.forEach(function (e) {
+        ensure(6); doc.setFont("helvetica", "bold"); doc.setFontSize(10); color(INK); doc.text(pt(fmt(e.date, true)), M, y + 3.6);
+        doc.setFont("helvetica", "normal"); color(INK); doc.text(pt(e.label), M + 34, y + 3.6); y += 5.8;
+      });
+    }
+    y += 4;
+    para("Programmes présentés par les candidats eux-mêmes, avec leurs sources. Document généré à partir des données les plus récentes du site.", { size: 9, color: MUTED, style: "italic" });
+
+    /* Candidates */
+    data.candidats.forEach(function (c) {
+      var col = rgb(PDF_COL[c.id] || "#3b1f17");
+      newPage();
+      doc.setFillColor(col[0], col[1], col[2]); doc.rect(0, 0, W, 42, "F");
+      doc.setFont("helvetica", "bold"); doc.setFontSize(24); doc.setTextColor(255, 255, 255); doc.text(pt(c.binome), M, 22);
+      doc.setFont("helvetica", "italic"); doc.setFontSize(12); doc.text(pt("« " + c.slogan + " »"), M, 32);
+      y = 54;
+      para(c.positionnement, { size: 10.5, color: MUTED, after: 3 });
+      if (c.site) { doc.setFont("helvetica", "normal"); doc.setFontSize(9.5); color(MUTED); doc.text("Site de campagne : ", M, y + 3.6); link(c.site, c.site, M + doc.getTextWidth("Site de campagne : ")); y += 7; }
+      heading("Le binôme", 13, col);
+      c.personnes.forEach(function (p) {
+        para(p.nom + "  -  " + p.role, { size: 10.5, style: "bold", after: 0.6 });
+        para(p.bio, { size: 9.5, color: MUTED, after: 3 });
+      });
+      heading("Programme", 13, col);
+      c.programme.forEach(function (a) {
+        ensure(16); y += 1.5;
+        para(a.titre, { size: 11.5, style: "bold", after: 0.8 });
+        if (a.resume) para(a.resume, { size: 9.5, style: "italic", color: MUTED, after: 1.4 });
+        a.mesures.forEach(function (m) { para(m, { size: 10, indent: 6, bullet: true, dot: col, after: 1.2 }); });
+        y += 1;
+      });
+      if ((c.sources || []).length) {
+        heading("Sources du programme", 13, col);
+        c.sources.forEach(function (s) {
+          ensure(6);
+          var w = link(s.label, s.url, M + 2);
+          doc.setFont("helvetica", "normal"); doc.setFontSize(9); color(MUTED); doc.text(pt("  (" + s.type + ")"), M + 2 + w, y + 3.6);
+          y += 5.6;
+        });
+      }
+      var evo = (c.evolutions || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      if (evo.length) {
+        heading("Évolutions du programme", 13, col);
+        evo.forEach(function (e) {
+          ensure(18);
+          para(e.titre + "  [" + e.type + "]", { size: 10.5, style: "bold", after: 0.6 });
+          if (e.detail) para(e.detail, { size: 9.5, color: MUTED, after: 0.8 });
+          para("Daté du " + fmt(e.date, true) + " · Constaté le " + fmt(e.constat || e.date, true) + (e.constat_heure ? " à " + e.constat_heure : ""), { size: 8.5, color: MUTED, after: 0.6 });
+          if (e.source) { doc.setFont("helvetica", "normal"); doc.setFontSize(8.5); color(MUTED); doc.text("Source : ", M, y + 3.4); link(host(e.source), e.source, M + doc.getTextWidth("Source : "), 8.5); y += 5.5; }
+          y += 1.2;
+        });
+      }
+      if (c.limites) { y += 3; para("Limites de cette fiche : " + c.limites, { size: 9, style: "italic", color: MUTED }); }
+    });
+
+    /* Comparison */
+    if ((data.comparatif || []).length) {
+      newPage();
+      para("Comparatif par thème", { size: 20, style: "bold", after: 2 });
+      para("Mesures reprises telles que les candidats les présentent. « Non précisé » : aucune mesure trouvée sur ce thème.", { size: 9.5, color: MUTED, after: 4 });
+      data.comparatif.forEach(function (r) {
+        ensure(40); y += 2;
+        heading(r.theme, 12.5, ACC);
+        data.candidats.forEach(function (c) {
+          var col = rgb(PDF_COL[c.id] || "#3b1f17");
+          para(c.binome + " : " + (r.items[c.id] || "Non précisé"), { size: 9.5, indent: 5, bullet: true, dot: col, after: 1.2, color: r.items[c.id] ? INK : MUTED });
+        });
+      });
+    }
+
+    /* Footer on every page */
+    var n = doc.getNumberOfPages();
+    for (var i = 1; i <= n; i++) {
+      doc.setPage(i);
+      doc.setDrawColor(220, 200, 176); doc.setLineWidth(0.2); doc.line(M, H - 14, W - M, H - 14);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(8); color(MUTED);
+      doc.text(pt("Bâtonnat de Paris 2027  ·  Édition du " + fmt(maj, true) + "  ·  Déclarations des candidats"), M, H - 9);
+      doc.text(i + " / " + n, W - M, H - 9, { align: "right" });
+    }
+    return doc.output("arraybuffer");
+  }
+
+  function savePdf(buf, filename, dl) {
+    if (dl) return dl.save({ filename: filename, data: buf });
+    return new Promise(function (resolve, reject) {
+      try {
+        var url = URL.createObjectURL(new Blob([buf], { type: "application/pdf" }));
+        var a = document.createElement("a");
+        a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+        resolve({ status: "saved" });
+      } catch (e) { reject(e); }
+    });
+  }
+
+  function setupPdf() {
+    var btn = document.getElementById("pdf"), msg = document.getElementById("pdf-msg");
+    if (!btn) return;
+    var getDl = (window.claude && window.claude.use) ? window.claude.use("downloads").catch(function () { return null; }) : Promise.resolve(null);
+    getDl.then(function (dl) {
+      btn.hidden = false;
+      btn.addEventListener("click", function () {
+        btn.disabled = true; msg.textContent = "Préparation du PDF…";
+        var lib = window.jspdf && window.jspdf.jsPDF;
+        if (!lib) { msg.textContent = "Le générateur de PDF n'a pas pu se charger. Rechargez la page."; btn.disabled = false; return; }
+        fetch("data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function () { return DATA; })
+          .then(function (data) {
+            var buf = buildPdf(data, lib);
+            return savePdf(buf, "batonnat-paris-2027-programmes-" + (data.maj || todayISO()) + ".pdf", dl);
+          })
+          .then(function () { msg.textContent = "PDF enregistré."; })
+          .catch(function (e) { msg.textContent = e && e.code === "declined" ? "" : "Le PDF n'a pas pu être enregistré. Réessayez."; })
+          .then(function () { btn.disabled = false; });
+      });
+    });
+  }
+
+  function show() {
+    var id = (location.hash || "").replace("#", "") || "apercu";
+    if (!TABS.some(function (t) { return t.id === id; })) id = "apercu";
+    Array.prototype.forEach.call(viewsEl.querySelectorAll("section.view"), function (s) { s.hidden = s.id !== "v-" + id; });
+    Array.prototype.forEach.call(tabsEl.querySelectorAll("a"), function (a) {
+      if (a.getAttribute("data-id") === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    var nav = document.querySelector("nav.tabs");
+    if (location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);
+  }
+
+  function build(data) {
+    DATA = data;
+    document.getElementById("contexte").textContent = String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, "");
+    data.candidats.forEach(function (c) { TABS.push({ id: c.id, label: c.binome, cls: "c-" + c.id }); });
+    TABS.push({ id: "comparatif", label: "Comparatif" });
+    TABS.forEach(function (t) {
+      tabsEl.appendChild(h("a", { href: "#" + t.id, "data-id": t.id, class: t.cls || "" }, [t.cls ? h("span", { class: "dot" }) : null, t.label]));
+    });
+    viewsEl.textContent = "";
+    viewsEl.appendChild(viewApercu());
+    data.candidats.forEach(function (c) { viewsEl.appendChild(viewCand(c)); });
+    viewsEl.appendChild(viewComparatif());
+    document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes.";
+    countdown();
+    window.addEventListener("hashchange", show);
+    show();
+    setupPdf();
+  }
+
+  fetch("data.json", { cache: "no-store" }).then(function (r) {
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(build).catch(function () {
+    document.getElementById("loading").textContent = "Les programmes n'ont pas pu être chargés. Rechargez la page dans un instant.";
+    document.getElementById("contexte").textContent = "";
+  });
+})();
+</script>

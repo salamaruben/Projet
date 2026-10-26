@@ -1,0 +1,741 @@
+{
+ "maj": "2026-10-26",
+ "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
+ "calendrier": [
+  {
+   "date": "2026-09-14",
+   "label": "Ouverture du registre des candidatures",
+   "detail": "Fabiani et Naquet signent les premiers, le matin même."
+  },
+  {
+   "date": "2026-10-09",
+   "label": "Clôture des candidatures"
+  },
+  {
+   "date": "2026-10-13",
+   "label": "Listes approuvées"
+  },
+  {
+   "date": "2026-12-01",
+   "label": "Débat des candidats",
+   "detail": "Maison du Barreau, avec une soirée « venez rencontrer vos candidats »."
+  },
+  {
+   "date": "2026-12-15",
+   "label": "1er tour",
+   "detail": "Vote électronique, de 8h30 à 19h."
+  },
+  {
+   "date": "2026-12-17",
+   "label": "2e tour",
+   "detail": "Vote électronique, de 8h30 à 19h."
+  }
+ ],
+ "agenda": [
+  {
+   "date": "2026-10-28",
+   "qui": "fabiani",
+   "label": "Soirée jeunes, Mad Men Paris"
+  },
+  {
+   "date": "2026-10-29",
+   "qui": "fabiani",
+   "label": "Cocktail droit pénal"
+  },
+  {
+   "date": "2026-11-02",
+   "qui": "fabiani",
+   "label": "Cocktail droit social"
+  },
+  {
+   "date": "2026-11-04",
+   "qui": "fabiani",
+   "label": "Petit-déjeuner droit public"
+  },
+  {
+   "date": "2026-11-17",
+   "qui": "fabiani",
+   "label": "Cocktail droit de la construction et de l'immobilier"
+  }
+ ],
+ "chiffres": [
+  {
+   "valeur": "~36 000",
+   "label": "avocats au barreau de Paris, environ 45 % de la profession",
+   "source": "Saada et Lagrue"
+  },
+  {
+   "valeur": "< 12 000",
+   "label": "votants au dernier scrutin",
+   "source": "Saada et Lagrue"
+  },
+  {
+   "valeur": "42",
+   "label": "conseillers élus, bénévoles, pour 3 ans",
+   "source": "Fabiani et Naquet"
+  }
+ ],
+ "candidats": [
+  {
+   "id": "saada",
+   "binome": "Saada et Lagrue",
+   "personnes": [
+    {
+     "nom": "Rachel Saada",
+     "role": "Candidate au bâtonnat",
+     "bio": "Avocate depuis 1985, droit du travail et sécurité sociale. Fondatrice de l'Atelier des droits (2007). Présidente du SAF Paris (2004-2007), Conseil de l'Ordre (2008-2010), CNB (2015-2020), CNBF jusqu'en 2023 dont vice-présidente. Membre de Défense sans frontières – Avocats solidaires."
+    },
+    {
+     "nom": "Marianne Lagrue",
+     "role": "Candidate à la vice-présidence",
+     "bio": "Avocate depuis 1997, droit des étrangers et asile. Présidente du SAF Paris (2011-2017), Conseil de l'Ordre (2018-2020), CNB (2009-2014), experte CCBE (migration), fondatrice de Défense sans frontières."
+    }
+   ],
+   "site": "https://votezracheletmarianne.paris/",
+   "slogan": "Un barreau égalitaire et solidaire",
+   "positionnement": "Défense des petites structures et des avocats exerçant seuls, démocratie ordinale, État de droit.",
+   "programme": [
+    {
+     "titre": "Réduire les inégalités entre avocats",
+     "mesures": [
+      "Lutte contre les violences sexistes et sexuelles, le harcèlement et les discriminations : prévention renforcée, rôle disciplinaire de l'Ordre accru, publicité des décisions.",
+      "Reprise de la pépinière du boulevard Sébastopol et locaux à loyers maîtrisés avec la Ville de Paris.",
+      "Contrat-cadre avec l'AGEFIPH pour les avocats en situation de handicap.",
+      "Cotisations d'assurance proportionnées au chiffre d'affaires et cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
+      "Intérêts de la CARPA utilisés au profit de tous, partenariats crèches, réforme de la conférence du stage pour les commissions d'office criminelles."
+     ],
+     "resume": "Lutte contre les violences et les discriminations, cotisations proportionnées aux revenus, locaux à loyers maîtrisés."
+    },
+    {
+     "titre": "Protéger les collaborateurs libéraux",
+     "mesures": [
+      "6e semaine de congés et droit effectif à la déconnexion.",
+      "Contrôle réel des conditions d'exercice, au-delà d'un questionnaire.",
+      "Respect de la clientèle personnelle et sanctions en cas d'abus."
+     ],
+     "resume": "Améliorer les conditions de travail des collaborateurs, ces avocats qui travaillent pour un cabinet sans être salariés."
+    },
+    {
+     "titre": "Un Ordre plus démocratique",
+     "mesures": [
+      "Plafonnement des dépenses de campagne et appels d'offres publics pour les dépenses de l'Ordre.",
+      "Conseils ouverts au public, publication systématique des rapports, assemblée générale annuelle, référendums sur les grandes questions.",
+      "Conférences citoyennes non élues et tirage au sort de membres dans certaines commissions.",
+      "Deux représentants du jeune barreau avec voix consultative."
+     ],
+     "resume": "Ouvrir le fonctionnement de l'Ordre : transparence, consultation des avocats et plafonnement des dépenses de campagne."
+    },
+    {
+     "titre": "Faciliter l'accès au droit pour tous",
+     "mesures": [
+      "Contrats de protection juridique labellisés par le barreau de Paris, financés par la CARPA.",
+      "Action auprès du CNB pour mieux rémunérer l'aide juridictionnelle et relever ses plafonds.",
+      "Consultations spécialisées (sécurité sociale, chômage, handicap, aide sociale) dans les maisons de justice et du droit."
+     ],
+     "resume": "Aider les particuliers à accéder à un avocat : protection juridique, aide juridictionnelle, consultations spécialisées."
+    },
+    {
+     "titre": "Un barreau qui parle d'une seule voix",
+     "mesures": [
+      "Fin des querelles sur la « supériorité » de Paris, qui pèse près de la moitié des avocats et siège au CNB."
+     ],
+     "resume": "Cesser les rivalités entre barreaux pour peser davantage."
+    },
+    {
+     "titre": "Entraide entre confrères",
+     "mesures": [
+      "« Cafés-boulot » et groupes de parole avec des professionnels de santé.",
+      "Soutien aux confrères agressés ou discriminés.",
+      "Renégociation de la prévoyance pour financer un congé de naissance supplémentaire de deux mois."
+     ],
+     "resume": "Soutien moral et financier aux avocats en difficulté, et congé de naissance supplémentaire."
+    },
+    {
+     "titre": "Défendre les conditions d'audience",
+     "mesures": [
+      "Dénoncer le manque de moyens, la réduction du temps d'audience et la perte de collégialité.",
+      "Actions symboliques sur le modèle du « procès du siècle » climat."
+     ],
+     "resume": "Défendre le temps d'audience et le dialogue avec les magistrats."
+    },
+    {
+     "titre": "Intelligence artificielle et écologie",
+     "mesures": [
+      "Laboratoire d'intelligence collective avec des chercheurs (secret professionnel, transparence sur l'usage de l'IA, fiscalité).",
+      "Bilan carbone avec objectifs chiffrés, critères sociaux et environnementaux dans les achats, bilan public annuel."
+     ],
+     "resume": "Un laboratoire de réflexion sur l'IA et un bilan carbone avec objectifs chiffrés."
+    }
+   ],
+   "nouveautes": [
+    {
+     "date": "2026-10-20",
+     "titre": "Lettre ouverte au Bâtonnier sur les gardes à vue de lycéens",
+     "resume": "Elles s'appuient sur l'article 719 du CPP (loi du 9 mai 2026, droit de visite du Bâtonnier ou d'un délégué) et formulent quatre demandes : visites sans préavis dans les commissariats parisiens les jours de mobilisation, délégués désignés pour visiter plusieurs lieux à la fois, constats rendus publics et transmis si besoin au CGLPL, au Défenseur des droits ou au procureur, permanence renforcée pour l'assistance des mineurs. Chiffres cités : plus de 8 000 interpellations en France dont plus de 85 % de mineurs, 855 interpellations à Paris le 17 octobre (préfecture), 24 enquêtes IGPN ouvertes. Elles reprochent au Bâtonnier d'avoir réagi aux dégradations subies par des commerçants mais pas aux gardes à vue massives."
+    },
+    {
+     "date": "2026-10-02",
+     "titre": "Six engagements contre les LGBTQIA+phobies",
+     "resume": "Nommer explicitement ces discriminations dans la politique de l'Ordre et les formulaires de COMHADIS, signalement effectif avec protection contre les représailles, sanctions fermes et rapport annuel anonymisé, respect du prénom d'usage dans l'annuaire et la carte professionnelle, charte LGBT+ annexée aux contrats de collaboration, appui sur les associations."
+    }
+   ],
+   "soutiens": {
+    "nombre": "139 à 140",
+    "notables": [
+     "Jean-Louis Borie (ancien bâtonnier)",
+     "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis)",
+     "Dominique Clemang (ancienne bâtonnière de Dijon)",
+     "Valérie Grimaud (CNB)",
+     "David van der Vlist (CNB)",
+     "Alice Oriol (Conseil de l'Ordre)",
+     "Stéphane Maugendre (président du SAF)",
+     "Caroline Mecary"
+    ]
+   },
+   "limites": "L'agenda de campagne est vide à ce jour.",
+   "evolutions": [
+    {
+     "date": "2026-10-20",
+     "constat": "2026-10-26",
+     "type": "Nouvelle proposition",
+     "titre": "Visites de commissariats et assistance des mineurs en garde à vue",
+     "detail": "Droit de visite du Bâtonnier exercé sans préavis les jours de mobilisation, délégués désignés pour visiter plusieurs lieux, constats rendus publics, permanence renforcée pour les mineurs.",
+     "source": "https://votezracheletmarianne.paris/actualites/lettre-ouverte-batonnier-gardes-a-vue-lyceens/"
+    },
+    {
+     "date": "2026-10-02",
+     "constat": "2026-10-26",
+     "type": "Nouvelle proposition",
+     "titre": "Six engagements contre les LGBTQIA+phobies",
+     "detail": "Prénom d'usage dans l'annuaire et la carte professionnelle, rapport annuel anonymisé des saisines, charte LGBT+ annexée aux contrats de collaboration.",
+     "source": "https://votezracheletmarianne.paris/actualites/lutter-contre-les-lgbtqiaphobies-au-sein-de-notre-profession/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Manifeste (programme complet)",
+     "url": "https://votezracheletmarianne.paris/#manifeste",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Lettre ouverte au Bâtonnat sur les gardes à vue de lycéens",
+     "url": "https://votezracheletmarianne.paris/actualites/lettre-ouverte-batonnier-gardes-a-vue-lyceens/",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Six engagements contre les LGBTQIA+phobies",
+     "url": "https://votezracheletmarianne.paris/actualites/lutter-contre-les-lgbtqiaphobies-au-sein-de-notre-profession/",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Actualités et soutiens",
+     "url": "https://votezracheletmarianne.paris/actualites/",
+     "type": "Site de campagne"
+    }
+   ]
+  },
+  {
+   "id": "bouyssou",
+   "binome": "Bouyssou et Pascarel",
+   "personnes": [
+    {
+     "nom": "Jacques Bouyssou",
+     "role": "Candidat au bâtonnat",
+     "bio": "Serment en janvier 1994, barreaux de Paris et Madrid. Lauréat de la Conférence 1998. Fondateur d'Alerion (2003). Conseil de l'Ordre 2014-2016, fondateur de l'Observatoire international des avocats en danger (2015), de Paris Place de Droit et de la Nuit du Droit. Co-président du Litigation Committee de l'IBA jusqu'au 8 octobre 2026, premier Français à ce poste."
+    },
+    {
+     "nom": "Carole Pascarel",
+     "role": "Candidate à la vice-présidence",
+     "bio": "Serment en 2000, 13 ans au contentieux chez UGGC, cabinet depuis 2014 (famille, patrimoine, consommation, modes amiables). Conseil de l'Ordre 2015-2017, CNB 2018-2020, médiatrice nationale de la consommation de la profession 2020-2025. Vice-présidente de Lawyers 4 Women."
+    }
+   ],
+   "site": "https://bouyssoupascarel.fr/",
+   "slogan": "Accompagner aujourd'hui, préparer demain",
+   "positionnement": "Un Ordre qui rend service, l'IA diffusée dans la profession, l'attractivité internationale de Paris, la défense de l'État de droit.",
+   "programme": [
+    {
+     "titre": "Un Ordre plus facile à solliciter",
+     "mesures": [
+      "Référents par domaine, publication anonymisée des décisions disciplinaires, retour du rescrit déontologique.",
+      "Recouvrement d'honoraires accéléré avec médiation préalable facultative, saisine en ligne des litiges entre avocats.",
+      "Détection précoce des difficultés économiques, prélèvement SEPA et appels de cotisations dématérialisés."
+     ],
+     "resume": "Référents par domaine, décisions disciplinaires publiées sans noms, aide au recouvrement des honoraires et paiement des cotisations simplifié."
+    },
+    {
+     "titre": "Aider chaque cabinet à se développer",
+     "mesures": [
+      "Parcours d'accompagnement : formation, comptabilité, management, cybersécurité, achat de locaux.",
+      "Étude d'un fonds d'aide au démarrage et espaces partagés.",
+      "Observatoire économique et cellule Nouveaux Métiers (médiation, arbitrage, enquêtes internes, droit de la durabilité)."
+     ],
+     "resume": "Un accompagnement pour tous les cabinets, petits ou grands : formation, aide au démarrage et nouveaux métiers."
+    },
+    {
+     "titre": "L'intelligence artificielle au service des avocats",
+     "mesures": [
+      "R.ia.BP : réseau d'IA servant de point d'entrée unique, avec suivi des demandes et supervision humaine pour toute réponse substantielle.",
+      "Académie IA permanente pour avocats, élèves-avocats et personnel, mise en place en septembre 2026.",
+      "Guide de l'avocat augmenté (charte, solutions vérifiées, clauses types) et observatoire des usages avec le CNB."
+     ],
+     "resume": "Mettre l'IA à la portée de toute la profession : un réseau d'IA de l'Ordre, une formation permanente et un guide de bonnes pratiques."
+    },
+    {
+     "titre": "Faire rayonner Paris à l'international",
+     "mesures": [
+      "Vitrine de la médiation internationale : ratification de la convention de Singapour, registre des médiateurs.",
+      "Programme « Jeunes confrères à l'international » et lutte contre l'exercice illégal par les plateformes."
+     ],
+     "resume": "Faire de Paris une place de référence pour la médiation internationale et aider les jeunes avocats à l'étranger."
+    },
+    {
+     "titre": "Protéger la santé des avocats",
+     "mesures": [
+      "États généraux de la santé au travail et lignes d'écoute anonymes.",
+      "Charte « Équilibre et Réussite » (charge de travail, déconnexion, formation, congés) et contrôle de l'exécution du contrat de collaboration (art. 14 RIN)."
+     ],
+     "resume": "Charge de travail, santé au travail et équilibre entre vie privée et vie professionnelle."
+    },
+    {
+     "titre": "Plus d'égalité entre avocats",
+     "mesures": [
+      "Congé de naissance transposé au règlement intérieur (en vigueur depuis le 1er juillet 2026 selon eux) et aide aux cabinets individuels.",
+      "Congé de paternité de 4 semaines avec publication annuelle du taux de recours.",
+      "Signalement indépendant et confidentiel du harcèlement et des discriminations, rendez-vous sous 3 jours."
+     ],
+     "resume": "Congés de naissance et de paternité, aide aux cabinets individuels et signalement du harcèlement et des discriminations."
+    },
+    {
+     "titre": "Un Ordre écologique",
+     "mesures": [
+      "Responsable RSE et climat, bilan carbone chiffré, rapport annuel.",
+      "Observatoire des contentieux climatiques et de la biodiversité."
+     ],
+     "resume": "Un responsable climat, un bilan carbone chiffré et un suivi des contentieux climatiques et de biodiversité."
+    },
+    {
+     "titre": "Défendre la profession et l'État de droit",
+     "mesures": [
+      "Cellule de veille et de riposte législative : analyse des textes menaçants sous 48 h.",
+      "Cellule d'assistance permanente (perquisition, atteinte au secret, cyberattaque), assurance protection juridique pour les confrères victimes d'infractions.",
+      "Défense de l'aide juridictionnelle et soutien aux avocats menacés."
+     ],
+     "resume": "Veille sur les projets de loi, assistance en cas de perquisition ou de cyberattaque, défense de l'aide juridictionnelle."
+    },
+    {
+     "titre": "Rendre des comptes aux avocats",
+     "mesures": [
+      "Premières mesures annoncées mises en place en 100 jours (selon la déclaration de candidature) ou 150 jours (selon le programme) : dispositif de signalement, référents, cellules et réseau d'IA (voir « L'intelligence artificielle au service des avocats »).",
+      "Feuille de route avec, pour chaque mesure, un responsable, une échéance, un financement et des indicateurs, et tableau de bord public chaque année.",
+      "Le programme ne chiffre pas les budgets."
+     ],
+     "resume": "Comment le binôme s'engage à tenir ses promesses : délais, responsables, financement et bilan public chaque année. C'est ce que le programme appelle la « redevabilité »."
+    }
+   ],
+   "nouveautes": [
+    {
+     "date": "2026-10-19",
+     "titre": "Six pistes pour les permanences pénales",
+     "resume": "Visite des permanents au P12, canal dédié aux observations écrites de la défense en garde à vue. Même jour : rencontre « La paix et la place du droit » avec Chems-eddine Hafiz, et parution du Lamy Droit de la médiation (chapitre de Jacques Bouyssou)."
+    },
+    {
+     "date": "2026-10-15",
+     "titre": "Annonce de la charte « Équilibre et Réussite »",
+     "resume": "Cabinets qui s'engagent à appliquer le contrat de collaboration et à laisser du temps pour développer une clientèle."
+    },
+    {
+     "date": "2026-10-14",
+     "titre": "Soirée État de droit et colloque Paris-Bruxelles",
+     "resume": "Soirée avec François Zimeray et Fida Hammami (Amnesty), colloque arbitrage et déontologie, visite de trois cabinets."
+    },
+    {
+     "date": "2026-10-13",
+     "titre": "Rencontres au Palais et à Genève",
+     "resume": "Rencontre avec le Colonel Beltrame (Groupe catholique du Palais). Carole Pascarel à Genève aux Bâtonnières du Monde."
+    },
+    {
+     "date": "2026-10-05",
+     "titre": "Publication du cœur de programme",
+     "resume": "Nuit du Droit et 80 ans de la CIJ le même jour."
+    },
+    {
+     "date": "2026-10-01",
+     "titre": "Lancement du site et de la déclaration de candidature",
+     "resume": "Le site recense 28 actualités entre le 25 septembre et le 19 octobre."
+    }
+   ],
+   "tribunes": [
+    {
+     "date": "2026-10-11",
+     "titre": "Parmi les lycéens en révolte, quels avocats de demain ?"
+    },
+    {
+     "date": "2026-10-04",
+     "titre": "Hamlet, l'avocat et la conscience démocratique"
+    },
+    {
+     "date": "2026-09-27",
+     "titre": "De l'intérêt pour l'avocat d'une bibliothèque et d'un jardin"
+    }
+   ],
+   "soutiens": {
+    "nombre": "Non consultable",
+    "notables": []
+   },
+   "limites": "La page des soutiens n'était pas accessible, aucun nom n'a été récupéré.",
+   "evolutions": [
+    {
+     "date": "2026-10-19",
+     "constat": "2026-10-26",
+     "type": "Nouvelle proposition",
+     "titre": "Six pistes pour les permanences pénales",
+     "detail": "Visite des permanents au P12, canal dédié aux observations écrites de la défense en garde à vue.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-15",
+     "constat": "2026-10-26",
+     "type": "Nouvelle proposition",
+     "titre": "Charte « Équilibre et Réussite »",
+     "detail": "Cabinets qui s'engagent à appliquer le contrat de collaboration et à laisser du temps pour développer une clientèle.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-05",
+     "constat": "2026-10-26",
+     "type": "Publication",
+     "titre": "Publication du cœur de programme",
+     "detail": "Neuf axes, de l'Ordre accessible à la redevabilité.",
+     "source": "https://bouyssoupascarel.fr/programme"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Programme (neuf axes)",
+     "url": "https://bouyssoupascarel.fr/programme",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Déclaration de candidature",
+     "url": "https://bouyssoupascarel.fr/declaration",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Biographies du binôme",
+     "url": "https://bouyssoupascarel.fr/binome",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Actualités",
+     "url": "https://bouyssoupascarel.fr/actualite",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Tribunes",
+     "url": "https://bouyssoupascarel.fr/tribunes",
+     "type": "Site de campagne"
+    }
+   ]
+  },
+  {
+   "id": "fabiani",
+   "binome": "Fabiani et Naquet",
+   "personnes": [
+    {
+     "nom": "Marie-Hélène Fabiani",
+     "role": "Candidate au bâtonnat",
+     "bio": "Avocate depuis 2003, propriété intellectuelle. Conseil de l'Ordre 2021-2023, CNB, UJA de Paris, LICRA."
+    },
+    {
+     "nom": "J. Frédéric Naquet",
+     "role": "Candidat à la vice-présidence",
+     "bio": "Avocat depuis 1989, droit du travail. Conseil de l'Ordre 2020-2022, ancien secrétaire du CNB, président pendant 15 ans de l'ONG Action Education."
+    }
+   ],
+   "site": "https://www.fabiani-naquet.paris/",
+   "slogan": "Construire l'Ordre dont nous avons besoin",
+   "positionnement": "Entrepreneuriat et confraternité, avec la liberté comme valeur centrale. Enjeux cités : réformes de la Justice après 2027, IA utilisée par près de 3 avocats sur 4.",
+   "programme": [
+    {
+     "titre": "Aider les avocats à gérer leur cabinet",
+     "mesures": [
+      "Bureau administratif externalisé pour l'URSSAF et les impôts, en partenariat avec l'administration.",
+      "Plateforme de transmission de clientèles avec rétrocession d'un pourcentage du chiffre d'affaires.",
+      "Fixation des honoraires restructurée (délai actuel jusqu'à 8 mois), injonction de payer avec exécution provisoire jusqu'à 5 000 € HT.",
+      "Accompagnement des premières années, coworking, prêts bancaires avec garanties de l'Ordre.",
+      "Cellule de médiateurs confrères, distincte du disciplinaire.",
+      "Lobbying auprès de Bercy : baisse de TVA sur les dossiers de particuliers, statut de mandataire social, lutte contre l'exercice illégal."
+     ],
+     "resume": "Moins de tâches administratives, aide pour transmettre un cabinet et honoraires payés plus vite."
+    },
+    {
+     "titre": "Formation, numérique et IA",
+     "mesures": [
+      "EFB : révision du syllabus, sessions plus petites, stages pratiques, gestion et management, gestion du stress.",
+      "Comité IA, formation continue, IA agentique dans l'environnement informatique de l'Ordre, environnement sécurisé éventuellement mutualisé avec d'autres barreaux.",
+      "Logiciels gratuits (facturation, stockage, visio), stockage souverain, cybersécurité et RGPD."
+     ],
+     "resume": "Moderniser la formation des jeunes avocats et fournir des outils numériques et d'IA sécurisés."
+    },
+    {
+     "titre": "Santé, entraide et protection sociale",
+     "mesures": [
+      "Hotline d'écoute d'urgence par des confrères formés, supervision entre pairs, référent handicap avec une place au Conseil.",
+      "Contrat ordinal facultatif de mutuelle et prévoyance sans hausse des cotisations de base.",
+      "Avance des indemnités de congé parentalité via la CARPA, substitution pendant les congés maternité.",
+      "Maison de santé des avocats de Paris et EHPAD dédié."
+     ],
+     "resume": "Écoute d'urgence, mutuelle facultative, avance des congés de parentalité et maison de santé."
+    },
+    {
+     "titre": "Transparence et indépendance de l'Ordre",
+     "mesures": [
+      "Comptes de l'Ordre et de la CARPA publics, rapport annuel sur l'usage des cotisations.",
+      "Publication des sanctions disciplinaires et des statistiques, avis déontologiques anonymisés en open data, assistant déontologique IA.",
+      "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat."
+     ],
+     "resume": "Comptes publics, publication des sanctions disciplinaires et avis déontologiques accessibles."
+    },
+    {
+     "titre": "Défendre la profession et la faire respecter",
+     "mesures": [
+      "Cellule ordinale de veille législative et d'accompagnement des avocats entendus en audition libre ou en garde à vue.",
+      "Opposition à la loi SURE et au plaider-coupable en matière criminelle.",
+      "Rencontres par spécialité avec magistrats, universitaires, greffiers, notaires, commissaires de justice.",
+      "Référents auprès des ministères et ambassades, « G7 des grands barreaux » et centre international de médiation à Paris."
+     ],
+     "resume": "Veille sur les lois, accompagnement des avocats en garde à vue, relations avec les magistrats et ouverture à l'international."
+    }
+   ],
+   "nouveautes": [
+    {
+     "date": "2026-09-30",
+     "titre": "Article du Monde du Droit : « L'avocat est un entrepreneur citoyen »",
+     "resume": "Présentation du binôme et de sa ligne entrepreneuriale."
+    },
+    {
+     "date": "2026-09-28",
+     "titre": "Remise des diplômes de l'EFB",
+     "resume": "Promotion Yasmina Reza."
+    },
+    {
+     "date": "2026-09-25",
+     "titre": "Congrès de l'ACE à La Grande-Motte",
+     "resume": ""
+    },
+    {
+     "date": "2026-09-14",
+     "titre": "Premiers à signer le registre des candidatures",
+     "resume": "Signature le matin de l'ouverture, les 14 et 15 septembre."
+    }
+   ],
+   "soutiens": {
+    "nombre": "~304 témoignages",
+    "notables": [
+     "Mario Stasi (président de la LICRA)",
+     "Xavier Delcros (avocat honoraire)",
+     "Vincent Maurel (associé KPMG)",
+     "Béatrice Weiss Gout",
+     "Marie-Hélène Cohen Guilleminet",
+     "Jeanne-Zoé Targa"
+    ]
+   },
+   "limites": "Seule la première des trois pages d'actualités du site a été lue.",
+   "evolutions": [
+    {
+     "date": "2026-10-26",
+     "constat": "2026-10-26",
+     "type": "Version initiale",
+     "titre": "Programme en cinq piliers enregistré",
+     "detail": "Aucune date de publication ni de modification n'est indiquée sur le PDF de programme. Les changements seront datés à partir de cette version.",
+     "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Programme détaillé (PDF, cinq piliers)",
+     "url": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Notre programme",
+     "url": "https://www.fabiani-naquet.paris/notre-programme",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Actualités et agenda",
+     "url": "https://www.fabiani-naquet.paris/actualite",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "Soutiens",
+     "url": "https://www.fabiani-naquet.paris/soutiens",
+     "type": "Site de campagne"
+    },
+    {
+     "label": "« L'avocat est un entrepreneur citoyen », Le Monde du Droit",
+     "url": "https://www.lemondedudroit.fr/institutions/105940-marie-helene-fabiani-et-frederic-naquet-binome-barreaudeparis-plus-entrepreneurial.html",
+     "type": "Presse"
+    }
+   ]
+  },
+  {
+   "id": "surin",
+   "binome": "Surin et Griguer",
+   "personnes": [
+    {
+     "nom": "Clarisse Surin",
+     "role": "Candidate au bâtonnat",
+     "bio": "Serment en 2008, droit du travail et pénal du travail. Conseil de l'Ordre 2020-2022, CNB 2021-2023 (vice-présidente des commissions Numérique et Prospective). Candidate au co-bâtonnat 2024 avec Thomas Baudesson, qualifiés pour le 2e tour, battus par Degos et Denoit-Benteux (46 % des suffrages)."
+    },
+    {
+     "nom": "Merav Griguer",
+     "role": "Candidate à la vice-présidence",
+     "bio": "Expérience du Conseil de l'Ordre et du CNB, cabinets d'affaires, plateformes internationales, enseignement, numérique, données et IA. Pas de biographie détaillée sur le site."
+    }
+   ],
+   "site": "https://www.batonnatsuringriguer.com/",
+   "slogan": "Écrivons ensemble le barreau de demain",
+   "positionnement": "Moderniser l'Ordre, le rendre utile à tous les modes d'exercice et restaurer la confiance. Beaucoup de mesures sont annoncées sous conditions (« sous réserve », « à définir »).",
+   "programme": [
+    {
+     "titre": "Règles professionnelles et fonctionnement de l'Ordre",
+     "mesures": [
+      "Outil de signalement sécurisé, référent ordinal en déontologie numérique, adaptation du RIBP à l'IA.",
+      "Service disciplinaire professionnalisé aux décisions plus lisibles.",
+      "Réponse ordinale sous 48 h aux alertes d'incidents d'audience, formations croisées avec les magistrats.",
+      "Travaux du Conseil ouverts (sous réserve de confidentialité), audit des services, réflexion sur le plafonnement des frais de campagne."
+     ],
+     "resume": "Une discipline plus lisible et un Ordre plus ouvert. Les règles professionnelles (déontologie) sont celles que les avocats doivent respecter."
+    },
+    {
+     "titre": "Cotisations et économie des cabinets",
+     "mesures": [
+      "Baisse des cotisations jusqu'à -30 % à l'horizon 2030, conditionnée à la rationalisation des coûts, au numérique et à de nouvelles ressources. Plan financier pluriannuel public voté chaque année.",
+      "Concertation sur l'accès à la profession (capacités d'accueil, conditions d'accès), à préciser.",
+      "Fonds de solidarité couvrant partiellement les rétrocessions impayées en procédure collective, financement à définir.",
+      "Honoraires de valeur, conventions types, étude d'un abonnement juridique de proximité.",
+      "Transmission et patrimonialité des parts, réflexion encadrée sur le financement et l'ouverture du capital.",
+      "Jeunes : formation renforcée, mentorat, associations plus précoces."
+     ],
+     "resume": "Baisse des cotisations sous conditions, aides financières, transmission des cabinets et soutien aux jeunes."
+    },
+    {
+     "titre": "Conditions de travail et santé",
+     "mesures": [
+      "Droit d'option entre collaboration libérale et salariat les trois premières années (demande au CNB et à la Chancellerie).",
+      "AVOCATCARE : pause de 3 mois une fois par carrière, modalités à définir. Guichet santé et prévoyance, bilans de santé.",
+      "Tolérance zéro pour le harcèlement, les discriminations et les violences.",
+      "Rencontres professionnelles mensuelles ouvertes aux autres professions."
+     ],
+     "resume": "Choix de statut pour les jeunes collaborateurs, pause de carrière, santé et lutte contre le harcèlement."
+    },
+    {
+     "titre": "Avenir de la profession : IA, formation, environnement",
+     "mesures": [
+      "Offre d'IA professionnelle hébergée en Europe, à coût raisonnable, avec outil d'anonymisation (évaluation préalable).",
+      "Institut de la formation du barreau de Paris avec parcours certifiants.",
+      "« La route du droit » pour l'accès au droit, contenu à préciser.",
+      "Label de conformité environnementale et 2e pépinière d'affaires écoresponsable (critères et objectif 2030 à préciser)."
+     ],
+     "resume": "Une offre d'IA européenne, une formation certifiante et des labels environnementaux. Plusieurs mesures restent à préciser."
+    }
+   ],
+   "nouveautes": [],
+   "soutiens": {
+    "nombre": "Aucun soutien listé",
+    "notables": []
+   },
+   "limites": "Aucune actualité datée sur le site. L'espace « Prendre part à la conversation » n'est pas encore ouvert. Aucun article de presse indépendant récent n'a été trouvé.",
+   "evolutions": [
+    {
+     "date": "2026-10-26",
+     "constat": "2026-10-26",
+     "type": "Version initiale",
+     "titre": "Programme en quatre thèmes enregistré",
+     "detail": "Le site ne date aucune publication. Les changements seront datés à partir de cette version.",
+     "source": "https://www.batonnatsuringriguer.com/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Engagements, convictions et biographies",
+     "url": "https://www.batonnatsuringriguer.com/",
+     "type": "Site de campagne"
+    }
+   ]
+  }
+ ],
+ "comparatif": [
+  {
+   "theme": "Cotisations",
+   "items": {
+    "saada": "Cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
+    "bouyssou": "Prélèvement SEPA et appels dématérialisés, pas de chiffre.",
+    "fabiani": "Mutuelle facultative sans hausse des cotisations de base.",
+    "surin": "Jusqu'à -30 % d'ici 2030, sous conditions."
+   }
+  },
+  {
+   "theme": "Collaborateurs",
+   "items": {
+    "saada": "6e semaine de congés et droit à la déconnexion.",
+    "bouyssou": "Charte « Équilibre et Réussite », contrôle de l'article 14 RIN, congé de paternité de 4 semaines.",
+    "fabiani": "Bureau administratif externalisé, hotline d'écoute.",
+    "surin": "Droit d'option salariat ou libéral, AVOCATCARE."
+   }
+  },
+  {
+   "theme": "Intelligence artificielle",
+   "items": {
+    "saada": "Laboratoire d'intelligence collective avec des chercheurs.",
+    "bouyssou": "R.ia.BP et Académie IA.",
+    "fabiani": "Comité IA, IA agentique, assistant déontologique.",
+    "surin": "Offre d'IA hébergée en Europe, outil d'anonymisation."
+   }
+  },
+  {
+   "theme": "Transparence et démocratie",
+   "items": {
+    "saada": "La plus ambitieuse : référendums, tirage au sort, assemblée générale annuelle.",
+    "bouyssou": "Tableau de bord public annuel.",
+    "fabiani": "Comptes de l'Ordre et de la CARPA publics.",
+    "surin": "Budget pluriannuel public, Conseil ouvert."
+   }
+  },
+  {
+   "theme": "Installation et transmission",
+   "items": {
+    "saada": "Pépinière du boulevard Sébastopol, locaux à loyers maîtrisés.",
+    "bouyssou": "Fonds d'aide au démarrage à l'étude, espaces partagés.",
+    "fabiani": "Plateforme de transmission de clientèles, coworking.",
+    "surin": "Patrimonialité des parts, réflexion sur l'ouverture du capital."
+   }
+  },
+  {
+   "theme": "Protection sociale",
+   "items": {
+    "saada": "Prévoyance renégociée, congé de naissance supplémentaire de deux mois.",
+    "bouyssou": "Congé de naissance transposé au règlement intérieur.",
+    "fabiani": "Maison de santé des avocats, EHPAD dédié.",
+    "surin": "Guichet santé et prévoyance, bilans de santé."
+   }
+  }
+ ],
+ "journal": [
+  {
+   "date": "2026-10-26",
+   "resume": "Première version : programmes complets, biographies, actualités et soutiens des quatre binômes. Les évolutions de programme sont datées à partir de cette version."
+  },
+  {
+   "date": "2026-10-26",
+   "resume": "Aucun changement : pas de nouvelle mesure ni modification de programme chez les quatre binômes depuis la dernière vérification ; calendrier officiel inchangé (débat le 1er décembre, scrutin les 15 et 17 décembre)."
+  }
+ ],
+ "sources_calendrier": [
+  {
+   "label": "Ordre des avocats de Paris, élections ordinales 2026",
+   "url": "https://www.avocatparis.org/elections-ordinales-2026"
+  }
+ ]
+}
