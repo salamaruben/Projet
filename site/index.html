@@ -464,134 +464,282 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   }
   function ctxText(data) { return String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, ""); }
 
+  var fontCache = null;
+  function b64(buf) {
+    var b = new Uint8Array(buf), s = "", i, n = 0x8000;
+    for (i = 0; i < b.length; i += n) s += String.fromCharCode.apply(null, b.subarray(i, i + n));
+    return btoa(s);
+  }
+  function loadFonts() {
+    if (fontCache) return fontCache;
+    var names = ["Montserrat-Regular.ttf", "Montserrat-Bold.ttf", "Montserrat-ExtraBold.ttf"];
+    fontCache = Promise.all(names.map(function (n) {
+      return fetch("fonts/" + n).then(function (r) { if (!r.ok) throw new Error(n); return r.arrayBuffer(); }).then(function (buf) { return [n, b64(buf)]; });
+    })).catch(function () { fontCache = null; return null; });
+    return fontCache;
+  }
+  function mix(c, k) { return [Math.round(c[0] * k + 255 * (1 - k)), Math.round(c[1] * k + 255 * (1 - k)), Math.round(c[2] * k + 255 * (1 - k))]; }
+
   function buildPdf(data, jsPDF) {
+    return loadFonts().then(function (fonts) { return drawPdf(data, jsPDF, fonts); });
+  }
+
+  function drawPdf(data, jsPDF, fonts) {
     var doc = new jsPDF({ unit: "mm", format: "a4" });
-    var W = 210, H = 297, M = 18, CW = W - 2 * M, y = M;
-    var INK = [43, 23, 16], MUTED = [107, 84, 70], DEEP = [59, 31, 23], SAND = [239, 224, 203], ACC = [187, 78, 46], LINK = [36, 64, 200];
-    function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
-    function newPage() { doc.addPage(); y = M; }
-    function ensure(h) { if (y + h > H - 20) newPage(); }
-    function para(text, o) {
-      o = o || {};
-      var size = o.size || 10, lh = size * 0.3528 * 1.45, indent = o.indent || 0, x = M + indent;
-      doc.setFont("helvetica", o.style || "normal"); doc.setFontSize(size); color(o.color || INK);
-      var ls = doc.splitTextToSize(pt(text), CW - indent);
-      ls.forEach(function (l, i) {
-        ensure(lh);
-        if (o.bullet && i === 0) { doc.setFillColor(o.dot[0], o.dot[1], o.dot[2]); doc.circle(x - 3, y + lh * 0.55, 0.6, "F"); }
-        doc.text(l, x, y + lh * 0.8); y += lh;
-      });
-      y += o.after == null ? 1.6 : o.after;
+    var F = { reg: ["helvetica", "normal"], bold: ["helvetica", "bold"], xb: ["helvetica", "bold"] };
+    if (fonts) {
+      fonts.forEach(function (f) { doc.addFileToVFS(f[0], f[1]); });
+      doc.addFont("Montserrat-Regular.ttf", "Mont", "normal");
+      doc.addFont("Montserrat-Bold.ttf", "Mont", "bold");
+      doc.addFont("Montserrat-ExtraBold.ttf", "MontXB", "normal");
+      F = { reg: ["Mont", "normal"], bold: ["Mont", "bold"], xb: ["MontXB", "normal"] };
     }
-    function heading(text, size, col) { ensure(size * 0.5 + 6); y += 3; para(text, { size: size, style: "bold", color: col || INK, after: 2 }); }
-    function link(label, url, x, size) {
-      doc.setFont("helvetica", "normal"); doc.setFontSize(size || 9.5); color(LINK);
-      doc.textWithLink(pt(label), x, y + 3.6, { url: url });
-      return doc.getTextWidth(pt(label));
+    var W = 210, H = 297, M = 20, CW = W - 2 * M, TOP = 26, BOT = H - 24, y = TOP;
+    var INK = [43, 23, 16], MUTED = [107, 84, 70], DEEP = [59, 31, 23], SAND = [239, 224, 203], BLUSH = [246, 234, 224], ACC = [187, 78, 46], LINE = [220, 200, 176], LINK = [36, 64, 200], WHITE = [255, 255, 255];
+    var label = "", pageLabel = {};
+    function font(k) { doc.setFont(F[k][0], F[k][1]); }
+    function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
+    function fill(c) { doc.setFillColor(c[0], c[1], c[2]); }
+    function stroke(c, w) { doc.setDrawColor(c[0], c[1], c[2]); doc.setLineWidth(w || 0.2); }
+    function lh(size, k) { return size * 0.3528 * (k || 1.5); }
+    function wrap(t, size, w, fk) { font(fk || "reg"); doc.setFontSize(size); return doc.splitTextToSize(pt(t), w); }
+    function newPage(l) { doc.addPage(); y = TOP; if (l != null) label = l; pageLabel[doc.getNumberOfPages()] = label; }
+    function ensure(h) { if (y + h > BOT) newPage(); }
+    /* draws lines with top at yy; returns height */
+    function put(lines, x, yy, size, fk, col, k, opts) {
+      font(fk); doc.setFontSize(size); color(col);
+      var l = lh(size, k);
+      lines.forEach(function (s, i) { doc.text(s, x, yy + l * i + size * 0.3528 * 0.82, opts); });
+      return lines.length * l;
+    }
+    function para(t, o) {
+      o = o || {};
+      var size = o.size || 10, k = o.k || 1.55, x = M + (o.indent || 0), w = CW - (o.indent || 0), l = lh(size, k);
+      var ls = wrap(t, size, w, o.font);
+      ls.forEach(function (s, i) {
+        ensure(l);
+        if (o.dot && i === 0) { fill(o.dot); doc.circle(x - 3.4, y + l * 0.5, 0.75, "F"); }
+        put([s], x, y, size, o.font || "reg", o.color || INK, k);
+        y += l;
+      });
+      y += o.after == null ? 1.8 : o.after;
+    }
+    function caps(t, x, yy, size, col, fk, cs, align) {
+      font(fk || "bold"); doc.setFontSize(size); color(col);
+      var s = pt(t).toUpperCase();
+      var xx = x;
+      if (align === "right") xx = x - doc.getTextWidth(s) - cs * (s.length - 1) * 0.3528 * 0.5;
+      doc.text(s, xx, yy + size * 0.3528 * 0.82, { charSpace: cs });
+    }
+    function h2(t, col, size) {
+      ensure(18); y += 2;
+      put([pt(t).toUpperCase()], M, y, size || 15, "xb", col || INK, 1.2); y += lh(size || 15, 1.2) + 1.5;
+    }
+    function linkAt(lbl, url, x, yy, size, col) {
+      font("reg"); doc.setFontSize(size); color(col || LINK);
+      doc.textWithLink(pt(lbl), x, yy + size * 0.3528 * 0.82, { url: url });
+      return doc.getTextWidth(pt(lbl));
     }
     var maj = data.maj || todayISO();
+    var cols = {}; data.candidats.forEach(function (c) { cols[c.id] = rgb(PDF_COL[c.id] || "#3b1f17"); });
+    function nMes(c) { return c.programme.reduce(function (s, a) { return s + a.mesures.length; }, 0); }
 
-    /* Cover */
-    doc.setFillColor(DEEP[0], DEEP[1], DEEP[2]); doc.rect(0, 0, W, 136, "F");
-    doc.setFont("helvetica", "normal"); doc.setFontSize(9); color([205, 184, 166]);
-    doc.text("ORDRE DES AVOCATS DE PARIS  -  MANDATURE 2028-2029", M, 30);
-    doc.setFont("helvetica", "bold"); doc.setFontSize(46); color(SAND);
-    doc.text("BÂTONNAT", M, 70);
-    color([228, 126, 86]); doc.text("DE PARIS 2027", M, 88);
-    doc.setFont("helvetica", "normal"); doc.setFontSize(13); color(SAND);
-    doc.text("Les programmes des quatre binômes candidats", M, 108);
-    doc.setFontSize(10.5); color([205, 184, 166]);
-    doc.text("Édition du " + pt(fmt(maj, true)) + "  -  scrutin les 15 et 17 décembre 2026", M, 116);
-    y = 150;
-    para(ctxText(data), { size: 10.5, color: MUTED, after: 6 });
-    heading("Les binômes", 13, ACC);
+    /* ---------- Cover ---------- */
+    fill(SAND); doc.rect(0, 0, W, H, "F");
+    caps("Ordre des avocats de Paris", M, 28, 8.5, ACC, "bold", 0.9);
+    caps("Mandature 2028-2029", W - M, 28, 8.5, MUTED, "reg", 0.9, "right");
+    font("xb"); doc.setFontSize(54); color(INK); doc.text("BÂTONNAT", M - 1, 78);
+    color(ACC); doc.setFontSize(54); doc.text("DE PARIS", M - 1, 96); doc.text("2027", M - 1, 114);
+    fill(DEEP); doc.rect(M, 134, CW, 58, "F");
+    stroke([106, 70, 56], 0.3); doc.rect(M + 3, 137, CW - 6, 52, "S");
+    font("xb"); doc.setFontSize(17); color(SAND); doc.text(pt("LES PROGRAMMES DES QUATRE"), M + 10, 153); doc.text(pt("BINÔMES CANDIDATS"), M + 10, 162);
+    font("reg"); doc.setFontSize(9.5); color([205, 184, 166]);
+    doc.text(pt("Édition du " + fmt(maj, true)), M + 10, 175);
+    doc.text(pt("Scrutin les 15 et 17 décembre 2026"), M + 10, 181);
+    var cy = 214;
     data.candidats.forEach(function (c) {
-      var col = rgb(PDF_COL[c.id] || "#3b1f17");
-      ensure(7); doc.setFillColor(col[0], col[1], col[2]); doc.rect(M, y + 0.8, 3.2, 3.2, "F");
-      doc.setFont("helvetica", "bold"); doc.setFontSize(10.5); color(INK); doc.text(pt(c.binome), M + 6, y + 3.6);
-      doc.setFont("helvetica", "normal"); color(MUTED); doc.text(pt(c.slogan), M + 10 + doc.getTextWidth(pt(c.binome)), y + 3.6);
-      y += 6.5;
+      fill(cols[c.id]); doc.circle(M + 2, cy + 2.2, 2, "F");
+      font("bold"); doc.setFontSize(11); color(INK); doc.text(pt(c.binome), M + 8, cy + 3.4);
+      font("reg"); doc.setFontSize(8.5); color(MUTED); doc.text(pt(c.slogan), M + 8, cy + 8.2);
+      cy += 15;
+    });
+    pageLabel[1] = "";
+
+    /* ---------- Overview ---------- */
+    newPage("Vue d'ensemble");
+    h2("Vue d'ensemble", INK, 22);
+    para(ctxText(data), { size: 9.5, color: MUTED, after: 3 });
+    data.candidats.forEach(function (c) {
+      var inner = CW - 14;
+      var pos = wrap(c.positionnement, 8.5, inner, "reg");
+      var bh = 26.5 + pos.length * lh(8.5, 1.5);
+      ensure(bh + 4);
+      fill(BLUSH); doc.roundedRect(M, y, CW, bh, 1.5, 1.5, "F");
+      fill(cols[c.id]); doc.circle(M + 6, y + 8.2, 1.9, "F");
+      font("xb"); doc.setFontSize(13); color(INK); doc.text(pt(c.binome.toUpperCase()), M + 11, y + 9.6);
+      font("bold"); doc.setFontSize(9); color(INK); doc.text(pt("« " + c.slogan + " »"), M + 11, y + 15.4);
+      var ty = put(pos, M + 11, y + 19.5, 8.5, "reg", MUTED, 1.5);
+      font("bold"); doc.setFontSize(8); color(ACC);
+      doc.text(nMes(c) + " mesures  ·  " + (c.nouveautes || []).length + " actualités  ·  " + (c.evolutions || []).length + " évolutions", M + 11, y + 19.5 + ty + 5);
+      y += bh + 3;
     });
     if ((data.calendrier || []).length) {
-      heading("Calendrier du scrutin", 13, ACC);
+      h2("Calendrier du scrutin", INK, 15); y += 1;
       data.calendrier.forEach(function (e) {
-        ensure(6); doc.setFont("helvetica", "bold"); doc.setFontSize(10); color(INK); doc.text(pt(fmt(e.date, true)), M, y + 3.6);
-        doc.setFont("helvetica", "normal"); color(INK); doc.text(pt(e.label), M + 34, y + 3.6); y += 5.8;
+        var det = e.detail ? wrap(e.detail, 8, CW - 42, "reg") : [];
+        var bh = Math.max(6, 5 + det.length * lh(8, 1.45) + 1);
+        ensure(bh);
+        font("xb"); doc.setFontSize(9.5); color(ACC); doc.text(pt(fmt(e.date, true)), M, y + 4.2);
+        font("bold"); doc.setFontSize(9.5); color(INK); doc.text(pt(e.label), M + 40, y + 4.2);
+        if (det.length) put(det, M + 40, y + 5.2, 8, "reg", MUTED, 1.45);
+        y += bh + 1.2;
       });
     }
-    y += 4;
-    para("Programmes présentés par les candidats eux-mêmes, avec leurs sources. Document généré à partir des données les plus récentes du site.", { size: 9, color: MUTED, style: "italic" });
 
-    /* Candidates */
+    /* ---------- Candidates ---------- */
     data.candidats.forEach(function (c) {
-      var col = rgb(PDF_COL[c.id] || "#3b1f17");
-      newPage();
-      doc.setFillColor(col[0], col[1], col[2]); doc.rect(0, 0, W, 42, "F");
-      doc.setFont("helvetica", "bold"); doc.setFontSize(24); doc.setTextColor(255, 255, 255); doc.text(pt(c.binome), M, 22);
-      doc.setFont("helvetica", "italic"); doc.setFontSize(12); doc.text(pt("« " + c.slogan + " »"), M, 32);
-      y = 54;
-      para(c.positionnement, { size: 10.5, color: MUTED, after: 3 });
-      if (c.site) { doc.setFont("helvetica", "normal"); doc.setFontSize(9.5); color(MUTED); doc.text("Site de campagne : ", M, y + 3.6); link(c.site, c.site, M + doc.getTextWidth("Site de campagne : ")); y += 7; }
-      heading("Le binôme", 13, col);
-      c.personnes.forEach(function (p) {
-        para(p.nom + "  -  " + p.role, { size: 10.5, style: "bold", after: 0.6 });
-        para(p.bio, { size: 9.5, color: MUTED, after: 3 });
+      var col = cols[c.id];
+      newPage(c.binome);
+      /* header band, full width (starts above the running header) */
+      var bandH = 62;
+      fill(col); doc.rect(0, 0, W, bandH, "F");
+      caps("Programme", M, 22, 8.5, WHITE, "bold", 0.9);
+      font("xb"); doc.setFontSize(27); doc.setTextColor(255, 255, 255);
+      var nl = doc.splitTextToSize(pt(c.binome.toUpperCase()), CW);
+      doc.text(nl, M, 36);
+      font("bold"); doc.setFontSize(11.5);
+      doc.text(pt("« " + c.slogan + " »"), M, 36 + nl.length * 10 + 4);
+      pageLabel[doc.getNumberOfPages()] = "";
+      y = bandH + 10;
+      para(c.positionnement, { size: 10, color: INK, after: 2 });
+      if (c.site) { font("reg"); doc.setFontSize(8.5); color(MUTED); doc.text("Site de campagne :", M, y + 3); linkAt(c.site, c.site, M + 33, y, 8.5); y += 8; }
+
+      /* people cards */
+      h2("Le binôme", col, 13);
+      var cw2 = (CW - 5) / 2;
+      var cards = c.personnes.map(function (p) {
+        var nm = wrap(p.nom, 12, cw2 - 8, "xb"), bio = wrap(p.bio, 8, cw2 - 8, "reg");
+        return { p: p, nm: nm, bio: bio, h: 5 + 4 + nm.length * lh(12, 1.25) + 2 + bio.length * lh(8, 1.5) + 5 };
       });
-      heading("Programme", 13, col);
+      var ch = Math.max.apply(null, cards.map(function (k) { return k.h; }));
+      ensure(ch + 4);
+      cards.forEach(function (k, i) {
+        var x = M + i * (cw2 + 5);
+        fill(BLUSH); stroke(LINE, 0.2); doc.roundedRect(x, y, cw2, ch, 1.5, 1.5, "FD");
+        caps(k.p.role, x + 4, y + 4.5, 6.8, col, "bold", 0.5);
+        var hh = put(k.nm, x + 4, y + 10, 12, "xb", INK, 1.25);
+        put(k.bio, x + 4, y + 10 + hh + 2, 8, "reg", MUTED, 1.5);
+      });
+      y += ch + 8;
+
+      /* programme */
+      h2("Programme · " + nMes(c) + " mesures", col, 13);
       c.programme.forEach(function (a) {
-        ensure(16); y += 1.5;
-        para(a.titre, { size: 11.5, style: "bold", after: 0.8 });
-        if (a.resume) para(a.resume, { size: 9.5, style: "italic", color: MUTED, after: 1.4 });
-        a.mesures.forEach(function (m) { para(m, { size: 10, indent: 6, bullet: true, dot: col, after: 1.2 }); });
-        y += 1;
+        var tl = wrap(a.titre, 12, CW - 6, "bold");
+        var rs = a.resume ? wrap(a.resume, 8.5, CW - 10, "reg") : [];
+        var first = a.mesures[0] ? wrap(a.mesures[0], 9.5, CW - 6, "reg") : [];
+        ensure(tl.length * lh(12, 1.3) + rs.length * lh(8.5, 1.5) + 9 + first.length * lh(9.5, 1.55) + 4);
+        y += 3;
+        fill(col); doc.circle(M + 1.4, y + 3.2, 1.4, "F");
+        y += put(tl, M + 6, y, 12, "bold", INK, 1.3);
+        if (rs.length) {
+          var bh = rs.length * lh(8.5, 1.5) + 4.4;
+          fill(BLUSH); doc.roundedRect(M + 6, y + 0.6, CW - 6, bh, 1.2, 1.2, "F");
+          put(rs, M + 9, y + 2.8, 8.5, "reg", MUTED, 1.5);
+          y += bh + 3;
+        } else y += 1.5;
+        a.mesures.forEach(function (m) { para(m, { size: 9.5, indent: 11, dot: col, after: 1.6 }); });
+        y += 1.5;
       });
+
+      /* sources */
       if ((c.sources || []).length) {
-        heading("Sources du programme", 13, col);
+        var sh = 12 + c.sources.length * 5.6;
+        ensure(sh + 6); y += 4;
+        fill(BLUSH); doc.roundedRect(M, y, CW, sh, 1.5, 1.5, "F");
+        caps("Sources du programme", M + 5, y + 4.6, 7.5, col, "bold", 0.6);
+        var sy = y + 11;
         c.sources.forEach(function (s) {
-          ensure(6);
-          var w = link(s.label, s.url, M + 2);
-          doc.setFont("helvetica", "normal"); doc.setFontSize(9); color(MUTED); doc.text(pt("  (" + s.type + ")"), M + 2 + w, y + 3.6);
-          y += 5.6;
+          var w = linkAt(s.label, s.url, M + 5, sy, 9);
+          font("reg"); doc.setFontSize(8); color(MUTED); doc.text(pt("  " + s.type), M + 5 + w, sy + 2.9);
+          sy += 5.6;
         });
+        y += sh + 4;
       }
+
+      /* evolutions */
       var evo = (c.evolutions || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
       if (evo.length) {
-        heading("Évolutions du programme", 13, col);
+        h2("Évolutions du programme", col, 13);
         evo.forEach(function (e) {
-          ensure(18);
-          para(e.titre + "  [" + e.type + "]", { size: 10.5, style: "bold", after: 0.6 });
-          if (e.detail) para(e.detail, { size: 9.5, color: MUTED, after: 0.8 });
-          para("Daté du " + fmt(e.date, true) + " · Constaté le " + fmt(e.constat || e.date, true) + (e.constat_heure ? " à " + e.constat_heure : ""), { size: 8.5, color: MUTED, after: 0.6 });
-          if (e.source) { doc.setFont("helvetica", "normal"); doc.setFontSize(8.5); color(MUTED); doc.text("Source : ", M, y + 3.4); link(host(e.source), e.source, M + doc.getTextWidth("Source : "), 8.5); y += 5.5; }
-          y += 1.2;
+          var tt = wrap(e.titre, 10, CW - 36, "bold");
+          var dt = e.detail ? wrap(e.detail, 8.5, CW - 36, "reg") : [];
+          var eh = tt.length * lh(10, 1.4) + 4 + dt.length * lh(8.5, 1.5) + 4 + (e.source ? 5 : 0) + 4;
+          ensure(eh);
+          stroke(LINE, 0.2); doc.line(M, y, W - M, y); y += 3;
+          font("xb"); doc.setFontSize(8.5); color(ACC); doc.text(pt(fmt(e.date, true)), M, y + 3);
+          var hh = put(tt, M + 32, y, 10, "bold", INK, 1.4);
+          caps(e.type, M + 32, y + hh + 0.4, 6.5, col, "bold", 0.5); y += hh + 4.6;
+          if (dt.length) y += put(dt, M + 32, y, 8.5, "reg", MUTED, 1.5) + 0.8;
+          font("reg"); doc.setFontSize(7.5); color(MUTED);
+          doc.text(pt("Daté du " + fmt(e.date, true) + " · Constaté le " + fmt(e.constat || e.date, true) + (e.constat_heure ? " à " + e.constat_heure : "")), M + 32, y + 2.6); y += 4.4;
+          if (e.source) { font("reg"); doc.setFontSize(7.5); color(MUTED); doc.text("Source :", M + 32, y + 2.6); linkAt(host(e.source), e.source, M + 32 + 11.5, y, 7.5); y += 5; }
+          y += 2;
         });
       }
-      if (c.limites) { y += 3; para("Limites de cette fiche : " + c.limites, { size: 9, style: "italic", color: MUTED }); }
+      if (c.limites) {
+        var lm = wrap("Limites de cette fiche : " + c.limites, 8.5, CW - 10, "reg");
+        var lhh = lm.length * lh(8.5, 1.5) + 8;
+        ensure(lhh + 6); y += 6;
+        stroke(MUTED, 0.2); doc.setLineDashPattern([1.2, 1.2], 0); doc.roundedRect(M, y, CW, lhh, 1.5, 1.5, "S"); doc.setLineDashPattern([], 0);
+        put(lm, M + 5, y + 4, 8.5, "reg", MUTED, 1.5); y += lhh;
+      }
     });
 
-    /* Comparison */
+    /* ---------- Comparison ---------- */
     if ((data.comparatif || []).length) {
-      newPage();
-      para("Comparatif par thème", { size: 20, style: "bold", after: 2 });
-      para("Mesures reprises telles que les candidats les présentent. « Non précisé » : aucune mesure trouvée sur ce thème.", { size: 9.5, color: MUTED, after: 4 });
+      newPage("Comparatif");
+      h2("Comparatif par thème", INK, 22);
+      para("Mesures reprises telles que les candidats les présentent. « Non précisé » : aucune mesure trouvée sur ce thème.", { size: 9, color: MUTED, after: 4 });
+      var cw2c = (CW - 4) / 2;
       data.comparatif.forEach(function (r) {
-        ensure(40); y += 2;
-        heading(r.theme, 12.5, ACC);
-        data.candidats.forEach(function (c) {
-          var col = rgb(PDF_COL[c.id] || "#3b1f17");
-          para(c.binome + " : " + (r.items[c.id] || "Non précisé"), { size: 9.5, indent: 5, bullet: true, dot: col, after: 1.2, color: r.items[c.id] ? INK : MUTED });
+        var cells = data.candidats.map(function (c) {
+          var t = r.items[c.id];
+          var ls = wrap(t || "Non précisé", 8.5, cw2c - 8, "reg");
+          return { c: c, t: t, ls: ls, h: 9 + ls.length * lh(8.5, 1.5) + 3.5 };
         });
+        var rowH = [Math.max(cells[0].h, cells[1] ? cells[1].h : 0), Math.max(cells[2] ? cells[2].h : 0, cells[3] ? cells[3].h : 0)];
+        var tl = wrap(r.theme.toUpperCase(), 12.5, CW, "xb");
+        ensure(tl.length * lh(12.5, 1.2) + 8 + rowH[0] + 6);
+        y += 3; stroke(INK, 0.5); doc.line(M, y, W - M, y); y += 3.5;
+        y += put(tl, M, y, 12.5, "xb", INK, 1.2) + 2.5;
+        for (var row = 0; row < 2; row++) {
+          var pair = cells.slice(row * 2, row * 2 + 2); if (!pair.length) break;
+          ensure(rowH[row] + 2);
+          pair.forEach(function (k, i) {
+            var x = M + i * (cw2c + 4), col = cols[k.c.id];
+            fill(mix(col, 0.1)); doc.roundedRect(x, y, cw2c, rowH[row], 1.5, 1.5, "F");
+            fill(col); doc.rect(x, y, cw2c, 1.1, "F");
+            caps(k.c.binome, x + 4, y + 3.6, 6.5, col, "bold", 0.4);
+            put(k.ls, x + 4, y + 8.2, 8.5, "reg", k.t ? INK : MUTED, 1.5);
+          });
+          y += rowH[row] + 3;
+        }
+        y += 3;
       });
     }
 
-    /* Footer on every page */
+    /* ---------- Running header and footer ---------- */
     var n = doc.getNumberOfPages();
-    for (var i = 1; i <= n; i++) {
+    for (var i = 2; i <= n; i++) {
       doc.setPage(i);
-      doc.setDrawColor(220, 200, 176); doc.setLineWidth(0.2); doc.line(M, H - 14, W - M, H - 14);
-      doc.setFont("helvetica", "normal"); doc.setFontSize(8); color(MUTED);
-      doc.text(pt("Bâtonnat de Paris 2027  ·  Édition du " + fmt(maj, true) + "  ·  Déclarations des candidats"), M, H - 9);
-      doc.text(i + " / " + n, W - M, H - 9, { align: "right" });
+      var onBand = pageLabel[i] === "";
+      caps("Bâtonnat de Paris 2027", M, 11, 6.8, onBand ? WHITE : MUTED, "bold", 0.7);
+      if (!onBand) { caps(pageLabel[i], W - M, 11, 6.8, MUTED, "reg", 0.7, "right"); stroke(LINE, 0.2); doc.line(M, 16, W - M, 16); }
+      stroke(LINE, 0.2); doc.line(M, H - 16, W - M, H - 16);
+      font("reg"); doc.setFontSize(7.5); color(MUTED);
+      doc.text(pt("Édition du " + fmt(maj, true) + "  ·  Déclarations des candidats"), M, H - 11);
+      doc.text(i + " / " + n, W - M, H - 11, { align: "right" });
     }
     return doc.output("arraybuffer");
   }
@@ -621,8 +769,9 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
         if (!lib) { msg.textContent = "Le générateur de PDF n'a pas pu se charger. Rechargez la page."; btn.disabled = false; return; }
         fetch("data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function () { return DATA; })
           .then(function (data) {
-            var buf = buildPdf(data, lib);
-            return savePdf(buf, "batonnat-paris-2027-programmes-" + (data.maj || todayISO()) + ".pdf", dl);
+            return buildPdf(data, lib).then(function (buf) {
+              return savePdf(buf, "batonnat-paris-2027-programmes-" + (data.maj || todayISO()) + ".pdf", dl);
+            });
           })
           .then(function () { msg.textContent = "PDF enregistré."; })
           .catch(function (e) { msg.textContent = e && e.code === "declined" ? "" : "Le PDF n'a pas pu être enregistré. Réessayez."; })
