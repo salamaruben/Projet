@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-26",
+ "maj": "2026-10-27",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -180,7 +180,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "139 à 140",
+    "nombre": "140",
     "notables": [
      "Jean-Louis Borie (ancien bâtonnier)",
      "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis)",
@@ -189,7 +189,8 @@
      "David van der Vlist (CNB)",
      "Alice Oriol (Conseil de l'Ordre)",
      "Stéphane Maugendre (président du SAF)",
-     "Caroline Mecary"
+     "Caroline Mecary",
+     "Franceline Lepany (avocate honoraire)"
     ]
    },
    "limites": "L'agenda de campagne est vide à ce jour.",
@@ -382,7 +383,7 @@
     "nombre": "Non consultable",
     "notables": []
    },
-   "limites": "La page des soutiens n'était pas accessible, aucun nom n'a été récupéré.",
+   "limites": "La page des soutiens (/soutiens) renvoie une erreur d'accès : aucun nom ni total n'a pu être récupéré. Les 28 actualités du site ont été lues, mais le site n'offre pas de lien individuel par article.",
    "evolutions": [
     {
      "date": "2026-10-19",
@@ -540,7 +541,7 @@
      "Jeanne-Zoé Targa"
     ]
    },
-   "limites": "Seule la première des trois pages d'actualités du site a été lue.",
+   "limites": "",
    "evolutions": [
     {
      "date": "2026-10-26",
@@ -730,6 +731,10 @@
   {
    "date": "2026-10-26",
    "resume": "Aucun changement : pas de nouvelle mesure ni modification de programme chez les quatre binômes depuis la dernière vérification ; calendrier officiel inchangé (débat le 1er décembre, scrutin les 15 et 17 décembre)."
+  },
+  {
+   "date": "2026-10-27",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Les trois pages d'actualités du site Fabiani–Naquet ont désormais été lues en entier ; Saada–Lagrue : 140 soutiens annoncés. Limite persistante : page des soutiens du site Bouyssou–Pascarel inaccessible ; recherche de presse juridique sans article récent sur les candidats 2028."
   }
  ],
  "sources_calendrier": [
