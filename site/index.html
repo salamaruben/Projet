@@ -392,8 +392,8 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
 
   var PHOTOS = {
     surin: { src: "img/surin-griguer.webp", w: 1000, h: 826 },
-    saada: { src: "img/saada-lagrue.webp", w: 1200, h: 800, framed: true },
-    bouyssou: { src: "img/bouyssou-pascarel.webp", w: 1000, h: 1000, framed: true },
+    saada: { src: "img/saada-lagrue.webp", w: 1000, h: 835 },
+    bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 400 },
     fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
   };
   function viewCand(c) {
@@ -404,7 +404,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       h("a", { class: "btn", href: c.site, target: "_blank", rel: "noopener", text: "Site de campagne" })
     ]);
     var ph = PHOTOS[c.id];
-    var photo = ph ? h("img", { class: "ch-photo", src: ph.src, alt: c.binome, width: String(ph.w), height: String(ph.h) }) : null;
+    var photo = ph ? h("img", { class: "ch-photo", src: ph.src, alt: c.binome, width: String(ph.w), height: String(ph.h), style: ph.maxw ? "max-width:" + ph.maxw + "px" : "" }) : null;
     var head = h("div", { class: "cand-head glow" + (photo ? " has-photo" : "") + (ph && ph.framed ? " framed" : "") }, [info, photo]);
     var people = h("div", { class: "people" }, c.personnes.map(function (p) {
       return h("div", { class: "person" }, [h("div", { class: "role", text: p.role }), h("h3", { text: p.nom }), h("p", { text: p.bio })]);
