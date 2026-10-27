@@ -215,6 +215,12 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   function shift(iso, days) { var d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
   function dayDiff(a, b) { return Math.round((new Date(b + "T12:00:00Z") - new Date(a + "T12:00:00Z")) / 86400000); }
   function byDateDesc(a, b) { return a.date < b.date ? 1 : -1; }
+  var CAND_ORDER = ["surin", "saada", "bouyssou", "fabiani"];
+  function sortCands(data) {
+    var rank = function (c) { var i = CAND_ORDER.indexOf(c.id); return i < 0 ? 99 : i; };
+    data.candidats.sort(function (a, b) { return rank(a) - rank(b); });
+    return data;
+  }
   function candById(id) { return DATA.candidats.filter(function (c) { return c.id === id; })[0]; }
   function nMesures(c) { return c.programme.reduce(function (s, a) { return s + a.mesures.length; }, 0); }
 
@@ -486,6 +492,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   }
 
   function drawPdf(data, jsPDF, fonts) {
+    sortCands(data);
     var doc = new jsPDF({ unit: "mm", format: "a4" });
     var F = { reg: ["helvetica", "normal"], bold: ["helvetica", "bold"], xb: ["helvetica", "bold"] };
     if (fonts) {
@@ -793,7 +800,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   }
 
   function build(data) {
-    DATA = data;
+    DATA = sortCands(data);
     document.getElementById("contexte").textContent = String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, "");
     data.candidats.forEach(function (c) { TABS.push({ id: c.id, label: c.binome, cls: "c-" + c.id }); });
     TABS.push({ id: "comparatif", label: "Comparatif" });
