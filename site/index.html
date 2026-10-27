@@ -177,7 +177,16 @@ details li::marker { color: var(--accent); }
 .cell { padding: 18px 20px; font-size: 15px; border: 1px solid var(--line); border-top: 4px solid var(--c); }
 .cell .nm { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
 .cell .nm::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.pie-wrap { display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: center; }
+.pie { width: min(100%, 280px); height: auto; flex: none; }
+.pie-n { font-family: var(--f); font-weight: 800; font-size: 34px; letter-spacing: -.04em; fill: var(--ink); }
+.pie-s { font-family: var(--f); font-weight: 600; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; fill: var(--muted); }
+.pie-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1 1 260px; min-width: 0; max-width: 520px; }
+.pie-legend li { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; gap: 10px; align-items: baseline; font-size: 15px; }
+.pie-legend .sw2 { width: 12px; height: 12px; border-radius: 50%; align-self: center; }
+.pie-legend .ln { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 13px; white-space: nowrap; }
 .cell.dim { opacity: .4; }
+.cell-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
 .cell.empty { background: transparent; border: 1px dashed var(--line); color: var(--muted); }
 .err { padding: 40px 0; color: var(--muted); }
 footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56px; font-size: 13px; }
@@ -425,6 +434,60 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 400 },
     fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
   };
+  var PIE_COLORS = ["#bb4e2e", "#3b1f17", "#0f766e", "#2457c5", "#a8650f", "#a3194f", "#6b7a2a"];
+  var PIE_OTHER = "#b8a99a";
+  function themeShares(c) {
+    var seen = {};
+    (DATA.comparatif || []).forEach(function (r) {
+      var v = r.items && r.items[c.id];
+      (Array.isArray(v) ? v : (v ? [v] : [])).forEach(function (x) { var k = mText(x); seen[k] = (seen[k] || 0) + 1; });
+    });
+    var rows = (DATA.comparatif || []).map(function (r) {
+      var v = r.items && r.items[c.id];
+      var list = Array.isArray(v) ? v : (v ? [v] : []);
+      return { theme: r.theme, n: list.length, w: list.reduce(function (s, x) { return s + 1 / seen[mText(x)]; }, 0) };
+    }).filter(function (x) { return x.n > 0; });
+    rows.sort(function (a, b) { return b.w - a.w || b.n - a.n; });
+    var total = rows.reduce(function (s, x) { return s + x.w; }, 0);
+    rows.forEach(function (x, i) { x.pct = x.w / total * 100; x.color = i < PIE_COLORS.length ? PIE_COLORS[i] : PIE_OTHER; });
+    return { rows: rows, total: total, count: Object.keys(seen).length };
+  }
+  function pieBlock(c) {
+    var sh = themeShares(c);
+    if (!sh.rows.length) return null;
+    var NS2 = "http://www.w3.org/2000/svg", R = 90, r = 52, cx = 100, cy = 100;
+    var svg = document.createElementNS(NS2, "svg");
+    svg.setAttribute("viewBox", "0 0 200 200"); svg.setAttribute("class", "pie"); svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Répartition des mesures de " + c.binome + " par thème : " + sh.rows.map(function (x) { return x.theme + " " + Math.round(x.pct) + " %"; }).join(", "));
+    function pt2(rad, a) { return [cx + rad * Math.cos(a), cy + rad * Math.sin(a)]; }
+    var ang = -Math.PI / 2;
+    var groups = sh.rows.slice(0, PIE_COLORS.length);
+    var rest = sh.rows.slice(PIE_COLORS.length);
+    if (rest.length) groups.push({ theme: "Autres thèmes", n: rest.reduce(function (s, x) { return s + x.n; }, 0), w: rest.reduce(function (s, x) { return s + x.w; }, 0), color: PIE_OTHER });
+    groups.forEach(function (g) {
+      var frac = g.w / sh.total, a2 = ang + frac * 2 * Math.PI;
+      if (frac > 0.9999) a2 = ang + 2 * Math.PI - 0.001;
+      var p1 = pt2(R, ang), p2 = pt2(R, a2), p3 = pt2(r, a2), p4 = pt2(r, ang), large = frac > 0.5 ? 1 : 0;
+      var path = document.createElementNS(NS2, "path");
+      path.setAttribute("d", "M" + p1[0].toFixed(2) + " " + p1[1].toFixed(2) + " A" + R + " " + R + " 0 " + large + " 1 " + p2[0].toFixed(2) + " " + p2[1].toFixed(2) + " L" + p3[0].toFixed(2) + " " + p3[1].toFixed(2) + " A" + r + " " + r + " 0 " + large + " 0 " + p4[0].toFixed(2) + " " + p4[1].toFixed(2) + " Z");
+      path.setAttribute("fill", g.color); path.setAttribute("stroke", "var(--bg)"); path.setAttribute("stroke-width", "2");
+      var tt = document.createElementNS(NS2, "title"); tt.textContent = g.theme + " : " + g.n + (g.n > 1 ? " mesures" : " mesure"); path.appendChild(tt);
+      svg.appendChild(path); ang = a2;
+    });
+    var label = document.createElementNS(NS2, "text");
+    label.setAttribute("x", cx); label.setAttribute("y", cy - 2); label.setAttribute("text-anchor", "middle"); label.setAttribute("class", "pie-n"); label.textContent = String(sh.count);
+    var sub = document.createElementNS(NS2, "text");
+    sub.setAttribute("x", cx); sub.setAttribute("y", cy + 14); sub.setAttribute("text-anchor", "middle"); sub.setAttribute("class", "pie-s"); sub.textContent = "mesures";
+    svg.appendChild(label); svg.appendChild(sub);
+    var legend = h("ul", { class: "pie-legend" }, sh.rows.map(function (x) {
+      return h("li", null, [h("span", { class: "sw2", style: "background:" + x.color }), h("span", { class: "lt", text: x.theme }), h("span", { class: "ln", text: x.n + (x.n > 1 ? " mesures" : " mesure") + " · " + Math.round(x.pct) + " %" })]);
+    }));
+    return h("div", { class: "sec" }, [
+      h("h2", { text: "Sur quoi porte le programme", style: "margin-bottom:12px" }),
+      h("p", { class: "note", style: "margin-bottom:28px", text: "Part du programme consacrée à chaque thème. Une mesure qui touche deux thèmes est partagée entre eux. Les thèmes sont les mêmes que dans le comparatif." }),
+      h("div", { class: "pie-wrap" }, [svg, legend])
+    ]);
+  }
   function viewCand(c) {
     var info = h("div", { class: "ch-text" }, [
       h("div", { class: "sw" }), h("h2", { text: c.binome }),
@@ -470,7 +533,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     var sup = h("div", { class: "sec" }, [h("h2", { text: "Soutiens : " + c.soutiens.nombre, style: "margin-bottom:24px" })]);
     if ((c.soutiens.notables || []).length) sup.appendChild(h("div", { class: "chips" }, c.soutiens.notables.map(function (s) { return h("span", { class: "chip", text: s }); })));
     var lim = c.limites ? h("div", { class: "limits", text: "Limites de cette fiche : " + c.limites }) : null;
-    return h("section", { class: "view c-" + c.id, id: "v-" + c.id }, [head, people, prog, evo, news, sup, lim]);
+    return h("section", { class: "view c-" + c.id, id: "v-" + c.id }, [head, people, pieBlock(c), prog, evo, news, sup, lim]);
   }
 
   function norm(t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
@@ -493,15 +556,18 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       var terms = norm(q.value).split(/\s+/).filter(Boolean);
       out.textContent = "";
       var rows = DATA.comparatif.filter(function (r) {
-        var all = norm(r.theme + " " + Object.keys(r.items || {}).map(function (k) { return r.items[k]; }).join(" "));
+        var all = norm(r.theme + " " + Object.keys(r.items || {}).map(function (k) { var v = r.items[k]; return Array.isArray(v) ? v.map(mText).join(" ") : v; }).join(" "));
         return hasAll(all, terms);
       });
       if (!rows.length) { out.appendChild(h("p", { class: "note", style: "margin-top:32px", text: "Aucun thème ne correspond. Effacez le filtre pour tout afficher." })); return; }
       rows.forEach(function (r) {
         var cells = DATA.candidats.filter(function (c) { return shown[c.id]; }).map(function (c) {
           var t = r.items[c.id];
-          var dim = terms.length && !hasAll(norm(t || ""), terms) ? " dim" : "";
-          return h("div", { class: "cell c-" + c.id + (t ? " glow" : " empty") + dim }, [h("div", { class: "nm", text: c.binome }), t || "Non précisé"]);
+          var has = Array.isArray(t) ? t.length > 0 : !!t;
+          var txt = Array.isArray(t) ? t.map(mText).join(" ") : (t || "");
+          var dim = terms.length && !hasAll(norm(txt), terms) ? " dim" : "";
+          var bodyNodes = Array.isArray(t) && t.length ? [h("ul", { class: "cell-list" }, t.map(function (x) { return h("li", null, abbr(mText(x))); }))] : (has ? abbr(txt) : ["Non précisé"]);
+          return h("div", { class: "cell c-" + c.id + (has ? " glow" : " empty") + dim }, [h("div", { class: "nm", text: c.binome })].concat(bodyNodes));
         });
         out.appendChild(h("div", { class: "theme-block" }, [h("h3", { text: r.theme }), h("div", { class: "theme-cells" }, cells)]));
       });
@@ -772,7 +838,8 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       var cw2c = (CW - 4) / 2;
       data.comparatif.forEach(function (r) {
         var cells = data.candidats.map(function (c) {
-          var t = r.items[c.id];
+          var t0 = r.items[c.id];
+          var t = Array.isArray(t0) ? (t0.length ? t0.map(function (x) { return "- " + mText(x); }).join("\n") : "") : t0;
           var ls = wrap(t || "Non précisé", 8.5, cw2c - 8, "reg");
           return { c: c, t: t, ls: ls, h: 9 + ls.length * lh(8.5, 1.5) + 3.5 };
         });

@@ -669,57 +669,304 @@
  ],
  "comparatif": [
   {
-   "theme": "Cotisations",
+   "theme": "Cotisations et finances de l'Ordre",
    "items": {
-    "saada": "Cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
-    "bouyssou": "Prélèvement SEPA et appels dématérialisés, pas de chiffre.",
-    "fabiani": "Mutuelle facultative sans hausse des cotisations de base.",
-    "surin": "Jusqu'à -30 % d'ici 2030, sous conditions."
+    "saada": [
+     "Cotisations d'assurance proportionnées au chiffre d'affaires et cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
+     "Intérêts de la CARPA utilisés au profit de tous, partenariats crèches, réforme de la conférence du stage pour les commissions d'office criminelles."
+    ],
+    "bouyssou": [
+     "Détection précoce des difficultés économiques, prélèvement SEPA et appels de cotisations dématérialisés."
+    ],
+    "surin": [
+     "Baisse des cotisations jusqu'à -30 % à l'horizon 2030, conditionnée à la rationalisation des coûts, au numérique et à de nouvelles ressources. Plan financier pluriannuel public voté chaque année."
+    ]
    }
   },
   {
-   "theme": "Collaborateurs",
+   "theme": "Aider les cabinets et l'installation",
    "items": {
-    "saada": "6e semaine de congés et droit à la déconnexion.",
-    "bouyssou": "Charte « Équilibre et Réussite », contrôle de l'article 14 RIN, congé de paternité de 4 semaines.",
-    "fabiani": "Bureau administratif externalisé, hotline d'écoute.",
-    "surin": "Droit d'option salariat ou libéral, AVOCATCARE."
+    "saada": [
+     "Reprise de la pépinière du boulevard Sébastopol et locaux à loyers maîtrisés avec la Ville de Paris."
+    ],
+    "bouyssou": [
+     "Détection précoce des difficultés économiques, prélèvement SEPA et appels de cotisations dématérialisés.",
+     "Parcours d'accompagnement : formation, comptabilité, management, cybersécurité, achat de locaux.",
+     "Étude d'un fonds d'aide au démarrage et espaces partagés.",
+     "Observatoire économique et cellule Nouveaux Métiers (médiation, arbitrage, enquêtes internes, droit de la durabilité)."
+    ],
+    "fabiani": [
+     "Bureau administratif externalisé pour l'URSSAF et les impôts, en partenariat avec l'administration.",
+     "Plateforme de transmission de clientèles avec rétrocession d'un pourcentage du chiffre d'affaires.",
+     "Accompagnement des premières années, coworking, prêts bancaires avec garanties de l'Ordre."
+    ],
+    "surin": [
+     "Fonds de solidarité couvrant partiellement les rétrocessions impayées en procédure collective, financement à définir.",
+     "Transmission et patrimonialité des parts, réflexion encadrée sur le financement et l'ouverture du capital."
+    ]
    }
   },
   {
-   "theme": "Intelligence artificielle",
+   "theme": "Honoraires et recouvrement",
    "items": {
-    "saada": "Laboratoire d'intelligence collective avec des chercheurs.",
-    "bouyssou": "R.ia.BP et Académie IA.",
-    "fabiani": "Comité IA, IA agentique, assistant déontologique.",
-    "surin": "Offre d'IA hébergée en Europe, outil d'anonymisation."
+    "bouyssou": [
+     "Recouvrement d'honoraires accéléré avec médiation préalable facultative, saisine en ligne des litiges entre avocats."
+    ],
+    "fabiani": [
+     "Fixation des honoraires restructurée (délai actuel jusqu'à 8 mois), injonction de payer avec exécution provisoire jusqu'à 5 000 € HT."
+    ],
+    "surin": [
+     "Honoraires de valeur, conventions types, étude d'un abonnement juridique de proximité."
+    ]
    }
   },
   {
-   "theme": "Transparence et démocratie",
+   "theme": "Jeunes avocats et formation",
    "items": {
-    "saada": "La plus ambitieuse : référendums, tirage au sort, assemblée générale annuelle.",
-    "bouyssou": "Tableau de bord public annuel.",
-    "fabiani": "Comptes de l'Ordre et de la CARPA publics.",
-    "surin": "Budget pluriannuel public, Conseil ouvert."
+    "saada": [
+     "Intérêts de la CARPA utilisés au profit de tous, partenariats crèches, réforme de la conférence du stage pour les commissions d'office criminelles.",
+     "Deux représentants du jeune barreau avec voix consultative."
+    ],
+    "bouyssou": [
+     "Académie IA permanente pour avocats, élèves-avocats et personnel, mise en place en septembre 2026."
+    ],
+    "fabiani": [
+     "Accompagnement des premières années, coworking, prêts bancaires avec garanties de l'Ordre.",
+     "EFB : révision du syllabus, sessions plus petites, stages pratiques, gestion et management, gestion du stress."
+    ],
+    "surin": [
+     "Concertation sur l'accès à la profession (capacités d'accueil, conditions d'accès), à préciser.",
+     "Jeunes : formation renforcée, mentorat, associations plus précoces.",
+     "Institut de la formation du barreau de Paris avec parcours certifiants."
+    ]
    }
   },
   {
-   "theme": "Installation et transmission",
+   "theme": "Collaborateurs et conditions de travail",
    "items": {
-    "saada": "Pépinière du boulevard Sébastopol, locaux à loyers maîtrisés.",
-    "bouyssou": "Fonds d'aide au démarrage à l'étude, espaces partagés.",
-    "fabiani": "Plateforme de transmission de clientèles, coworking.",
-    "surin": "Patrimonialité des parts, réflexion sur l'ouverture du capital."
+    "saada": [
+     "6e semaine de congés et droit effectif à la déconnexion.",
+     "Contrôle réel des conditions d'exercice, au-delà d'un questionnaire.",
+     "Respect de la clientèle personnelle et sanctions en cas d'abus."
+    ],
+    "bouyssou": [
+     "Charte « Équilibre et Réussite » (charge de travail, déconnexion, formation, congés) et contrôle de l'exécution du contrat de collaboration (art. 14 RIN)."
+    ],
+    "surin": [
+     "Droit d'option entre collaboration libérale et salariat les trois premières années (demande au CNB et à la Chancellerie)."
+    ]
    }
   },
   {
-   "theme": "Protection sociale",
+   "theme": "Intelligence artificielle et numérique",
    "items": {
-    "saada": "Prévoyance renégociée, congé de naissance supplémentaire de deux mois.",
-    "bouyssou": "Congé de naissance transposé au règlement intérieur.",
-    "fabiani": "Maison de santé des avocats, EHPAD dédié.",
-    "surin": "Guichet santé et prévoyance, bilans de santé."
+    "saada": [
+     "Laboratoire d'intelligence collective avec des chercheurs (secret professionnel, transparence sur l'usage de l'IA, fiscalité)."
+    ],
+    "bouyssou": [
+     "R.ia.BP : réseau d'IA servant de point d'entrée unique, avec suivi des demandes et supervision humaine pour toute réponse substantielle.",
+     "Académie IA permanente pour avocats, élèves-avocats et personnel, mise en place en septembre 2026.",
+     "Guide de l'avocat augmenté (charte, solutions vérifiées, clauses types) et observatoire des usages avec le CNB."
+    ],
+    "fabiani": [
+     "Comité IA, formation continue, IA agentique dans l'environnement informatique de l'Ordre, environnement sécurisé éventuellement mutualisé avec d'autres barreaux.",
+     "Logiciels gratuits (facturation, stockage, visio), stockage souverain, cybersécurité et RGPD."
+    ],
+    "surin": [
+     "Outil de signalement sécurisé, référent ordinal en déontologie numérique, adaptation du RIBP à l'IA.",
+     "Offre d'IA professionnelle hébergée en Europe, à coût raisonnable, avec outil d'anonymisation (évaluation préalable)."
+    ]
+   }
+  },
+  {
+   "theme": "Transparence et démocratie de l'Ordre",
+   "items": {
+    "saada": [
+     "Plafonnement des dépenses de campagne et appels d'offres publics pour les dépenses de l'Ordre.",
+     "Conseils ouverts au public, publication systématique des rapports, assemblée générale annuelle, référendums sur les grandes questions.",
+     "Conférences citoyennes non élues et tirage au sort de membres dans certaines commissions.",
+     "Deux représentants du jeune barreau avec voix consultative."
+    ],
+    "fabiani": [
+     "Comptes de l'Ordre et de la CARPA publics, rapport annuel sur l'usage des cotisations.",
+     "Publication des sanctions disciplinaires et des statistiques, avis déontologiques anonymisés en open data, assistant déontologique IA.",
+     "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat."
+    ],
+    "surin": [
+     "Travaux du Conseil ouverts (sous réserve de confidentialité), audit des services, réflexion sur le plafonnement des frais de campagne."
+    ]
+   }
+  },
+  {
+   "theme": "Déontologie et discipline",
+   "items": {
+    "bouyssou": [
+     "Référents par domaine, publication anonymisée des décisions disciplinaires, retour du rescrit déontologique."
+    ],
+    "fabiani": [
+     "Cellule de médiateurs confrères, distincte du disciplinaire.",
+     "Publication des sanctions disciplinaires et des statistiques, avis déontologiques anonymisés en open data, assistant déontologique IA.",
+     "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat."
+    ],
+    "surin": [
+     "Outil de signalement sécurisé, référent ordinal en déontologie numérique, adaptation du RIBP à l'IA.",
+     "Service disciplinaire professionnalisé aux décisions plus lisibles."
+    ]
+   }
+  },
+  {
+   "theme": "Égalité, harcèlement et discriminations",
+   "items": {
+    "saada": [
+     "Lutte contre les violences sexistes et sexuelles, le harcèlement et les discriminations : prévention renforcée, rôle disciplinaire de l'Ordre accru, publicité des décisions.",
+     "Contrat-cadre avec l'AGEFIPH pour les avocats en situation de handicap."
+    ],
+    "bouyssou": [
+     "Signalement indépendant et confidentiel du harcèlement et des discriminations, rendez-vous sous 3 jours."
+    ],
+    "surin": [
+     "Tolérance zéro pour le harcèlement, les discriminations et les violences."
+    ]
+   }
+  },
+  {
+   "theme": "Santé, entraide et protection sociale",
+   "items": {
+    "saada": [
+     "« Cafés-boulot » et groupes de parole avec des professionnels de santé.",
+     "Soutien aux confrères agressés ou discriminés."
+    ],
+    "bouyssou": [
+     "États généraux de la santé au travail et lignes d'écoute anonymes.",
+     "Charte « Équilibre et Réussite » (charge de travail, déconnexion, formation, congés) et contrôle de l'exécution du contrat de collaboration (art. 14 RIN)."
+    ],
+    "fabiani": [
+     "Hotline d'écoute d'urgence par des confrères formés, supervision entre pairs, référent handicap avec une place au Conseil.",
+     "Contrat ordinal facultatif de mutuelle et prévoyance sans hausse des cotisations de base.",
+     "Maison de santé des avocats de Paris et EHPAD dédié."
+    ],
+    "surin": [
+     "AVOCATCARE : pause de 3 mois une fois par carrière, modalités à définir. Guichet santé et prévoyance, bilans de santé."
+    ]
+   }
+  },
+  {
+   "theme": "Congés de naissance et de paternité",
+   "items": {
+    "saada": [
+     "Renégociation de la prévoyance pour financer un congé de naissance supplémentaire de deux mois."
+    ],
+    "bouyssou": [
+     "Congé de naissance transposé au règlement intérieur (en vigueur depuis le 1er juillet 2026 selon eux) et aide aux cabinets individuels.",
+     "Congé de paternité de 4 semaines avec publication annuelle du taux de recours."
+    ],
+    "fabiani": [
+     "Avance des indemnités de congé parentalité via la CARPA, substitution pendant les congés maternité."
+    ]
+   }
+  },
+  {
+   "theme": "Défense de la profession et État de droit",
+   "items": {
+    "bouyssou": [
+     "Programme « Jeunes confrères à l'international » et lutte contre l'exercice illégal par les plateformes.",
+     "Cellule de veille et de riposte législative : analyse des textes menaçants sous 48 h.",
+     "Cellule d'assistance permanente (perquisition, atteinte au secret, cyberattaque), assurance protection juridique pour les confrères victimes d'infractions.",
+     "Défense de l'aide juridictionnelle et soutien aux avocats menacés."
+    ],
+    "fabiani": [
+     "Lobbying auprès de Bercy : baisse de TVA sur les dossiers de particuliers, statut de mandataire social, lutte contre l'exercice illégal.",
+     "Cellule ordinale de veille législative et d'accompagnement des avocats entendus en audition libre ou en garde à vue.",
+     "Opposition à la loi SURE et au plaider-coupable en matière criminelle."
+    ]
+   }
+  },
+  {
+   "theme": "Accès au droit et aide juridictionnelle",
+   "items": {
+    "saada": [
+     "Contrats de protection juridique labellisés par le barreau de Paris, financés par la CARPA.",
+     "Action auprès du CNB pour mieux rémunérer l'aide juridictionnelle et relever ses plafonds.",
+     "Consultations spécialisées (sécurité sociale, chômage, handicap, aide sociale) dans les maisons de justice et du droit."
+    ],
+    "bouyssou": [
+     "Défense de l'aide juridictionnelle et soutien aux avocats menacés."
+    ],
+    "surin": [
+     "« La route du droit » pour l'accès au droit, contenu à préciser."
+    ]
+   }
+  },
+  {
+   "theme": "Relations avec la magistrature et audiences",
+   "items": {
+    "saada": [
+     "Dénoncer le manque de moyens, la réduction du temps d'audience et la perte de collégialité.",
+     "Actions symboliques sur le modèle du « procès du siècle » climat."
+    ],
+    "fabiani": [
+     "Rencontres par spécialité avec magistrats, universitaires, greffiers, notaires, commissaires de justice."
+    ],
+    "surin": [
+     "Réponse ordinale sous 48 h aux alertes d'incidents d'audience, formations croisées avec les magistrats."
+    ]
+   }
+  },
+  {
+   "theme": "International et rayonnement",
+   "items": {
+    "bouyssou": [
+     "Vitrine de la médiation internationale : ratification de la convention de Singapour, registre des médiateurs.",
+     "Programme « Jeunes confrères à l'international » et lutte contre l'exercice illégal par les plateformes."
+    ],
+    "fabiani": [
+     "Référents auprès des ministères et ambassades, « G7 des grands barreaux » et centre international de médiation à Paris."
+    ]
+   }
+  },
+  {
+   "theme": "Écologie et responsabilité sociale",
+   "items": {
+    "saada": [
+     "Bilan carbone avec objectifs chiffrés, critères sociaux et environnementaux dans les achats, bilan public annuel."
+    ],
+    "bouyssou": [
+     "Responsable RSE et climat, bilan carbone chiffré, rapport annuel.",
+     "Observatoire des contentieux climatiques et de la biodiversité."
+    ],
+    "surin": [
+     "Label de conformité environnementale et 2e pépinière d'affaires écoresponsable (critères et objectif 2030 à préciser)."
+    ]
+   }
+  },
+  {
+   "theme": "Un Ordre au service des avocats",
+   "items": {
+    "bouyssou": [
+     "Référents par domaine, publication anonymisée des décisions disciplinaires, retour du rescrit déontologique.",
+     "R.ia.BP : réseau d'IA servant de point d'entrée unique, avec suivi des demandes et supervision humaine pour toute réponse substantielle."
+    ]
+   }
+  },
+  {
+   "theme": "Vie de la profession et unité",
+   "items": {
+    "saada": [
+     "Fin des querelles sur la « supériorité » de Paris, qui pèse près de la moitié des avocats et siège au CNB."
+    ],
+    "surin": [
+     "Rencontres professionnelles mensuelles ouvertes aux autres professions."
+    ]
+   }
+  },
+  {
+   "theme": "Suivi des engagements",
+   "items": {
+    "bouyssou": [
+     "Premières mesures annoncées mises en place en 100 jours (selon la déclaration de candidature) ou 150 jours (selon le programme) : dispositif de signalement, référents, cellules et réseau d'IA (voir « L'intelligence artificielle au service des avocats »).",
+     "Feuille de route avec, pour chaque mesure, un responsable, une échéance, un financement et des indicateurs, et tableau de bord public chaque année.",
+     "Le programme ne chiffre pas les budgets."
+    ]
    }
   }
  ],
