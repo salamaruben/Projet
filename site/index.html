@@ -177,6 +177,7 @@ details li::marker { color: var(--accent); }
 .cell { padding: 18px 20px; font-size: 15px; border: 1px solid var(--line); border-top: 4px solid var(--c); }
 .cell .nm { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
 .cell .nm::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.cell.dim { opacity: .4; }
 .cell.empty { background: transparent; border: 1px dashed var(--line); color: var(--muted); }
 .err { padding: 40px 0; color: var(--muted); }
 footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56px; font-size: 13px; }
@@ -472,8 +473,10 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     return h("section", { class: "view c-" + c.id, id: "v-" + c.id }, [head, people, prog, evo, news, sup, lim]);
   }
 
+  function norm(t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
+  function hasAll(text, terms) { return terms.every(function (w) { return text.indexOf(w) >= 0; }); }
   function viewComparatif() {
-    var q = h("input", { type: "search", id: "cmp-q", placeholder: "Filtrer par thème (cotisations, IA…)", "aria-label": "Filtrer par thème" });
+    var q = h("input", { type: "search", id: "cmp-q", placeholder: "Chercher un thème ou un mot (prêt, IA, cotisations…)", "aria-label": "Chercher un thème ou un mot dans le comparatif" });
     var tools = h("div", { class: "tools" }, [q]);
     var out = h("div", { id: "cmp-out" });
     DATA.candidats.forEach(function (c) {
@@ -487,14 +490,18 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       tools.appendChild(b);
     });
     function render() {
-      var term = q.value.trim().toLowerCase();
+      var terms = norm(q.value).split(/\s+/).filter(Boolean);
       out.textContent = "";
-      var rows = DATA.comparatif.filter(function (r) { return !term || r.theme.toLowerCase().indexOf(term) >= 0; });
+      var rows = DATA.comparatif.filter(function (r) {
+        var all = norm(r.theme + " " + Object.keys(r.items || {}).map(function (k) { return r.items[k]; }).join(" "));
+        return hasAll(all, terms);
+      });
       if (!rows.length) { out.appendChild(h("p", { class: "note", style: "margin-top:32px", text: "Aucun thème ne correspond. Effacez le filtre pour tout afficher." })); return; }
       rows.forEach(function (r) {
         var cells = DATA.candidats.filter(function (c) { return shown[c.id]; }).map(function (c) {
           var t = r.items[c.id];
-          return h("div", { class: "cell c-" + c.id + (t ? " glow" : " empty") }, [h("div", { class: "nm", text: c.binome }), t || "Non précisé"]);
+          var dim = terms.length && !hasAll(norm(t || ""), terms) ? " dim" : "";
+          return h("div", { class: "cell c-" + c.id + (t ? " glow" : " empty") + dim }, [h("div", { class: "nm", text: c.binome }), t || "Non précisé"]);
         });
         out.appendChild(h("div", { class: "theme-block" }, [h("h3", { text: r.theme }), h("div", { class: "theme-cells" }, cells)]));
       });
