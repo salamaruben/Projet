@@ -143,6 +143,13 @@ summary::-webkit-details-marker { display: none; }
 .st { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .rs { font-size: 14px; font-weight: 500; letter-spacing: 0; line-height: 1.5; color: var(--muted); }
 abbr[title] { text-decoration: none; }
+.mes { font: inherit; color: inherit; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; }
+.mes:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
+.mes .plus { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-left: 8px; border: 1px solid var(--c); border-radius: 50%; font-size: 15px; line-height: 1; vertical-align: 1px; }
+.mes[aria-expanded="true"] .plus { background: var(--c); color: var(--on-c); }
+.mes-detail { margin: 8px 0 6px; padding: 12px 16px; background: var(--bg2); border-radius: 10px; font-size: 15px; color: var(--muted); max-width: 66ch; }
+.mes-detail p { margin: 0; }
+.mes-detail p + p { margin-top: 6px; }
 summary .n { margin-left: auto; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 summary::after { content: "+"; width: 34px; height: 34px; flex: none; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 20px; font-weight: 400; line-height: 1; }
 details[open] summary::after { content: "−"; background: var(--deep); border-color: var(--deep); color: var(--on-deep); }
@@ -390,6 +397,24 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     ]);
   }
 
+  function mText(m) { return typeof m === "string" ? m : String((m && m.texte) || ""); }
+  function mesureLi(m) {
+    var o = typeof m === "string" ? { texte: m } : (m || {});
+    if (!o.detail) return h("li", null, abbr(o.texte));
+    var sign = h("span", { class: "plus", "aria-hidden": "true", text: "+" });
+    var det = h("div", { class: "mes-detail", hidden: "" }, [
+      h("p", null, abbr(o.detail)),
+      o.source ? h("p", { class: "stamp" }, ["Source : ", srcLink(o.source)]) : null
+    ]);
+    var btn = h("button", { type: "button", class: "mes", "aria-expanded": "false" }, abbr(o.texte).concat([sign]));
+    btn.addEventListener("click", function () {
+      var open = det.hidden;
+      det.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      sign.textContent = open ? "\u2212" : "+";
+    });
+    return h("li", { class: "has-detail" }, [btn, det]);
+  }
   var PHOTOS = {
     surin: { src: "img/surin-griguer.webp", w: 1000, h: 826 },
     saada: { src: "img/saada-lagrue.webp", w: 1000, h: 835 },
@@ -412,7 +437,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     var prog = h("div", { class: "sec" }, [h("h2", { text: "Programme", style: "margin-bottom:28px" })].concat(c.programme.map(function (a, i) {
       var d = h("details", null, [
         h("summary", null, [h("span", { class: "st" }, [h("span", { class: "tt", text: a.titre }), a.resume ? h("span", { class: "rs" }, abbr(a.resume)) : null]), h("span", { class: "n", text: a.mesures.length + (a.mesures.length > 1 ? " mesures" : " mesure") })]),
-        h("ul", null, a.mesures.map(function (m) { return h("li", null, abbr(m)); }))
+        h("ul", null, a.mesures.map(mesureLi))
       ]);
       if (i === 0) d.open = true;
       return d;
@@ -663,7 +688,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       c.programme.forEach(function (a) {
         var tl = wrap(a.titre, 12, CW - 6, "bold");
         var rs = a.resume ? wrap(a.resume, 8.5, CW - 10, "reg") : [];
-        var first = a.mesures[0] ? wrap(a.mesures[0], 9.5, CW - 6, "reg") : [];
+        var first = a.mesures[0] ? wrap(mText(a.mesures[0]), 9.5, CW - 6, "reg") : [];
         ensure(tl.length * lh(12, 1.3) + rs.length * lh(8.5, 1.5) + 9 + first.length * lh(9.5, 1.55) + 4);
         y += 3;
         fill(col); doc.circle(M + 1.4, y + 3.2, 1.4, "F");
@@ -674,7 +699,10 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
           put(rs, M + 9, y + 2.8, 8.5, "reg", MUTED, 1.5);
           y += bh + 3;
         } else y += 1.5;
-        a.mesures.forEach(function (m) { para(m, { size: 9.5, indent: 11, dot: col, after: 1.6 }); });
+        a.mesures.forEach(function (m) {
+          para(mText(m), { size: 9.5, indent: 11, dot: col, after: (m && m.detail) ? 0.6 : 1.6 });
+          if (m && m.detail) para("Détail : " + m.detail, { size: 8.5, color: MUTED, indent: 11, after: 1.8 });
+        });
         y += 1.5;
       });
 
