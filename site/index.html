@@ -147,11 +147,11 @@ abbr[title] { text-decoration: none; }
 .mes:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
 .mes .plus { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-left: 8px; border: 1px solid var(--c); border-radius: 50%; font-size: 15px; line-height: 1; vertical-align: 1px; }
 .mes[aria-expanded="true"] .plus { background: var(--c); color: var(--on-c); }
-.msrc { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-left: 4px; color: var(--accent); white-space: nowrap; text-decoration: none; border-bottom: 1px solid currentColor; }
-.msrc:hover { opacity: .75; }
 .mes-detail { margin: 8px 0 6px; padding: 12px 16px; background: var(--bg2); border-radius: 10px; font-size: 15px; color: var(--muted); max-width: 66ch; }
 .mes-detail p { margin: 0; }
-.mes-detail p + p { margin-top: 6px; }
+.mes-detail p + p { margin-top: 8px; }
+.mes-points { margin: 8px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.mes-detail .stamp { margin-top: 10px; }
 summary .n { margin-left: auto; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 summary::after { content: "+"; width: 34px; height: 34px; flex: none; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 20px; font-weight: 400; line-height: 1; }
 details[open] summary::after { content: "−"; background: var(--deep); border-color: var(--deep); color: var(--on-deep); }
@@ -400,21 +400,15 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   }
 
   function mText(m) { return typeof m === "string" ? m : String((m && m.texte) || ""); }
-  function programUrl(c) {
-    var src = (c && c.sources) || [];
-    var p = src.filter(function (x) { return /programme/i.test(x.label || "") && x.type === "Site de campagne"; })[0] || src[0];
-    return p ? p.url : "";
-  }
   function mesureLi(m, c) {
     var o = typeof m === "string" ? { texte: m } : (m || {});
-    var url = o.source || programUrl(c);
-    var link = url ? h("a", { class: "msrc", href: url, target: "_blank", rel: "noopener", text: o.source ? "Source" : "Programme", title: o.source ? "Source précise de cette mesure" : "Programme du candidat (la source précise de cette mesure sera ajoutée)" }) : null;
-    if (!o.detail) return h("li", null, abbr(o.texte).concat([" ", link]));
+    var pts = Array.isArray(o.points) ? o.points : [];
+    if (!o.detail && !pts.length) return h("li", null, abbr(o.texte));
     var sign = h("span", { class: "plus", "aria-hidden": "true", text: "+" });
-    var det = h("div", { class: "mes-detail", hidden: "" }, [
-      h("p", null, abbr(o.detail)),
-      o.source ? h("p", { class: "stamp" }, ["Source : ", srcLink(o.source)]) : null
-    ]);
+    var kids = String(o.detail || "").split(/\n+/).filter(Boolean).map(function (t) { return h("p", null, abbr(t)); });
+    if (pts.length) kids.push(h("ul", { class: "mes-points" }, pts.map(function (t) { return h("li", null, abbr(t)); })));
+    if (o.source) kids.push(h("p", { class: "stamp" }, ["Source : ", srcLink(o.source)]));
+    var det = h("div", { class: "mes-detail", hidden: "" }, kids);
     var btn = h("button", { type: "button", class: "mes", "aria-expanded": "false" }, abbr(o.texte).concat([sign]));
     btn.addEventListener("click", function () {
       var open = det.hidden;
@@ -422,7 +416,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       btn.setAttribute("aria-expanded", open ? "true" : "false");
       sign.textContent = open ? "\u2212" : "+";
     });
-    return h("li", { class: "has-detail" }, [btn, " ", link, det]);
+    return h("li", { class: "has-detail" }, [btn, det]);
   }
   var PHOTOS = {
     surin: { src: "img/surin-griguer.webp", w: 1000, h: 826 },
@@ -709,8 +703,12 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
           y += bh + 3;
         } else y += 1.5;
         a.mesures.forEach(function (m) {
-          para(mText(m), { size: 9.5, indent: 11, dot: col, after: (m && m.detail) ? 0.6 : 1.6 });
-          if (m && m.detail) para("Détail : " + m.detail, { size: 8.5, color: MUTED, indent: 11, after: 1.8 });
+          para(mText(m), { size: 9.5, indent: 11, dot: col, after: (m && (m.detail || (m.points || []).length)) ? 0.6 : 1.6 });
+          if (m && (m.detail || (m.points || []).length)) {
+            String(m.detail || "").split(/\n+/).filter(Boolean).forEach(function (t, i) { para((i === 0 ? "Détail : " : "") + t, { size: 8.5, color: MUTED, indent: 11, after: 0.8 }); });
+            (m.points || []).forEach(function (t) { para(t, { size: 8.5, color: MUTED, indent: 15, dot: col, after: 0.8 }); });
+            y += 1;
+          }
         });
         y += 1.5;
       });
