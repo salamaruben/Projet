@@ -117,6 +117,11 @@ main { padding-block: 72px 112px; }
 
 /* Candidate view */
 .cand-head { padding: clamp(28px, 6vw, 72px); display: grid; gap: 20px; border: 1px solid var(--line); border-top: 8px solid var(--c); }
+.ch-text { display: grid; gap: 20px; align-content: start; min-width: 0; }
+.cand-head.has-photo { padding-bottom: 0; overflow: hidden; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px 32px; align-items: end; }
+.cand-head.has-photo .ch-text { padding-bottom: clamp(28px, 6vw, 72px); align-self: center; }
+.ch-photo { display: block; width: 100%; height: auto; max-width: 560px; justify-self: end; align-self: end; }
+@media (max-width: 820px) { .cand-head.has-photo { grid-template-columns: minmax(0, 1fr); } .cand-head.has-photo .ch-text { padding-bottom: 0; } .ch-photo { justify-self: center; margin-top: 8px; } }
 .cand-head h2 { font-size: clamp(40px, 8vw, 96px); line-height: .92; letter-spacing: -.05em; }
 .cand-head .slogan { font-size: clamp(20px, 3vw, 30px); font-weight: 700; letter-spacing: -.02em; margin: 0; max-width: 28ch; line-height: 1.15; }
 .cand-head .pos { font-size: 16px; color: var(--muted); margin: 0; max-width: 60ch; }
@@ -381,13 +386,16 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     ]);
   }
 
+  var PHOTOS = { surin: "img/surin-griguer.webp" };
   function viewCand(c) {
-    var head = h("div", { class: "cand-head glow" }, [
+    var info = h("div", { class: "ch-text" }, [
       h("div", { class: "sw" }), h("h2", { text: c.binome }),
       h("p", { class: "slogan", text: "« " + c.slogan + " »" }),
       h("p", { class: "pos", text: c.positionnement }),
       h("a", { class: "btn", href: c.site, target: "_blank", rel: "noopener", text: "Site de campagne" })
     ]);
+    var photo = PHOTOS[c.id] ? h("img", { class: "ch-photo", src: PHOTOS[c.id], alt: c.binome, width: "1000", height: "826" }) : null;
+    var head = h("div", { class: "cand-head glow" + (photo ? " has-photo" : "") }, [info, photo]);
     var people = h("div", { class: "people" }, c.personnes.map(function (p) {
       return h("div", { class: "person" }, [h("div", { class: "role", text: p.role }), h("h3", { text: p.nom }), h("p", { text: p.bio })]);
     }));
