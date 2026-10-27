@@ -147,6 +147,8 @@ abbr[title] { text-decoration: none; }
 .mes:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
 .mes .plus { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-left: 8px; border: 1px solid var(--c); border-radius: 50%; font-size: 15px; line-height: 1; vertical-align: 1px; }
 .mes[aria-expanded="true"] .plus { background: var(--c); color: var(--on-c); }
+.msrc { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-left: 4px; color: var(--accent); white-space: nowrap; text-decoration: none; border-bottom: 1px solid currentColor; }
+.msrc:hover { opacity: .75; }
 .mes-detail { margin: 8px 0 6px; padding: 12px 16px; background: var(--bg2); border-radius: 10px; font-size: 15px; color: var(--muted); max-width: 66ch; }
 .mes-detail p { margin: 0; }
 .mes-detail p + p { margin-top: 6px; }
@@ -398,9 +400,16 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   }
 
   function mText(m) { return typeof m === "string" ? m : String((m && m.texte) || ""); }
-  function mesureLi(m) {
+  function programUrl(c) {
+    var src = (c && c.sources) || [];
+    var p = src.filter(function (x) { return /programme/i.test(x.label || "") && x.type === "Site de campagne"; })[0] || src[0];
+    return p ? p.url : "";
+  }
+  function mesureLi(m, c) {
     var o = typeof m === "string" ? { texte: m } : (m || {});
-    if (!o.detail) return h("li", null, abbr(o.texte));
+    var url = o.source || programUrl(c);
+    var link = url ? h("a", { class: "msrc", href: url, target: "_blank", rel: "noopener", text: o.source ? "Source" : "Programme", title: o.source ? "Source précise de cette mesure" : "Programme du candidat (la source précise de cette mesure sera ajoutée)" }) : null;
+    if (!o.detail) return h("li", null, abbr(o.texte).concat([" ", link]));
     var sign = h("span", { class: "plus", "aria-hidden": "true", text: "+" });
     var det = h("div", { class: "mes-detail", hidden: "" }, [
       h("p", null, abbr(o.detail)),
@@ -413,7 +422,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       btn.setAttribute("aria-expanded", open ? "true" : "false");
       sign.textContent = open ? "\u2212" : "+";
     });
-    return h("li", { class: "has-detail" }, [btn, det]);
+    return h("li", { class: "has-detail" }, [btn, " ", link, det]);
   }
   var PHOTOS = {
     surin: { src: "img/surin-griguer.webp", w: 1000, h: 826 },
@@ -437,7 +446,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     var prog = h("div", { class: "sec" }, [h("h2", { text: "Programme", style: "margin-bottom:28px" })].concat(c.programme.map(function (a, i) {
       var d = h("details", null, [
         h("summary", null, [h("span", { class: "st" }, [h("span", { class: "tt", text: a.titre }), a.resume ? h("span", { class: "rs" }, abbr(a.resume)) : null]), h("span", { class: "n", text: a.mesures.length + (a.mesures.length > 1 ? " mesures" : " mesure") })]),
-        h("ul", null, a.mesures.map(mesureLi))
+        h("ul", null, a.mesures.map(function (m) { return mesureLi(m, c); }))
       ]);
       if (i === 0) d.open = true;
       return d;
