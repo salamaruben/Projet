@@ -1047,12 +1047,16 @@ footer { background:var(--deep); color:#fff; }
       if (a.getAttribute("data-id") === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     var nav = document.querySelector("nav.tabs");
-    if (location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);
+    var hero = document.querySelector("header.hero");
+    if (hero) hero.hidden = id === "mentions";
+    if (nav) nav.hidden = id === "mentions";
+    if (id !== "mentions" && location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);
   }
 
   function viewMentions() {
     function p(t) { return h("p", { class: "note", style: "margin-top:10px", text: t }); }
     return h("section", { class: "view", id: "v-mentions" }, [
+      h("p", { class: "note", style: "margin-bottom:16px" }, [h("a", { href: "#apercu", text: "\u2190 Retour au site" })]),
       h("h2", { text: "Mentions légales", style: "margin-bottom:24px" }),
       h("h3", { text: "Éditeur", style: "margin-top:28px" }),
       p("Site édité à titre non professionnel par une personne physique qui a choisi de rester anonyme. Conformément à l'article 6 de la loi du 21 juin 2004 pour la confiance dans l'économie numérique, son identité a été communiquée à l'hébergeur."),
