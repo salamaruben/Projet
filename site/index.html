@@ -521,6 +521,23 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     return h("div", { class: "rail-box" }, [rail, steps]);
   }
 
+  function limited(items, n, cls, style) {
+    var box = h("div", { class: cls || "feed", style: style || "" }, items.slice(0, n));
+    if (items.length <= n) return box;
+    var rest = items.slice(n);
+    var wrap = h("div", null, [box]);
+    var moreLabel = rest.length === 1 ? "Voir 1 autre" : "Voir les " + rest.length + " autres";
+    var btn = h("button", { type: "button", class: "toggle more", "aria-pressed": "false", text: moreLabel });
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-pressed") !== "true";
+      if (open) { rest.forEach(function (el) { box.appendChild(el); }); btn.textContent = "Réduire"; }
+      else { rest.forEach(function (el) { if (el.parentNode === box) box.removeChild(el); }); btn.textContent = moreLabel; }
+      btn.setAttribute("aria-pressed", open ? "true" : "false");
+    });
+    wrap.appendChild(h("div", { style: "margin-top:16px" }, [btn]));
+    return wrap;
+  }
+
   function viewApercu() {
     var today = todayISO();
     var all = [];
@@ -541,9 +558,9 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       ]);
     }));
 
-    var feed = h("div", { class: "feed" }, all.slice(0, 12).map(function (x) {
+    var feed = limited(all.slice(0, 12).map(function (x) {
       return newsItem(x.n, x.c, true, DATA.maj && x.n.date >= shift(DATA.maj, -3));
-    }));
+    }), 4);
     var evos = [];
     DATA.candidats.forEach(function (c) { (c.evolutions || []).forEach(function (e) { evos.push({ e: e, c: c }); }); });
     evos.sort(function (a, b) { return a.e.date < b.e.date ? 1 : -1; });
@@ -576,13 +593,13 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
           h("div", { class: "sec" }, [
             h("h2", { text: "Évolutions des programmes" }),
             h("p", { class: "note", text: "Chaque nouvelle mesure, modification ou retrait est daté du jour où le candidat l'a publié, ou du jour où nous l'avons constaté quand la date n'est pas indiquée." }),
-            h("div", { class: "feed", style: "margin-top:32px" }, evos.slice(0, 8).map(function (x) { return evoItem(x.e, x.c, true); }))
+            limited(evos.slice(0, 8).map(function (x) { return evoItem(x.e, x.c, true); }), 3, "feed", "margin-top:32px")
           ]),
           h("div", { class: "sec" }, [
             h("h2", { text: "Historique des mises à jour", style: "margin-bottom:32px" }),
-            h("div", { class: "feed" }, (DATA.journal || []).slice().sort(byDateDesc).map(function (j) {
+            limited((DATA.journal || []).slice().sort(byDateDesc).map(function (j) {
               return h("div", { class: "item" }, [h("div", { class: "date", text: fmt(j.date, true) }), h("div", null, [h("p", { text: j.resume, style: "margin:0" })])]);
-            }))
+            }), 3)
           ])
         ]),
         h("div", { class: "aside" }, [
