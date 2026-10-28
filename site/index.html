@@ -819,7 +819,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   }
 
   /* ---------- PDF export ---------- */
-  var PDF_COL = { surin: "#2b4797", saada: "#0cb7a4", bouyssou: "#f29b1d", fabiani: "#c2336b" };
+  var PDF_COL = { surin: "#4a63b8", saada: "#d9743f", bouyssou: "#7a5fb0", fabiani: "#c2587a" };
   function rgb(hex) { var n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
   function pt(t) {
     return String(t == null ? "" : t).replace(/[\u00a0\u202f\u2009]/g, " ").replace(/\u2212/g, "-").replace(/\u2192/g, "->")
@@ -859,7 +859,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       F = { reg: ["Mont", "normal"], bold: ["Mont", "bold"], xb: ["MontXB", "normal"] };
     }
     var W = 210, H = 297, M = 20, CW = W - 2 * M, TOP = 26, BOT = H - 24, y = TOP;
-    var INK = [28, 39, 80], MUTED = [86, 97, 134], DEEP = [43, 71, 151], SAND = [230, 234, 242], BLUSH = [243, 245, 248], ACC = [12, 183, 164], LINE = [217, 223, 235], LINK = [43, 71, 151], WHITE = [255, 255, 255];
+    var INK = [27, 36, 71], MUTED = [88, 96, 127], DEEP = [38, 54, 90], SAND = [232, 230, 240], BLUSH = [241, 239, 245], ACC = [201, 98, 46], LINE = [214, 212, 226], LINK = [74, 99, 184], WHITE = [255, 255, 255];
     var label = "", pageLabel = {};
     function font(k) { doc.setFont(F[k][0], F[k][1]); }
     function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
