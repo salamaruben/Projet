@@ -1,14 +1,14 @@
 <title>Bâtonnat de Paris 2027</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap">
 <style>
-/* Layout: sand hero and blush body, chocolate framed countdown, terracotta accents, Montserrat in tight heavy caps with small letter-spaced labels, as in the reference identity. Candidate colours stay distinct. */
+/* Base layout; the second style block below sets the blue and turquoise identity. Candidate colours stay distinct. */
 :root {
   --bg: #f6eae0; --bg2: #efe0cb; --surface: #fbf5ee; --ink: #2b1710; --muted: #6b5446; --line: #dcc8b0;
   --accent: #bb4e2e; --on-accent: #ffffff; --deep: #3b1f17; --on-deep: #f6eae0; --deep-line: #6a4638; --seat: #dcc8b0; --seat-deep: #5d3a2d;
   --on-c: #ffffff;
-  --c-saada: #0f766e; --c-bouyssou: #2457c5; --c-fabiani: #a8650f; --c-surin: #a3194f;
+  --c-surin: #2b4797; --c-saada: #0cb7a4; --c-bouyssou: #f29b1d; --c-fabiani: #c2336b;
   color-scheme: light;
   --f: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
@@ -17,7 +17,7 @@ body { background-color: var(--bg); color: var(--ink); font-family: var(--f); fo
 a { color: inherit; text-underline-offset: 3px; }
 a:focus-visible, summary:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.c-saada { --c: var(--c-saada); } .c-bouyssou { --c: var(--c-bouyssou); } .c-fabiani { --c: var(--c-fabiani); } .c-surin { --c: var(--c-surin); }
+.c-saada { --c: var(--c-saada); } .c-bouyssou { --c: var(--c-bouyssou); } .c-fabiani { --c: var(--c-fabiani); } .c-surin { --c: var(--c-surin); } .c-bouyssou { --on-c: #1c2750; }
 .glow { background: linear-gradient(155deg, color-mix(in srgb, var(--c) 20%, var(--surface)), var(--surface) 75%); }
 h1, h2, h3 { margin: 0; font-family: var(--f); font-weight: 800; text-wrap: balance; }
 h2 { font-size: clamp(30px, 5vw, 54px); line-height: .98; letter-spacing: -.04em; text-transform: uppercase; }
@@ -191,21 +191,88 @@ details li::marker { color: var(--accent); }
 .err { padding: 40px 0; color: var(--muted); }
 footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56px; font-size: 13px; }
 </style>
+<style>
+:root { --bg:#f3f5f8; --bg2:#e6eaf2; --surface:#fafbfd; --ink:#1c2750; --muted:#566186; --line:#d9dfeb; --accent:#0cb7a4; --deep:#2b4797; --on-deep:#ffffff; --seat:#cfd7ea; --f:"Jost","Helvetica Neue",Arial,sans-serif; --fs:"Roboto Slab",Georgia,serif; }
+body { background:var(--bg); font-size:17px; }
+h1,h2,h3 { font-weight:500; text-transform:none; letter-spacing:.01em; }
+h2 { font-size:clamp(28px,4vw,40px); font-weight:500; letter-spacing:.02em; }
+header.hero { background:var(--bg); }
+body::before { background:var(--bg); }
+.topbar { border-bottom:1px solid var(--line); }
+.topbar-in { display:flex; justify-content:space-between; align-items:center; padding-block:22px; }
+.brand { font-size:15px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); }
+.topnote { font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+.hero-main2 { display:grid; grid-template-columns:minmax(250px,330px) minmax(0,1fr); gap:0 48px; padding-block:48px 56px; align-items:start; }
+@media (max-width:900px){ .hero-main2 { grid-template-columns:minmax(0,1fr); gap:28px; padding-block:28px 36px; } }
+.direct { background:var(--deep); color:#fff; padding:26px 26px 26px 64px; position:relative; }
+.direct-label { position:absolute; left:24px; top:26px; writing-mode:vertical-rl; transform:rotate(180deg); font-size:12px; letter-spacing:.24em; text-transform:uppercase; }
+.direct ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.direct a { display:flex; align-items:center; gap:16px; color:#fff; text-decoration:none; font-size:13px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; }
+.direct a:hover { text-decoration:underline; text-underline-offset:4px; }
+.direct .ic { width:38px; height:38px; flex:none; border-radius:50%; background:var(--accent); display:grid; place-items:center; font-weight:600; font-size:15px; letter-spacing:0; color:#fff; }
+.une { position:relative; padding-top:0; }
+.une-tab { position:absolute; right:0; top:-26px; background:var(--accent); color:#fff; padding:14px 26px 14px 22px; font-size:14px; letter-spacing:.22em; text-transform:uppercase; display:flex; align-items:center; gap:14px; z-index:2; }
+.une-tab .doc { width:22px; height:26px; border:2px solid #fff; border-radius:3px; display:inline-block; background:linear-gradient(#fff,#fff) 4px 6px/10px 2px no-repeat,linear-gradient(#fff,#fff) 4px 11px/10px 2px no-repeat,linear-gradient(#fff,#fff) 4px 16px/6px 2px no-repeat; }
+.une-card { background:linear-gradient(135deg,#1c2750 0%,#2b4797 100%); color:#fff; padding:clamp(28px,5vw,56px); min-height:420px; display:flex; flex-direction:column; gap:18px; justify-content:flex-end; }
+.une-kick { font-family:var(--fs); font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#7ee6d8; }
+.hero h1 { font-size:clamp(40px,6.4vw,84px); line-height:1.02; font-weight:400; letter-spacing:.04em; text-transform:uppercase; color:#fff; }
+.une-count { display:flex; align-items:baseline; gap:18px; flex-wrap:wrap; }
+.une-count b { font-size:clamp(46px,7vw,84px); font-weight:300; line-height:1; letter-spacing:.02em; color:#7ee6d8; }
+.une-count span { font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#dbe4ff; }
+.lede { color:#dbe4ff; font-size:18px; max-width:56ch; margin:0; }
+.btn-pdf { margin-top:6px; background:var(--accent); font-size:13px; letter-spacing:.14em; border-radius:0; padding:16px 26px; color:#fff; }
+.pdf-msg { color:#dbe4ff; margin:0; }
+nav.tabs { background:var(--bg); border-block:1px solid var(--line); margin-top:0; }
+nav.tabs a { font-size:12px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; border-radius:0; padding:14px 18px; }
+nav.tabs a:hover { background:var(--bg2); }
+nav.tabs a[aria-current="page"] { background:var(--bg); color:var(--ink); box-shadow:inset 0 -3px 0 var(--accent); }
+main { padding-block:64px 100px; }
+.panel { border-radius:0; border-top-width:5px; }
+.panel h3 { font-weight:500; letter-spacing:.04em; text-transform:uppercase; font-size:clamp(20px,2vw,24px); }
+.panel .stats b, .fig b, .steps .d { font-weight:400; }
+.lab { font-family:var(--fs); letter-spacing:.2em; font-weight:500; color:var(--accent); border-top:1px solid var(--line); }
+.lab span:last-child { color:var(--muted); }
+.rail-box { background:var(--deep); }
+.cand-head h2 { font-weight:400; letter-spacing:.04em; text-transform:uppercase; }
+.cand-head { border-radius:0; }
+.btn { border-radius:0; letter-spacing:.16em; }
+.person h3 { font-weight:500; text-transform:uppercase; letter-spacing:.04em; }
+summary { font-weight:500; }
+details { border-radius:0; }
+.theme-block h3 { font-weight:500; text-transform:uppercase; letter-spacing:.04em; }
+.cell { border-radius:0; }
+.sec > h2, .aside h2 { font-weight:500; text-transform:none; }
+.msrc,.who,.cell .nm,.stats span { letter-spacing:.12em; }
+.pie-n { font-family:var(--f); font-weight:400; }
+footer { background:var(--deep); color:#fff; }
+.toggle,.chip { border-radius:0; }
+</style>
+
 
 <header class="hero">
-  <div class="wrap">
-    <div class="hero-top"><span>Mandature 2028-2029</span></div>
-    <div class="hero-main">
-      <div>
-        <h1>Bâtonnat<span>de Paris 2027</span></h1>
+  <div class="topbar"><div class="wrap topbar-in"><span class="brand">Bâtonnat de Paris 2027</span><span class="topnote">Site indépendant, non officiel · Mandature 2028-2029</span></div></div>
+  <div class="wrap hero-main2">
+    <aside class="direct" aria-label="Accès direct">
+      <div class="direct-label">Accès direct</div>
+      <ul>
+        <li><a href="#apercu"><span class="ic">A</span>Aperçu</a></li>
+        <li><a href="#surin"><span class="ic">S</span>Surin et Griguer</a></li>
+        <li><a href="#saada"><span class="ic">S</span>Saada et Lagrue</a></li>
+        <li><a href="#bouyssou"><span class="ic">B</span>Bouyssou et Pascarel</a></li>
+        <li><a href="#fabiani"><span class="ic">F</span>Fabiani et Naquet</a></li>
+        <li><a href="#comparatif"><span class="ic">C</span>Comparatif</a></li>
+      </ul>
+    </aside>
+    <div class="une">
+      <div class="une-tab"><span class="doc"></span>À la une</div>
+      <div class="une-card">
+        <div class="une-kick">Scrutin du 15 et 17 décembre 2026</div>
+        <h1>Bâtonnat de Paris 2027</h1>
+        <div class="une-count" id="countdown" hidden><b id="cd-n"></b><span id="cd-l"></span></div>
         <p class="lede" id="contexte">Chargement des programmes…</p>
         <button type="button" class="btn-pdf" id="pdf" hidden>Télécharger le programme de tous les candidats (PDF)</button>
         <p class="pdf-msg" id="pdf-msg" role="status"></p>
       </div>
-      <figure class="frame" id="countdown" hidden><div class="frame-in cf">
-        <div class="cf-n" id="cd-n"></div>
-        <div class="cf-l" id="cd-l"></div>
-      </div></figure>
     </div>
   </div>
 </header>
@@ -434,8 +501,8 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 400 },
     fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
   };
-  var PIE_COLORS = ["#bb4e2e", "#3b1f17", "#0f766e", "#2457c5", "#a8650f", "#a3194f", "#6b7a2a"];
-  var PIE_OTHER = "#b8a99a";
+  var PIE_COLORS = ["#2b4797", "#0cb7a4", "#f29b1d", "#c2336b", "#1c2750", "#3d9bd9", "#7a4fb5"];
+  var PIE_OTHER = "#aab4cf";
   function themeShares(c) {
     var seen = {};
     (DATA.comparatif || []).forEach(function (r) {
@@ -582,7 +649,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
   }
 
   /* ---------- PDF export ---------- */
-  var PDF_COL = { saada: "#0f766e", bouyssou: "#2457c5", fabiani: "#a8650f", surin: "#a3194f" };
+  var PDF_COL = { surin: "#2b4797", saada: "#0cb7a4", bouyssou: "#f29b1d", fabiani: "#c2336b" };
   function rgb(hex) { var n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
   function pt(t) {
     return String(t == null ? "" : t).replace(/[\u00a0\u202f\u2009]/g, " ").replace(/\u2212/g, "-").replace(/\u2192/g, "->")
@@ -622,7 +689,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
       F = { reg: ["Mont", "normal"], bold: ["Mont", "bold"], xb: ["MontXB", "normal"] };
     }
     var W = 210, H = 297, M = 20, CW = W - 2 * M, TOP = 26, BOT = H - 24, y = TOP;
-    var INK = [43, 23, 16], MUTED = [107, 84, 70], DEEP = [59, 31, 23], SAND = [239, 224, 203], BLUSH = [246, 234, 224], ACC = [187, 78, 46], LINE = [220, 200, 176], LINK = [36, 64, 200], WHITE = [255, 255, 255];
+    var INK = [28, 39, 80], MUTED = [86, 97, 134], DEEP = [43, 71, 151], SAND = [230, 234, 242], BLUSH = [243, 245, 248], ACC = [12, 183, 164], LINE = [217, 223, 235], LINK = [43, 71, 151], WHITE = [255, 255, 255];
     var label = "", pageLabel = {};
     function font(k) { doc.setFont(F[k][0], F[k][1]); }
     function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
@@ -673,7 +740,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
 
     /* ---------- Cover ---------- */
     fill(SAND); doc.rect(0, 0, W, H, "F");
-    caps("Ordre des avocats de Paris", M, 28, 8.5, ACC, "bold", 0.9);
+    caps("Site indépendant, non officiel", M, 28, 8.5, ACC, "bold", 0.9);
     caps("Mandature 2028-2029", W - M, 28, 8.5, MUTED, "reg", 0.9, "right");
     font("xb"); doc.setFontSize(54); color(INK); doc.text("BÂTONNAT", M - 1, 78);
     color(ACC); doc.setFontSize(54); doc.text("DE PARIS", M - 1, 96); doc.text("2027", M - 1, 114);
@@ -938,7 +1005,7 @@ footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56p
     viewsEl.appendChild(viewApercu());
     data.candidats.forEach(function (c) { viewsEl.appendChild(viewCand(c)); });
     viewsEl.appendChild(viewComparatif());
-    document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes.";
+    document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes. Site indépendant, sans lien avec l'Ordre des avocats de Paris.";
     countdown();
     window.addEventListener("hashchange", show);
     show();
