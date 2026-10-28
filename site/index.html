@@ -960,145 +960,91 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       });
     }
 
-    /* ---------- Candidates ---------- */
+    /* ---------- Candidates (synthetic: one page each) ---------- */
     data.candidats.forEach(function (c) {
       var col = cols[c.id];
       newPage(c.binome);
-      /* header band, full width (starts above the running header) */
-      var bandH = 62;
+      var bandH = 38;
       fill(col); doc.rect(0, 0, W, bandH, "F");
-      caps("Programme", M, 22, 8.5, WHITE, "bold", 0.9);
-      font("xb"); doc.setFontSize(27); doc.setTextColor(255, 255, 255);
+      font("xb"); doc.setFontSize(19); doc.setTextColor(255, 255, 255);
       var nl = doc.splitTextToSize(pt(c.binome.toUpperCase()), CW);
-      doc.text(nl, M, 36);
-      font("bold"); doc.setFontSize(11.5);
-      doc.text(pt("« " + c.slogan + " »"), M, 36 + nl.length * 10 + 4);
+      doc.text(nl, M, 22);
+      font("bold"); doc.setFontSize(9.5);
+      doc.text(pt("« " + c.slogan + " »"), M, 22 + nl.length * 7.5 + 1);
       pageLabel[doc.getNumberOfPages()] = "";
-      y = bandH + 10;
-      para(c.positionnement, { size: 10, color: INK, after: 2 });
-      if (c.site) { font("reg"); doc.setFontSize(8.5); color(MUTED); doc.text("Site de campagne :", M, y + 3); linkAt(c.site, c.site, M + 33, y, 8.5); y += 8; }
-
-      /* people cards */
-      h2("Le binôme", col, 13);
-      var cw2 = (CW - 5) / 2;
-      var cards = c.personnes.map(function (p) {
-        var nm = wrap(p.nom, 12, cw2 - 8, "xb"), bio = wrap(p.bio, 8, cw2 - 8, "reg");
-        return { p: p, nm: nm, bio: bio, h: 5 + 4 + nm.length * lh(12, 1.25) + 2 + bio.length * lh(8, 1.5) + 5 };
+      y = bandH + 5;
+      para(c.positionnement, { size: 8.5, color: INK, after: 1, k: 1.4 });
+      c.personnes.forEach(function (p) {
+        para(p.role + " : " + p.nom, { size: 8, color: MUTED, after: 0.3, font: "bold" });
       });
-      var ch = Math.max.apply(null, cards.map(function (k) { return k.h; }));
-      ensure(ch + 4);
-      cards.forEach(function (k, i) {
-        var x = M + i * (cw2 + 5);
-        fill(BLUSH); stroke(LINE, 0.2); doc.roundedRect(x, y, cw2, ch, 1.5, 1.5, "FD");
-        caps(k.p.role, x + 4, y + 4.5, 6.8, col, "bold", 0.5);
-        var hh = put(k.nm, x + 4, y + 10, 12, "xb", INK, 1.25);
-        put(k.bio, x + 4, y + 10 + hh + 2, 8, "reg", MUTED, 1.5);
-      });
-      y += ch + 8;
-
-      /* programme */
-      h2("Programme · " + nMes(c) + " mesures", col, 13);
+      y += 1;
+      h2(nMes(c) + " mesures", col, 11);
       c.programme.forEach(function (a) {
-        var tl = wrap(a.titre, 12, CW - 6, "bold");
-        var rs = a.resume ? wrap(a.resume, 8.5, CW - 10, "reg") : [];
-        var first = a.mesures[0] ? wrap(mText(a.mesures[0]), 9.5, CW - 6, "reg") : [];
-        ensure(tl.length * lh(12, 1.3) + rs.length * lh(8.5, 1.5) + 9 + first.length * lh(9.5, 1.55) + 4);
-        y += 3;
-        fill(col); doc.circle(M + 1.4, y + 3.2, 1.4, "F");
-        y += put(tl, M + 6, y, 12, "bold", INK, 1.3);
-        if (rs.length) {
-          var bh = rs.length * lh(8.5, 1.5) + 4.4;
-          fill(BLUSH); doc.roundedRect(M + 6, y + 0.6, CW - 6, bh, 1.2, 1.2, "F");
-          put(rs, M + 9, y + 2.8, 8.5, "reg", MUTED, 1.5);
-          y += bh + 3;
-        } else y += 1.5;
+        var tl = wrap(a.titre, 10, CW - 6, "bold");
+        var rs = [];
+        var first = a.mesures[0] ? wrap(mText(a.mesures[0]), 8.5, CW - 14, "reg") : [];
+        ensure(tl.length * lh(10, 1.3) + rs.length * lh(7.8, 1.4) + first.length * lh(8.5, 1.4) + 6);
+        y += 1;
+        fill(col); doc.circle(M + 1.4, y + 2.6, 1.3, "F");
+        y += put(tl, M + 6, y, 9.6, "bold", INK, 1.25) + 0.4;
+        if (rs.length) y += put(rs, M + 6, y, 7.8, "reg", MUTED, 1.4) + 0.6;
         a.mesures.forEach(function (m) {
-          para(mText(m), { size: 9.5, indent: 11, dot: col, after: (m && (m.detail || (m.points || []).length)) ? 0.6 : 1.6 });
-          if (m && (m.detail || (m.points || []).length)) {
-            String(m.detail || "").split(/\n+/).filter(Boolean).forEach(function (t, i) { para((i === 0 ? "Détail : " : "") + t, { size: 8.5, color: MUTED, indent: 11, after: 0.8 }); });
-            (m.points || []).forEach(function (t) { para(t, { size: 8.5, color: MUTED, indent: 15, dot: col, after: 0.8 }); });
-            y += 1;
-          }
+          para(mText(m), { size: 8, indent: 9, dot: col, after: 0.5, k: 1.28 });
         });
-        y += 1.5;
+        y += 0.6;
       });
-
-      /* sources */
-      if ((c.sources || []).length) {
-        var sh = 12 + c.sources.length * 5.6;
-        ensure(sh + 6); y += 4;
-        fill(BLUSH); doc.roundedRect(M, y, CW, sh, 1.5, 1.5, "F");
-        caps("Sources du programme", M + 5, y + 4.6, 7.5, col, "bold", 0.6);
-        var sy = y + 11;
-        c.sources.forEach(function (s) {
-          var w = linkAt(s.label, s.url, M + 5, sy, 9);
-          font("reg"); doc.setFontSize(8); color(MUTED); doc.text(pt("  " + s.type), M + 5 + w, sy + 2.9);
-          sy += 5.6;
-        });
-        y += sh + 4;
-      }
-
-      /* evolutions */
-      var evo = (c.evolutions || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-      if (evo.length) {
-        h2("Évolutions du programme", col, 13);
-        evo.forEach(function (e) {
-          var tt = wrap(e.titre, 10, CW - 36, "bold");
-          var dt = e.detail ? wrap(e.detail, 8.5, CW - 36, "reg") : [];
-          var eh = tt.length * lh(10, 1.4) + 4 + dt.length * lh(8.5, 1.5) + 4 + (e.source ? 5 : 0) + 4;
-          ensure(eh);
-          stroke(LINE, 0.2); doc.line(M, y, W - M, y); y += 3;
-          font("xb"); doc.setFontSize(8.5); color(ACC); doc.text(pt(fmt(e.date, true)), M, y + 3);
-          var hh = put(tt, M + 32, y, 10, "bold", INK, 1.4);
-          caps(e.type, M + 32, y + hh + 0.4, 6.5, col, "bold", 0.5); y += hh + 4.6;
-          if (dt.length) y += put(dt, M + 32, y, 8.5, "reg", MUTED, 1.5) + 0.8;
-          font("reg"); doc.setFontSize(7.5); color(MUTED);
-          doc.text(pt("Daté du " + fmt(e.date, true) + " · Constaté le " + fmt(e.constat || e.date, true) + (e.constat_heure ? " à " + e.constat_heure : "")), M + 32, y + 2.6); y += 4.4;
-          if (e.source) { font("reg"); doc.setFontSize(7.5); color(MUTED); doc.text("Source :", M + 32, y + 2.6); linkAt(host(e.source), e.source, M + 32 + 11.5, y, 7.5); y += 5; }
-          y += 2;
-        });
-      }
-      if (c.limites) {
-        var lm = wrap("Limites de cette fiche : " + c.limites, 8.5, CW - 10, "reg");
-        var lhh = lm.length * lh(8.5, 1.5) + 8;
-        ensure(lhh + 6); y += 6;
-        stroke(MUTED, 0.2); doc.setLineDashPattern([1.2, 1.2], 0); doc.roundedRect(M, y, CW, lhh, 1.5, 1.5, "S"); doc.setLineDashPattern([], 0);
-        put(lm, M + 5, y + 4, 8.5, "reg", MUTED, 1.5); y += lhh;
-      }
+      ensure(14); y += 2;
+      stroke(LINE, 0.2); doc.line(M, y, W - M, y); y += 3;
+      font("reg"); doc.setFontSize(8); color(MUTED);
+      doc.text("Détail de chaque mesure, sources et évolutions : sur le site.", M, y + 3);
+      if (c.site) { doc.text("Site de campagne :", M, y + 7.6); linkAt(c.site, c.site, M + 29, y + 4.6, 8); }
     });
 
-    /* ---------- Comparison ---------- */
+    /* ---------- Comparison at a glance ---------- */
     if ((data.comparatif || []).length) {
-      newPage("Comparatif");
-      h2("Comparatif par thème", INK, 22);
-      para("Mesures reprises telles que les candidats les présentent. « Non précisé » : aucune mesure trouvée sur ce thème.", { size: 9, color: MUTED, after: 4 });
-      var cw2c = (CW - 4) / 2;
-      data.comparatif.forEach(function (r) {
-        var cells = data.candidats.map(function (c) {
-          var t0 = r.items[c.id];
-          var t = Array.isArray(t0) ? (t0.length ? t0.map(function (x) { return "- " + mText(x); }).join("\n") : "") : t0;
-          var ls = wrap(t || "Non précisé", 8.5, cw2c - 8, "reg");
-          return { c: c, t: t, ls: ls, h: 9 + ls.length * lh(8.5, 1.5) + 3.5 };
-        });
-        var rowH = [Math.max(cells[0].h, cells[1] ? cells[1].h : 0), Math.max(cells[2] ? cells[2].h : 0, cells[3] ? cells[3].h : 0)];
-        var tl = wrap(r.theme.toUpperCase(), 12.5, CW, "xb");
-        ensure(tl.length * lh(12.5, 1.2) + 8 + rowH[0] + 6);
-        y += 3; stroke(INK, 0.5); doc.line(M, y, W - M, y); y += 3.5;
-        y += put(tl, M, y, 12.5, "xb", INK, 1.2) + 2.5;
-        for (var row = 0; row < 2; row++) {
-          var pair = cells.slice(row * 2, row * 2 + 2); if (!pair.length) break;
-          ensure(rowH[row] + 2);
-          pair.forEach(function (k, i) {
-            var x = M + i * (cw2c + 4), col = cols[k.c.id];
-            fill(mix(col, 0.1)); doc.roundedRect(x, y, cw2c, rowH[row], 1.5, 1.5, "F");
-            fill(col); doc.rect(x, y, cw2c, 1.1, "F");
-            caps(k.c.binome, x + 4, y + 3.6, 6.5, col, "bold", 0.4);
-            put(k.ls, x + 4, y + 8.2, 8.5, "reg", k.t ? INK : MUTED, 1.5);
-          });
-          y += rowH[row] + 3;
-        }
-        y += 3;
+      newPage("En un coup d'œil");
+      h2("Les programmes en un coup d'œil", INK, 17);
+      para("Nombre de mesures de chaque binôme par thème. Une case vide signifie qu'aucune mesure n'a été trouvée sur ce thème.", { size: 8.5, color: MUTED, after: 4, k: 1.45 });
+      var tw = 74, cw4 = (CW - tw) / 4;
+      var hx = M + tw;
+      data.candidats.forEach(function (c, i) {
+        var nm = wrap(c.binome, 7, cw4 - 3, "bold");
+        fill(cols[c.id]); doc.roundedRect(hx + i * cw4 + 0.8, y, cw4 - 1.6, 12, 1.2, 1.2, "F");
+        put(nm, hx + i * cw4 + 2, y + 2.2, 7, "bold", WHITE, 1.25);
       });
+      y += 14;
+      var maxN = 1;
+      data.comparatif.forEach(function (r) { data.candidats.forEach(function (c) { var v = r.items[c.id]; var n0 = Array.isArray(v) ? v.length : (v ? 1 : 0); if (n0 > maxN) maxN = n0; }); });
+      data.comparatif.forEach(function (r, ri) {
+        var rh = 8.6;
+        ensure(rh + 1);
+        if (ri % 2 === 0) { fill(BLUSH); doc.rect(M, y - 0.4, CW, rh, "F"); }
+        font("bold"); doc.setFontSize(8.3); color(INK);
+        var tl2 = wrap(r.theme, 8.3, tw - 3, "bold");
+        put(tl2.slice(0, 2), M + 1.5, y + (tl2.length > 1 ? 0.9 : 2.1), 8.3, "bold", INK, 1.15);
+        data.candidats.forEach(function (c, i) {
+          var v = r.items[c.id]; var n0 = Array.isArray(v) ? v.length : (v ? 1 : 0);
+          var cx = hx + i * cw4;
+          if (n0 > 0) {
+            fill(mix(cols[c.id], 0.18 + 0.62 * (n0 / maxN)));
+            doc.roundedRect(cx + 1.2, y + 0.4, cw4 - 2.4, rh - 1.4, 1.2, 1.2, "F");
+            font("xb"); doc.setFontSize(9.5); color(n0 / maxN > 0.55 ? WHITE : INK);
+            doc.text(String(n0), cx + cw4 / 2, y + 5.2, { align: "center" });
+          } else {
+            font("reg"); doc.setFontSize(8); color(LINE);
+            doc.text("\u2013", cx + cw4 / 2, y + 5.2, { align: "center" });
+          }
+        });
+        y += rh;
+      });
+      y += 3;
+      font("bold"); doc.setFontSize(8.3); color(INK); doc.text("Total des mesures", M + 1.5, y + 4);
+      data.candidats.forEach(function (c, i) {
+        font("xb"); doc.setFontSize(10); color(cols[c.id]);
+        doc.text(String(nMes(c)), hx + i * cw4 + cw4 / 2, y + 4, { align: "center" });
+      });
+      y += 9;
+      para("Pour le détail de chaque mesure, les sources et les évolutions, rendez-vous sur le site.", { size: 8.5, color: MUTED, after: 0 });
     }
 
     /* ---------- Running header and footer ---------- */
