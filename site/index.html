@@ -8,7 +8,7 @@
   --bg: #f6eae0; --bg2: #efe0cb; --surface: #fbf5ee; --ink: #2b1710; --muted: #6b5446; --line: #dcc8b0;
   --accent: #bb4e2e; --on-accent: #ffffff; --deep: #3b1f17; --on-deep: #f6eae0; --deep-line: #6a4638; --seat: #dcc8b0; --seat-deep: #5d3a2d;
   --on-c: #ffffff;
-  --c-surin: #2b4797; --c-saada: #0cb7a4; --c-bouyssou: #f29b1d; --c-fabiani: #c2336b;
+  --c-surin: #4a63b8; --c-saada: #d9743f; --c-bouyssou: #7a5fb0; --c-fabiani: #c2587a;
   color-scheme: light;
   --f: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
@@ -253,30 +253,142 @@ footer { background:var(--deep); color:#fff; }
 </style>
 
 
-<header class="hero">
-  <div class="topbar"><div class="wrap topbar-in"><span class="brand">Bâtonnat de Paris 2027</span><span class="topnote">Site indépendant, non officiel · Mandature 2028-2029</span></div></div>
-  <div class="wrap hero-main2">
-    <aside class="direct" aria-label="Accès direct">
-      <div class="direct-label">Accès direct</div>
-      <ul>
-        <li><a href="#apercu"><span class="ic">A</span>Aperçu</a></li>
-        <li><a href="#surin"><span class="ic">S</span>Surin et Griguer</a></li>
-        <li><a href="#saada"><span class="ic">S</span>Saada et Lagrue</a></li>
-        <li><a href="#bouyssou"><span class="ic">B</span>Bouyssou et Pascarel</a></li>
-        <li><a href="#fabiani"><span class="ic">F</span>Fabiani et Naquet</a></li>
-        <li><a href="#comparatif"><span class="ic">C</span>Comparatif</a></li>
-      </ul>
-    </aside>
-    <div class="une">
-      <div class="une-tab"><span class="doc"></span>À la une</div>
-      <div class="une-card">
-        <div class="une-kick">Scrutin du 15 et 17 décembre 2026</div>
-        <h1>Bâtonnat de Paris 2027</h1>
-        <div class="une-count" id="countdown" hidden><b id="cd-n"></b><span id="cd-l"></span></div>
-        <p class="lede" id="contexte">Chargement des programmes…</p>
-        <button type="button" class="btn-pdf" id="pdf" hidden>Télécharger le programme de tous les candidats (PDF)</button>
-        <p class="pdf-msg" id="pdf-msg" role="status"></p>
-      </div>
+<style>
+/* --- Proposition 2 : photo plein écran, cadre fin, verre dépoli --- */
+:root { --bg:#f3f5f8; --bg2:#e6eaf2; --surface:#fafbfd; --ink:#16203d; --muted:#566186; --line:#d9dfeb; --accent:#0cb7a4; --deep:#16203d; --on-deep:#fff; --f:"Inter","Helvetica Neue",Arial,sans-serif; }
+body { background:var(--bg); font-family:var(--f); font-size:16px; }
+h1,h2,h3 { font-family:var(--f); font-weight:600; letter-spacing:-.02em; text-transform:none; }
+h2 { font-size:clamp(26px,3.4vw,38px); }
+header.hero2 { position:relative; min-height:min(100vh,860px); overflow:hidden; color:#fff; padding:56px 56px 56px; background:#27385c; isolation:isolate; }
+header.hero2 .sky { position:absolute; inset:0; width:100%; height:100%; z-index:-1; }
+header.hero2::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(14,22,48,.35),rgba(14,22,48,0) 40%,rgba(14,22,48,.35)); }
+.tl,.tr { position:absolute; top:18px; font-size:10px; letter-spacing:.12em; line-height:1.4; opacity:.9; }
+.tl { left:56px; } .tr { right:56px; text-align:right; }
+.frame2 { position:relative; z-index:1; min-height:calc(min(100vh,860px) - 112px); border:1px solid rgba(255,255,255,.65); padding:22px 26px 26px; display:flex; flex-direction:column; max-width:1320px; margin:0 auto; }
+.gnav { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.logo2 { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; font-size:13px; font-weight:600; line-height:1.15; }
+.logo2 .lg { width:30px; height:30px; border:2px solid #fff; border-radius:6px; display:grid; grid-template-columns:1fr 1fr; gap:3px; padding:4px; } .logo2 .lg i { background:#fff; border-radius:2px; }
+.glinks { display:flex; gap:22px; font-size:12px; } .glinks a { color:#fff; text-decoration:none; opacity:.92; } .glinks a:hover { opacity:1; text-decoration:underline; text-underline-offset:4px; }
+.wbtn { display:inline-flex; align-items:center; gap:12px; background:#fff; color:#16203d; font:inherit; font-size:12px; font-weight:600; padding:9px 10px 9px 16px; border:0; border-radius:3px; cursor:pointer; text-decoration:none; letter-spacing:0; text-transform:none; }
+.wbtn .sq { width:26px; height:26px; background:#16203d; border-radius:3px; display:grid; place-items:center; }
+.wbtn.big { font-size:14px; padding:12px 12px 12px 22px; } .wbtn.big .sq { width:34px; height:34px; }
+.gbtn { display:inline-flex; align-items:center; background:rgba(255,255,255,.18); backdrop-filter:blur(8px); color:#fff; text-decoration:none; font-size:13px; padding:14px 22px; border-radius:3px; border:1px solid rgba(255,255,255,.28); }
+.hbody { margin-top:clamp(40px,10vh,110px); max-width:900px; } header.hero2 h1 { text-wrap:balance; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
+.chip2 { background:rgba(255,255,255,.2); backdrop-filter:blur(8px); border-radius:3px; font-size:11px; padding:5px 11px; color:#fff; } .chip2 b { font-weight:700; }
+header.hero2 h1 { font-size:clamp(30px,4.2vw,52px); line-height:1.08; font-weight:600; color:#fff; letter-spacing:-.025em; margin:0; }
+header.hero2 .lede { color:rgba(255,255,255,.88); font-size:15px; max-width:52ch; margin:26px 0 0; }
+header.hero2 .pdf-msg { color:#fff; margin:8px 0 0; }
+.hfoot { margin-top:auto; padding-top:40px; display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+nav.tabs { background:rgba(243,245,248,.92); backdrop-filter:blur(10px); }
+nav.tabs a { text-transform:none; letter-spacing:0; font-size:14px; font-weight:500; }
+.panel,.cand-head,.person,details,.cell { border-radius:6px; }
+@media (max-width:900px) { .tr { display:none; } header.hero2 { padding:44px 14px 14px; } .tl { left:14px; } .tr { right:14px; } .glinks { display:none; } .frame2 { padding:16px; } .hfoot { flex-direction:column; align-items:stretch; } .gbtn { justify-content:center; } }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* --- Proposition 2 : palette du crépuscule partout --- */
+:root { --bg:#f1eff5; --bg2:#e8e6f0; --surface:rgba(255,255,255,.74); --ink:#1b2447; --muted:#58607f; --line:#d6d4e2; --accent:#d9743f; --deep:#1b2447; --on-deep:#fff; --seat:#d6d4e2; color-scheme:light; --c-surin:#4a63b8; --c-saada:#d9743f; --c-bouyssou:#7a5fb0; --c-fabiani:#c2587a; }
+html { background:#f1eff5; }
+body { background:linear-gradient(180deg,#26365a 0,#7c8db3 140px,#f1eff5 520px,#f1eff5 70%,#f7ede6 100%); color:var(--ink); }
+.glow { background:linear-gradient(155deg,color-mix(in srgb,var(--c) 14%,#fff),rgba(255,255,255,.8) 75%); }
+.panel,.cand-head,.person,details,.cell,.sources,.rail-box,.limits { border:1px solid var(--line); border-top-width:3px; border-radius:6px; }
+.panel,.cand-head,.cell { border-top-color:var(--c); }
+.person,details,.sources { background:rgba(255,255,255,.72); border-top-width:1px; }
+.rail-box { background:linear-gradient(135deg,#26365a,#4a5a88); color:#fff; border-top-width:1px; }
+.theme-block { border:0; border-top:1px solid var(--line); border-radius:0; }
+nav.tabs { background:rgba(241,239,245,.9); backdrop-filter:blur(12px); border-block:1px solid var(--line); }
+nav.tabs a { color:var(--ink); } nav.tabs a:hover { background:rgba(27,36,71,.06); } nav.tabs a[aria-current="page"] { background:transparent; color:var(--ink); box-shadow:inset 0 -2px 0 var(--accent); }
+.lab { font-family:var(--f); font-size:11px; font-weight:500; letter-spacing:.12em; color:var(--muted); border-top:1px solid var(--line); }
+.stamp a,.fig small a,.sources a,.note a { color:#b4561f; }
+.panel .go,.btn { background:#1b2447; color:#fff; border-radius:3px; text-transform:none; letter-spacing:0; font-size:13px; font-weight:600; padding:10px 10px 10px 16px; display:inline-flex; align-items:center; gap:12px; }
+.panel .go::after,.btn::after { content:"\2192"; display:inline-grid; place-items:center; width:24px; height:24px; background:#f4b98a; color:#1b2447; border-radius:3px; font-size:13px; }
+details[open] summary::after { background:#1b2447; border-color:#1b2447; color:#fff; }
+.mes-detail { background:rgba(27,36,71,.05); border-radius:4px; }
+.tools input[type="search"] { background:#fff; border-radius:3px; }
+.toggle { border-radius:3px; background:color-mix(in srgb,var(--c) 14%,#fff); } .toggle[aria-pressed="false"] { background:transparent; }
+.chip,.tag-t,.pill-new { border-radius:3px; } .pill-new { background:#d9743f; color:#fff; }
+.steps li.next .d::after { background:#f4b98a; color:#1b2447; border-radius:3px; }
+.rail { background:rgba(255,255,255,.25); } .rail .tick { background:#26365a; border-color:#fff; } .rail .tick.past,.rail .done { background:#f4b98a; border-color:#f4b98a; }
+.steps .t { color:rgba(255,255,255,.75); }
+.pie-n { fill:#1b2447; } .pie-s { fill:#58607f; } .pie path { stroke:#f1eff5; }
+.date,.agenda .d { color:#b4561f; }
+.lab,.person .role { color:#b4561f; } .lab span:last-child { color:var(--muted); }
+details li::marker { color:#d9743f; }
+footer { background:linear-gradient(180deg,#26365a,#1b2447); color:rgba(255,255,255,.85); }
+footer a { color:#f4b98a; }
+.cand-head.has-photo.framed .ch-photo { border-color:#fff; }
+</style>
+<style>
+/* --- formes arrondies, plus modernes --- */
+.frame2 { border-radius:28px; }
+header.hero2 { border-radius:0 0 36px 36px; }
+.wbtn,.gbtn,.panel .go,.btn { border-radius:999px; }
+.wbtn .sq { border-radius:50%; } .wbtn.big .sq { border-radius:50%; }
+.panel .go::after,.btn::after { border-radius:50%; }
+.chip2,.chip,.tag-t,.pill-new { border-radius:999px; }
+.logo2 .lg { border-radius:10px; } .logo2 .lg i { border-radius:3px; }
+.panel,.cand-head,.person,details,.sources,.limits,.cell { border-radius:22px; }
+.panel,.cand-head,.cell { border:1.5px solid color-mix(in srgb,var(--c) 45%,#fff); }
+.rail-box { border-radius:22px; }
+.rail,.rail .done { border-radius:999px; }
+.mes-detail { border-radius:14px; }
+.tools input[type="search"],.toggle { border-radius:999px; }
+nav.tabs a { border-radius:999px; }
+nav.tabs a[aria-current="page"] { box-shadow:none; background:#1b2447; color:#fff; }
+nav.tabs .row { padding-block:12px; }
+.cand-head .ch-photo { border-radius:0; }
+.cand-head.has-photo.framed .ch-photo { border-radius:18px; }
+.ch-text .btn { border-radius:999px; }
+.theme-block h3 { }
+.sources { border-radius:22px; }
+footer { border-radius:36px 36px 0 0; margin-top:24px; }
+.person { padding:26px 28px; }
+@media (max-width:900px) { header.hero2 { border-radius:0 0 24px 24px; } .frame2 { border-radius:20px; } }
+</style>
+<header class="hero2">
+  <svg class="sky" viewBox="0 0 1600 700" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+<defs>
+<linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b5a8c"/><stop offset=".5" stop-color="#8190b6"/><stop offset=".8" stop-color="#eaa985"/><stop offset="1" stop-color="#f4cb9e"/></linearGradient>
+<linearGradient id="wt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a6c94"/><stop offset="1" stop-color="#26365a"/></linearGradient>
+<radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3d6" stop-opacity=".95"/><stop offset="1" stop-color="#ffd7a0" stop-opacity="0"/></radialGradient>
+<linearGradient id="rf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6cf9f" stop-opacity=".55"/><stop offset="1" stop-color="#f6cf9f" stop-opacity="0"/></linearGradient>
+<filter id="bl"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="1600" height="700" fill="url(#sk)"/>
+<circle cx="1000" cy="500" r="190" fill="url(#sun)"/>
+<g fill="#6a5f6c" opacity=".7"><rect x="-20" y="530" width="47" height="30"/><rect x="33" y="542" width="53" height="18"/><rect x="90" y="533" width="77" height="27"/><rect x="167" y="537" width="53" height="23"/><rect x="226" y="522" width="78" height="38"/><rect x="305" y="538" width="42" height="22"/><rect x="350" y="534" width="68" height="26"/><rect x="418" y="523" width="89" height="37"/><rect x="512" y="530" width="58" height="30"/><rect x="571" y="540" width="44" height="20"/><rect x="618" y="522" width="77" height="38"/><rect x="698" y="523" width="40" height="37"/><rect x="743" y="484" width="63" height="76"/><rect x="808" y="481" width="77" height="79"/><rect x="887" y="519" width="64" height="41"/><rect x="953" y="513" width="59" height="47"/><rect x="1015" y="518" width="86" height="42"/><rect x="1103" y="517" width="87" height="43"/><rect x="1196" y="532" width="70" height="28"/><rect x="1272" y="529" width="43" height="31"/><rect x="1316" y="477" width="42" height="83"/><rect x="1362" y="492" width="55" height="68"/><rect x="1421" y="480" width="66" height="80"/><rect x="1491" y="520" width="73" height="40"/><rect x="1565" y="513" width="48" height="47"/></g>
+<g fill="#2b3555" opacity=".9"><rect x="-10" y="503" width="58" height="57"/><rect x="51" y="520" width="62" height="40"/><rect x="114" y="502" width="62" height="58"/><rect x="180" y="526" width="41" height="34"/><rect x="224" y="523" width="49" height="37"/><rect x="273" y="530" width="64" height="30"/><rect x="341" y="504" width="55" height="56"/><rect x="400" y="532" width="40" height="28"/><rect x="444" y="529" width="34" height="31"/><rect x="478" y="517" width="42" height="43"/><rect x="524" y="503" width="31" height="57"/><rect x="557" y="520" width="58" height="40"/><rect x="619" y="514" width="44" height="46"/><rect x="666" y="527" width="30" height="33"/><rect x="699" y="506" width="47" height="54"/><rect x="750" y="500" width="35" height="60"/><rect x="787" y="467" width="44" height="93"/><rect x="833" y="524" width="31" height="36"/><rect x="868" y="481" width="36" height="79"/><rect x="904" y="483" width="48" height="77"/><rect x="952" y="532" width="31" height="28"/><rect x="984" y="526" width="43" height="34"/><rect x="1030" y="442" width="54" height="118"/><rect x="1087" y="523" width="56" height="37"/><rect x="1147" y="433" width="42" height="127"/><rect x="1191" y="521" width="51" height="39"/><rect x="1244" y="531" width="51" height="29"/><rect x="1298" y="515" width="37" height="45"/><rect x="1336" y="531" width="36" height="29"/><rect x="1372" y="430" width="59" height="130"/><rect x="1434" y="445" width="41" height="115"/><rect x="1479" y="475" width="42" height="85"/><rect x="1525" y="439" width="42" height="121"/><rect x="1568" y="450" width="56" height="110"/></g>
+<g fill="#1c2644">
+<path d="M1208 560 L1222 560 L1232 470 L1240 420 L1246 380 L1250 330 L1254 300 L1258 330 L1262 380 L1268 420 L1276 470 L1286 560 L1272 560 Q1254 515 1236 560Z"/>
+<rect x="1226" y="466" width="56" height="6"/><rect x="1240" y="414" width="28" height="5"/>
+<rect x="1252" y="262" width="3" height="40"/>
+<rect x="1420" y="400" width="38" height="160"/><rect x="1470" y="440" width="50" height="120"/>
+<path d="M880 560 L880 470 Q880 440 910 425 Q940 440 940 470 L940 560Z"/><rect x="906" y="395" width="8" height="32"/>
+</g>
+<rect y="560" width="1600" height="140" fill="url(#wt)"/>
+<rect x="940" y="560" width="200" height="140" fill="url(#rf)" filter="url(#bl)"/>
+<g stroke="#ffe3bd" stroke-opacity=".3" stroke-width="2" stroke-linecap="round"><path d="M990 585h100M1000 605h80M1010 625h60M1020 645h40"/></g>
+</svg>
+  <div class="tl">SITE INDÉPENDANT, NON OFFICIEL</div>
+  <div class="tr">COMPARATEUR DES PROGRAMMES<br>BÂTONNAT DE PARIS 2027</div>
+  <div class="frame2">
+    <div class="gnav">
+      <a class="logo2" href="#apercu"><span class="lg"><i></i><i></i></span><span>Bâtonnat<br>de Paris 2027</span></a>
+      <nav class="glinks" aria-label="Accès rapide">
+        <a href="#surin">Surin et Griguer</a><a href="#saada">Saada et Lagrue</a><a href="#bouyssou">Bouyssou et Pascarel</a><a href="#fabiani">Fabiani et Naquet</a><a href="#comparatif">Comparatif</a>
+      </nav>
+      <button type="button" class="btn-pdf wbtn" id="pdf" hidden>Programmes en PDF <span class="sq"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2.4"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg></span></button>
+    </div>
+    <div class="hbody">
+      <div class="chips"><span class="chip2">4 binômes</span><span class="chip2">Scrutin des 15 et 17 décembre 2026</span><span class="chip2" id="countdown" hidden><b id="cd-n"></b> <span id="cd-l"></span></span></div>
+      <h1>Comparez les programmes<br>des candidats au bâtonnat de Paris</h1>
+      <p class="lede" id="contexte">Chargement des programmes…</p>
+      <p class="pdf-msg" id="pdf-msg" role="status"></p>
+    </div>
+    <div class="hfoot">
+      <a class="wbtn big" href="#comparatif">Comparer les programmes <span class="sq"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg></span></a>
+      <a class="gbtn" href="#surin">Voir les binômes</a>
     </div>
   </div>
 </header>
@@ -505,8 +617,8 @@ footer { background:var(--deep); color:#fff; }
     bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 290 },
     fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
   };
-  var PIE_COLORS = ["#2b4797", "#0cb7a4", "#f29b1d", "#c2336b", "#1c2750", "#3d9bd9", "#7a4fb5"];
-  var PIE_OTHER = "#aab4cf";
+  var PIE_COLORS = ["#4a63b8", "#d9743f", "#7a5fb0", "#c2587a", "#1b2447", "#7c8db3", "#f0a97a"];
+  var PIE_OTHER = "#c4c0d4";
   function themeShares(c) {
     var seen = {};
     (DATA.comparatif || []).forEach(function (r) {
@@ -1048,7 +1160,7 @@ footer { background:var(--deep); color:#fff; }
       if (a.getAttribute("data-id") === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     var nav = document.querySelector("nav.tabs");
-    var hero = document.querySelector("header.hero");
+    var hero = document.querySelector("header.hero2");
     if (hero) hero.hidden = id === "mentions";
     if (nav) nav.hidden = id === "mentions";
     if (id !== "mentions" && location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);

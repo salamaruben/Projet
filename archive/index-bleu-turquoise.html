@@ -1,0 +1,1118 @@
+<title>Bâtonnat de Paris 2027</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap">
+<style>
+/* Base layout; the second style block below sets the blue and turquoise identity. Candidate colours stay distinct. */
+:root {
+  --bg: #f6eae0; --bg2: #efe0cb; --surface: #fbf5ee; --ink: #2b1710; --muted: #6b5446; --line: #dcc8b0;
+  --accent: #bb4e2e; --on-accent: #ffffff; --deep: #3b1f17; --on-deep: #f6eae0; --deep-line: #6a4638; --seat: #dcc8b0; --seat-deep: #5d3a2d;
+  --on-c: #ffffff;
+  --c-surin: #2b4797; --c-saada: #0cb7a4; --c-bouyssou: #f29b1d; --c-fabiani: #c2336b;
+  color-scheme: light;
+  --f: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { background-color: var(--bg); color: var(--ink); font-family: var(--f); font-size: 16px; line-height: 1.65; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.c-saada { --c: var(--c-saada); } .c-bouyssou { --c: var(--c-bouyssou); } .c-fabiani { --c: var(--c-fabiani); } .c-surin { --c: var(--c-surin); } .c-bouyssou { --on-c: #1c2750; }
+.glow { background: linear-gradient(155deg, color-mix(in srgb, var(--c) 20%, var(--surface)), var(--surface) 75%); }
+h1, h2, h3 { margin: 0; font-family: var(--f); font-weight: 800; text-wrap: balance; }
+h2 { font-size: clamp(30px, 5vw, 54px); line-height: .98; letter-spacing: -.04em; text-transform: uppercase; }
+h3 { font-weight: 700; font-size: 17px; line-height: 1.35; letter-spacing: -.01em; }
+.lab { display: flex; justify-content: space-between; gap: 16px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding-top: 14px; border-top: 2px solid var(--ink); margin-bottom: 36px; }
+.lab span:last-child { font-weight: 500; color: var(--muted); letter-spacing: .1em; }
+.note { font-size: 15px; color: var(--muted); max-width: 66ch; margin: 0; }
+.sec { margin-top: 112px; }
+.sec > h2 { margin-bottom: 14px; }
+
+/* Header and hero (sand band) */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg2); z-index: 20; }
+header.hero { background: var(--bg2); }
+header.hero .wrap { padding-block: 28px 56px; }
+.hero-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 32px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.hero-top span:last-child { color: var(--muted); font-weight: 500; }
+.hero-main { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px 64px; align-items: center; margin-top: 56px; }
+@media (max-width: 900px) { .hero-main { grid-template-columns: minmax(0, 1fr); } }
+.hero h1 { font-size: clamp(42px, 6.6vw, 88px); line-height: .92; letter-spacing: -.05em; text-transform: uppercase; }
+.hero h1 span { display: block; color: var(--accent); }
+.lede { margin: 32px 0 0; max-width: 50ch; font-size: 17px; color: var(--muted); }
+.btn-pdf { margin-top: 24px; display: inline-flex; align-items: center; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 16px 26px; border: 0; border-radius: 999px; background: var(--accent); color: #fff; cursor: pointer; text-align: left; }
+.btn-pdf:hover { text-decoration: underline; text-underline-offset: 3px; }
+.btn-pdf:disabled { opacity: .6; cursor: progress; }
+.pdf-msg { margin: 10px 0 0; min-height: 1.4em; font-size: 14px; color: var(--muted); }
+.frame { margin: 0; background: var(--deep); color: var(--on-deep); padding: 14px; }
+.frame-in { border: 1px solid var(--deep-line); padding: clamp(20px, 4vw, 40px) clamp(12px, 3vw, 32px) 24px; }
+.cf { display: grid; place-content: center; text-align: center; min-height: 280px; gap: 18px; }
+.cf-n { font-size: clamp(76px, 11vw, 140px); font-weight: 800; letter-spacing: -.05em; line-height: .9; font-variant-numeric: tabular-nums; }
+.cf-l { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+
+/* Nav */
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+nav.tabs .row { display: flex; gap: 4px; overflow-x: auto; padding-block: 10px; scrollbar-width: thin; }
+nav.tabs a { flex: none; text-decoration: none; font-weight: 600; font-size: 13px; letter-spacing: .02em; padding: 9px 18px; border-radius: 999px; white-space: nowrap; color: var(--ink); }
+nav.tabs a:hover { background: var(--line); }
+nav.tabs a[aria-current="page"] { background: var(--deep); color: var(--on-deep); }
+nav.tabs a .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); margin-right: 8px; }
+main { padding-block: 72px 112px; }
+.view[hidden] { display: none; }
+
+/* Candidate columns */
+.strip { display: flex; gap: 14px; }
+@media (max-width: 900px) { .strip { flex-direction: column; } }
+.panel { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px; min-height: 540px; padding: 28px 24px; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-top: 6px solid var(--c); }
+@media (max-width: 900px) { .panel { min-height: 0; flex: none; } }
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) { .panel { transition: flex-grow .35s ease; } .strip:hover .panel:hover, .strip:focus-within .panel:focus-visible { flex-grow: 1.4; } }
+.panel h3 { font-size: clamp(24px, 2.4vw, 30px); font-weight: 800; line-height: 1.02; letter-spacing: -.04em; text-transform: uppercase; }
+.panel .slogan { font-size: 16px; font-weight: 600; margin: 0; line-height: 1.4; }
+.panel .pos { font-size: 14px; color: var(--muted); margin: 0; }
+.panel .stats { display: flex; gap: 8px 22px; flex-wrap: wrap; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
+.panel .stats b { display: block; font-size: 32px; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.panel .stats span { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.panel .go { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: var(--c); color: var(--on-c); padding: 10px 18px; border-radius: 999px; }
+.panel:hover .go { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Election rail */
+.rail-box { margin-top: 28px; padding: 32px clamp(20px, 4vw, 44px) 36px; background: var(--deep); color: var(--on-deep); }
+.rail { position: relative; height: 10px; margin: 44px 12px 0; background: var(--seat-deep); border-radius: 5px; }
+.rail .done { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 5px; }
+.rail .tick { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--deep); border: 3px solid var(--on-deep); }
+.rail .tick.past { border-color: var(--accent); background: var(--accent); }
+.rail .tick.vote { border-color: var(--on-deep); background: var(--on-deep); width: 24px; height: 24px; margin: -12px 0 0 -12px; }
+.rail .now { position: absolute; top: -36px; transform: translateX(-50%); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+.rail .now::after { content: ""; display: block; width: 2px; height: 18px; background: var(--on-deep); margin: 4px auto 0; }
+.steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; }
+.steps li { font-size: 14px; line-height: 1.45; }
+.steps .d { display: block; font-size: 20px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.steps .t { display: block; color: #cdb8a6; font-size: 13px; margin-top: 4px; }
+.steps li.past { opacity: .55; }
+.steps li.next .d::after { content: "Prochaine étape"; display: block; width: fit-content; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: var(--accent); color: #fff; padding: 3px 10px; margin: 6px 0; border-radius: 999px; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+@media (max-width: 900px) { .cols { grid-template-columns: minmax(0, 1fr); gap: 80px; } }
+.feed { display: flex; flex-direction: column; }
+.item { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
+.item:first-child { border-top: 0; padding-top: 0; }
+.date { font-size: 13px; font-weight: 700; color: var(--accent); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.who { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+.who::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.item p { margin: 4px 0 0; color: var(--muted); font-size: 15px; max-width: 66ch; }
+.pill-new { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--accent); color: #fff; padding: 3px 9px; margin-left: 8px; border-radius: 999px; vertical-align: 2px; }
+.tag-t { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--muted); padding: 2px 9px; margin-left: 8px; vertical-align: 2px; border-radius: 999px; display: inline-block; }
+.stamp { font-size: 13px; }
+.stamp a, .fig small a, .sources a, .note a { color: var(--accent); font-weight: 600; }
+.stamp time { font-weight: 600; color: var(--ink); }
+.aside { display: flex; flex-direction: column; gap: 72px; }
+.aside h2 { font-size: 30px; margin-bottom: 22px; }
+.agenda { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+.agenda li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; font-size: 15px; }
+.agenda li.past { opacity: .5; }
+.agenda .d { font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.fig { padding-block: 20px; border-top: 1px solid var(--line); }
+.fig b { display: block; font-size: 48px; font-weight: 800; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.fig span { display: block; margin-top: 8px; font-size: 15px; color: var(--muted); }
+.fig small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* Candidate view */
+.cand-head { padding: clamp(20px, 3.5vw, 40px); display: grid; gap: 14px; border: 1px solid var(--line); border-top: 8px solid var(--c); }
+.ch-text { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.cand-head.has-photo { padding-bottom: 0; overflow: hidden; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px 32px; align-items: end; }
+.cand-head.has-photo .ch-text { padding-bottom: clamp(20px, 3.5vw, 40px); align-self: center; }
+.ch-photo { display: block; width: 100%; height: auto; max-width: 380px; justify-self: end; align-self: end; }
+.cand-head.has-photo.framed { padding-bottom: clamp(28px, 6vw, 72px); align-items: center; }
+.cand-head.has-photo.framed .ch-text { padding-bottom: 0; }
+.cand-head.has-photo.framed .ch-photo { align-self: center; max-width: 500px; border: 6px solid var(--surface); box-shadow: 0 10px 30px rgba(43, 23, 16, .16); }
+@media (max-width: 820px) { .cand-head.has-photo.framed .ch-photo { margin-top: 0; } }
+@media (max-width: 820px) { .cand-head.has-photo { grid-template-columns: minmax(0, 1fr); } .cand-head.has-photo .ch-text { padding-bottom: 0; } .ch-photo { justify-self: center; margin-top: 8px; max-width: 300px; } }
+.cand-head h2 { font-size: clamp(28px, 4.2vw, 50px); line-height: 1; letter-spacing: -.05em; }
+.cand-head .slogan { font-size: clamp(17px, 2vw, 22px); font-weight: 700; letter-spacing: -.02em; margin: 0; max-width: 28ch; line-height: 1.15; }
+.cand-head .pos { font-size: 15px; color: var(--muted); margin: 0; max-width: 60ch; }
+.btn { display: inline-flex; width: fit-content; font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 12px 22px; background: var(--c); color: var(--on-c); text-decoration: none; }
+.btn:hover { text-decoration: underline; }
+.people { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-top: 16px; }
+.person { background: var(--surface); padding: 28px; border: 1px solid var(--line); }
+.person .role { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.person h3 { font-size: 28px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; margin: 8px 0 10px; text-transform: uppercase; }
+.person p { margin: 0; font-size: 15px; color: var(--muted); }
+details { background: var(--surface); border: 1px solid var(--line); }
+details + details { margin-top: 8px; }
+summary { cursor: pointer; padding: 20px 24px; font-size: 18px; font-weight: 700; letter-spacing: -.02em; line-height: 1.25; list-style: none; display: flex; align-items: center; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+.st { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.rs { font-size: 14px; font-weight: 500; letter-spacing: 0; line-height: 1.5; color: var(--muted); }
+abbr[title] { text-decoration: none; }
+.mes { font: inherit; color: inherit; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; }
+.mes:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
+.mes .plus { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-left: 8px; border: 1px solid var(--c); border-radius: 50%; font-size: 15px; line-height: 1; vertical-align: 1px; }
+.mes[aria-expanded="true"] .plus { background: var(--c); color: var(--on-c); }
+.mes-detail { margin: 8px 0 6px; padding: 12px 16px; background: var(--bg2); border-radius: 10px; font-size: 15px; color: var(--muted); max-width: 66ch; }
+.mes-detail p { margin: 0; }
+.mes-detail p + p { margin-top: 8px; }
+.mes-points { margin: 8px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.mes-detail .stamp { margin-top: 10px; }
+summary .n { margin-left: auto; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+summary::after { content: "+"; width: 34px; height: 34px; flex: none; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; font-size: 20px; font-weight: 400; line-height: 1; }
+details[open] summary::after { content: "−"; background: var(--deep); border-color: var(--deep); color: var(--on-deep); }
+details ul { margin: 0; padding: 0 28px 24px 46px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; max-width: 72ch; }
+details li::marker { color: var(--accent); }
+.chrono-theme { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 20px; }
+.chrono .item { grid-template-columns: 110px minmax(0, 1fr); }
+.chrono .item:first-child { border-top: 0; padding-top: 0; }
+.sources { margin-top: 24px; padding: 22px 26px; background: var(--bg2); }
+.sources ul { margin: 10px 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
+.sources li span { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-size: 14px; border: 1px solid var(--line); background: var(--surface); padding: 6px 16px; border-radius: 999px; }
+.limits { margin-top: 64px; padding: 20px 24px; border: 1px dashed var(--muted); font-size: 15px; color: var(--muted); max-width: 72ch; }
+
+/* Comparison */
+.tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 32px 0 8px; }
+.tools input[type="search"] { font: inherit; font-size: 15px; padding: 12px 20px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); min-width: 0; flex: 1 1 240px; max-width: 360px; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 13px; font-weight: 700; padding: 10px 18px; border: 1px solid var(--c); border-radius: 999px; background: color-mix(in srgb, var(--c) 14%, var(--surface)); color: var(--ink); cursor: pointer; }
+.toggle::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.toggle[aria-pressed="false"] { background: transparent; border-color: var(--line); color: var(--muted); }
+.toggle[aria-pressed="false"]::before { background: transparent; border: 2px solid var(--muted); }
+.theme-block { padding-block: 28px 8px; border-top: 2px solid var(--ink); margin-top: 32px; }
+.theme-block h3 { font-size: clamp(22px, 3vw, 30px); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; text-transform: uppercase; margin-bottom: 18px; }
+.theme-cells { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+.cell { padding: 18px 20px; font-size: 15px; border: 1px solid var(--line); border-top: 4px solid var(--c); }
+.cell .nm { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+.cell .nm::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.pie-wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; }
+.pie { width: min(100%, 210px); height: auto; flex: none; }
+.pie-n { font-family: var(--f); font-weight: 800; font-size: 34px; letter-spacing: -.04em; fill: var(--ink); }
+.pie-s { font-family: var(--f); font-weight: 600; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; fill: var(--muted); }
+.pie-legend { list-style: none; margin: 0; padding: 0; columns: 2 260px; column-gap: 36px; flex: 1 1 360px; min-width: 0; max-width: 820px; }
+.pie-legend li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 0 10px; align-items: baseline; font-size: 14px; line-height: 1.35; break-inside: avoid; padding-bottom: 8px; }
+.pie-legend .sw2 { width: 12px; height: 12px; border-radius: 50%; align-self: center; }
+.pie-legend .ln { grid-column: 2; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px; white-space: nowrap; }
+.cell.dim { opacity: .4; }
+.cell-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+.cell.empty { background: transparent; border: 1px dashed var(--line); color: var(--muted); }
+.err { padding: 40px 0; color: var(--muted); }
+footer { background: var(--deep); color: var(--on-deep); padding-block: 40px 56px; font-size: 13px; }
+</style>
+<style>
+:root { --bg:#f3f5f8; --bg2:#e6eaf2; --surface:#fafbfd; --ink:#1c2750; --muted:#566186; --line:#d9dfeb; --accent:#0cb7a4; --deep:#2b4797; --on-deep:#ffffff; --seat:#cfd7ea; --f:"Jost","Helvetica Neue",Arial,sans-serif; --fs:"Roboto Slab",Georgia,serif; }
+body { background:var(--bg); font-size:17px; }
+h1,h2,h3 { font-weight:500; text-transform:none; letter-spacing:.01em; }
+h2 { font-size:clamp(28px,4vw,40px); font-weight:500; letter-spacing:.02em; }
+header.hero { background:var(--bg); }
+body::before { background:var(--bg); }
+.topbar { border-bottom:1px solid var(--line); }
+.topbar-in { display:flex; justify-content:space-between; align-items:center; padding-block:14px; }
+.brand { font-size:15px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); }
+.topnote { font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+.hero-main2 { display:grid; grid-template-columns:minmax(250px,330px) minmax(0,1fr); gap:0 36px; padding-block:32px 36px; align-items:start; }
+@media (max-width:900px){ .hero-main2 { grid-template-columns:minmax(0,1fr); gap:28px; padding-block:28px 36px; } }
+.direct { background:var(--deep); color:#fff; padding:18px 18px 18px 56px; position:relative; }
+.direct-label { position:absolute; left:20px; top:18px; writing-mode:vertical-rl; transform:rotate(180deg); font-size:12px; letter-spacing:.24em; text-transform:uppercase; }
+.direct ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
+.direct a { display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none; font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; }
+.direct a:hover { text-decoration:underline; text-underline-offset:4px; }
+.direct .ic { width:30px; height:30px; flex:none; border-radius:50%; background:var(--accent); display:grid; place-items:center; font-weight:600; font-size:13px; letter-spacing:0; color:#fff; }
+.une { position:relative; padding-top:0; }
+.une-tab { position:absolute; right:0; top:-18px; background:var(--accent); color:#fff; padding:9px 20px 9px 16px; font-size:12px; letter-spacing:.22em; text-transform:uppercase; display:flex; align-items:center; gap:14px; z-index:2; }
+.une-tab .doc { width:22px; height:26px; border:2px solid #fff; border-radius:3px; display:inline-block; background:linear-gradient(#fff,#fff) 4px 6px/10px 2px no-repeat,linear-gradient(#fff,#fff) 4px 11px/10px 2px no-repeat,linear-gradient(#fff,#fff) 4px 16px/6px 2px no-repeat; }
+.une-card { background:linear-gradient(135deg,#1c2750 0%,#2b4797 100%); color:#fff; padding:clamp(20px,3.2vw,32px); min-height:0; display:flex; flex-direction:column; gap:10px; justify-content:flex-end; }
+@media (max-width:900px){ .une-card { padding-top:52px; } }
+.une-kick { font-family:var(--fs); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#7ee6d8; }
+.hero h1 { font-size:clamp(28px,3.8vw,46px); line-height:1.05; font-weight:400; letter-spacing:.04em; text-transform:uppercase; color:#fff; }
+.une-count { display:flex; align-items:baseline; gap:18px; flex-wrap:wrap; }
+.une-count b { font-size:clamp(34px,4.4vw,52px); font-weight:300; line-height:1; letter-spacing:.02em; color:#7ee6d8; }
+.une-count span { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#dbe4ff; }
+.lede { color:#dbe4ff; font-size:15px; max-width:60ch; margin:0; }
+.btn-pdf { margin-top:6px; background:var(--accent); font-size:12px; letter-spacing:.12em; border-radius:0; padding:12px 20px; color:#fff; }
+.pdf-msg { color:#dbe4ff; margin:0; }
+nav.tabs { background:var(--bg); border-block:1px solid var(--line); margin-top:0; }
+nav.tabs a { font-size:12px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; border-radius:0; padding:14px 18px; }
+nav.tabs a:hover { background:var(--bg2); }
+nav.tabs a[aria-current="page"] { background:var(--bg); color:var(--ink); box-shadow:inset 0 -3px 0 var(--accent); }
+main { padding-block:64px 100px; }
+.panel { border-radius:0; border-top-width:5px; }
+.panel h3 { font-weight:500; letter-spacing:.04em; text-transform:uppercase; font-size:clamp(20px,2vw,24px); }
+.panel .stats b, .fig b, .steps .d { font-weight:400; }
+.lab { font-family:var(--fs); letter-spacing:.2em; font-weight:500; color:var(--accent); border-top:1px solid var(--line); }
+.lab span:last-child { color:var(--muted); }
+.rail-box { background:var(--deep); }
+.cand-head h2 { font-weight:400; letter-spacing:.04em; text-transform:uppercase; }
+.cand-head { border-radius:0; }
+.btn { border-radius:0; letter-spacing:.16em; }
+.person h3 { font-weight:500; text-transform:uppercase; letter-spacing:.04em; }
+summary { font-weight:500; }
+details { border-radius:0; }
+.theme-block h3 { font-weight:500; text-transform:uppercase; letter-spacing:.04em; }
+.cell { border-radius:0; }
+.sec > h2, .aside h2 { font-weight:500; text-transform:none; }
+.msrc,.who,.cell .nm,.stats span { letter-spacing:.12em; }
+.pie-n { font-family:var(--f); font-weight:400; }
+footer { background:var(--deep); color:#fff; }
+.toggle,.chip { border-radius:0; }
+</style>
+
+
+<header class="hero">
+  <div class="topbar"><div class="wrap topbar-in"><span class="brand">Bâtonnat de Paris 2027</span><span class="topnote">Site indépendant, non officiel · Mandature 2028-2029</span></div></div>
+  <div class="wrap hero-main2">
+    <aside class="direct" aria-label="Accès direct">
+      <div class="direct-label">Accès direct</div>
+      <ul>
+        <li><a href="#apercu"><span class="ic">A</span>Aperçu</a></li>
+        <li><a href="#surin"><span class="ic">S</span>Surin et Griguer</a></li>
+        <li><a href="#saada"><span class="ic">S</span>Saada et Lagrue</a></li>
+        <li><a href="#bouyssou"><span class="ic">B</span>Bouyssou et Pascarel</a></li>
+        <li><a href="#fabiani"><span class="ic">F</span>Fabiani et Naquet</a></li>
+        <li><a href="#comparatif"><span class="ic">C</span>Comparatif</a></li>
+      </ul>
+    </aside>
+    <div class="une">
+      <div class="une-tab"><span class="doc"></span>À la une</div>
+      <div class="une-card">
+        <div class="une-kick">Scrutin du 15 et 17 décembre 2026</div>
+        <h1>Bâtonnat de Paris 2027</h1>
+        <div class="une-count" id="countdown" hidden><b id="cd-n"></b><span id="cd-l"></span></div>
+        <p class="lede" id="contexte">Chargement des programmes…</p>
+        <button type="button" class="btn-pdf" id="pdf" hidden>Télécharger le programme de tous les candidats (PDF)</button>
+        <p class="pdf-msg" id="pdf-msg" role="status"></p>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Sections"><div class="wrap"><div class="row" id="tabs"></div></div></nav>
+<main><div class="wrap" id="views"><div class="err" id="loading">Chargement…</div></div></main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+(function () {
+  var DATA = null;
+  var TABS = [{ id: "apercu", label: "Aperçu" }];
+  var tabsEl = document.getElementById("tabs");
+  var viewsEl = document.getElementById("views");
+  var shown = {};
+  
+  function h(tag, attrs, kids) {
+    var el = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "class") el.className = attrs[k];
+      else if (k === "text") el.textContent = attrs[k];
+      else el.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(function (c) { if (c) el.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return el;
+  }
+  function fmt(d, withYear) {
+    var o = { day: "numeric", month: "short", timeZone: "UTC" };
+    if (withYear) o.year = "numeric";
+    return new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", o);
+  }
+  function todayISO() {
+    try { return new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" }); } catch (e) { return new Date().toISOString().slice(0, 10); }
+  }
+  function shift(iso, days) { var d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
+  function dayDiff(a, b) { return Math.round((new Date(b + "T12:00:00Z") - new Date(a + "T12:00:00Z")) / 86400000); }
+  function byDateDesc(a, b) { return a.date < b.date ? 1 : -1; }
+  var CAND_ORDER = ["surin", "saada", "bouyssou", "fabiani"];
+  function sortCands(data) {
+    var rank = function (c) { var i = CAND_ORDER.indexOf(c.id); return i < 0 ? 99 : i; };
+    data.candidats.sort(function (a, b) { return rank(a) - rank(b); });
+    return data;
+  }
+  function candById(id) { return DATA.candidats.filter(function (c) { return c.id === id; })[0]; }
+  function nMesures(c) { return c.programme.reduce(function (s, a) { return s + a.mesures.length; }, 0); }
+
+  var GLOSS = {
+    "CARPA": "Caisse des règlements pécuniaires des avocats : elle gère les fonds que les avocats détiennent pour leurs clients",
+    "CNB": "Conseil national des barreaux : l'instance qui représente tous les avocats de France",
+    "EFB": "École de formation du barreau : l'école des futurs avocats",
+    "AGEFIPH": "Association pour l'insertion professionnelle des personnes handicapées",
+    "RIN": "Règlement intérieur national de la profession d'avocat",
+    "RIBP": "Règlement intérieur du barreau de Paris",
+    "RSE": "Responsabilité sociétale des entreprises",
+    "RGPD": "Règlement général sur la protection des données personnelles",
+    "URSSAF": "Organisme qui collecte les cotisations sociales",
+    "EHPAD": "Établissement d'hébergement pour personnes âgées dépendantes"
+  };
+  var GLOSS_RE = new RegExp("\\b(" + Object.keys(GLOSS).join("|") + ")\\b", "g");
+  function abbr(text) {
+    var out = [], last = 0, m;
+    text = String(text || "");
+    GLOSS_RE.lastIndex = 0;
+    while ((m = GLOSS_RE.exec(text))) {
+      if (m.index > last) out.push(text.slice(last, m.index));
+      out.push(h("abbr", { title: GLOSS[m[1]], text: m[1] }));
+      last = m.index + m[1].length;
+    }
+    if (last < text.length) out.push(text.slice(last));
+    return out;
+  }
+  function host(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return "source"; } }
+  function srcLink(u, prefix) { return u ? h("a", { href: u, target: "_blank", rel: "noopener", text: host(u) }) : null; }
+  function stampTime(e) {
+    var t = "Daté du " + fmt(e.date, true);
+    var c = e.constat || e.date;
+    t += " · Constaté le " + fmt(c, true) + (e.constat_heure ? " à " + e.constat_heure : "");
+    return t;
+  }
+  function newsItem(n, cand, showWho, isNew) {
+    var title = h("h3", { text: n.titre });
+    if (isNew) title.appendChild(h("span", { class: "pill-new", text: "Nouveau" }));
+    var body = h("div", null, [showWho ? h("span", { class: "who", text: cand.binome }) : null, title, n.resume ? h("p", { text: n.resume }) : null,
+      (n.source || n.heure) ? h("p", { class: "stamp" }, [n.heure ? fmt(n.date, true) + " à " + n.heure + ". " : "", n.source ? "Source : " : "", srcLink(n.source)]) : null]);
+    return h("div", { class: "item c-" + cand.id }, [h("div", { class: "date", text: fmt(n.date) }), body]);
+  }
+  function evoItem(e, cand, showWho) {
+    var body = h("div", null, [
+      showWho ? h("span", { class: "who", text: cand.binome }) : null,
+      h("h3", null, [e.titre, h("span", { class: "tag-t", text: e.type })]),
+      e.detail ? h("p", null, abbr(e.detail)) : null,
+      h("p", { class: "stamp" }, [h("time", { datetime: e.date, text: stampTime(e) })]),
+      e.source ? h("p", { class: "stamp" }, ["Source : ", srcLink(e.source)]) : null
+    ]);
+    return h("div", { class: "item c-" + cand.id }, [h("div", { class: "date", text: fmt(e.date, true) }), body]);
+  }
+
+  function countdown() {
+    var cal = DATA.calendrier || [];
+    var first = cal.filter(function (e) { return e.label === "1er tour"; })[0];
+    if (!first) return;
+    var days = dayDiff(todayISO(), first.date);
+    if (days < 0) return;
+    document.getElementById("cd-n").textContent = days === 0 ? "Aujourd'hui" : "J-" + days;
+    document.getElementById("cd-l").textContent = days === 0 ? "1er tour du scrutin" : "avant le 1er tour, le " + fmt(first.date, true);
+    document.getElementById("countdown").hidden = false;
+  }
+
+  function railBlock() {
+    var cal = DATA.calendrier || [];
+    var today = todayISO();
+    var start = cal[0].date;
+    var last = cal.filter(function (e) { return e.label === "2e tour"; })[0];
+    var end = last ? last.date : cal[cal.length - 1].date;
+    var span = Math.max(1, dayDiff(start, end));
+    function pct(d) { return Math.min(100, Math.max(0, dayDiff(start, d) / span * 100)); }
+    var rail = h("div", { class: "rail" }, [h("div", { class: "done", style: "width:" + pct(today) + "%" })]);
+    cal.forEach(function (e) {
+      rail.appendChild(h("span", { class: "tick" + (e.date < today ? " past" : "") + (/tour/.test(e.label) ? " vote" : ""), style: "left:" + pct(e.date) + "%", title: e.label }));
+    });
+    if (today >= start && today <= end) rail.appendChild(h("span", { class: "now", style: "left:" + pct(today) + "%", text: "Aujourd'hui" }));
+    var nextIdx = -1;
+    cal.forEach(function (e, i) { if (nextIdx < 0 && e.date >= today) nextIdx = i; });
+    var steps = h("ol", { class: "steps" }, cal.map(function (e, i) {
+      return h("li", { class: e.date < today ? "past" : (i === nextIdx ? "next" : "") }, [
+        h("span", { class: "d", text: fmt(e.date) }), e.label, e.detail ? h("span", { class: "t", text: e.detail }) : null
+      ]);
+    }));
+    return h("div", { class: "rail-box" }, [rail, steps]);
+  }
+
+  function viewApercu() {
+    var today = todayISO();
+    var all = [];
+    DATA.candidats.forEach(function (c) { (c.nouveautes || []).forEach(function (n) { all.push({ n: n, c: c }); }); });
+    all.sort(function (a, b) { return a.n.date < b.n.date ? 1 : -1; });
+
+    var strip = h("div", { class: "strip" }, DATA.candidats.map(function (c) {
+      return h("a", { class: "panel glow c-" + c.id, href: "#" + c.id, "aria-label": "Voir le programme de " + c.binome }, [
+        h("div", { class: "sw" }), h("h3", { text: c.binome }),
+        h("p", { class: "slogan", text: "« " + c.slogan + " »" }),
+        h("p", { class: "pos", text: c.positionnement }),
+        h("div", { class: "stats" }, [
+          h("div", null, [h("b", { text: String(nMesures(c)) }), h("span", { text: "mesures" })]),
+          h("div", null, [h("b", { text: String((c.nouveautes || []).length) }), h("span", { text: "actualités" })]),
+          h("div", null, [h("b", { text: String((c.evolutions || []).length) }), h("span", { text: "évolutions" })])
+        ]),
+        h("span", { class: "go", text: "Voir le programme" })
+      ]);
+    }));
+
+    var feed = h("div", { class: "feed" }, all.slice(0, 12).map(function (x) {
+      return newsItem(x.n, x.c, true, DATA.maj && x.n.date >= shift(DATA.maj, -3));
+    }));
+    var evos = [];
+    DATA.candidats.forEach(function (c) { (c.evolutions || []).forEach(function (e) { evos.push({ e: e, c: c }); }); });
+    evos.sort(function (a, b) { return a.e.date < b.e.date ? 1 : -1; });
+    var agenda = h("ul", { class: "agenda" }, (DATA.agenda || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; }).map(function (a) {
+      var c = candById(a.qui);
+      return h("li", { class: "c-" + a.qui + (a.date < today ? " past" : "") }, [
+        h("div", { class: "d", text: fmt(a.date) }),
+        h("div", null, [a.label, h("div", { class: "who", style: "margin:2px 0 0", text: c ? c.binome : "" })])
+      ]);
+    }));
+    var figs = h("div", null, (DATA.chiffres || []).map(function (f) {
+      return h("div", { class: "fig" }, [h("b", { text: f.valeur }), h("span", { text: f.label }), h("small", null, ["Source : ", (function () { var m = DATA.candidats.filter(function (c) { return c.binome === f.source; })[0]; return m && m.site ? h("a", { href: m.site, target: "_blank", rel: "noopener", text: f.source }) : f.source; })()])]);
+    }));
+    return h("section", { class: "view", id: "v-apercu" }, [
+      h("div", { class: "lab" }, [h("span", { text: "01 — Les binômes" }), h("span", { text: "Mandature 2028–2029" })]),
+      h("h2", { text: "Quatre binômes en lice", style: "margin-bottom:36px" }),
+      strip,
+      h("div", { class: "sec" }, [
+        h("div", { class: "lab" }, [h("span", { text: "02 — Le calendrier" }), h("span", { text: "Décembre 2026" })]),
+        h("h2", { text: "Le calendrier du scrutin" }),
+        h("p", { class: "note", style: "margin-top:12px" }, ["Source : "].concat((DATA.sources_calendrier || []).map(function (s, i) {
+          return [i ? " · " : "", h("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label })];
+        }).reduce(function (a, b) { return a.concat(b); }, []))),
+        railBlock()
+      ]),
+      h("div", { class: "sec" }, [h("div", { class: "lab" }, [h("span", { text: "03 — L'actualité" }), h("span", { text: "Mise à jour quotidienne" })])]),
+      h("div", { class: "cols" }, [
+        h("div", null, [
+          h("h2", { text: "Dernières actualités", style: "margin-bottom:32px" }), feed,
+          h("div", { class: "sec" }, [
+            h("h2", { text: "Évolutions des programmes" }),
+            h("p", { class: "note", text: "Chaque nouvelle mesure, modification ou retrait est daté du jour où le candidat l'a publié, ou du jour où nous l'avons constaté quand la date n'est pas indiquée." }),
+            h("div", { class: "feed", style: "margin-top:32px" }, evos.slice(0, 8).map(function (x) { return evoItem(x.e, x.c, true); }))
+          ]),
+          h("div", { class: "sec" }, [
+            h("h2", { text: "Historique des mises à jour", style: "margin-bottom:32px" }),
+            h("div", { class: "feed" }, (DATA.journal || []).slice().sort(byDateDesc).map(function (j) {
+              return h("div", { class: "item" }, [h("div", { class: "date", text: fmt(j.date, true) }), h("div", null, [h("p", { text: j.resume, style: "margin:0" })])]);
+            }))
+          ])
+        ]),
+        h("div", { class: "aside" }, [
+          h("div", null, [h("h2", { text: "Repères" }), figs]),
+          h("div", null, [h("h2", { text: "Rencontres annoncées" }), agenda])
+        ])
+      ])
+    ]);
+  }
+
+  function mText(m) { return typeof m === "string" ? m : String((m && m.texte) || ""); }
+  function mesureLi(m, c) {
+    var o = typeof m === "string" ? { texte: m } : (m || {});
+    var pts = Array.isArray(o.points) ? o.points : [];
+    if (!o.detail && !pts.length) return h("li", null, abbr(o.texte));
+    var sign = h("span", { class: "plus", "aria-hidden": "true", text: "+" });
+    var kids = String(o.detail || "").split(/\n+/).filter(Boolean).map(function (t) { return h("p", null, abbr(t)); });
+    if (pts.length) kids.push(h("ul", { class: "mes-points" }, pts.map(function (t) { return h("li", null, abbr(t)); })));
+    if (o.source) kids.push(h("p", { class: "stamp" }, ["Source : ", srcLink(o.source)]));
+    var det = h("div", { class: "mes-detail", hidden: "" }, kids);
+    var btn = h("button", { type: "button", class: "mes", "aria-expanded": "false" }, abbr(o.texte).concat([sign]));
+    btn.addEventListener("click", function () {
+      var open = det.hidden;
+      det.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      sign.textContent = open ? "\u2212" : "+";
+    });
+    return h("li", { class: "has-detail" }, [btn, det]);
+  }
+  var PHOTOS = {
+    surin: { src: "img/surin-griguer.webp", w: 1000, h: 826 },
+    saada: { src: "img/saada-lagrue.webp", w: 1000, h: 835 },
+    bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 290 },
+    fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
+  };
+  var PIE_COLORS = ["#2b4797", "#0cb7a4", "#f29b1d", "#c2336b", "#1c2750", "#3d9bd9", "#7a4fb5"];
+  var PIE_OTHER = "#aab4cf";
+  function themeShares(c) {
+    var seen = {};
+    (DATA.comparatif || []).forEach(function (r) {
+      var v = r.items && r.items[c.id];
+      (Array.isArray(v) ? v : (v ? [v] : [])).forEach(function (x) { var k = mText(x); seen[k] = (seen[k] || 0) + 1; });
+    });
+    var rows = (DATA.comparatif || []).map(function (r) {
+      var v = r.items && r.items[c.id];
+      var list = Array.isArray(v) ? v : (v ? [v] : []);
+      return { theme: r.theme, n: list.length, w: list.reduce(function (s, x) { return s + 1 / seen[mText(x)]; }, 0) };
+    }).filter(function (x) { return x.n > 0; });
+    rows.sort(function (a, b) { return b.w - a.w || b.n - a.n; });
+    var total = rows.reduce(function (s, x) { return s + x.w; }, 0);
+    rows.forEach(function (x, i) { x.pct = x.w / total * 100; x.color = i < PIE_COLORS.length ? PIE_COLORS[i] : PIE_OTHER; });
+    return { rows: rows, total: total, count: Object.keys(seen).length };
+  }
+  function pieBlock(c) {
+    var sh = themeShares(c);
+    if (!sh.rows.length) return null;
+    var NS2 = "http://www.w3.org/2000/svg", R = 90, r = 52, cx = 100, cy = 100;
+    var svg = document.createElementNS(NS2, "svg");
+    svg.setAttribute("viewBox", "0 0 200 200"); svg.setAttribute("class", "pie"); svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Répartition des mesures de " + c.binome + " par thème : " + sh.rows.map(function (x) { return x.theme + " " + Math.round(x.pct) + " %"; }).join(", "));
+    function pt2(rad, a) { return [cx + rad * Math.cos(a), cy + rad * Math.sin(a)]; }
+    var ang = -Math.PI / 2;
+    var groups = sh.rows.slice(0, PIE_COLORS.length);
+    var rest = sh.rows.slice(PIE_COLORS.length);
+    if (rest.length) groups.push({ theme: "Autres thèmes", n: rest.reduce(function (s, x) { return s + x.n; }, 0), w: rest.reduce(function (s, x) { return s + x.w; }, 0), color: PIE_OTHER });
+    groups.forEach(function (g) {
+      var frac = g.w / sh.total, a2 = ang + frac * 2 * Math.PI;
+      if (frac > 0.9999) a2 = ang + 2 * Math.PI - 0.001;
+      var p1 = pt2(R, ang), p2 = pt2(R, a2), p3 = pt2(r, a2), p4 = pt2(r, ang), large = frac > 0.5 ? 1 : 0;
+      var path = document.createElementNS(NS2, "path");
+      path.setAttribute("d", "M" + p1[0].toFixed(2) + " " + p1[1].toFixed(2) + " A" + R + " " + R + " 0 " + large + " 1 " + p2[0].toFixed(2) + " " + p2[1].toFixed(2) + " L" + p3[0].toFixed(2) + " " + p3[1].toFixed(2) + " A" + r + " " + r + " 0 " + large + " 0 " + p4[0].toFixed(2) + " " + p4[1].toFixed(2) + " Z");
+      path.setAttribute("fill", g.color); path.setAttribute("stroke", "var(--bg)"); path.setAttribute("stroke-width", "2");
+      var tt = document.createElementNS(NS2, "title"); tt.textContent = g.theme + " : " + g.n + (g.n > 1 ? " mesures" : " mesure"); path.appendChild(tt);
+      svg.appendChild(path); ang = a2;
+    });
+    var label = document.createElementNS(NS2, "text");
+    label.setAttribute("x", cx); label.setAttribute("y", cy - 2); label.setAttribute("text-anchor", "middle"); label.setAttribute("class", "pie-n"); label.textContent = String(sh.count);
+    var sub = document.createElementNS(NS2, "text");
+    sub.setAttribute("x", cx); sub.setAttribute("y", cy + 14); sub.setAttribute("text-anchor", "middle"); sub.setAttribute("class", "pie-s"); sub.textContent = "mesures";
+    svg.appendChild(label); svg.appendChild(sub);
+    var legend = h("ul", { class: "pie-legend" }, sh.rows.map(function (x) {
+      return h("li", null, [h("span", { class: "sw2", style: "background:" + x.color }), h("span", { class: "lt", text: x.theme }), h("span", { class: "ln", text: x.n + (x.n > 1 ? " mesures" : " mesure") + " · " + Math.round(x.pct) + " %" })]);
+    }));
+    return h("div", { class: "sec" }, [
+      h("h2", { text: "Sur quoi porte le programme", style: "margin-bottom:12px" }),
+      h("p", { class: "note", style: "margin-bottom:28px", text: "Part du programme consacrée à chaque thème. Une mesure qui touche deux thèmes est partagée entre eux. Les thèmes sont les mêmes que dans le comparatif." }),
+      h("div", { class: "pie-wrap" }, [svg, legend])
+    ]);
+  }
+  function chronoProgramme(c) {
+    var groups = {};
+    function g(d) { return groups[d] || (groups[d] = { evos: [], mes: [] }); }
+    (c.evolutions || []).forEach(function (e) { g(e.date).evos.push(e); });
+    var base = [];
+    c.programme.forEach(function (a) {
+      var rest = [];
+      a.mesures.forEach(function (m) {
+        if (m && typeof m === "object" && m.date) g(m.date).mes.push({ m: m, theme: a.titre }); else rest.push(m);
+      });
+      if (rest.length) base.push({ titre: a.titre, mesures: rest });
+    });
+    var box = h("div", { class: "chrono" });
+    Object.keys(groups).sort().reverse().forEach(function (d) {
+      var x = groups[d];
+      var kids = [h("div", { class: "date", text: fmt(d, true) })];
+      var body = h("div", null, []);
+      x.evos.forEach(function (e) {
+        body.appendChild(h("h3", null, [e.titre, h("span", { class: "tag-t", text: e.type })]));
+        if (e.detail) body.appendChild(h("p", { class: "note", style: "margin:4px 0 12px" }, abbr(e.detail)));
+      });
+      if (x.mes.length) body.appendChild(h("ul", { class: "cell-list", style: "margin:8px 0 12px" }, x.mes.map(function (y) { return mesureLi(y.m, c); })));
+      kids.push(body);
+      box.appendChild(h("div", { class: "item" }, kids));
+    });
+    if (base.length) {
+      var first = (c.evolutions || []).map(function (e) { return e.date; }).sort()[0];
+      var inner = [h("h3", { text: "Programme de départ" }),
+        h("p", { class: "note", style: "margin:4px 0 12px", text: "Mesures présentes dès le début du suivi" + (first ? " (" + fmt(first, true) + ")" : "") + " : leur date de publication exacte n'est pas indiquée par les candidats." })];
+      base.forEach(function (a) {
+        inner.push(h("h3", { class: "chrono-theme", text: a.titre }));
+        inner.push(h("ul", { class: "cell-list", style: "margin:8px 0 16px" }, a.mesures.map(function (m) { return mesureLi(m, c); })));
+      });
+      box.appendChild(h("div", { class: "item" }, [h("div", { class: "date", text: "Départ" }), h("div", null, inner)]));
+    }
+    return box;
+  }
+  function viewCand(c) {
+    var info = h("div", { class: "ch-text" }, [
+      h("div", { class: "sw" }), h("h2", { text: c.binome }),
+      h("p", { class: "slogan", text: "« " + c.slogan + " »" }),
+      h("p", { class: "pos", text: c.positionnement }),
+      h("a", { class: "btn", href: c.site, target: "_blank", rel: "noopener", text: "Site de campagne" })
+    ]);
+    var ph = PHOTOS[c.id];
+    var photo = ph ? h("img", { class: "ch-photo", src: ph.src, alt: c.binome, width: String(ph.w), height: String(ph.h), style: ph.maxw ? "max-width:" + ph.maxw + "px" : "" }) : null;
+    var head = h("div", { class: "cand-head glow" + (photo ? " has-photo" : "") + (ph && ph.framed ? " framed" : "") }, [info, photo]);
+    var people = h("div", { class: "people" }, c.personnes.map(function (p) {
+      return h("div", { class: "person" }, [h("div", { class: "role", text: p.role }), h("h3", { text: p.nom }), h("p", { text: p.bio })]);
+    }));
+    var themed = c.programme.map(function (a, i) {
+      var d = h("details", null, [
+        h("summary", null, [h("span", { class: "st" }, [h("span", { class: "tt", text: a.titre }), a.resume ? h("span", { class: "rs" }, abbr(a.resume)) : null]), h("span", { class: "n", text: a.mesures.length + (a.mesures.length > 1 ? " mesures" : " mesure") })]),
+        h("ul", null, a.mesures.map(function (m) { return mesureLi(m, c); }))
+      ]);
+      if (i === 0) d.open = true;
+      return d;
+    });
+    var themedBox = h("div", null, themed);
+    var chronoBox = chronoProgramme(c);
+    chronoBox.hidden = true;
+    var bTheme = h("button", { type: "button", class: "toggle", "aria-pressed": "true", text: "Par thème" });
+    var bChrono = h("button", { type: "button", class: "toggle", "aria-pressed": "false", text: "Par date" });
+    function setMode(chrono) {
+      themedBox.hidden = chrono; chronoBox.hidden = !chrono;
+      bTheme.setAttribute("aria-pressed", chrono ? "false" : "true");
+      bChrono.setAttribute("aria-pressed", chrono ? "true" : "false");
+    }
+    bTheme.addEventListener("click", function () { setMode(false); });
+    bChrono.addEventListener("click", function () { setMode(true); });
+    var prog = h("div", { class: "sec" }, [
+      h("h2", { text: "Programme", style: "margin-bottom:20px" }),
+      h("div", { class: "tools", style: "margin:0 0 20px" }, [h("span", { class: "note", text: "Afficher :" }), bTheme, bChrono]),
+      themedBox, chronoBox
+    ]);
+    prog.appendChild(h("div", { class: "sources" }, [
+      h("h3", { text: "Sources du programme" }),
+      h("ul", null, (c.sources || []).map(function (s) {
+        return h("li", null, [h("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label }), h("span", { text: " (" + s.type + ")" })]);
+      })),
+      h("p", { class: "note", text: "Consultées le " + fmt(DATA.maj, true) + ". Le programme est repris tel que le candidat le présente." })
+    ]));
+    var evo = h("div", { class: "sec" }, [h("h2", { text: "Évolutions du programme", style: "margin-bottom:32px" })]);
+    if ((c.evolutions || []).length) evo.appendChild(h("div", { class: "feed" }, c.evolutions.slice().sort(byDateDesc).map(function (e) { return evoItem(e, c, false); })));
+    else evo.appendChild(h("p", { class: "note", text: "Aucune modification constatée depuis le début du suivi." }));
+    var news = h("div", { class: "sec" }, [h("h2", { text: "Actualités", style: "margin-bottom:32px" })]);
+    if ((c.nouveautes || []).length) news.appendChild(h("div", { class: "feed" }, c.nouveautes.slice().sort(byDateDesc).map(function (n) {
+      return newsItem(n, c, false, DATA.maj && n.date >= shift(DATA.maj, -3));
+    })));
+    else news.appendChild(h("p", { class: "note", text: "Aucune actualité datée n'a été trouvée." }));
+    if ((c.tribunes || []).length) {
+      news.appendChild(h("h3", { text: "Tribunes", style: "margin-top:40px" }));
+      news.appendChild(h("div", { class: "feed", style: "margin-top:16px" }, c.tribunes.map(function (t) {
+        return h("div", { class: "item" }, [h("div", { class: "date", text: fmt(t.date) }), h("div", null, [h("h3", { text: t.titre })])]);
+      })));
+    }
+    var sup = h("div", { class: "sec" }, [h("h2", { text: "Soutiens : " + c.soutiens.nombre, style: "margin-bottom:24px" })]);
+    if ((c.soutiens.notables || []).length) sup.appendChild(h("div", { class: "chips" }, c.soutiens.notables.map(function (s) { return h("span", { class: "chip", text: s }); })));
+    var lim = c.limites ? h("div", { class: "limits", text: "Limites de cette fiche : " + c.limites }) : null;
+    return h("section", { class: "view c-" + c.id, id: "v-" + c.id }, [head, people, pieBlock(c), prog, evo, news, sup, lim]);
+  }
+
+  function norm(t) { return String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
+  function hasAll(text, terms) { return terms.every(function (w) { return text.indexOf(w) >= 0; }); }
+  function viewComparatif() {
+    var q = h("input", { type: "search", id: "cmp-q", placeholder: "Chercher un thème ou un mot (prêt, IA, cotisations…)", "aria-label": "Chercher un thème ou un mot dans le comparatif" });
+    var tools = h("div", { class: "tools" }, [q]);
+    var out = h("div", { id: "cmp-out" });
+    DATA.candidats.forEach(function (c) {
+      shown[c.id] = true;
+      var b = h("button", { type: "button", class: "toggle c-" + c.id, "aria-pressed": "true", text: c.binome });
+      b.addEventListener("click", function () {
+        shown[c.id] = !shown[c.id];
+        b.setAttribute("aria-pressed", shown[c.id] ? "true" : "false");
+        render();
+      });
+      tools.appendChild(b);
+    });
+    function render() {
+      var terms = norm(q.value).split(/\s+/).filter(Boolean);
+      out.textContent = "";
+      var rows = DATA.comparatif.filter(function (r) {
+        var all = norm(r.theme + " " + Object.keys(r.items || {}).map(function (k) { var v = r.items[k]; return Array.isArray(v) ? v.map(mText).join(" ") : v; }).join(" "));
+        return hasAll(all, terms);
+      });
+      if (!rows.length) { out.appendChild(h("p", { class: "note", style: "margin-top:32px", text: "Aucun thème ne correspond. Effacez le filtre pour tout afficher." })); return; }
+      rows.forEach(function (r) {
+        var cells = DATA.candidats.filter(function (c) { return shown[c.id]; }).map(function (c) {
+          var t = r.items[c.id];
+          var has = Array.isArray(t) ? t.length > 0 : !!t;
+          var txt = Array.isArray(t) ? t.map(mText).join(" ") : (t || "");
+          var dim = terms.length && !hasAll(norm(txt), terms) ? " dim" : "";
+          var bodyNodes = Array.isArray(t) && t.length ? [h("ul", { class: "cell-list" }, t.map(function (x) { return h("li", null, abbr(mText(x))); }))] : (has ? abbr(txt) : ["Non précisé"]);
+          return h("div", { class: "cell c-" + c.id + (has ? " glow" : " empty") + dim }, [h("div", { class: "nm", text: c.binome })].concat(bodyNodes));
+        });
+        out.appendChild(h("div", { class: "theme-block" }, [h("h3", { text: r.theme }), h("div", { class: "theme-cells" }, cells)]));
+      });
+    }
+    q.addEventListener("input", render);
+    render();
+    return h("section", { class: "view", id: "v-comparatif" }, [
+      h("h2", { text: "Comparer les programmes" }),
+      h("p", { class: "note", style: "margin-top:14px", text: "Les mesures sont reprises telles que les candidats les présentent. « Non précisé » signifie qu'aucune mesure n'a été trouvée sur ce thème." }),
+      tools, out
+    ]);
+  }
+
+  /* ---------- PDF export ---------- */
+  var PDF_COL = { surin: "#2b4797", saada: "#0cb7a4", bouyssou: "#f29b1d", fabiani: "#c2336b" };
+  function rgb(hex) { var n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function pt(t) {
+    return String(t == null ? "" : t).replace(/[\u00a0\u202f\u2009]/g, " ").replace(/\u2212/g, "-").replace(/\u2192/g, "->")
+      .replace(/[^\n\u0020-\u007e\u00a1-\u00ff\u0152\u0153\u2013\u2014\u2018\u2019\u201c\u201d\u2022\u2026\u20ac]/g, "");
+  }
+  function ctxText(data) { return String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, ""); }
+
+  var fontCache = null;
+  function b64(buf) {
+    var b = new Uint8Array(buf), s = "", i, n = 0x8000;
+    for (i = 0; i < b.length; i += n) s += String.fromCharCode.apply(null, b.subarray(i, i + n));
+    return btoa(s);
+  }
+  function loadFonts() {
+    if (fontCache) return fontCache;
+    var names = ["Montserrat-Regular.ttf", "Montserrat-Bold.ttf", "Montserrat-ExtraBold.ttf"];
+    fontCache = Promise.all(names.map(function (n) {
+      return fetch("fonts/" + n).then(function (r) { if (!r.ok) throw new Error(n); return r.arrayBuffer(); }).then(function (buf) { return [n, b64(buf)]; });
+    })).catch(function () { fontCache = null; return null; });
+    return fontCache;
+  }
+  function mix(c, k) { return [Math.round(c[0] * k + 255 * (1 - k)), Math.round(c[1] * k + 255 * (1 - k)), Math.round(c[2] * k + 255 * (1 - k))]; }
+
+  function buildPdf(data, jsPDF) {
+    return loadFonts().then(function (fonts) { return drawPdf(data, jsPDF, fonts); });
+  }
+
+  function drawPdf(data, jsPDF, fonts) {
+    sortCands(data);
+    var doc = new jsPDF({ unit: "mm", format: "a4" });
+    var F = { reg: ["helvetica", "normal"], bold: ["helvetica", "bold"], xb: ["helvetica", "bold"] };
+    if (fonts) {
+      fonts.forEach(function (f) { doc.addFileToVFS(f[0], f[1]); });
+      doc.addFont("Montserrat-Regular.ttf", "Mont", "normal");
+      doc.addFont("Montserrat-Bold.ttf", "Mont", "bold");
+      doc.addFont("Montserrat-ExtraBold.ttf", "MontXB", "normal");
+      F = { reg: ["Mont", "normal"], bold: ["Mont", "bold"], xb: ["MontXB", "normal"] };
+    }
+    var W = 210, H = 297, M = 20, CW = W - 2 * M, TOP = 26, BOT = H - 24, y = TOP;
+    var INK = [28, 39, 80], MUTED = [86, 97, 134], DEEP = [43, 71, 151], SAND = [230, 234, 242], BLUSH = [243, 245, 248], ACC = [12, 183, 164], LINE = [217, 223, 235], LINK = [43, 71, 151], WHITE = [255, 255, 255];
+    var label = "", pageLabel = {};
+    function font(k) { doc.setFont(F[k][0], F[k][1]); }
+    function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
+    function fill(c) { doc.setFillColor(c[0], c[1], c[2]); }
+    function stroke(c, w) { doc.setDrawColor(c[0], c[1], c[2]); doc.setLineWidth(w || 0.2); }
+    function lh(size, k) { return size * 0.3528 * (k || 1.5); }
+    function wrap(t, size, w, fk) { font(fk || "reg"); doc.setFontSize(size); return doc.splitTextToSize(pt(t), w); }
+    function newPage(l) { doc.addPage(); y = TOP; if (l != null) label = l; pageLabel[doc.getNumberOfPages()] = label; }
+    function ensure(h) { if (y + h > BOT) newPage(); }
+    /* draws lines with top at yy; returns height */
+    function put(lines, x, yy, size, fk, col, k, opts) {
+      font(fk); doc.setFontSize(size); color(col);
+      var l = lh(size, k);
+      lines.forEach(function (s, i) { doc.text(s, x, yy + l * i + size * 0.3528 * 0.82, opts); });
+      return lines.length * l;
+    }
+    function para(t, o) {
+      o = o || {};
+      var size = o.size || 10, k = o.k || 1.55, x = M + (o.indent || 0), w = CW - (o.indent || 0), l = lh(size, k);
+      var ls = wrap(t, size, w, o.font);
+      ls.forEach(function (s, i) {
+        ensure(l);
+        if (o.dot && i === 0) { fill(o.dot); doc.circle(x - 3.4, y + l * 0.5, 0.75, "F"); }
+        put([s], x, y, size, o.font || "reg", o.color || INK, k);
+        y += l;
+      });
+      y += o.after == null ? 1.8 : o.after;
+    }
+    function caps(t, x, yy, size, col, fk, cs, align) {
+      font(fk || "bold"); doc.setFontSize(size); color(col);
+      var s = pt(t).toUpperCase();
+      var xx = x;
+      if (align === "right") xx = x - doc.getTextWidth(s) - cs * (s.length - 1) * 0.3528 * 0.5;
+      doc.text(s, xx, yy + size * 0.3528 * 0.82, { charSpace: cs });
+    }
+    function h2(t, col, size) {
+      ensure(18); y += 2;
+      put([pt(t).toUpperCase()], M, y, size || 15, "xb", col || INK, 1.2); y += lh(size || 15, 1.2) + 1.5;
+    }
+    function linkAt(lbl, url, x, yy, size, col) {
+      font("reg"); doc.setFontSize(size); color(col || LINK);
+      doc.textWithLink(pt(lbl), x, yy + size * 0.3528 * 0.82, { url: url });
+      return doc.getTextWidth(pt(lbl));
+    }
+    var maj = data.maj || todayISO();
+    var cols = {}; data.candidats.forEach(function (c) { cols[c.id] = rgb(PDF_COL[c.id] || "#3b1f17"); });
+    function nMes(c) { return c.programme.reduce(function (s, a) { return s + a.mesures.length; }, 0); }
+
+    /* ---------- Cover ---------- */
+    fill(SAND); doc.rect(0, 0, W, H, "F");
+    caps("Site indépendant, non officiel", M, 28, 8.5, ACC, "bold", 0.9);
+    caps("Mandature 2028-2029", W - M, 28, 8.5, MUTED, "reg", 0.9, "right");
+    font("xb"); doc.setFontSize(54); color(INK); doc.text("BÂTONNAT", M - 1, 78);
+    color(ACC); doc.setFontSize(54); doc.text("DE PARIS", M - 1, 96); doc.text("2027", M - 1, 114);
+    fill(DEEP); doc.rect(M, 134, CW, 58, "F");
+    stroke([106, 70, 56], 0.3); doc.rect(M + 3, 137, CW - 6, 52, "S");
+    font("xb"); doc.setFontSize(17); color(SAND); doc.text(pt("LES PROGRAMMES DES QUATRE"), M + 10, 153); doc.text(pt("BINÔMES CANDIDATS"), M + 10, 162);
+    font("reg"); doc.setFontSize(9.5); color([205, 184, 166]);
+    doc.text(pt("Édition du " + fmt(maj, true)), M + 10, 175);
+    doc.text(pt("Scrutin les 15 et 17 décembre 2026"), M + 10, 181);
+    var cy = 214;
+    data.candidats.forEach(function (c) {
+      fill(cols[c.id]); doc.circle(M + 2, cy + 2.2, 2, "F");
+      font("bold"); doc.setFontSize(11); color(INK); doc.text(pt(c.binome), M + 8, cy + 3.4);
+      font("reg"); doc.setFontSize(8.5); color(MUTED); doc.text(pt(c.slogan), M + 8, cy + 8.2);
+      cy += 15;
+    });
+    pageLabel[1] = "";
+
+    /* ---------- Overview ---------- */
+    newPage("Vue d'ensemble");
+    h2("Vue d'ensemble", INK, 22);
+    para(ctxText(data), { size: 9.5, color: MUTED, after: 3 });
+    data.candidats.forEach(function (c) {
+      var inner = CW - 14;
+      var pos = wrap(c.positionnement, 8.5, inner, "reg");
+      var bh = 26.5 + pos.length * lh(8.5, 1.5);
+      ensure(bh + 4);
+      fill(BLUSH); doc.roundedRect(M, y, CW, bh, 1.5, 1.5, "F");
+      fill(cols[c.id]); doc.circle(M + 6, y + 8.2, 1.9, "F");
+      font("xb"); doc.setFontSize(13); color(INK); doc.text(pt(c.binome.toUpperCase()), M + 11, y + 9.6);
+      font("bold"); doc.setFontSize(9); color(INK); doc.text(pt("« " + c.slogan + " »"), M + 11, y + 15.4);
+      var ty = put(pos, M + 11, y + 19.5, 8.5, "reg", MUTED, 1.5);
+      font("bold"); doc.setFontSize(8); color(ACC);
+      doc.text(nMes(c) + " mesures  ·  " + (c.nouveautes || []).length + " actualités  ·  " + (c.evolutions || []).length + " évolutions", M + 11, y + 19.5 + ty + 5);
+      y += bh + 3;
+    });
+    if ((data.calendrier || []).length) {
+      h2("Calendrier du scrutin", INK, 15); y += 1;
+      data.calendrier.forEach(function (e) {
+        var det = e.detail ? wrap(e.detail, 8, CW - 42, "reg") : [];
+        var bh = Math.max(6, 5 + det.length * lh(8, 1.45) + 1);
+        ensure(bh);
+        font("xb"); doc.setFontSize(9.5); color(ACC); doc.text(pt(fmt(e.date, true)), M, y + 4.2);
+        font("bold"); doc.setFontSize(9.5); color(INK); doc.text(pt(e.label), M + 40, y + 4.2);
+        if (det.length) put(det, M + 40, y + 5.2, 8, "reg", MUTED, 1.45);
+        y += bh + 1.2;
+      });
+    }
+
+    /* ---------- Candidates ---------- */
+    data.candidats.forEach(function (c) {
+      var col = cols[c.id];
+      newPage(c.binome);
+      /* header band, full width (starts above the running header) */
+      var bandH = 62;
+      fill(col); doc.rect(0, 0, W, bandH, "F");
+      caps("Programme", M, 22, 8.5, WHITE, "bold", 0.9);
+      font("xb"); doc.setFontSize(27); doc.setTextColor(255, 255, 255);
+      var nl = doc.splitTextToSize(pt(c.binome.toUpperCase()), CW);
+      doc.text(nl, M, 36);
+      font("bold"); doc.setFontSize(11.5);
+      doc.text(pt("« " + c.slogan + " »"), M, 36 + nl.length * 10 + 4);
+      pageLabel[doc.getNumberOfPages()] = "";
+      y = bandH + 10;
+      para(c.positionnement, { size: 10, color: INK, after: 2 });
+      if (c.site) { font("reg"); doc.setFontSize(8.5); color(MUTED); doc.text("Site de campagne :", M, y + 3); linkAt(c.site, c.site, M + 33, y, 8.5); y += 8; }
+
+      /* people cards */
+      h2("Le binôme", col, 13);
+      var cw2 = (CW - 5) / 2;
+      var cards = c.personnes.map(function (p) {
+        var nm = wrap(p.nom, 12, cw2 - 8, "xb"), bio = wrap(p.bio, 8, cw2 - 8, "reg");
+        return { p: p, nm: nm, bio: bio, h: 5 + 4 + nm.length * lh(12, 1.25) + 2 + bio.length * lh(8, 1.5) + 5 };
+      });
+      var ch = Math.max.apply(null, cards.map(function (k) { return k.h; }));
+      ensure(ch + 4);
+      cards.forEach(function (k, i) {
+        var x = M + i * (cw2 + 5);
+        fill(BLUSH); stroke(LINE, 0.2); doc.roundedRect(x, y, cw2, ch, 1.5, 1.5, "FD");
+        caps(k.p.role, x + 4, y + 4.5, 6.8, col, "bold", 0.5);
+        var hh = put(k.nm, x + 4, y + 10, 12, "xb", INK, 1.25);
+        put(k.bio, x + 4, y + 10 + hh + 2, 8, "reg", MUTED, 1.5);
+      });
+      y += ch + 8;
+
+      /* programme */
+      h2("Programme · " + nMes(c) + " mesures", col, 13);
+      c.programme.forEach(function (a) {
+        var tl = wrap(a.titre, 12, CW - 6, "bold");
+        var rs = a.resume ? wrap(a.resume, 8.5, CW - 10, "reg") : [];
+        var first = a.mesures[0] ? wrap(mText(a.mesures[0]), 9.5, CW - 6, "reg") : [];
+        ensure(tl.length * lh(12, 1.3) + rs.length * lh(8.5, 1.5) + 9 + first.length * lh(9.5, 1.55) + 4);
+        y += 3;
+        fill(col); doc.circle(M + 1.4, y + 3.2, 1.4, "F");
+        y += put(tl, M + 6, y, 12, "bold", INK, 1.3);
+        if (rs.length) {
+          var bh = rs.length * lh(8.5, 1.5) + 4.4;
+          fill(BLUSH); doc.roundedRect(M + 6, y + 0.6, CW - 6, bh, 1.2, 1.2, "F");
+          put(rs, M + 9, y + 2.8, 8.5, "reg", MUTED, 1.5);
+          y += bh + 3;
+        } else y += 1.5;
+        a.mesures.forEach(function (m) {
+          para(mText(m), { size: 9.5, indent: 11, dot: col, after: (m && (m.detail || (m.points || []).length)) ? 0.6 : 1.6 });
+          if (m && (m.detail || (m.points || []).length)) {
+            String(m.detail || "").split(/\n+/).filter(Boolean).forEach(function (t, i) { para((i === 0 ? "Détail : " : "") + t, { size: 8.5, color: MUTED, indent: 11, after: 0.8 }); });
+            (m.points || []).forEach(function (t) { para(t, { size: 8.5, color: MUTED, indent: 15, dot: col, after: 0.8 }); });
+            y += 1;
+          }
+        });
+        y += 1.5;
+      });
+
+      /* sources */
+      if ((c.sources || []).length) {
+        var sh = 12 + c.sources.length * 5.6;
+        ensure(sh + 6); y += 4;
+        fill(BLUSH); doc.roundedRect(M, y, CW, sh, 1.5, 1.5, "F");
+        caps("Sources du programme", M + 5, y + 4.6, 7.5, col, "bold", 0.6);
+        var sy = y + 11;
+        c.sources.forEach(function (s) {
+          var w = linkAt(s.label, s.url, M + 5, sy, 9);
+          font("reg"); doc.setFontSize(8); color(MUTED); doc.text(pt("  " + s.type), M + 5 + w, sy + 2.9);
+          sy += 5.6;
+        });
+        y += sh + 4;
+      }
+
+      /* evolutions */
+      var evo = (c.evolutions || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      if (evo.length) {
+        h2("Évolutions du programme", col, 13);
+        evo.forEach(function (e) {
+          var tt = wrap(e.titre, 10, CW - 36, "bold");
+          var dt = e.detail ? wrap(e.detail, 8.5, CW - 36, "reg") : [];
+          var eh = tt.length * lh(10, 1.4) + 4 + dt.length * lh(8.5, 1.5) + 4 + (e.source ? 5 : 0) + 4;
+          ensure(eh);
+          stroke(LINE, 0.2); doc.line(M, y, W - M, y); y += 3;
+          font("xb"); doc.setFontSize(8.5); color(ACC); doc.text(pt(fmt(e.date, true)), M, y + 3);
+          var hh = put(tt, M + 32, y, 10, "bold", INK, 1.4);
+          caps(e.type, M + 32, y + hh + 0.4, 6.5, col, "bold", 0.5); y += hh + 4.6;
+          if (dt.length) y += put(dt, M + 32, y, 8.5, "reg", MUTED, 1.5) + 0.8;
+          font("reg"); doc.setFontSize(7.5); color(MUTED);
+          doc.text(pt("Daté du " + fmt(e.date, true) + " · Constaté le " + fmt(e.constat || e.date, true) + (e.constat_heure ? " à " + e.constat_heure : "")), M + 32, y + 2.6); y += 4.4;
+          if (e.source) { font("reg"); doc.setFontSize(7.5); color(MUTED); doc.text("Source :", M + 32, y + 2.6); linkAt(host(e.source), e.source, M + 32 + 11.5, y, 7.5); y += 5; }
+          y += 2;
+        });
+      }
+      if (c.limites) {
+        var lm = wrap("Limites de cette fiche : " + c.limites, 8.5, CW - 10, "reg");
+        var lhh = lm.length * lh(8.5, 1.5) + 8;
+        ensure(lhh + 6); y += 6;
+        stroke(MUTED, 0.2); doc.setLineDashPattern([1.2, 1.2], 0); doc.roundedRect(M, y, CW, lhh, 1.5, 1.5, "S"); doc.setLineDashPattern([], 0);
+        put(lm, M + 5, y + 4, 8.5, "reg", MUTED, 1.5); y += lhh;
+      }
+    });
+
+    /* ---------- Comparison ---------- */
+    if ((data.comparatif || []).length) {
+      newPage("Comparatif");
+      h2("Comparatif par thème", INK, 22);
+      para("Mesures reprises telles que les candidats les présentent. « Non précisé » : aucune mesure trouvée sur ce thème.", { size: 9, color: MUTED, after: 4 });
+      var cw2c = (CW - 4) / 2;
+      data.comparatif.forEach(function (r) {
+        var cells = data.candidats.map(function (c) {
+          var t0 = r.items[c.id];
+          var t = Array.isArray(t0) ? (t0.length ? t0.map(function (x) { return "- " + mText(x); }).join("\n") : "") : t0;
+          var ls = wrap(t || "Non précisé", 8.5, cw2c - 8, "reg");
+          return { c: c, t: t, ls: ls, h: 9 + ls.length * lh(8.5, 1.5) + 3.5 };
+        });
+        var rowH = [Math.max(cells[0].h, cells[1] ? cells[1].h : 0), Math.max(cells[2] ? cells[2].h : 0, cells[3] ? cells[3].h : 0)];
+        var tl = wrap(r.theme.toUpperCase(), 12.5, CW, "xb");
+        ensure(tl.length * lh(12.5, 1.2) + 8 + rowH[0] + 6);
+        y += 3; stroke(INK, 0.5); doc.line(M, y, W - M, y); y += 3.5;
+        y += put(tl, M, y, 12.5, "xb", INK, 1.2) + 2.5;
+        for (var row = 0; row < 2; row++) {
+          var pair = cells.slice(row * 2, row * 2 + 2); if (!pair.length) break;
+          ensure(rowH[row] + 2);
+          pair.forEach(function (k, i) {
+            var x = M + i * (cw2c + 4), col = cols[k.c.id];
+            fill(mix(col, 0.1)); doc.roundedRect(x, y, cw2c, rowH[row], 1.5, 1.5, "F");
+            fill(col); doc.rect(x, y, cw2c, 1.1, "F");
+            caps(k.c.binome, x + 4, y + 3.6, 6.5, col, "bold", 0.4);
+            put(k.ls, x + 4, y + 8.2, 8.5, "reg", k.t ? INK : MUTED, 1.5);
+          });
+          y += rowH[row] + 3;
+        }
+        y += 3;
+      });
+    }
+
+    /* ---------- Running header and footer ---------- */
+    var n = doc.getNumberOfPages();
+    for (var i = 2; i <= n; i++) {
+      doc.setPage(i);
+      var onBand = pageLabel[i] === "";
+      caps("Bâtonnat de Paris 2027", M, 11, 6.8, onBand ? WHITE : MUTED, "bold", 0.7);
+      if (!onBand) { caps(pageLabel[i], W - M, 11, 6.8, MUTED, "reg", 0.7, "right"); stroke(LINE, 0.2); doc.line(M, 16, W - M, 16); }
+      stroke(LINE, 0.2); doc.line(M, H - 16, W - M, H - 16);
+      font("reg"); doc.setFontSize(7.5); color(MUTED);
+      doc.text(pt("Édition du " + fmt(maj, true) + "  ·  Déclarations des candidats"), M, H - 11);
+      doc.text(i + " / " + n, W - M, H - 11, { align: "right" });
+    }
+    return doc.output("arraybuffer");
+  }
+
+  function savePdf(buf, filename, dl) {
+    if (dl) return dl.save({ filename: filename, data: buf });
+    return new Promise(function (resolve, reject) {
+      try {
+        var url = URL.createObjectURL(new Blob([buf], { type: "application/pdf" }));
+        var a = document.createElement("a");
+        a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+        resolve({ status: "saved" });
+      } catch (e) { reject(e); }
+    });
+  }
+
+  function setupPdf() {
+    var btn = document.getElementById("pdf"), msg = document.getElementById("pdf-msg");
+    if (!btn) return;
+    var getDl = (window.claude && window.claude.use) ? window.claude.use("downloads").catch(function () { return null; }) : Promise.resolve(null);
+    getDl.then(function (dl) {
+      btn.hidden = false;
+      btn.addEventListener("click", function () {
+        btn.disabled = true; msg.textContent = "Préparation du PDF…";
+        var lib = window.jspdf && window.jspdf.jsPDF;
+        if (!lib) { msg.textContent = "Le générateur de PDF n'a pas pu se charger. Rechargez la page."; btn.disabled = false; return; }
+        fetch("data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function () { return DATA; })
+          .then(function (data) {
+            return buildPdf(data, lib).then(function (buf) {
+              return savePdf(buf, "batonnat-paris-2027-programmes-" + (data.maj || todayISO()) + ".pdf", dl);
+            });
+          })
+          .then(function () { msg.textContent = "PDF enregistré."; })
+          .catch(function (e) { msg.textContent = e && e.code === "declined" ? "" : "Le PDF n'a pas pu être enregistré. Réessayez."; })
+          .then(function () { btn.disabled = false; });
+      });
+    });
+  }
+
+  function show() {
+    var id = (location.hash || "").replace("#", "") || "apercu";
+    if (id !== "mentions" && !TABS.some(function (t) { return t.id === id; })) id = "apercu";
+    Array.prototype.forEach.call(viewsEl.querySelectorAll("section.view"), function (s) { s.hidden = s.id !== "v-" + id; });
+    Array.prototype.forEach.call(tabsEl.querySelectorAll("a"), function (a) {
+      if (a.getAttribute("data-id") === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    var nav = document.querySelector("nav.tabs");
+    var hero = document.querySelector("header.hero");
+    if (hero) hero.hidden = id === "mentions";
+    if (nav) nav.hidden = id === "mentions";
+    if (id !== "mentions" && location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);
+  }
+
+  function viewMentions() {
+    function p(t) { return h("p", { class: "note", style: "margin-top:10px" }, typeof t === "string" ? [t] : t); }
+    function hh(t) { return h("h3", { text: t, style: "margin-top:28px" }); }
+    return h("section", { class: "view", id: "v-mentions" }, [
+      h("p", { class: "note", style: "margin-bottom:16px" }, [h("a", { href: "#apercu", text: "\u2190 Retour au site" })]),
+      h("h2", { text: "Mentions légales", style: "margin-bottom:24px" }),
+      hh("Informations légales"),
+      p("Ce site est édité à titre non professionnel par une personne physique qui a choisi de rester anonyme. Conformément à l\u2019article 1-1, II, de la loi n\u00b0 2004-575 du 21 juin 2004 pour la confiance dans l\u2019économie numérique, les éléments permettant de l\u2019identifier ont été communiqués à l\u2019hébergeur. L\u2019éditeur assure la direction de la publication."),
+      hh("Hébergeur"),
+      p("Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis \u2013 vercel.com."),
+      p("L\u2019utilisateur du site reconnaît avoir pris connaissance des présentes conditions et s\u2019engage à les respecter."),
+      hh("Nature du site"),
+      p("Ce site est indépendant. Il n'est lié ni à l'Ordre des avocats de Paris, ni à aucun candidat ni à aucune liste. Il présente côte à côte les programmes des candidats au bâtonnat de Paris pour le scrutin de décembre 2026. Les mesures sont reprises telles que les candidats les présentent dans leurs documents, sites et publications publics, dont les sources sont indiquées. Les regroupements par thème du comparatif et des diagrammes sont faits par ce site."),
+      hh("Protection des données à caractère personnel"),
+      p([h("strong", { text: "Personnes citées. " }), "Le site mentionne les candidats au bâtonnat de Paris et, lorsqu\u2019ils l\u2019ont eux-mêmes rendu public, leurs soutiens. Ces informations proviennent exclusivement des sources publiques indiquées sur le site. Elles sont traitées par l\u2019éditeur, responsable de traitement, afin d\u2019informer les électeurs sur le scrutin de décembre 2026, sur le fondement de l\u2019intérêt légitime (art. 6, 1, f du RGPD). Elles sont conservées jusqu\u2019à trois mois après le scrutin. Toute personne concernée peut exercer ses droits d\u2019accès, de rectification, d\u2019effacement et d\u2019opposition en écrivant à l\u2019adresse de contact ci-dessus. Elle peut aussi introduire une réclamation auprès de la CNIL (cnil.fr)."]),
+      p([h("strong", { text: "Visiteurs. " }), "Le site ne dépose aucun cookie et n\u2019utilise ni traceur ni outil de mesure d\u2019audience. L\u2019hébergeur enregistre, pour des raisons techniques et de sécurité, des journaux de connexion (notamment l\u2019adresse IP), conservés pour une durée limitée et susceptibles d\u2019être traités aux États-Unis."]),
+      hh("Propriété intellectuelle"),
+      p("La conception du site, sa structure, sa mise en page, les textes de présentation et les regroupements thématiques du comparatif sont l\u2019\u0153uvre de l\u2019éditeur. Toute reproduction totale ou partielle de ces éléments sans autorisation est interdite et pourrait constituer une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle."),
+      p("Les programmes, textes, photographies et autres contenus des candidats restent la propriété de leurs auteurs. Ils sont reproduits à titre d\u2019information du public, avec indication de leur source. Leur auteur peut demander leur retrait ou leur correction à l\u2019adresse de contact ci-dessus."),
+      hh("Droit de réponse"),
+      p("Toute personne nommée ou désignée sur le site dispose d\u2019un droit de réponse. Elle peut l\u2019exercer à l\u2019adresse de contact ci-dessus ou par l\u2019intermédiaire de l\u2019hébergeur."),
+      hh("Modification"),
+      p("L\u2019éditeur se réserve le droit de modifier le contenu des présentes conditions à tout moment et sans préavis. L\u2019utilisateur est invité à les consulter régulièrement."),
+      hh("Loi applicable"),
+      p("Le présent site est régi par les lois françaises."),
+      hh("Contact"),
+      h("p", { class: "note", style: "margin-top:10px" }, [h("a", { href: "mailto:programme.batonnat.2027@gmail.com", text: "programme.batonnat.2027@gmail.com" })])
+    ]);
+  }
+
+  function build(data) {
+    DATA = sortCands(data);
+    document.getElementById("contexte").textContent = String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, "");
+    data.candidats.forEach(function (c) { TABS.push({ id: c.id, label: c.binome, cls: "c-" + c.id }); });
+    TABS.push({ id: "comparatif", label: "Comparatif" });
+    TABS.forEach(function (t) {
+      tabsEl.appendChild(h("a", { href: "#" + t.id, "data-id": t.id, class: t.cls || "" }, [t.cls ? h("span", { class: "dot" }) : null, t.label]));
+    });
+    viewsEl.textContent = "";
+    viewsEl.appendChild(viewApercu());
+    data.candidats.forEach(function (c) { viewsEl.appendChild(viewCand(c)); });
+    viewsEl.appendChild(viewComparatif());
+    viewsEl.appendChild(viewMentions());
+    document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes. Site indépendant, sans lien avec l'Ordre des avocats de Paris.";
+    var ft = document.getElementById("foot");
+    ft.appendChild(document.createTextNode(" "));
+    ft.appendChild(h("a", { href: "#mentions", text: "Mentions légales" }));
+    countdown();
+    window.addEventListener("hashchange", show);
+    show();
+    setupPdf();
+  }
+
+  fetch("data.json", { cache: "no-store" }).then(function (r) {
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(build).catch(function () {
+    document.getElementById("loading").textContent = "Les programmes n'ont pas pu être chargés. Rechargez la page dans un instant.";
+    document.getElementById("contexte").textContent = "";
+  });
+})();
+</script>
