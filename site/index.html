@@ -157,6 +157,9 @@ summary::after { content: "+"; width: 34px; height: 34px; flex: none; border-rad
 details[open] summary::after { content: "−"; background: var(--deep); border-color: var(--deep); color: var(--on-deep); }
 details ul { margin: 0; padding: 0 28px 24px 46px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; max-width: 72ch; }
 details li::marker { color: var(--accent); }
+.chrono-theme { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 20px; }
+.chrono .item { grid-template-columns: 110px minmax(0, 1fr); }
+.chrono .item:first-child { border-top: 0; padding-top: 0; }
 .sources { margin-top: 24px; padding: 22px 26px; background: var(--bg2); }
 .sources ul { margin: 10px 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
 .sources li span { color: var(--muted); }
@@ -555,6 +558,43 @@ footer { background:var(--deep); color:#fff; }
       h("div", { class: "pie-wrap" }, [svg, legend])
     ]);
   }
+  function chronoProgramme(c) {
+    var groups = {};
+    function g(d) { return groups[d] || (groups[d] = { evos: [], mes: [] }); }
+    (c.evolutions || []).forEach(function (e) { g(e.date).evos.push(e); });
+    var base = [];
+    c.programme.forEach(function (a) {
+      var rest = [];
+      a.mesures.forEach(function (m) {
+        if (m && typeof m === "object" && m.date) g(m.date).mes.push({ m: m, theme: a.titre }); else rest.push(m);
+      });
+      if (rest.length) base.push({ titre: a.titre, mesures: rest });
+    });
+    var box = h("div", { class: "chrono" });
+    Object.keys(groups).sort().reverse().forEach(function (d) {
+      var x = groups[d];
+      var kids = [h("div", { class: "date", text: fmt(d, true) })];
+      var body = h("div", null, []);
+      x.evos.forEach(function (e) {
+        body.appendChild(h("h3", null, [e.titre, h("span", { class: "tag-t", text: e.type })]));
+        if (e.detail) body.appendChild(h("p", { class: "note", style: "margin:4px 0 12px" }, abbr(e.detail)));
+      });
+      if (x.mes.length) body.appendChild(h("ul", { class: "cell-list", style: "margin:8px 0 12px" }, x.mes.map(function (y) { return mesureLi(y.m, c); })));
+      kids.push(body);
+      box.appendChild(h("div", { class: "item" }, kids));
+    });
+    if (base.length) {
+      var first = (c.evolutions || []).map(function (e) { return e.date; }).sort()[0];
+      var inner = [h("h3", { text: "Programme de départ" }),
+        h("p", { class: "note", style: "margin:4px 0 12px", text: "Mesures présentes dès le début du suivi" + (first ? " (" + fmt(first, true) + ")" : "") + " : leur date de publication exacte n'est pas indiquée par les candidats." })];
+      base.forEach(function (a) {
+        inner.push(h("h3", { class: "chrono-theme", text: a.titre }));
+        inner.push(h("ul", { class: "cell-list", style: "margin:8px 0 16px" }, a.mesures.map(function (m) { return mesureLi(m, c); })));
+      });
+      box.appendChild(h("div", { class: "item" }, [h("div", { class: "date", text: "Départ" }), h("div", null, inner)]));
+    }
+    return box;
+  }
   function viewCand(c) {
     var info = h("div", { class: "ch-text" }, [
       h("div", { class: "sw" }), h("h2", { text: c.binome }),
@@ -568,14 +608,31 @@ footer { background:var(--deep); color:#fff; }
     var people = h("div", { class: "people" }, c.personnes.map(function (p) {
       return h("div", { class: "person" }, [h("div", { class: "role", text: p.role }), h("h3", { text: p.nom }), h("p", { text: p.bio })]);
     }));
-    var prog = h("div", { class: "sec" }, [h("h2", { text: "Programme", style: "margin-bottom:28px" })].concat(c.programme.map(function (a, i) {
+    var themed = c.programme.map(function (a, i) {
       var d = h("details", null, [
         h("summary", null, [h("span", { class: "st" }, [h("span", { class: "tt", text: a.titre }), a.resume ? h("span", { class: "rs" }, abbr(a.resume)) : null]), h("span", { class: "n", text: a.mesures.length + (a.mesures.length > 1 ? " mesures" : " mesure") })]),
         h("ul", null, a.mesures.map(function (m) { return mesureLi(m, c); }))
       ]);
       if (i === 0) d.open = true;
       return d;
-    })));
+    });
+    var themedBox = h("div", null, themed);
+    var chronoBox = chronoProgramme(c);
+    chronoBox.hidden = true;
+    var bTheme = h("button", { type: "button", class: "toggle", "aria-pressed": "true", text: "Par thème" });
+    var bChrono = h("button", { type: "button", class: "toggle", "aria-pressed": "false", text: "Par date" });
+    function setMode(chrono) {
+      themedBox.hidden = chrono; chronoBox.hidden = !chrono;
+      bTheme.setAttribute("aria-pressed", chrono ? "false" : "true");
+      bChrono.setAttribute("aria-pressed", chrono ? "true" : "false");
+    }
+    bTheme.addEventListener("click", function () { setMode(false); });
+    bChrono.addEventListener("click", function () { setMode(true); });
+    var prog = h("div", { class: "sec" }, [
+      h("h2", { text: "Programme", style: "margin-bottom:20px" }),
+      h("div", { class: "tools", style: "margin:0 0 20px" }, [h("span", { class: "note", text: "Afficher :" }), bTheme, bChrono]),
+      themedBox, chronoBox
+    ]);
     prog.appendChild(h("div", { class: "sources" }, [
       h("h3", { text: "Sources du programme" }),
       h("ul", null, (c.sources || []).map(function (s) {
