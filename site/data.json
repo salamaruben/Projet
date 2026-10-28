@@ -1058,16 +1058,7 @@
     ]
    },
    "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. Pages 2 et 3 des actualités : seule la page 2 a été relue ce jour.",
-   "evolutions": [
-    {
-     "date": "2026-10-26",
-     "constat": "2026-10-26",
-     "type": "Version initiale",
-     "titre": "Programme en cinq piliers enregistré",
-     "detail": "Aucune date de publication ni de modification n'est indiquée sur le PDF de programme. Les changements seront datés à partir de cette version.",
-     "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf"
-    }
-   ],
+   "evolutions": [],
    "sources": [
     {
      "label": "Programme détaillé (PDF, cinq piliers)",
@@ -1321,16 +1312,7 @@
     "notables": []
    },
    "limites": "Le site est une page unique lue par résumés ; la section « convictions » n'a pas pu être lue. Les sous-mesures 2.5 (regroupement des cabinets), 2.7 (cellule d'appui géopolitique) et 4.2 (formation IA et cybersécurité) ne sont pas détaillées dans les mesures. Aucune actualité datée.  Aucun article de presse indépendant récent.",
-   "evolutions": [
-    {
-     "date": "2026-10-26",
-     "constat": "2026-10-26",
-     "type": "Version initiale",
-     "titre": "Programme en quatre thèmes enregistré",
-     "detail": "Le site ne date aucune publication. Les changements seront datés à partir de cette version.",
-     "source": "https://www.batonnatsuringriguer.com/"
-    }
-   ],
+   "evolutions": [],
    "sources": [
     {
      "label": "Engagements, convictions et biographies",
