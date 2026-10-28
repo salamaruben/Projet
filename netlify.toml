@@ -1,7 +1,0 @@
-[build]
-  publish = "site"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive"
