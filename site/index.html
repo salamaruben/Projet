@@ -1120,6 +1120,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   }
 
   function show() {
+    if (location.hash === "#mentions") { location.replace("mentions.html"); return; }
     var id = (location.hash || "").replace("#", "") || "apercu";
     if (id !== "mentions" && !TABS.some(function (t) { return t.id === id; })) id = "apercu";
     Array.prototype.forEach.call(viewsEl.querySelectorAll("section.view"), function (s) { s.hidden = s.id !== "v-" + id; });
@@ -1136,36 +1137,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     else window.scrollTo(0, 0);
   }
 
-  function viewMentions() {
-    function p(t) { return h("p", { class: "note", style: "margin-top:10px" }, typeof t === "string" ? [t] : t); }
-    function hh(t) { return h("h3", { text: t, style: "margin-top:28px" }); }
-    return h("section", { class: "view", id: "v-mentions" }, [
-      h("p", { class: "note", style: "margin-bottom:16px" }, [h("a", { href: "#apercu", text: "\u2190 Retour au site" })]),
-      h("h2", { text: "Mentions légales", style: "margin-bottom:24px" }),
-      hh("Informations légales"),
-      p("Ce site est édité à titre non professionnel par une personne physique qui a choisi de rester anonyme. Conformément à l\u2019article 1-1, II, de la loi n\u00b0 2004-575 du 21 juin 2004 pour la confiance dans l\u2019économie numérique, les éléments permettant de l\u2019identifier ont été communiqués à l\u2019hébergeur. L\u2019éditeur assure la direction de la publication."),
-      hh("Hébergeur"),
-      p("Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis \u2013 vercel.com."),
-      p("L\u2019utilisateur du site reconnaît avoir pris connaissance des présentes conditions et s\u2019engage à les respecter."),
-      hh("Nature du site"),
-      p("Ce site est indépendant. Il n'est lié ni à l'Ordre des avocats de Paris, ni à aucun candidat ni à aucune liste. Il présente côte à côte les programmes des candidats au bâtonnat de Paris pour le scrutin de décembre 2026. Les mesures sont reprises telles que les candidats les présentent dans leurs documents, sites et publications publics, dont les sources sont indiquées. Les regroupements par thème du comparatif et des diagrammes sont faits par ce site."),
-      hh("Protection des données à caractère personnel"),
-      p([h("strong", { text: "Personnes citées. " }), "Le site mentionne les candidats au bâtonnat de Paris et, lorsqu\u2019ils l\u2019ont eux-mêmes rendu public, leurs soutiens. Ces informations proviennent exclusivement des sources publiques indiquées sur le site. Elles sont traitées par l\u2019éditeur, responsable de traitement, afin d\u2019informer les électeurs sur le scrutin de décembre 2026, sur le fondement de l\u2019intérêt légitime (art. 6, 1, f du RGPD). Elles sont conservées jusqu\u2019à trois mois après le scrutin. Toute personne concernée peut exercer ses droits d\u2019accès, de rectification, d\u2019effacement et d\u2019opposition en écrivant à l\u2019adresse de contact ci-dessus. Elle peut aussi introduire une réclamation auprès de la CNIL (cnil.fr)."]),
-      p([h("strong", { text: "Visiteurs. " }), "Le site ne dépose aucun cookie et n\u2019utilise ni traceur ni outil de mesure d\u2019audience. L\u2019hébergeur enregistre, pour des raisons techniques et de sécurité, des journaux de connexion (notamment l\u2019adresse IP), conservés pour une durée limitée et susceptibles d\u2019être traités aux États-Unis."]),
-      hh("Propriété intellectuelle"),
-      p("La conception du site, sa structure, sa mise en page, les textes de présentation et les regroupements thématiques du comparatif sont l\u2019\u0153uvre de l\u2019éditeur. Toute reproduction totale ou partielle de ces éléments sans autorisation est interdite et pourrait constituer une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle."),
-      p("Les programmes, textes, photographies et autres contenus des candidats restent la propriété de leurs auteurs. Ils sont reproduits à titre d\u2019information du public, avec indication de leur source. Leur auteur peut demander leur retrait ou leur correction à l\u2019adresse de contact ci-dessus."),
-      hh("Droit de réponse"),
-      p("Toute personne nommée ou désignée sur le site dispose d\u2019un droit de réponse. Elle peut l\u2019exercer à l\u2019adresse de contact ci-dessus ou par l\u2019intermédiaire de l\u2019hébergeur."),
-      hh("Modification"),
-      p("L\u2019éditeur se réserve le droit de modifier le contenu des présentes conditions à tout moment et sans préavis. L\u2019utilisateur est invité à les consulter régulièrement."),
-      hh("Loi applicable"),
-      p("Le présent site est régi par les lois françaises."),
-      hh("Contact"),
-      h("p", { class: "note", style: "margin-top:10px" }, [h("a", { href: "mailto:programme.batonnat.2027@gmail.com", text: "programme.batonnat.2027@gmail.com" })])
-    ]);
-  }
-
   function build(data) {
     DATA = sortCands(data);
     document.getElementById("contexte").textContent = String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, "");
@@ -1178,11 +1149,10 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     viewsEl.appendChild(viewApercu());
     data.candidats.forEach(function (c) { viewsEl.appendChild(viewCand(c)); });
     viewsEl.appendChild(viewComparatif());
-    viewsEl.appendChild(viewMentions());
     document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes. Site indépendant, sans lien avec l'Ordre des avocats de Paris.";
     var ft = document.getElementById("foot");
     ft.appendChild(document.createTextNode(" "));
-    ft.appendChild(h("a", { href: "#mentions", text: "Mentions légales" }));
+    ft.appendChild(h("a", { href: "mentions.html", text: "Mentions légales" }));
     countdown();
     window.addEventListener("hashchange", show);
     show();
