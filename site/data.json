@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-27",
+ "maj": "2026-10-28",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -98,71 +98,184 @@
     {
      "titre": "Réduire les inégalités entre avocats",
      "mesures": [
-      "Lutte contre les violences sexistes et sexuelles, le harcèlement et les discriminations : prévention renforcée, rôle disciplinaire de l'Ordre accru, publicité des décisions.",
-      "Reprise de la pépinière du boulevard Sébastopol et locaux à loyers maîtrisés avec la Ville de Paris.",
-      "Contrat-cadre avec l'AGEFIPH pour les avocats en situation de handicap.",
-      "Cotisations d'assurance proportionnées au chiffre d'affaires et cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
-      "Intérêts de la CARPA utilisés au profit de tous, partenariats crèches, réforme de la conférence du stage pour les commissions d'office criminelles."
+      {
+       "texte": "Lutte contre les violences sexistes et sexuelles, le harcèlement et les discriminations : prévention renforcée, rôle disciplinaire de l'Ordre accru, publicité des décisions.",
+       "detail": "Dans la section « Un barreau juste et égalitaire », Rachel Saada et Marianne Lagrue disent vouloir lutter « sans faiblir » contre les violences sexistes et sexuelles au travail, le harcèlement moral et toutes les discriminations. Elles constatent que les victimes ont peu confiance dans la capacité de l'Ordre à sanctionner ces manquements : des affaires apparaissent dans la presse ou sur les réseaux sociaux alors qu'elles auraient dû être traitées par les représentants du barreau.\nLes engagements : renforcer la prévention et le rôle disciplinaire de l'Ordre, et assurer la publicité de toutes les décisions rendues sur ces sujets.\nLe manifeste ne donne ni calendrier, ni budget, ni précision sur la forme de la publicité des décisions.\nUn article de campagne du 2 octobre 2026 (sur les LGBTQIA+phobies) précise la méthode pour ce type de discriminations : voir les points ci-dessous.",
+       "source": "https://votezracheletmarianne.paris/#manifeste ; détail : https://votezracheletmarianne.paris/actualites/lutter-contre-les-lgbtqiaphobies-au-sein-de-notre-profession/",
+       "points": [
+        "Former à ces questions les membres de la commission Harcèlement et Discrimination (COMHADIS) du barreau de Paris, accusé de réception rapide, retour systématique à la personne qui signale, protection contre les représailles.",
+        "Sanctionner « sans complaisance » les manquements au principe d'égalité et publier chaque année un bilan anonymisé des saisines par motif de discrimination, avec les suites données.",
+        "Contexte chiffré cité (enquête de 2017, 7 138 répondants) : moins de 5 % des victimes avaient engagé une démarche formelle, par crainte de représailles, faute de preuves ou par sentiment d'inutilité.",
+        "Ces engagements sont pris pour le mandat 2028-2029 ; aucune date plus précise n'est indiquée."
+       ]
+      },
+      {
+       "texte": "Reprise de la pépinière du boulevard Sébastopol et locaux à loyers maîtrisés avec la Ville de Paris.",
+       "detail": "Le programme veut reprendre et améliorer la pépinière du boulevard Sébastopol, dont la gestion a été confiée « à tort » à une société à but lucratif, selon le manifeste.\nIl veut aussi créer, avec la Ville de Paris, des lieux d'exercice à l'abri de la pression foncière et des « loyers indécents », c'est-à-dire des locaux à loyers maîtrisés pour les avocats, notamment ceux qui s'installent.\nLe manifeste ne donne ni chiffres (nombre de places, montant des loyers), ni calendrier, ni mode de financement.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Contrat-cadre avec l'AGEFIPH pour les avocats en situation de handicap.",
+       "detail": "Le programme prévoit de conclure un contrat-cadre avec l'AGEFIPH (association qui finance l'insertion professionnelle des personnes handicapées) pour faciliter l'installation ou le recrutement d'avocats en situation de handicap et leur accès aux aides.\nLe manifeste ne détaille ni le contenu du contrat, ni les montants, ni le calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Cotisations d'assurance proportionnées au chiffre d'affaires et cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
+       "detail": "Le programme propose deux changements de cotisations.\nD'abord, individualiser les cotisations d'assurance responsabilité civile professionnelle : elles dépendraient du chiffre d'affaires de chaque avocat et des risques réellement encourus, au lieu d'être identiques pour tous.\nEnsuite, instaurer une véritable progressivité de la cotisation ordinale (la cotisation versée à l'Ordre) : aujourd'hui elle est plafonnée à partir d'un revenu annuel de 350 000 €, ce qui signifie que les revenus plus élevés ne paient pas davantage. Le programme veut supprimer cet effet de plafond.\nLe manifeste ne donne ni taux, ni seuils de progressivité, ni mode de calcul, ni délai.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Intérêts de la CARPA utilisés au profit de tous, partenariats crèches, réforme de la conférence du stage pour les commissions d'office criminelles.",
+       "detail": "Cette mesure regroupe plusieurs engagements de la section « Un barreau juste et égalitaire ».\nLe programme veut utiliser les intérêts des fonds de la CARPA (caisse qui gère les sommes confiées aux avocats pour leurs clients) « au profit de toutes et tous ». Il ne précise pas l'affectation exacte ni les montants.\nIl prévoit aussi de négocier des prêts personnels ou professionnels pour les avocats, et de relancer les partenariats avec des services de crèche et de halte-garderie.\nEnfin, il veut réformer le « quasi-monopole » de la conférence du stage pour les commissions d'office criminelles (désignations d'avocats d'office dans les affaires criminelles). Le manifeste n'explique pas concrètement comment.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Lutte contre les violences et les discriminations, cotisations proportionnées aux revenus, locaux à loyers maîtrisés."
     },
     {
      "titre": "Protéger les collaborateurs libéraux",
      "mesures": [
-      "6e semaine de congés et droit effectif à la déconnexion.",
-      "Contrôle réel des conditions d'exercice, au-delà d'un questionnaire.",
-      "Respect de la clientèle personnelle et sanctions en cas d'abus."
+      {
+       "texte": "6e semaine de congés et droit effectif à la déconnexion.",
+       "detail": "Dans la section « Protéger les collaborateurs et collaboratrices libéraux », le programme affirme que « la collaboration libérale ne peut être un salariat sans les droits qui y sont associés ». Il juge légitime que les nouvelles générations refusent un engagement qui exige tout au détriment du reste de leur vie.\nLa mesure : instaurer une sixième semaine de repos et garantir un droit réel à la déconnexion. L'objectif est que la collaboration permette de se former, de développer sa propre clientèle, de construire son avenir et de garder une vie en dehors du cabinet.\nLe manifeste ne donne ni modalités (qui finance, quelle durée exacte au-delà de « sixième semaine »), ni calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Contrôle réel des conditions d'exercice, au-delà d'un questionnaire.",
+       "detail": "Le programme veut un contrôle effectif des conditions d'exercice des collaborateurs libéraux, « au-delà du simple questionnaire » qui leur est aujourd'hui adressé.\nLe manifeste ne précise ni qui effectuerait ces contrôles, ni selon quelle fréquence, ni avec quelles suites.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Respect de la clientèle personnelle et sanctions en cas d'abus.",
+       "detail": "Le programme veut faire respecter les droits liés à la clientèle personnelle du collaborateur (la possibilité de développer sa propre clientèle en parallèle de son travail pour le cabinet), et sanctionner les abus en engageant les procédures appropriées lorsque c'est nécessaire.\nLe manifeste ne détaille pas les sanctions envisagées ni les cas visés.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Améliorer les conditions de travail des collaborateurs, ces avocats qui travaillent pour un cabinet sans être salariés."
     },
     {
      "titre": "Un Ordre plus démocratique",
      "mesures": [
-      "Plafonnement des dépenses de campagne et appels d'offres publics pour les dépenses de l'Ordre.",
-      "Conseils ouverts au public, publication systématique des rapports, assemblée générale annuelle, référendums sur les grandes questions.",
-      "Conférences citoyennes non élues et tirage au sort de membres dans certaines commissions.",
-      "Deux représentants du jeune barreau avec voix consultative."
+      {
+       "texte": "Plafonnement des dépenses de campagne et appels d'offres publics pour les dépenses de l'Ordre.",
+       "detail": "Dans la section « Une démocratie ordinale vivante », le constat est que l'Ordre suscite crainte et défiance (censeur, juge, trésorier) et paraît éloigné des difficultés des cabinets. Le but est de le rendre plus proche, plus accessible et moins vertical.\nDeux mesures : plafonner les dépenses de campagne électorale pour limiter les déséquilibres entre candidats ; et, pour les dépenses de l'Ordre, réviser les montants des dépenses externalisées (communication, publications, événements) et institutionnaliser les appels d'offres en les rendant publics.\nLe manifeste ne chiffre pas le plafond et ne donne pas de calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Conseils ouverts au public, publication systématique des rapports, assemblée générale annuelle, référendums sur les grandes questions.",
+       "detail": "Pour rendre l'Ordre plus transparent et plus participatif, le programme prévoit :",
+       "source": "https://votezracheletmarianne.paris/#manifeste",
+       "points": [
+        "Renforcer la publicité des séances du conseil de l'Ordre, en permettant au public d'y assister.",
+        "Publier systématiquement les rapports.",
+        "Tenir une assemblée générale par an.",
+        "Organiser des référendums sur les grandes questions qui exigent la position du barreau."
+       ]
+      },
+      {
+       "texte": "Conférences citoyennes non élues et tirage au sort de membres dans certaines commissions.",
+       "detail": "Le programme prévoit de créer des instances non élues sur le modèle des conférences citoyennes, et de désigner par tirage au sort des membres du barreau pour siéger dans les commissions ordinales (selon le texte du manifeste, dans certaines commissions).\nLe manifeste ne précise ni les commissions concernées, ni le nombre de personnes tirées au sort, ni le calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Deux représentants du jeune barreau avec voix consultative.",
+       "detail": "Le programme prévoit l'élection de deux représentants du jeune barreau, qui auraient voix consultative (ils donnent leur avis mais ne votent pas) au sein de l'Ordre.\nLe manifeste ne donne pas d'autre précision (mode d'élection, âge ou ancienneté retenus).",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Ouvrir le fonctionnement de l'Ordre : transparence, consultation des avocats et plafonnement des dépenses de campagne."
     },
     {
      "titre": "Faciliter l'accès au droit pour tous",
      "mesures": [
-      "Contrats de protection juridique labellisés par le barreau de Paris, financés par la CARPA.",
-      "Action auprès du CNB pour mieux rémunérer l'aide juridictionnelle et relever ses plafonds.",
-      "Consultations spécialisées (sécurité sociale, chômage, handicap, aide sociale) dans les maisons de justice et du droit."
+      {
+       "texte": "Contrats de protection juridique labellisés par le barreau de Paris, financés par la CARPA.",
+       "detail": "Dans la section « Accès au droit », le programme estime que « le besoin de justice n'est pas suffisamment couvert » et que de nombreux justiciables renoncent faute d'un véritable accès au droit.\nIl propose de co-construire des contrats de protection juridique labellisés par le barreau de Paris. Selon le programme, ils permettraient une rémunération plus juste des avocats et limiteraient le reste à charge des justiciables, grâce aux bénéfices de la CARPA.\nLe manifeste ne donne ni montants, ni partenaires (assureurs), ni calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Action auprès du CNB pour mieux rémunérer l'aide juridictionnelle et relever ses plafonds.",
+       "detail": "Le programme prévoit de se mobiliser aux côtés du Conseil national des barreaux (CNB) pour mieux rémunérer les dossiers d'aide juridictionnelle (l'aide de l'État qui finance l'avocat des personnes à faibles ressources) et relever les plafonds de ressources, c'est-à-dire élargir le nombre de personnes qui y ont droit.\nLe manifeste ne donne ni montants ni seuils chiffrés.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Consultations spécialisées (sécurité sociale, chômage, handicap, aide sociale) dans les maisons de justice et du droit.",
+       "detail": "Le programme propose de créer, avec la Ville de Paris, des consultations dédiées dans les maisons de la justice et du droit, sur la sécurité sociale, le chômage, le handicap et l'aide sociale.\nLe manifeste ne donne ni calendrier, ni nombre de permanences, ni financement.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Aider les particuliers à accéder à un avocat : protection juridique, aide juridictionnelle, consultations spécialisées."
     },
     {
      "titre": "Un barreau qui parle d'une seule voix",
      "mesures": [
-      "Fin des querelles sur la « supériorité » de Paris, qui pèse près de la moitié des avocats et siège au CNB."
+      {
+       "texte": "Fin des querelles sur la « supériorité » de Paris, qui pèse près de la moitié des avocats et siège au CNB.",
+       "detail": "Dans la section « Un barreau d'une seule voix », le programme rappelle que le barreau de Paris représente près de la moitié des avocats français et siège au CNB, seule représentation nationale de la profession. Il juge sans pertinence les rivalités sur la « supériorité » de Paris, qui nuisent à l'unité et à la crédibilité de la profession. La mesure proposée est simple : y mettre un terme.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Cesser les rivalités entre barreaux pour peser davantage."
     },
     {
      "titre": "Entraide entre confrères",
      "mesures": [
-      "« Cafés-boulot » et groupes de parole avec des professionnels de santé.",
-      "Soutien aux confrères agressés ou discriminés.",
-      "Renégociation de la prévoyance pour financer un congé de naissance supplémentaire de deux mois."
+      {
+       "texte": "« Cafés-boulot » et groupes de parole avec des professionnels de santé.",
+       "detail": "Face à la concentration des grands cabinets et à la fragilité des cabinets individuels, le programme plaide pour des espaces d'échange et d'écoute en plus du soutien matériel.\nIl propose des « cafés-boulot », sur le modèle des cafés philo, pour échanger et s'entraider, et des groupes de parole et de soutien, éventuellement animés avec des professionnels de santé, comme dans les métiers du soin.\nLe manifeste ne donne ni fréquence, ni budget, ni calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Soutien aux confrères agressés ou discriminés.",
+       "detail": "Le programme s'engage à soutenir, et à dénoncer, les agressions et micro-agressions racistes, sexistes, LGBTQIA+phobes et validistes (discriminations liées au handicap) subies par les confrères et consœurs.\nLe manifeste ne détaille pas la forme du soutien.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Renégociation de la prévoyance pour financer un congé de naissance supplémentaire de deux mois.",
+       "detail": "Le programme propose de renégocier le contrat de prévoyance (l'assurance qui protège les avocats en cas d'arrêt ou d'événement de vie) afin que chacun puisse bénéficier d'un congé supplémentaire de naissance de deux mois.\nLe manifeste ne donne ni montant de cotisation, ni calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Soutien moral et financier aux avocats en difficulté, et congé de naissance supplémentaire."
     },
     {
      "titre": "Défendre les conditions d'audience",
      "mesures": [
-      "Dénoncer le manque de moyens, la réduction du temps d'audience et la perte de collégialité.",
-      "Actions symboliques sur le modèle du « procès du siècle » climat."
+      {
+       "texte": "Dénoncer le manque de moyens, la réduction du temps d'audience et la perte de collégialité.",
+       "detail": "Dans la section « Conditions d'audience et dialogue avec la magistrature », le programme dénonce des réformes non concertées et un manque de moyens dans tous les domaines du droit. Il affirme que les avocats sont devenus des boucs émissaires de la magistrature. Il constate que la complexité augmente, que le temps d'audience diminue ou est détourné, que la collégialité (jugement par plusieurs magistrats) est devenue l'exception et que plaider relève presque du privilège.\nIl rappelle la déclaration de Jean-Jacques Urvoas en 2016 sur la « clochardisation de la justice » et juge que la situation s'est aggravée depuis. Il souligne que la France compte moins de magistrats par habitant que la moyenne des pays membres du Conseil de l'Europe, et que le retard ne se résorberait qu'en éliminant des dossiers.\nLa mesure : dénoncer cette situation et exiger des moyens.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Actions symboliques sur le modèle du « procès du siècle » climat.",
+       "detail": "Pour appuyer cette dénonciation, le programme propose des actions spectaculaires, sur le modèle du « procès du siècle » (le recours contre l'inaction de l'État face au réchauffement climatique).\nLe manifeste ne précise pas la nature des actions envisagées.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      }
      ],
      "resume": "Défendre le temps d'audience et le dialogue avec les magistrats."
     },
     {
      "titre": "Intelligence artificielle et écologie",
      "mesures": [
-      "Laboratoire d'intelligence collective avec des chercheurs (secret professionnel, transparence sur l'usage de l'IA, fiscalité).",
-      "Bilan carbone avec objectifs chiffrés, critères sociaux et environnementaux dans les achats, bilan public annuel."
+      {
+       "texte": "Laboratoire d'intelligence collective avec des chercheurs (secret professionnel, transparence sur l'usage de l'IA, fiscalité).",
+       "detail": "Le programme déplore que l'essor de l'intelligence artificielle ait empêché toute réflexion structurée. Il doute qu'elle fasse gagner du temps ou ouvre de nouveaux marchés, estime que les métiers du droit sont parmi les plus menacés et alerte sur le secret professionnel, sur les risques pour les juges et les jugements, et sur un appauvrissement des idées et un conformisme accru. Il refuse que la profession se contente d'offrir des abonnements aux petits cabinets.\nIl pose des questions ouvertes : instaurer une taxe, mentionner dans les écrits le degré d'assistance de l'IA, demander l'accord de l'auteur avant de soumettre ses conclusions à une IA.\nLa mesure : créer un « laboratoire d'intelligence collective » avec des scientifiques et des chercheurs pour trouver des parades et éviter la disparition d'une partie de la profession. Le manifeste ne donne ni budget ni calendrier.",
+       "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Bilan carbone avec objectifs chiffrés, critères sociaux et environnementaux dans les achats, bilan public annuel.",
+       "detail": "Le programme affirme que le barreau de Paris doit se préoccuper du changement climatique, vu sa taille et son rôle symbolique, et veut l'inscrire dans la défense d'un « État de droit écologique ».\nMesures :",
+       "source": "https://votezracheletmarianne.paris/#manifeste",
+       "points": [
+        "Réaliser le bilan carbone du barreau et fixer des objectifs chiffrés de réduction (les objectifs ne sont pas donnés).",
+        "Intégrer des critères sociaux et environnementaux dans les achats et marchés de l'Ordre.",
+        "Numérique responsable : prolonger la durée de vie du matériel, privilégier le reconditionné, réduire l'empreinte numérique.",
+        "Événements écoresponsables (alimentation, transports, déchets, impressions).",
+        "Développer une offre de formation sur le droit de l'environnement et le climat.",
+        "Soutenir les avocats et initiatives en faveur de la transition écologique.",
+        "Publier chaque année un bilan public des engagements et des résultats."
+       ]
+      }
      ],
      "resume": "Un laboratoire de réflexion sur l'IA et un bilan carbone avec objectifs chiffrés."
     }
@@ -193,7 +306,7 @@
      "Franceline Lepany (avocate honoraire)"
     ]
    },
-   "limites": "L'agenda de campagne est vide à ce jour.",
+   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide.",
    "evolutions": [
     {
      "date": "2026-10-20",
@@ -257,83 +370,307 @@
     {
      "titre": "Un Ordre plus facile à solliciter",
      "mesures": [
-      "Référents par domaine, publication anonymisée des décisions disciplinaires, retour du rescrit déontologique.",
-      "Recouvrement d'honoraires accéléré avec médiation préalable facultative, saisine en ligne des litiges entre avocats.",
-      "Détection précoce des difficultés économiques, prélèvement SEPA et appels de cotisations dématérialisés."
+      {
+       "texte": "Référents par domaine, publication anonymisée des décisions disciplinaires, retour du rescrit déontologique.",
+       "detail": "Selon le programme de Bouyssou–Pascarel (axe « Répondre à chaque avocat, immédiatement »), l'Ordre serait plus lisible : chaque avocat saurait à qui s'adresser et obtiendrait une réponse dans un délai connu. Le constat de départ est que les avocats ne savent pas toujours à qui s'adresser, ne peuvent pas suivre leurs demandes et n'ont pas de positions déontologiques écrites et motivées.\nTrois mesures sont prévues.\nPremièrement, des référents ordinaux seraient désignés par domaine d'activité, sensibilisés aux spécificités de chaque pratique. On pourrait les joindre par téléphone et par une plateforme dédiée aux questions qui leur sont adressées. Le fonctionnement de l'Ordre serait rendu compréhensible et soumis à des règles de procédure fixes. Le programme ne précise ni délai ni nombre de référents ; leur désignation figure parmi les actions annoncées dans les 150 premiers jours.\nDeuxièmement, les décisions disciplinaires seraient publiées sous forme anonymisée, y compris celles de la cour d'appel et de la Cour de cassation, ainsi que les avis déontologiques. Les publications du site de l'Ordre (avis, questions fréquentes, modèles) seraient révisées de façon systématique pour vérifier qu'elles sont à jour et pertinentes.\nTroisièmement, le projet de rescrit déontologique serait réactivé : l'avocat pourrait obtenir, sur une situation qu'il envisage, une analyse écrite et motivée avant d'agir.",
+       "source": "https://bouyssoupascarel.fr/programme#point-5",
+       "points": [
+        "Référents par domaine, joignables par téléphone et plateforme dédiée",
+        "Décisions disciplinaires (cour d'appel et Cour de cassation comprises) et avis déontologiques publiés sans les noms",
+        "Rescrit déontologique : analyse écrite et motivée d'une situation envisagée",
+        "Désignation des référents dans les 150 premiers jours"
+       ]
+      },
+      {
+       "texte": "Recouvrement d'honoraires accéléré avec médiation préalable facultative, saisine en ligne des litiges entre avocats.",
+       "detail": "Le programme prévoit deux volets pour les honoraires et les litiges entre confrères.\nHonoraires : une médiation préalable serait intégrée à la procédure de fixation des honoraires. Elle serait proposée systématiquement mais ne serait jamais obligatoire. Elle compléterait, sans la concurrencer, la médiation de la consommation nationale, qui ne peut pas être saisie à l'initiative des avocats. L'objectif est une solution négociée sous 45 jours ; selon le programme, une solution négociée est trouvée dans environ 70 % des cas, en 45 jours. Une plateforme sécurisée, au sein de R.ia.BP (Réseau d'intelligence artificielle du Barreau de Paris), permettrait la saisine en ligne, le suivi de la procédure et la transmission dématérialisée de la décision de fixation.\nLitiges entre avocats : une plateforme sécurisée au sein de R.ia.BP permettrait aussi de saisir en ligne le règlement des litiges entre avocats et en matière de collaboration. R.ia.BP servirait également à mieux faire connaître et faciliter l'accès aux services existants de règlement de ces litiges.\nLe programme ne donne ni date précise ni budget pour ces outils, hormis le lancement de R.ia.BP dans les 150 premiers jours.",
+       "source": "https://bouyssoupascarel.fr/programme#point-5",
+       "points": [
+        "Médiation préalable : systématiquement proposée, jamais obligatoire",
+        "Objectif : solution négociée sous 45 jours (environ 70 % des cas selon le programme)",
+        "Saisine en ligne et décision transmise par voie dématérialisée",
+        "Même plateforme pour les litiges entre avocats et ceux liés à la collaboration"
+       ]
+      },
+      {
+       "texte": "Détection précoce des difficultés économiques, prélèvement SEPA et appels de cotisations dématérialisés.",
+       "detail": "Détection précoce : le programme prévoit d'identifier les signaux de difficultés économiques d'un cabinet pour les anticiper, et d'accompagner l'avocat dès les premiers signes, avant que la situation devienne irrémédiable. Un service d'assistance serait accessible via R.ia.BP (Réseau d'intelligence artificielle du Barreau de Paris). Le programme ne précise pas quels signaux seraient suivis ni quels moyens financiers seraient mobilisés.\nCotisations : le prélèvement SEPA (prélèvement bancaire européen) et les appels de cotisations dématérialisés seraient généralisés, pour simplifier le paiement des cotisations.\nSur l'accueil des difficultés économiques, l'axe sur la protection de la santé prévoit aussi un accès rapide à des professionnels qualifiés en cas de surcharge, d'isolement ou de difficulté économique.",
+       "source": "https://bouyssoupascarel.fr/programme#point-5",
+       "points": [
+        "Repérage et accompagnement précoces, avant que la situation soit irrémédiable",
+        "Service d'assistance via R.ia.BP",
+        "Prélèvement SEPA et appels de cotisations dématérialisés généralisés"
+       ]
+      }
      ],
      "resume": "Référents par domaine, décisions disciplinaires publiées sans noms, aide au recouvrement des honoraires et paiement des cotisations simplifié."
     },
     {
      "titre": "Aider chaque cabinet à se développer",
      "mesures": [
-      "Parcours d'accompagnement : formation, comptabilité, management, cybersécurité, achat de locaux.",
-      "Étude d'un fonds d'aide au démarrage et espaces partagés.",
-      "Observatoire économique et cellule Nouveaux Métiers (médiation, arbitrage, enquêtes internes, droit de la durabilité)."
+      {
+       "texte": "Parcours d'accompagnement : formation, comptabilité, management, cybersécurité, achat de locaux.",
+       "detail": "Selon le programme (axe « Donner à chacun les moyens de réussir »), l'Ordre accompagnerait le cabinet à chaque étape, de l'installation à la transmission en passant par les phases de croissance. Il proposerait un parcours réunissant formation continue, expertise comptable, management de cabinet, communication, cybersécurité et accompagnement à l'achat de locaux.\nLe programme ne donne ni calendrier, ni budget, ni pilote précis pour ce parcours.",
+       "source": "https://bouyssoupascarel.fr/programme#point-1",
+       "points": [
+        "Formation continue, comptabilité, management, communication, cybersécurité, achat de locaux",
+        "De l'installation à la transmission"
+       ]
+      },
+      {
+       "texte": "Étude d'un fonds d'aide au démarrage et espaces partagés.",
+       "detail": "Deux pistes pour les cabinets qui démarrent. D'une part, l'Ordre étudierait la mise en place d'un fonds d'aide au démarrage sous forme de prêts à conditions facilitées et transparentes. Il s'agit d'une étude : le programme n'annonce ni montant, ni taux, ni plafond, ni critères d'attribution.\nD'autre part, l'Ordre développerait des espaces de travail partagés et des bureaux accessibles, sur le modèle du « CDAAP » (sigle que le programme ne développe pas).",
+       "source": "https://bouyssoupascarel.fr/programme#point-1",
+       "points": [
+        "Fonds d'aide au démarrage : prêts à conditions facilitées et transparentes (à l'étude)",
+        "Espaces de travail partagés et bureaux accessibles"
+       ]
+      },
+      {
+       "texte": "Observatoire économique et cellule Nouveaux Métiers (médiation, arbitrage, enquêtes internes, droit de la durabilité).",
+       "detail": "Observatoire économique : il publierait des données anonymisées sur les chiffres d'affaires, les charges et les revenus des cabinets, pour éclairer toutes les étapes de la vie professionnelle. Un rapport annuel chiffré serait présenté à la profession.\nCellule Nouveaux Métiers Nouvelles Pratiques : elle identifierait les nouveaux domaines d'intervention de l'avocat, accompagnerait les projets liés aux plateformes, aux abonnements juridiques, à la cybersécurité, à la conformité, à la certification, à l'intelligence économique et à la direction juridique externalisée, et publierait une doctrine ordinale préservant l'anonymat des cabinets pour sécuriser les initiatives de bonne foi. Elle soutiendrait directement les avocats qui développent des offres dans des domaines porteurs : médiation, arbitrage, enquêtes internes, gestion des risques, droit de la durabilité, contentieux climatique et biodiversité, droit de l'art et du sport, direction juridique à temps partagé.\nLa mise en place de la cellule est annoncée dans les 150 premiers jours.",
+       "source": "https://bouyssoupascarel.fr/programme#point-1",
+       "points": [
+        "Données anonymisées : chiffres d'affaires, charges, revenus ; rapport annuel chiffré",
+        "Cellule installée dans les 150 premiers jours",
+        "Doctrine ordinale anonyme pour sécuriser les initiatives de bonne foi"
+       ]
+      }
      ],
      "resume": "Un accompagnement pour tous les cabinets, petits ou grands : formation, aide au démarrage et nouveaux métiers."
     },
     {
      "titre": "L'intelligence artificielle au service des avocats",
      "mesures": [
-      "R.ia.BP : réseau d'IA servant de point d'entrée unique, avec suivi des demandes et supervision humaine pour toute réponse substantielle.",
-      "Académie IA permanente pour avocats, élèves-avocats et personnel, mise en place en septembre 2026.",
-      "Guide de l'avocat augmenté (charte, solutions vérifiées, clauses types) et observatoire des usages avec le CNB."
+      {
+       "texte": "R.ia.BP : réseau d'IA servant de point d'entrée unique, avec suivi des demandes et supervision humaine pour toute réponse substantielle.",
+       "detail": "R.ia.BP (Réseau d'intelligence artificielle du Barreau de Paris) serait créé comme point d'entrée unique de l'avocat vers l'Ordre. Il identifierait rapidement le bon interlocuteur, assurerait une première orientation, puis suivrait la demande jusqu'à la réponse. Les sujets couverts : déontologie, démarches ordinales, collaboration, formation continue, recouvrement des honoraires et difficultés économiques.\nLes outils automatisés traiteraient les demandes simples, mais « aucune réponse substantielle ne sera délivrée sans supervision humaine ». La déclaration de candidature le présente comme un agent d'IA répondant aux questions pratiques quotidiennes, aux côtés des équipes de l'Ordre. R.ia.BP hébergerait aussi les plateformes de saisine en ligne et le dispositif de signalement du harcèlement.\nCalendrier : lancement dans les 150 premiers jours (100 jours selon la déclaration). Le 25 septembre 2026, le binôme a par ailleurs adopté l'agent IA d'Avocats+, fournisseur retenu par le CNB (Conseil national des barreaux), parmi les seize premiers avocats en France à le faire. Le programme ne chiffre pas le coût de R.ia.BP.",
+       "source": "https://bouyssoupascarel.fr/programme#point-5",
+       "points": [
+        "Point d'entrée unique, suivi des demandes jusqu'à la réponse",
+        "Supervision humaine pour toute réponse substantielle",
+        "Lancement dans les 150 premiers jours"
+       ]
+      },
+      {
+       "texte": "Académie IA permanente pour avocats, élèves-avocats et personnel, mise en place en septembre 2026.",
+       "detail": "Selon le programme, l'Académie IA, mise en place par l'Ordre en septembre 2026, deviendrait une Académie permanente du droit et de l'intelligence artificielle, ouverte aux avocats, aux élèves-avocats et au personnel des cabinets. Elle comprendrait un service de veille, des formations pratiques (sécurité, secret professionnel, protection des données, biais de l'IA, vérification des sources, responsabilité professionnelle) et des parcours spécialisés : contentieux augmenté, revue de contrats, conformité, enquêtes internes, arbitrage, droit pénal des affaires, gestion juridique (legal operations).\nÉtat réel : l'Académie IA actuelle a été annoncée par le barreau de Paris le 24 septembre 2026 (Le Monde du Droit). Il s'agit de formations gratuites d'une journée à la Maison des Avocats, comptant pour la formation continue : notions d'IA et éthique, panorama d'outils, atelier de trois heures sur la création d'agents d'IA. Selon Lexis Veille (28 septembre 2026), la première session était annoncée pour novembre 2026. Elle est donc lancée mais en tout début de parcours ; la transformation en académie permanente et élargie reste une promesse du programme.",
+       "source": "https://bouyssoupascarel.fr/programme#point-4",
+       "points": [
+        "Académie annoncée le 24 septembre 2026 ; première session prévue en novembre 2026",
+        "Formations gratuites, d'une journée, à la Maison des Avocats",
+        "Promesse : académie permanente, ouverte aux élèves-avocats et au personnel"
+       ]
+      },
+      {
+       "texte": "Guide de l'avocat augmenté (charte, solutions vérifiées, clauses types) et observatoire des usages avec le CNB.",
+       "detail": "Guide de l'avocat augmenté : il prolongerait le travail de l'Ordre sur une doctrine déontologique claire de ce qu'un avocat peut déléguer à une machine et de ce qu'il ne doit jamais lui confier. Il comprendrait une charte ordinale de l'IA, mise à jour régulièrement selon la pratique réelle et les besoins remontés par les confrères, ainsi qu'une liste de solutions vérifiées et des clauses types pour les fournisseurs numériques. Le but : aider chacun à comprendre les outils et leurs limites, contrôler les résultats, protéger les données confiées et garder la maîtrise de la stratégie et de la relation client.\nObservatoire des nouveaux usages : il suivrait les usages et besoins des confrères et les évolutions de règles qui en découlent (services en ligne, plateformes algorithmiques, assistants conversationnels, communication numérique, contenus produits ou réécrits par l'IA). Le principe : l'avocat reste responsable du diagnostic juridique et de la relation client. Il travaillerait avec le CNB (Conseil national des barreaux) à la mise à jour des textes.\nLe programme prévoit en outre une réflexion collective sur les effets de l'IA sur la formation des jeunes avocats et sur le risque de saturation des juridictions et de l'Ordre par des saisines générées par des outils automatisés.",
+       "source": "https://bouyssoupascarel.fr/programme#point-4",
+       "points": [
+        "Charte ordinale de l'IA, solutions vérifiées, clauses types",
+        "Observatoire des usages, avec le CNB",
+        "Réflexion sur la formation des jeunes et la saturation par les saisines automatisées"
+       ]
+      }
      ],
      "resume": "Mettre l'IA à la portée de toute la profession : un réseau d'IA de l'Ordre, une formation permanente et un guide de bonnes pratiques."
     },
     {
      "titre": "Faire rayonner Paris à l'international",
      "mesures": [
-      "Vitrine de la médiation internationale : ratification de la convention de Singapour, registre des médiateurs.",
-      "Programme « Jeunes confrères à l'international » et lutte contre l'exercice illégal par les plateformes."
+      {
+       "texte": "Vitrine de la médiation internationale : ratification de la convention de Singapour, registre des médiateurs.",
+       "detail": "Paris serait la vitrine de la médiation internationale. Le programme prévoit de soutenir une politique de développement de la médiation et d'œuvrer à la ratification de la convention de Singapour (traité international sur l'exécution des accords de médiation commerciale internationale). Il veut rendre compréhensibles, dans tous les pays, les exigences de certification des avocats médiateurs internationaux, afin que les entreprises étrangères puissent évaluer leur expérience, et faire d'un registre un canal d'affaires pour les confrères dans les litiges transfrontaliers.\nL'objectif général est que Paris reste la première place juridique européenne pour le droit, le contentieux, l'arbitrage et la médiation. Le programme ne donne ni critères détaillés pour le registre ou la certification, ni chiffres.",
+       "source": "https://bouyssoupascarel.fr/programme#point-6",
+       "points": [
+        "Ratification de la convention de Singapour",
+        "Certifications des médiateurs lisibles à l'étranger",
+        "Registre comme canal d'affaires pour les litiges transfrontaliers"
+       ]
+      },
+      {
+       "texte": "Programme « Jeunes confrères à l'international » et lutte contre l'exercice illégal par les plateformes.",
+       "detail": "Programme « Jeunes confrères à l'international » : relancer les échanges de collaborateurs avec des cabinets étrangers, renforcer les formations en droit comparé et développer des projets transfrontaliers sous forme de campus internationaux. Les échanges se feraient dans le barreau étranger de leur choix.\nConfrères exerçant à l'étranger : leur lien avec l'Ordre serait structuré autour d'un référent et d'un agent formé aux spécificités de l'exercice international, avec une concertation sur les cotisations de prévoyance, de retraite et de responsabilité civile.\nExercice illégal : le programme veut mettre fin à l'exercice illégal de la profession par des opérateurs tiers, notamment des plateformes, dans le conseil juridique et la rédaction d'actes. Il ne détaille pas les moyens (action en justice, partenariats, etc.).",
+       "source": "https://bouyssoupascarel.fr/programme#point-6",
+       "points": [
+        "Échanges de collaborateurs, droit comparé, campus internationaux",
+        "Référent pour les avocats parisiens à l'étranger",
+        "Lutte contre l'exercice illégal par les plateformes"
+       ]
+      }
      ],
      "resume": "Faire de Paris une place de référence pour la médiation internationale et aider les jeunes avocats à l'étranger."
     },
     {
      "titre": "Protéger la santé des avocats",
      "mesures": [
-      "États généraux de la santé au travail et lignes d'écoute anonymes.",
-      "Charte « Équilibre et Réussite » (charge de travail, déconnexion, formation, congés) et contrôle de l'exécution du contrat de collaboration (art. 14 RIN)."
+      {
+       "texte": "États généraux de la santé au travail et lignes d'écoute anonymes.",
+       "detail": "Selon le programme, des États généraux de la santé au travail seraient engagés pour identifier les causes de la recrudescence des épuisements professionnels et apporter des réponses structurelles. La ligne d'écoute serait accessible à tous, anonyme sur demande, avec accès rapide à des professionnels qualifiés en cas de surcharge de travail, d'isolement ou de difficulté économique.\nLa déclaration de candidature et le programme prévoient aussi, dans les 150 premiers jours, un dispositif indépendant de protection de la santé psychique et de signalement. Le programme ne donne ni date des États généraux, ni budget.",
+       "source": "https://bouyssoupascarel.fr/programme#point-2",
+       "points": [
+        "États généraux de la santé au travail",
+        "Ligne d'écoute accessible à tous, anonyme sur demande",
+        "Accès rapide à des professionnels qualifiés"
+       ]
+      },
+      {
+       "texte": "Charte « Équilibre et Réussite » (charge de travail, déconnexion, formation, congés) et contrôle de l'exécution du contrat de collaboration (art. 14 RIN).",
+       "detail": "Charte « Équilibre et Réussite » : elle permettrait, dans chaque cabinet, une concertation sur la charge de travail, la flexibilité, le droit à la déconnexion, la formation et la durée des congés. Dans un article du 15 octobre 2026, le binôme explique l'avoir imaginée après un déjeuner avec l'équipe jeune de la campagne : des cabinets signeraient la charte pour s'engager à appliquer le contrat de collaboration tel qu'il est écrit, notamment le temps que ce contrat réserve aux jeunes collaborateurs pour développer leur propre clientèle.\nContrôle du contrat de collaboration : la collaboration deviendrait un moment d'apprentissage, d'évolution et de respect, et le contrôle de l'exécution du contrat prévu à l'article 14 du RIN (règlement intérieur national de la profession d'avocat) serait organisé. Le programme ne précise ni les modalités du contrôle ni les sanctions.\nLe programme prévoit aussi une carte « avocat culture » donnant aux avocats de Paris des tarifs culturels réduits (selon le programme de Bouyssou–Pascarel).",
+       "source": "https://bouyssoupascarel.fr/programme#point-2",
+       "points": [
+        "Concertation par cabinet : charge, flexibilité, déconnexion, formation, congés",
+        "Cabinets signataires s'engagent à appliquer le contrat tel qu'écrit",
+        "Contrôle de l'exécution du contrat (art. 14 RIN)"
+       ]
+      }
      ],
      "resume": "Charge de travail, santé au travail et équilibre entre vie privée et vie professionnelle."
     },
     {
      "titre": "Plus d'égalité entre avocats",
      "mesures": [
-      "Congé de naissance transposé au règlement intérieur (en vigueur depuis le 1er juillet 2026 selon eux) et aide aux cabinets individuels.",
-      "Congé de paternité de 4 semaines avec publication annuelle du taux de recours.",
-      "Signalement indépendant et confidentiel du harcèlement et des discriminations, rendez-vous sous 3 jours."
+      {
+       "texte": "Congé de naissance transposé au règlement intérieur (en vigueur depuis le 1er juillet 2026 selon eux) et aide aux cabinets individuels.",
+       "detail": "Le programme propose de transposer dans le règlement intérieur du barreau de Paris le congé supplémentaire de naissance, en vigueur depuis le 1er juillet 2026 selon le programme, et d'aider les cabinets individuels à le mettre en œuvre.\nIl prévoit aussi d'étudier une solution d'assurance collective durable et juste pour ce congé, afin que les périodes de maternité, de paternité ou d'adoption ne causent pas de souci financier, que l'avocat exerce seul, en collaboration ou en association. Le programme ne donne pas de montant ni de calendrier.",
+       "source": "https://bouyssoupascarel.fr/programme#point-3",
+       "points": [
+        "Congé de naissance supplémentaire transposé au règlement intérieur",
+        "Aide aux cabinets individuels",
+        "Étude d'une assurance collective"
+       ]
+      },
+      {
+       "texte": "Congé de paternité de 4 semaines avec publication annuelle du taux de recours.",
+       "detail": "Le congé de paternité de quatre semaines reste, selon le programme, sous-utilisé. Pour le promouvoir : informer les cabinets et les collaborateurs, mettre en avant les bonnes pratiques, publier chaque année le taux de recours, et demander à l'assureur de prévoyance d'aligner les indemnités journalières de paternité sur celles de maternité.\nLe programme ne donne pas de taux cible.",
+       "source": "https://bouyssoupascarel.fr/programme#point-3",
+       "points": [
+        "Information des cabinets et des collaborateurs",
+        "Taux de recours publié chaque année",
+        "Alignement des indemnités paternité sur maternité demandé à l'assureur de prévoyance"
+       ]
+      },
+      {
+       "texte": "Signalement indépendant et confidentiel du harcèlement et des discriminations, rendez-vous sous 3 jours.",
+       "detail": "Le programme prévoit un dispositif de signalement indépendant, confidentiel et accessible des violences, du harcèlement et des discriminations, hébergé sur R.ia.BP (Réseau d'intelligence artificielle du Barreau de Paris). Il vise le harcèlement et les discriminations fondés sur l'un des 26 critères interdits par la loi. Un premier contact anonyme serait possible si la personne le souhaite.\nUn rendez-vous serait proposé sous trois jours, dans les locaux de l'Ordre ou par téléphone avec le référent harcèlement. La personne serait orientée immédiatement puis accompagnée sur les plans juridique, psychologique et ordinal.\nL'Ordre s'engagerait aussi à l'exemplarité : parité dans ses nominations, ses instances et les conférences qu'il organise, mesure et publication des écarts de rémunération. Mise en place dans les 150 premiers jours.",
+       "source": "https://bouyssoupascarel.fr/programme#point-3",
+       "points": [
+        "Premier contact anonyme possible",
+        "Rendez-vous sous 3 jours (Ordre ou téléphone)",
+        "Accompagnement juridique, psychologique et ordinal"
+       ]
+      }
      ],
      "resume": "Congés de naissance et de paternité, aide aux cabinets individuels et signalement du harcèlement et des discriminations."
     },
     {
      "titre": "Un Ordre écologique",
      "mesures": [
-      "Responsable RSE et climat, bilan carbone chiffré, rapport annuel.",
-      "Observatoire des contentieux climatiques et de la biodiversité."
+      {
+       "texte": "Responsable RSE et climat, bilan carbone chiffré, rapport annuel.",
+       "detail": "Un responsable RSE (responsabilité sociétale des entreprises), climat et développement durable serait désigné. Des critères climatiques et environnementaux seraient intégrés à la gestion et à la politique d'achat de l'Ordre. Un bilan carbone chiffré du fonctionnement de l'Ordre permettrait de repérer les postes à améliorer, et un rapport annuel présenterait les actions menées.\nLe programme ne donne ni objectif de réduction chiffré ni budget.",
+       "source": "https://bouyssoupascarel.fr/programme#point-8",
+       "points": [
+        "Responsable RSE et climat",
+        "Critères environnementaux dans les achats",
+        "Bilan carbone chiffré et rapport annuel"
+       ]
+      },
+      {
+       "texte": "Observatoire des contentieux climatiques et de la biodiversité.",
+       "detail": "Un Observatoire des contentieux climatiques et de la biodiversité soutiendrait le développement de ces pratiques chez les avocats. Le programme y associe : des formations continues en droit de la durabilité, crise climatique, droit de l'environnement et adaptation au changement climatique ; un débat sur la personnalité juridique des écosystèmes ; et un partenariat avec des ONG environnementales pour que davantage d'élèves-avocats y effectuent leur stage de projet pédagogique individuel.",
+       "source": "https://bouyssoupascarel.fr/programme#point-8",
+       "points": [
+        "Soutien à la pratique des contentieux climat et biodiversité",
+        "Formations en droit de la durabilité",
+        "Stages d'élèves-avocats en ONG"
+       ]
+      }
      ],
      "resume": "Un responsable climat, un bilan carbone chiffré et un suivi des contentieux climatiques et de biodiversité."
     },
     {
      "titre": "Défendre la profession et l'État de droit",
      "mesures": [
-      "Cellule de veille et de riposte législative : analyse des textes menaçants sous 48 h.",
-      "Cellule d'assistance permanente (perquisition, atteinte au secret, cyberattaque), assurance protection juridique pour les confrères victimes d'infractions.",
-      "Défense de l'aide juridictionnelle et soutien aux avocats menacés."
+      {
+       "texte": "Cellule de veille et de riposte législative : analyse des textes menaçants sous 48 h.",
+       "detail": "Cette cellule réunirait avocats aux Conseils, pénalistes, publicistes, spécialistes du droit des étrangers et confrères européens. Elle analyserait sous 48 heures tout texte menaçant l'État de droit ou les droits de la défense, puis proposerait au Conseil de l'Ordre une position publique et, si besoin, un recours. Son installation est annoncée dans les 150 premiers jours.\nLe programme défend sans concession le secret professionnel, le contradictoire, la présomption d'innocence et le droit de plaider, quels que soient la cause et le client.",
+       "source": "https://bouyssoupascarel.fr/programme#point-7",
+       "points": [
+        "Analyse sous 48 heures",
+        "Position publique et recours proposés au Conseil de l'Ordre",
+        "Installation dans les 150 premiers jours"
+       ]
+      },
+      {
+       "texte": "Cellule d'assistance permanente (perquisition, atteinte au secret, cyberattaque), assurance protection juridique pour les confrères victimes d'infractions.",
+       "detail": "La cellule d'assistance permanente réagirait immédiatement en cas de perquisition, d'atteinte au secret professionnel, de cyberattaque ou de mise en cause d'un confrère pour l'exercice de sa profession.\nUne assurance protection juridique prendrait en charge les frais d'avocat des confrères victimes d'une infraction dans le cadre de leur exercice. Le programme ne donne ni plafond, ni coût, ni conditions précises.",
+       "source": "https://bouyssoupascarel.fr/programme#point-7",
+       "points": [
+        "Réaction immédiate : perquisition, secret, cyberattaque",
+        "Assurance protection juridique pour les confrères victimes"
+       ]
+      },
+      {
+       "texte": "Défense de l'aide juridictionnelle et soutien aux avocats menacés.",
+       "detail": "Avocats menacés : observation des procès, interventions auprès des autorités et accueil à Paris des confrères empêchés d'exercer. Le 22 octobre 2026, le binôme a proposé de faire de Paris une place forte de cette solidarité grâce à une cellule de veille et de riposte, après la mise à l'honneur par le CNB (Conseil national des barreaux) de l'Observatoire international des avocats en danger, né à Istanbul en 2014 et auquel Jacques Bouyssou participait ; l'article ne détaille pas le fonctionnement.\nAide juridictionnelle : défense de l'aide juridictionnelle et des moyens des juridictions, dialogue régulier avec les chefs de juridiction (audiences, délais, greffes, difficultés des justiciables) et institutionnalisation des « petits déjeuners de la Justice » avec magistrats, greffiers, huissiers audienciers, officiers de police judiciaire et experts.\nActualité du 22 octobre 2026 (déclaration du binôme sur son site) : à l'occasion de l'hommage du CNB à l'Observatoire international des avocats en danger, Carole Pascarel et Jacques Bouyssou proposent de faire de Paris un bastion de cette solidarité par une « cellule de veille et de riposte » pour les avocats menacés.",
+       "source": "https://bouyssoupascarel.fr/programme#point-7",
+       "points": [
+        "Observation de procès, accueil à Paris",
+        "Petits déjeuners de la Justice institutionnalisés"
+       ]
+      }
      ],
      "resume": "Veille sur les projets de loi, assistance en cas de perquisition ou de cyberattaque, défense de l'aide juridictionnelle."
     },
     {
      "titre": "Rendre des comptes aux avocats",
      "mesures": [
-      "Premières mesures annoncées mises en place en 100 jours (selon la déclaration de candidature) ou 150 jours (selon le programme) : dispositif de signalement, référents, cellules et réseau d'IA (voir « L'intelligence artificielle au service des avocats »).",
-      "Feuille de route avec, pour chaque mesure, un responsable, une échéance, un financement et des indicateurs, et tableau de bord public chaque année.",
-      "Le programme ne chiffre pas les budgets."
+      {
+       "texte": "Premières mesures annoncées mises en place en 100 jours (selon la déclaration de candidature) ou 150 jours (selon le programme) : dispositif de signalement, référents, cellules et réseau d'IA (voir « L'intelligence artificielle au service des avocats »).",
+       "detail": "Le programme annonce un compte rendu dans les 150 premiers jours : lancement de R.ia.BP, installation de la cellule Nouveaux Métiers Nouvelles Pratiques et de la cellule de veille et de riposte législative, mise en place du dispositif indépendant de protection de la santé psychique et de signalement, désignation des référents ordinaux. La déclaration de candidature parle de 100 jours pour les mesures clés ; le programme détaillé dit 150 jours (écart à noter). Des comptes rendus sont promis pour les décisions les plus urgentes.",
+       "source": "https://bouyssoupascarel.fr/programme#point-9",
+       "points": [
+        "100 jours (déclaration) contre 150 jours (programme)"
+       ]
+      },
+      {
+       "texte": "Feuille de route avec, pour chaque mesure, un responsable, une échéance, un financement et des indicateurs, et tableau de bord public chaque année.",
+       "detail": "Une feuille de route publique indiquerait, pour chaque engagement, un responsable, une échéance, un financement et des indicateurs, publiés périodiquement par thème. Un tableau de bord annuel public suivrait notamment le nombre de confrères formés, les outils évalués, les incidents cyber signalés, les projets accompagnés, les médiations conduites et les délais de réponse. Le programme prévoit aussi des consultations, rencontres par quartier et réunions thématiques régulières. La déclaration de candidature évoque, elle, un compte rendu mensuel (écart avec le tableau de bord annuel du programme).",
+       "source": "https://bouyssoupascarel.fr/programme#point-9",
+       "points": [
+        "Responsable, échéance, financement, indicateurs",
+        "Tableau de bord annuel public"
+       ]
+      },
+      {
+       "texte": "Le programme ne chiffre pas les budgets.",
+       "detail": "Le programme mentionne le financement uniquement comme un élément que la feuille de route devra préciser pour chaque mesure. Il ne donne aucun montant, budget ni source de financement, pour aucun axe.",
+       "source": "https://bouyssoupascarel.fr/programme#point-9"
+      }
      ],
      "resume": "Comment le binôme s'engage à tenir ses promesses : délais, responsables, financement et bilan public chaque année. C'est ce que le programme appelle la « redevabilité »."
     }
    ],
    "nouveautes": [
+    {
+     "date": "2026-10-23",
+     "titre": "Convention nationale des avocats à Toulouse",
+     "resume": "Selon le site du binôme, Jacques Bouyssou et Carole Pascarel ont participé à trois jours de rencontres et de débats sur l'avenir de la profession. Aucune proposition nouvelle.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-22",
+     "titre": "Cellule de veille et de riposte pour les avocats menacés",
+     "resume": "Le binôme propose de faire de Paris un bastion de solidarité avec les avocats menacés (déclaration du binôme).",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-20",
+     "titre": "Dix ans de la loi Sapin II",
+     "resume": "Selon le site du binôme, Jacques Bouyssou a assisté à un colloque marquant les dix ans de la loi Sapin II. Aucune proposition.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
     {
      "date": "2026-10-19",
      "titre": "Six pistes pour les permanences pénales",
@@ -383,8 +720,17 @@
     "nombre": "Non consultable",
     "notables": []
    },
-   "limites": "La page des soutiens (/soutiens) renvoie une erreur d'accès : aucun nom ni total n'a pu être récupéré. Les 28 actualités du site ont été lues, mais le site n'offre pas de lien individuel par article.",
+   "limites": "La page des soutiens (/soutiens) n'a pas été relue ce jour ; elle renvoyait une erreur d'accès. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour.",
    "evolutions": [
+    {
+     "date": "2026-10-22",
+     "constat": "2026-10-28",
+     "constat_heure": "09:00",
+     "type": "Nouvelle proposition",
+     "titre": "Cellule de veille et de riposte pour les avocats menacés",
+     "detail": "Selon le site du binôme (déclaration des candidats), Paris deviendrait un bastion de la solidarité avec les avocats menacés grâce à une cellule de veille et de riposte, proposée à l'occasion de l'hommage du CNB à l'Observatoire international des avocats en danger.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
     {
      "date": "2026-10-19",
      "constat": "2026-10-26",
@@ -460,50 +806,220 @@
     {
      "titre": "Aider les avocats à gérer leur cabinet",
      "mesures": [
-      "Bureau administratif externalisé pour l'URSSAF et les impôts, en partenariat avec l'administration.",
-      "Plateforme de transmission de clientèles avec rétrocession d'un pourcentage du chiffre d'affaires.",
-      "Fixation des honoraires restructurée (délai actuel jusqu'à 8 mois), injonction de payer avec exécution provisoire jusqu'à 5 000 € HT.",
-      "Accompagnement des premières années, coworking, prêts bancaires avec garanties de l'Ordre.",
-      "Cellule de médiateurs confrères, distincte du disciplinaire.",
-      "Lobbying auprès de Bercy : baisse de TVA sur les dossiers de particuliers, statut de mandataire social, lutte contre l'exercice illégal."
+      {
+       "texte": "Bureau administratif externalisé pour l'URSSAF et les impôts, en partenariat avec l'administration.",
+       "detail": "Selon le programme de Fabiani–Naquet, l'Ordre mettrait en place, en partenariat avec l'administration, un bureau administratif externalisé pour les questions d'URSSAF et d'impôts, avec « un interlocuteur dédié » côté administrations.\nL'objectif est d'éviter que chaque avocat appelle seul ces administrations pour les mêmes sujets : les 36 000 avocats du barreau de Paris rencontrent, selon le programme, les mêmes difficultés de cotisations.\nLe programme ne précise ni le calendrier, ni le budget, ni qui pilote la mesure.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=3",
+       "points": [
+        "Public : les 36 000 avocats du barreau de Paris",
+        "Un interlocuteur dédié dans les administrations"
+       ]
+      },
+      {
+       "texte": "Plateforme de transmission de clientèles avec rétrocession d'un pourcentage du chiffre d'affaires.",
+       "detail": "Le programme prévoit un service de l'Ordre et une plateforme pour céder une clientèle et des dossiers. Il vise les confrères proches de la retraite et ceux qui reprennent une structure pour démarrer ou étoffer leur clientèle.\nPlutôt qu'un prix forfaitaire, le cédant resterait impliqué et se verrait rétrocéder un pourcentage du chiffre d'affaires généré par la clientèle transmise. Le taux n'est pas indiqué. Le programme y voit aussi une façon de rouvrir le débat sur l'apport d'affaires.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=3",
+       "points": [
+        "Taux de rétrocession non précisé"
+       ]
+      },
+      {
+       "texte": "Fixation des honoraires restructurée (délai actuel jusqu'à 8 mois), injonction de payer avec exécution provisoire jusqu'à 5 000 € HT.",
+       "detail": "Le service de fixation des honoraires de l'Ordre serait restructuré : traitement automatisé, saisine facilitée, décision rapide. Aujourd'hui, selon le programme, une saisine peut durer jusqu'à 8 mois (4 mois renouvelables une fois).\nLe programme propose aussi de créer une injonction de payer avec exécution provisoire (le paiement peut être exigé sans attendre la fin d'un éventuel recours) pour les créances jusqu'à 5 000 € HT. La réflexion sur l'affacturage (cession des factures à un tiers contre paiement immédiat) serait poursuivie.\nAucun calendrier n'est donné.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=4",
+       "points": [
+        "Délai actuel : jusqu'à 8 mois",
+        "Injonction de payer : créances jusqu'à 5 000 € HT",
+        "Réflexion sur l'affacturage poursuivie"
+       ]
+      },
+      {
+       "texte": "Accompagnement des premières années, coworking, prêts bancaires avec garanties de l'Ordre.",
+       "detail": "Cette mesure regroupe plusieurs engagements du programme pour les débuts d'exercice.\nPremières années : accélérer la prestation de serment pour réduire la période creuse (« trou noir ») entre la sortie de l'école et le serment ; créer un service dédié aux premières années d'exercice ; prévoir une ligne dédiée pour rendre le calcul et l'appel des cotisations lisibles et prévisibles (aucun montant indiqué).\nCoworking : refonte de la domiciliation et du coworking, avec des espaces partagés et des salles de réunion ponctuelles pour les avocats solos et les petites structures. L'Ordre travaillerait avec la Mairie de Paris pour assouplir les règles d'installation des avocats à Paris.\nPrêts bancaires : l'Ordre faciliterait les partenariats avec les banques et les conditions de prêt, et pourrait garantir ces prêts « sous certaines conditions ». Le programme ne dit ni quelle banque, ni le montant, ni le public visé, ni les conditions de la garantie.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=4",
+       "points": [
+        "Serment accéléré",
+        "Coworking, salles de réunion ponctuelles",
+        "Garantie de l'Ordre sur des prêts : conditions non précisées"
+       ]
+      },
+      {
+       "texte": "Cellule de médiateurs confrères, distincte du disciplinaire.",
+       "detail": "Le programme crée une cellule de confrères médiateurs formés, choisis pour leur connaissance concrète des cabinets. Ils interviennent en binôme, en toute confidentialité, et la cellule est distincte des instances disciplinaires : ce qui s'y dit n'en sort pas.\nDeux niveaux : une médiation de projet en amont (avant la rédaction du pacte lors d'une association ou d'une reprise, éventuellement au démarrage d'une collaboration) et une médiation de conflit en cours de route, dès les premières tensions entre associés ou entre un cabinet et son collaborateur, sans attendre la saisine des commissions compétentes de l'Ordre.\nModèle cité : la cellule de mésentente entre associés créée par les notaires en 2020.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=4",
+       "points": [
+        "Binôme de médiateurs, confidentialité",
+        "Médiation de projet et médiation de conflit"
+       ]
+      },
+      {
+       "texte": "Lobbying auprès de Bercy : baisse de TVA sur les dossiers de particuliers, statut de mandataire social, lutte contre l'exercice illégal.",
+       "detail": "Le programme prévoit de poursuivre le lobbying auprès du ministère de l'Économie et des Finances (Bercy), en tenant compte des contraintes européennes.\nObjectifs : baisser la TVA sur les dossiers facturés aux particuliers ; repenser la rémunération des avocats en tant que mandataires sociaux de leur cabinet ; lutter contre les concurrents qui exercent illégalement la profession. L'Ordre se veut « les avocats des avocats ».\nAucun taux de TVA ni calendrier n'est précisé.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=4",
+       "points": [
+        "Baisse de TVA pour les particuliers",
+        "Statut de mandataire social",
+        "Lutte contre l'exercice illégal"
+       ]
+      }
      ],
      "resume": "Moins de tâches administratives, aide pour transmettre un cabinet et honoraires payés plus vite."
     },
     {
      "titre": "Formation, numérique et IA",
      "mesures": [
-      "EFB : révision du syllabus, sessions plus petites, stages pratiques, gestion et management, gestion du stress.",
-      "Comité IA, formation continue, IA agentique dans l'environnement informatique de l'Ordre, environnement sécurisé éventuellement mutualisé avec d'autres barreaux.",
-      "Logiciels gratuits (facturation, stockage, visio), stockage souverain, cybersécurité et RGPD."
+      {
+       "texte": "EFB : révision du syllabus, sessions plus petites, stages pratiques, gestion et management, gestion du stress.",
+       "detail": "Le programme veut faire de l'EFB (l'école des avocats) une grande école d'excellence qui forme à exercer, et pas seulement à connaître le droit. Constat : les sortants ne savent pas gérer un cabinet, facturer ni manager une équipe.\nMesures : revoir le syllabus et fixer des objectifs, sans ajouter de module ; organiser plusieurs sessions pour réduire la taille des groupes ; immersions pratiques (une nuit avec des gendarmes ou des officiers de police judiciaire, une journée en prison, à l'institut médico-légal ou à l'Autorité des marchés financiers) ; enseignement de la déontologie, de la confraternité, du contradictoire et des structures d'exercice (p. 5) ; gestion, facturation et management avec l'Ordre des experts-comptables et de grandes écoles de commerce parisiennes, avec business plan, négociation et modes amiables (p. 6) ; formation à l'IA ; gestion du stress, car les avocats de moins de 35 ans sont plus touchés (p. 6) ; ouverture internationale.\nUn dialogue permanent est prévu avec le CNB, le FIFPL (fonds de formation des professionnels libéraux) et la Chancellerie. Aucun chiffre sur le nombre de sessions ni de budget.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=5",
+       "points": [
+        "Pas de module supplémentaire",
+        "Partenariats : experts-comptables, grandes écoles de commerce",
+        "Gestion du stress dès la formation initiale"
+       ]
+      },
+      {
+       "texte": "Comité IA, formation continue, IA agentique dans l'environnement informatique de l'Ordre, environnement sécurisé éventuellement mutualisé avec d'autres barreaux.",
+       "detail": "Le programme part du constat que près de trois avocats sur quatre utilisent déjà l'IA, ce qui risque de creuser un fossé entre cabinets. Il prévoit : un comité IA de l'Ordre réunissant des « sages » et référents (avocats, ingénieurs, philosophes) pour répondre à des questions concrètes et projeter la profession à 10 ou 20 ans ; l'IA dans la formation continue, sur le modèle des modules de l'EFB, avec le raisonnement et la déontologie au centre ; l'intégration d'IA agentique (capable d'enchaîner des tâches seule) pour moderniser le système informatique de l'Ordre au service des confrères.\nL'Ordre offrirait aussi un espace de travail IA sécurisé, éventuellement mutualisé avec d'autres barreaux français et européens, pour réduire la fracture entre cabinets.\nAucun budget ni calendrier.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=7",
+       "points": [
+        "Comité IA : avocats, ingénieurs, philosophes",
+        "Espace IA sécurisé, éventuellement mutualisé avec d'autres barreaux"
+       ]
+      },
+      {
+       "texte": "Logiciels gratuits (facturation, stockage, visio), stockage souverain, cybersécurité et RGPD.",
+       "detail": "Le programme poursuivrait et améliorerait l'offre gratuite de logiciels de l'Ordre : facturation, stockage documentaire, visioconférence et gestion des dossiers.\nUn espace de stockage sécurisé, centralisé et indépendant (« souverain ») serait dédié à l'archivage des actes et pièces sensibles, pour protéger le secret professionnel. Les questions de cybersécurité et de RGPD seraient prises en compte.\nAucun budget ni calendrier.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=7",
+       "points": [
+        "Facturation, stockage, visio, gestion des dossiers",
+        "Stockage souverain pour les pièces sensibles"
+       ]
+      }
      ],
      "resume": "Moderniser la formation des jeunes avocats et fournir des outils numériques et d'IA sécurisés."
     },
     {
      "titre": "Santé, entraide et protection sociale",
      "mesures": [
-      "Hotline d'écoute d'urgence par des confrères formés, supervision entre pairs, référent handicap avec une place au Conseil.",
-      "Contrat ordinal facultatif de mutuelle et prévoyance sans hausse des cotisations de base.",
-      "Avance des indemnités de congé parentalité via la CARPA, substitution pendant les congés maternité.",
-      "Maison de santé des avocats de Paris et EHPAD dédié."
+      {
+       "texte": "Hotline d'écoute d'urgence par des confrères formés, supervision entre pairs, référent handicap avec une place au Conseil.",
+       "detail": "Le programme part du stress, de la fatigue et de l'épuisement des avocats : « la prévention des risques professionnels est une priorité ». Il prévoit une hotline d'écoute professionnelle d'urgence, bienveillante et confidentielle, assurée par des confrères formés, pour les avocats en épuisement professionnel, ainsi qu'une supervision entre pairs pour parler des dossiers et clients difficiles avant de commettre des erreurs (groupes de supervision, formation à la gestion du stress). Horaires et moyens ne sont pas précisés.\nUn référent handicap identifié aurait une place réservée au Conseil de l'Ordre à intervalle régulier (périodicité non précisée).\nLe programme prévoit aussi une cellule pénale dédiée pour les avocats victimes d'infractions (agression, cambriolage, harcèlement).",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=8",
+       "points": [
+        "Hotline tenue par des confrères formés",
+        "Supervision entre pairs",
+        "Référent handicap au Conseil"
+       ]
+      },
+      {
+       "texte": "Contrat ordinal facultatif de mutuelle et prévoyance sans hausse des cotisations de base.",
+       "detail": "Le programme propose des contrats collectifs de référence de mutuelle et de prévoyance, facultatifs (chaque avocat choisit d'y souscrire ou non), à des tarifs « très inférieurs au marché individuel » et conçus pour le statut des avocats libéraux. Le principe : faciliter sans imposer, et ne pas augmenter « d'un seul euro » les cotisations de base.\nAucun tarif ni assureur n'est indiqué.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=9",
+       "points": [
+        "Facultatif",
+        "Pas de hausse des cotisations de base"
+       ]
+      },
+      {
+       "texte": "Avance des indemnités de congé parentalité via la CARPA, substitution pendant les congés maternité.",
+       "detail": "Le programme prévoit un soutien à la parentalité via la CARPA : avancer les indemnités de congé parentalité aux petites structures qui en ont besoin, pour ne pénaliser ni ces structures ni les femmes. Les conditions d'éligibilité ne sont pas précisées.\nIl prévoit aussi un système de substitution et d'entraide en conseil et en contentieux, en commençant par les consœurs installées en congé maternité qui n'ont pas d'associé pour gérer leurs dossiers, afin de permettre un repos serein. Durée et modalités non précisées.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=9",
+       "points": [
+        "Avance via la CARPA aux petites structures",
+        "Substitution pendant le congé maternité"
+       ]
+      },
+      {
+       "texte": "Maison de santé des avocats de Paris et EHPAD dédié.",
+       "detail": "Le programme prévoit une Maison de Santé des Avocats de Paris : un centre de santé pluridisciplinaire conçu pour les avocats, avec des professionnels formés aux spécificités du métier et à leurs agendas, « sans cotisation supplémentaire ».\nIl prévoit aussi un premier EHPAD des avocats de Paris, sur le modèle de la Maison Nationale des Artistes, destiné prioritairement aux confrères, à leurs conjoints et à leur famille.\nAucun budget, capacité, lieu ni calendrier n'est indiqué.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=10",
+       "points": [
+        "Maison de santé sans cotisation supplémentaire",
+        "EHPAD inspiré de la Maison Nationale des Artistes"
+       ]
+      }
      ],
      "resume": "Écoute d'urgence, mutuelle facultative, avance des congés de parentalité et maison de santé."
     },
     {
      "titre": "Transparence et indépendance de l'Ordre",
      "mesures": [
-      "Comptes de l'Ordre et de la CARPA publics, rapport annuel sur l'usage des cotisations.",
-      "Publication des sanctions disciplinaires et des statistiques, avis déontologiques anonymisés en open data, assistant déontologique IA.",
-      "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat."
+      {
+       "texte": "Comptes de l'Ordre et de la CARPA publics, rapport annuel sur l'usage des cotisations.",
+       "detail": "Le programme prévoit de publier les comptes de l'Ordre et ceux de la CARPA, ainsi qu'un rapport annuel sur l'usage des cotisations, pour un Ordre plus lisible. Il part du constat que deux tiers des avocats parisiens ne votent plus aux élections ordinales.\nAucun calendrier ni format n'est précisé.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=11",
+       "points": [
+        "Comptes de l'Ordre et de la CARPA",
+        "Rapport annuel sur les cotisations"
+       ]
+      },
+      {
+       "texte": "Publication des sanctions disciplinaires et des statistiques, avis déontologiques anonymisés en open data, assistant déontologique IA.",
+       "detail": "Le programme prévoit de rendre publiques les sanctions disciplinaires et leurs statistiques (format et rythme non précisés), pour une discipline connue de tous.\nIl prévoit aussi une doctrine déontologique accessible, avec un rescrit déontologique (réponse officielle en cas de doute), des avis anonymisés en open data (données ouvertes) et un assistant déontologique fondé sur l'IA pour sécuriser chaque confrère.\nIl ajoute d'appliquer les mêmes règles à tous et de faire exécuter réellement les décisions disciplinaires, avec des procédures accélérées en partenariat avec la Cour (p. 12).",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=11",
+       "points": [
+        "Sanctions et statistiques publiques",
+        "Avis anonymisés en open data",
+        "Assistant déontologique IA"
+       ]
+      },
+      {
+       "texte": "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat.",
+       "detail": "Pour rapprocher l'Ordre de ses membres, le programme instaure des permanences mensuelles, réserve des places aux confrères qui souhaitent assister aux séances du Conseil et prend mieux en compte les avocats plaignants dans la procédure disciplinaire (p. 12).\nSur l'autorégulation, il affirme son refus d'un tiers extérieur ou d'un déontologue non avocat, qu'il présente comme le gage de l'indépendance de la profession (p. 11). C'est un principe, sans mesure chiffrée.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=12",
+       "points": [
+        "Permanences mensuelles",
+        "Places pour assister au Conseil",
+        "Refus d'un déontologue non avocat"
+       ]
+      }
      ],
      "resume": "Comptes publics, publication des sanctions disciplinaires et avis déontologiques accessibles."
     },
     {
      "titre": "Défendre la profession et la faire respecter",
      "mesures": [
-      "Cellule ordinale de veille législative et d'accompagnement des avocats entendus en audition libre ou en garde à vue.",
-      "Opposition à la loi SURE et au plaider-coupable en matière criminelle.",
-      "Rencontres par spécialité avec magistrats, universitaires, greffiers, notaires, commissaires de justice.",
-      "Référents auprès des ministères et ambassades, « G7 des grands barreaux » et centre international de médiation à Paris."
+      {
+       "texte": "Cellule ordinale de veille législative et d'accompagnement des avocats entendus en audition libre ou en garde à vue.",
+       "detail": "Le programme crée une cellule ordinale de veille législative, capable de réagir vite aux projets de loi, composée notamment d'avocats pénalistes volontaires. Elle accompagnerait les confrères convoqués comme témoins, placés en audition libre ou en garde à vue.\nElle s'accompagne d'un lobbying continu pour défendre le secret professionnel, d'un enseignement de la culture du secret dès l'université et à l'EFB, et d'un vade-mecum des réflexes à avoir lors d'une audition.\nAucun budget ni calendrier.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=13",
+       "points": [
+        "Veille législative",
+        "Accompagnement en audition libre et garde à vue",
+        "Vade-mecum des réflexes"
+       ]
+      },
+      {
+       "texte": "Opposition à la loi SURE et au plaider-coupable en matière criminelle.",
+       "detail": "Le programme s'oppose à la dilution des droits de la défense. Il rejette la loi SURE et le plaider-coupable en matière criminelle, qu'il juge sacrificiels pour les droits de la défense et des parties civiles.\nIl prévoit aussi de créer un pôle « État de droit » et d'assumer des prises de parole publiques (p. 14). Le texte ne détaille pas le contenu de la loi SURE.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=13",
+       "points": [
+        "Rejet de la loi SURE",
+        "Rejet du plaider-coupable criminel",
+        "Pôle « État de droit »"
+       ]
+      },
+      {
+       "texte": "Rencontres par spécialité avec magistrats, universitaires, greffiers, notaires, commissaires de justice.",
+       "detail": "Le programme prévoit des rencontres régulières par spécialité entre avocats, universitaires, magistrats, policiers, gendarmes, douaniers, greffiers, notaires et commissaires de justice.\nIl y ajoute des chartes de bonnes pratiques, des formations communes, des dispositifs de substitution pour les demandes de renvoi, la publication en ligne du rôle des audiences, un accès simplifié au greffe de l'Ordre, la réouverture de la Buvette du Palais et un kiosque au Palais de justice avec journaux et ouvrages de doctrine (p. 15).",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=14",
+       "points": [
+        "Rencontres par matière",
+        "Chartes et formations communes",
+        "Rôle des audiences en ligne"
+       ]
+      },
+      {
+       "texte": "Référents auprès des ministères et ambassades, « G7 des grands barreaux » et centre international de médiation à Paris.",
+       "detail": "Le programme prévoit de désigner des avocats référents auprès de la Chancellerie et d'autres ministères (Intérieur, Économie, Santé, Familles, Autonomie) pour peser en amont des réformes, et des référents dans les ambassades, consulats et auprès de Business France, en s'appuyant sur les confrères exerçant à l'étranger (p. 15).\nIl renforcerait le service des Affaires publiques de l'Ordre, avec celui du CNB, et créerait un service dédié aux confrères internationaux avec des référents par pays (p. 16).\nEnfin, un « G7 des grands barreaux » réunirait les grands barreaux mondiaux, et un centre international de médiation serait créé, pour faire de Paris le hub juridique européen (p. 16). Aucun calendrier ni budget.",
+       "source": "https://www.fabiani-naquet.paris/documents/Programme_Fabiani_Naquet.pdf#page=15",
+       "points": [
+        "Référents dans les ministères et ambassades",
+        "G7 des grands barreaux",
+        "Centre international de médiation à Paris"
+       ]
+      }
      ],
      "resume": "Veille sur les lois, accompagnement des avocats en garde à vue, relations avec les magistrats et ouverture à l'international."
     }
@@ -541,7 +1057,7 @@
      "Jeanne-Zoé Targa"
     ]
    },
-   "limites": "",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. Pages 2 et 3 des actualités : seule la page 2 a été relue ce jour.",
    "evolutions": [
     {
      "date": "2026-10-26",
@@ -602,42 +1118,199 @@
     {
      "titre": "Règles professionnelles et fonctionnement de l'Ordre",
      "mesures": [
-      "Outil de signalement sécurisé, référent ordinal en déontologie numérique, adaptation du RIBP à l'IA.",
-      "Service disciplinaire professionnalisé aux décisions plus lisibles.",
-      "Réponse ordinale sous 48 h aux alertes d'incidents d'audience, formations croisées avec les magistrats.",
-      "Travaux du Conseil ouverts (sous réserve de confidentialité), audit des services, réflexion sur le plafonnement des frais de campagne."
+      {
+       "texte": "Outil de signalement sécurisé, référent ordinal en déontologie numérique, adaptation du RIBP à l'IA.",
+       "detail": "Mesure 1.1 du programme (axe « Une déontologie et un Ordre exemplaires »). Selon le programme de Surin–Griguer, la déontologie est présentée comme le socle de la confiance des confrères, des magistrats et des justiciables. Quatre éléments : un outil sécurisé de signalement ; un référent ordinal de la déontologie numérique ; des formations en présentiel ; l'adaptation du RIBP (règlement intérieur des barreaux de France) aux usages de l'intelligence artificielle.\nLe programme ajoute une mise à jour déontologique périodique, proposée à titre expérimental et sous réserve des travaux et validations nécessaires (donc conditionnelle).\nCalendrier, pilote et moyens ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Outil sécurisé de signalement",
+        "Référent ordinal de la déontologie numérique",
+        "Formations en présentiel",
+        "RIBP adapté à l'IA",
+        "Mise à jour déontologique périodique, à titre expérimental"
+       ]
+      },
+      {
+       "texte": "Service disciplinaire professionnalisé aux décisions plus lisibles.",
+       "detail": "Mesure 1.2 du programme (« discipline plus lisible »). Il s'agit de professionnaliser le service disciplinaire de l'Ordre : renforcer ses moyens humains et lui donner un outil dédié, et rendre les décisions plus compréhensibles. Le programme prévoit aussi de poursuivre, avec le CNB (Conseil national des barreaux) et la Chancellerie (ministère de la Justice), la réflexion sur la procédure disciplinaire et ses garanties.\nCalendrier, budget et pilote ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Moyens humains renforcés et outil dédié",
+        "Décisions plus lisibles",
+        "Réflexion sur la procédure et les garanties avec le CNB et la Chancellerie"
+       ]
+      },
+      {
+       "texte": "Réponse ordinale sous 48 h aux alertes d'incidents d'audience, formations croisées avec les magistrats.",
+       "detail": "Mesure 1.3 du programme (lien avec la magistrature). Elle comprend des formations et des immersions croisées entre avocats et magistrats, et un engagement de réponse de l'Ordre sous 48 heures aux alertes sur les incidents d'audience.\nLe programme ne précise ni le calendrier, ni le pilote, ni les moyens, ni les modalités de l'alerte.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Formations et immersions croisées avocats-magistrats",
+        "Réponse ordinale sous 48 heures aux alertes d'incidents d'audience"
+       ]
+      },
+      {
+       "texte": "Travaux du Conseil ouverts (sous réserve de confidentialité), audit des services, réflexion sur le plafonnement des frais de campagne.",
+       "detail": "Mesure 1.4 du programme (« un Ordre exemplaire et transparent »). Elle vise à rendre l'Ordre plus transparent et plus lisible pour ses membres : ouvrir davantage les travaux du Conseil de l'Ordre aux confrères, sous réserve de confidentialité ; auditer l'organisation des services ; réfléchir à un plafonnement des frais de campagne (à l'étude, aucune décision annoncée) ; et créer un label valorisant la transparence, l'inclusion et l'égalité dans les cabinets.\nCalendrier, pilote et moyens ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Travaux du Conseil ouverts, sous réserve de confidentialité",
+        "Audit de l'organisation des services",
+        "Plafonnement des frais de campagne : simple réflexion",
+        "Label de transparence et d'égalité pour les cabinets"
+       ]
+      }
      ],
      "resume": "Une discipline plus lisible et un Ordre plus ouvert. Les règles professionnelles (déontologie) sont celles que les avocats doivent respecter."
     },
     {
      "titre": "Cotisations et économie des cabinets",
      "mesures": [
-      "Baisse des cotisations jusqu'à -30 % à l'horizon 2030, conditionnée à la rationalisation des coûts, au numérique et à de nouvelles ressources. Plan financier pluriannuel public voté chaque année.",
-      "Concertation sur l'accès à la profession (capacités d'accueil, conditions d'accès), à préciser.",
-      "Fonds de solidarité couvrant partiellement les rétrocessions impayées en procédure collective, financement à définir.",
-      "Honoraires de valeur, conventions types, étude d'un abonnement juridique de proximité.",
-      "Transmission et patrimonialité des parts, réflexion encadrée sur le financement et l'ouverture du capital.",
-      "Jeunes : formation renforcée, mentorat, associations plus précoces."
+      {
+       "texte": "Baisse des cotisations jusqu'à -30 % à l'horizon 2030, conditionnée à la rationalisation des coûts, au numérique et à de nouvelles ressources. Plan financier pluriannuel public voté chaque année.",
+       "detail": "Mesure 2.1 du programme (« maîtriser les coûts de l'Ordre »). Objectif chiffré : une baisse des cotisations pouvant atteindre 30 % à l'horizon 2030. Ce n'est pas une promesse ferme : selon le programme de Surin–Griguer, elle est conditionnée à la rationalisation des coûts, à la transformation numérique et à de nouvelles ressources.\nMécanisme : un plan financier pluriannuel public, voté chaque année par le Conseil de l'Ordre. Le porteur opérationnel n'est pas nommé. La justification est d'alléger la charge financière des avocats, en particulier des cabinets à taille humaine.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Jusqu'à -30 % à l'horizon 2030",
+        "Conditions : rationalisation des coûts, numérique, nouvelles ressources",
+        "Plan financier pluriannuel public voté chaque année"
+       ]
+      },
+      {
+       "texte": "Concertation sur l'accès à la profession (capacités d'accueil, conditions d'accès), à préciser.",
+       "detail": "Mesure 2.2 du programme (entrée dans la profession). Il s'agit d'ouvrir une concertation avec les universités, le CNB et la Chancellerie sur les conditions d'accès : étudier la capacité d'accueil du marché, mieux informer et orienter les élèves-avocats, et examiner une éventuelle contribution de formation en cas de départ direct en entreprise. Objectif : adapter l'accès à la profession aux capacités réelles du marché.\nLe site précise que ces mécanismes restent à préciser et à valider ; calendrier et moyens ne sont pas donnés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Concertation avec universités, CNB et Chancellerie",
+        "Éventuelle contribution de formation en cas de départ direct en entreprise",
+        "Mécanismes à préciser et à valider"
+       ]
+      },
+      {
+       "texte": "Fonds de solidarité couvrant partiellement les rétrocessions impayées en procédure collective, financement à définir.",
+       "detail": "Mesure 2.3 du programme (rétrocessions impayées). Créer, avec les acteurs concernés, un fonds de solidarité qui prendrait en charge, de façon partielle et par subrogation (le fonds se substitue au créancier), les rétrocessions d'honoraires impayées lorsqu'un cabinet est en procédure collective (redressement ou liquidation), et accompagner les cabinets en difficulté. Le programme y voit un enjeu de solidarité envers les confrères.\nLe financement et les modalités sont à définir ; calendrier et pilote ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Prise en charge partielle",
+        "Accompagnement des cabinets en difficulté",
+        "Financement à définir"
+       ]
+      },
+      {
+       "texte": "Honoraires de valeur, conventions types, étude d'un abonnement juridique de proximité.",
+       "detail": "Mesure 2.4 du programme (valorisation du conseil). Former les avocats aux honoraires fondés sur la valeur, proposer des modèles de conventions d'honoraires, étudier un abonnement juridique de proximité et accompagner les nouvelles activités.\nL'abonnement juridique n'est qu'à l'étude ; calendrier, pilote et moyens ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Formation aux honoraires de valeur",
+        "Conventions types",
+        "Abonnement juridique de proximité : à l'étude"
+       ]
+      },
+      {
+       "texte": "Transmission et patrimonialité des parts, réflexion encadrée sur le financement et l'ouverture du capital.",
+       "detail": "Mesure 2.6 du programme (développement des cabinets). Travailler sur la transmission des cabinets, la patrimonialité des parts (leur valeur patrimoniale) et les parcours d'association, et ouvrir une réflexion encadrée sur le financement et l'ouverture du capital, dans le respect de la déontologie et de l'indépendance de l'avocat, avec le CNB et la Chancellerie.\nIl s'agit d'une réflexion, non d'une décision : aucune modalité, calendrier ni moyen n'est annoncé.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Transmission et patrimonialité des parts",
+        "Réflexion encadrée sur financement et ouverture du capital",
+        "Respect de la déontologie et de l'indépendance"
+       ]
+      },
+      {
+       "texte": "Jeunes : formation renforcée, mentorat, associations plus précoces.",
+       "detail": "Mesure 2.8 du programme (avenir des collaborateurs et des jeunes avocats). Renforcer la formation pendant les premières années, développer le mentorat, favoriser des parcours d'association plus précoces et faciliter le financement de formations complémentaires.\nCalendrier, pilote et moyens ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Formation renforcée",
+        "Mentorat",
+        "Associations plus précoces",
+        "Aide au financement de formations complémentaires"
+       ]
+      }
      ],
      "resume": "Baisse des cotisations sous conditions, aides financières, transmission des cabinets et soutien aux jeunes."
     },
     {
      "titre": "Conditions de travail et santé",
      "mesures": [
-      "Droit d'option entre collaboration libérale et salariat les trois premières années (demande au CNB et à la Chancellerie).",
-      "AVOCATCARE : pause de 3 mois une fois par carrière, modalités à définir. Guichet santé et prévoyance, bilans de santé.",
-      "Tolérance zéro pour le harcèlement, les discriminations et les violences.",
-      "Rencontres professionnelles mensuelles ouvertes aux autres professions."
+      {
+       "texte": "Droit d'option entre collaboration libérale et salariat les trois premières années (demande au CNB et à la Chancellerie).",
+       "detail": "Mesure 3.1 du programme (sécuriser la collaboration). Proposer au CNB et à la Chancellerie un droit d'option entre collaboration libérale et salariat pendant les trois premières années suivant le serment. L'Ordre de Paris ne peut pas décider seul : la mesure suppose une démarche auprès de ces deux institutions.\nLe programme ne détaille ni les conditions ni le fonctionnement du dispositif.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Option collaboration libérale ou salariat",
+        "Trois premières années après le serment",
+        "À porter auprès du CNB et de la Chancellerie"
+       ]
+      },
+      {
+       "texte": "AVOCATCARE : pause de 3 mois une fois par carrière, modalités à définir. Guichet santé et prévoyance, bilans de santé.",
+       "detail": "Mesure 3.2 du programme (« agir avant l'épuisement »). Le dispositif AVOCATCARE permettrait une pause de trois mois, utilisable une seule fois dans la carrière, pour prévenir l'épuisement ; ses modalités sont à définir. S'y ajoutent un guichet santé et prévoyance, des rappels de couverture et des partenariats pour faciliter les bilans de santé. Le programme présente la santé des avocats comme un enjeu central.\nCalendrier, pilote, coût et financement ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Pause de 3 mois, une fois par carrière, modalités à définir",
+        "Guichet santé et prévoyance",
+        "Rappels de couverture",
+        "Partenariats pour bilans de santé"
+       ]
+      },
+      {
+       "texte": "Tolérance zéro pour le harcèlement, les discriminations et les violences.",
+       "detail": "Mesure 3.1 du programme (second volet) : une tolérance zéro face au harcèlement, aux discriminations et aux violences. Le programme ne donne pas de précision supplémentaire sur ce point.",
+       "source": "https://www.batonnatsuringriguer.com/#programme"
+      },
+      {
+       "texte": "Rencontres professionnelles mensuelles ouvertes aux autres professions.",
+       "detail": "Mesure 3.3 du programme (retisser le lien confraternel). Organiser chaque mois des rencontres professionnelles thématiques, ouvertes aux autres professions du droit et aux entreprises, ainsi que des échanges avec les barreaux étrangers.\nLe programme ne précise ni le lieu, ni le budget, ni le pilote.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Rencontres mensuelles thématiques",
+        "Ouvertes aux autres professions du droit et aux entreprises",
+        "Échanges avec les barreaux étrangers"
+       ]
+      }
      ],
      "resume": "Choix de statut pour les jeunes collaborateurs, pause de carrière, santé et lutte contre le harcèlement."
     },
     {
      "titre": "Avenir de la profession : IA, formation, environnement",
      "mesures": [
-      "Offre d'IA professionnelle hébergée en Europe, à coût raisonnable, avec outil d'anonymisation (évaluation préalable).",
-      "Institut de la formation du barreau de Paris avec parcours certifiants.",
-      "« La route du droit » pour l'accès au droit, contenu à préciser.",
-      "Label de conformité environnementale et 2e pépinière d'affaires écoresponsable (critères et objectif 2030 à préciser)."
+      {
+       "texte": "Offre d'IA professionnelle hébergée en Europe, à coût raisonnable, avec outil d'anonymisation (évaluation préalable).",
+       "detail": "Mesure 4.1 du programme (un socle d'IA souveraine). Négocier une offre professionnelle d'intelligence artificielle à coût raisonnable, hébergée en Europe et conçue pour les exigences de confidentialité, avec la possibilité de déploiements internes aux cabinets et un outil d'anonymisation et de pseudonymisation des données. Objectif : une IA responsable qui protège la confidentialité des dossiers.\nCondition : les outils et leurs garanties devront être évalués avant tout déploiement. Montant, calendrier et pilote ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Hébergement en Europe",
+        "Coût raisonnable",
+        "Outil d'anonymisation et de pseudonymisation",
+        "Évaluation préalable"
+       ]
+      },
+      {
+       "texte": "Institut de la formation du barreau de Paris avec parcours certifiants.",
+       "detail": "Mesure 4.3 du programme. Créer un Institut de la formation du barreau de Paris, proposant des parcours certifiants (plaidoirie, gestion, facturation, développement, communication, etc.), et travailler avec le CNB sur la place de l'économie du cabinet et du numérique dans la formation. Le programme prévoit aussi (4.2) des modules en ligne et des ateliers pratiques sur l'IA, la cybersécurité et la protection des données.\nStatut juridique, budget et calendrier ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Parcours certifiants",
+        "Modules en ligne et ateliers (IA, cybersécurité, protection des données)"
+       ]
+      },
+      {
+       "texte": "« La route du droit » pour l'accès au droit, contenu à préciser.",
+       "detail": "Mesure 4.4 du programme (« développer le réflexe avocat »). Un programme intitulé « La route du droit », destiné à faciliter l'accès au droit. Son contenu reste à préciser : le site ne donne ni public visé, ni moyens, ni calendrier.",
+       "source": "https://www.batonnatsuringriguer.com/#programme"
+      },
+      {
+       "texte": "Label de conformité environnementale et 2e pépinière d'affaires écoresponsable (critères et objectif 2030 à préciser).",
+       "detail": "Mesure 4.6 du programme (accompagner la transition environnementale), à rapprocher de la 4.5 (accompagner les entreprises sur leurs engagements environnementaux et la prévention du greenwashing, et donner aux avocats les moyens de développer ce conseil). La 4.6 comprend de la formation, un projet de label de conformité environnementale et une deuxième pépinière d'affaires écoresponsable.\nÀ préciser selon le site : les critères du label et l'objectif de réduction à l'horizon 2030. Calendrier, pilote et moyens ne sont pas précisés.",
+       "source": "https://www.batonnatsuringriguer.com/#programme",
+       "points": [
+        "Formation",
+        "Projet de label de conformité environnementale",
+        "2e pépinière d'affaires écoresponsable",
+        "Critères et objectif 2030 à préciser"
+       ]
+      }
      ],
      "resume": "Une offre d'IA européenne, une formation certifiante et des labels environnementaux. Plusieurs mesures restent à préciser."
     }
@@ -647,7 +1320,7 @@
     "nombre": "Aucun soutien listé",
     "notables": []
    },
-   "limites": "Aucune actualité datée sur le site. L'espace « Prendre part à la conversation » n'est pas encore ouvert. Aucun article de presse indépendant récent n'a été trouvé.",
+   "limites": "Le site est une page unique lue par résumés ; la section « convictions » n'a pas pu être lue. Les sous-mesures 2.5 (regroupement des cabinets), 2.7 (cellule d'appui géopolitique) et 4.2 (formation IA et cybersécurité) ne sont pas détaillées dans les mesures. Aucune actualité datée.  Aucun article de presse indépendant récent.",
    "evolutions": [
     {
      "date": "2026-10-26",
@@ -982,6 +1655,10 @@
   {
    "date": "2026-10-27",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Les trois pages d'actualités du site Fabiani–Naquet ont désormais été lues en entier ; Saada–Lagrue : 140 soutiens annoncés. Limite persistante : page des soutiens du site Bouyssou–Pascarel inaccessible ; recherche de presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-10-28",
+   "resume": "Détails rédigés pour 85 mesures sur 85 (les quatre binômes). Une nouvelle proposition chez Bouyssou–Pascarel (cellule de veille et de riposte pour avocats menacés, 22 oct.) et trois actualités ajoutées ; aucun autre changement de programme. Limites : sources lues par résumés (texte intégral non obtenu), PDF Fabiani–Naquet partiel, page des soutiens Bouyssou–Pascarel et section « convictions » Surin–Griguer non lues."
   }
  ],
  "sources_calendrier": [
