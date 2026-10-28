@@ -116,20 +116,20 @@ main { padding-block: 72px 112px; }
 .fig small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
 
 /* Candidate view */
-.cand-head { padding: clamp(28px, 6vw, 72px); display: grid; gap: 20px; border: 1px solid var(--line); border-top: 8px solid var(--c); }
-.ch-text { display: grid; gap: 20px; align-content: start; min-width: 0; }
+.cand-head { padding: clamp(20px, 3.5vw, 40px); display: grid; gap: 14px; border: 1px solid var(--line); border-top: 8px solid var(--c); }
+.ch-text { display: grid; gap: 12px; align-content: start; min-width: 0; }
 .cand-head.has-photo { padding-bottom: 0; overflow: hidden; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px 32px; align-items: end; }
-.cand-head.has-photo .ch-text { padding-bottom: clamp(28px, 6vw, 72px); align-self: center; }
-.ch-photo { display: block; width: 100%; height: auto; max-width: 560px; justify-self: end; align-self: end; }
+.cand-head.has-photo .ch-text { padding-bottom: clamp(20px, 3.5vw, 40px); align-self: center; }
+.ch-photo { display: block; width: 100%; height: auto; max-width: 380px; justify-self: end; align-self: end; }
 .cand-head.has-photo.framed { padding-bottom: clamp(28px, 6vw, 72px); align-items: center; }
 .cand-head.has-photo.framed .ch-text { padding-bottom: 0; }
 .cand-head.has-photo.framed .ch-photo { align-self: center; max-width: 500px; border: 6px solid var(--surface); box-shadow: 0 10px 30px rgba(43, 23, 16, .16); }
 @media (max-width: 820px) { .cand-head.has-photo.framed .ch-photo { margin-top: 0; } }
-@media (max-width: 820px) { .cand-head.has-photo { grid-template-columns: minmax(0, 1fr); } .cand-head.has-photo .ch-text { padding-bottom: 0; } .ch-photo { justify-self: center; margin-top: 8px; } }
-.cand-head h2 { font-size: clamp(40px, 8vw, 96px); line-height: .92; letter-spacing: -.05em; }
-.cand-head .slogan { font-size: clamp(20px, 3vw, 30px); font-weight: 700; letter-spacing: -.02em; margin: 0; max-width: 28ch; line-height: 1.15; }
-.cand-head .pos { font-size: 16px; color: var(--muted); margin: 0; max-width: 60ch; }
-.btn { display: inline-flex; width: fit-content; font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 15px 28px; background: var(--c); color: var(--on-c); text-decoration: none; }
+@media (max-width: 820px) { .cand-head.has-photo { grid-template-columns: minmax(0, 1fr); } .cand-head.has-photo .ch-text { padding-bottom: 0; } .ch-photo { justify-self: center; margin-top: 8px; max-width: 300px; } }
+.cand-head h2 { font-size: clamp(28px, 4.2vw, 50px); line-height: 1; letter-spacing: -.05em; }
+.cand-head .slogan { font-size: clamp(17px, 2vw, 22px); font-weight: 700; letter-spacing: -.02em; margin: 0; max-width: 28ch; line-height: 1.15; }
+.cand-head .pos { font-size: 15px; color: var(--muted); margin: 0; max-width: 60ch; }
+.btn { display: inline-flex; width: fit-content; font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 12px 22px; background: var(--c); color: var(--on-c); text-decoration: none; }
 .btn:hover { text-decoration: underline; }
 .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-top: 16px; }
 .person { background: var(--surface); padding: 28px; border: 1px solid var(--line); }
@@ -502,7 +502,7 @@ footer { background:var(--deep); color:#fff; }
   var PHOTOS = {
     surin: { src: "img/surin-griguer.webp", w: 1000, h: 826 },
     saada: { src: "img/saada-lagrue.webp", w: 1000, h: 835 },
-    bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 400 },
+    bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 290 },
     fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
   };
   var PIE_COLORS = ["#2b4797", "#0cb7a4", "#f29b1d", "#c2336b", "#1c2750", "#3d9bd9", "#7a4fb5"];
