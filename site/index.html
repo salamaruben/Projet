@@ -1055,19 +1055,23 @@ footer { background:var(--deep); color:#fff; }
   }
 
   function viewMentions() {
-    function p(t) { return h("p", { class: "note", style: "margin-top:10px", text: t }); }
+    function p(t) { return h("p", { class: "note", style: "margin-top:10px" }, typeof t === "string" ? [t] : t); }
+    function hh(t) { return h("h3", { text: t, style: "margin-top:28px" }); }
     return h("section", { class: "view", id: "v-mentions" }, [
       h("p", { class: "note", style: "margin-bottom:16px" }, [h("a", { href: "#apercu", text: "\u2190 Retour au site" })]),
       h("h2", { text: "Mentions légales", style: "margin-bottom:24px" }),
-      h("h3", { text: "Éditeur", style: "margin-top:28px" }),
-      p("Site édité à titre non professionnel par une personne physique qui a choisi de rester anonyme. Conformément à l'article 6 de la loi du 21 juin 2004 pour la confiance dans l'économie numérique, son identité a été communiquée à l'hébergeur."),
-      h("h3", { text: "Hébergeur", style: "margin-top:28px" }),
-      p("Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com)."),
-      h("h3", { text: "Nature du site", style: "margin-top:28px" }),
+      hh("Éditeur"),
+      p("Site édité à titre non professionnel par une personne physique qui a choisi de rester anonyme. Conformément à l\u2019article 1-1, II, de la loi n\u00b0 2004-575 du 21 juin 2004 pour la confiance dans l\u2019économie numérique, les éléments permettant de l\u2019identifier ont été communiqués à l\u2019hébergeur."),
+      hh("Hébergeur"),
+      p("Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis \u2013 vercel.com."),
+      hh("Nature du site"),
       p("Ce site est indépendant. Il n'est lié ni à l'Ordre des avocats de Paris, ni à aucun candidat ni à aucune liste. Il présente côte à côte les programmes des candidats au bâtonnat de Paris pour le scrutin de décembre 2026. Les mesures sont reprises telles que les candidats les présentent dans leurs documents, sites et publications publics, dont les sources sont indiquées. Les regroupements par thème du comparatif et des diagrammes sont faits par ce site."),
-      h("h3", { text: "Données personnelles, rectification et retrait", style: "margin-top:28px" }),
-      p("Le site cite des personnes nommées (candidats et, lorsque les candidats les ont eux-mêmes rendus publics, des soutiens). Il ne collecte aucune donnée sur ses visiteurs, n'utilise aucun cookie et n'intègre aucun traceur. Toute personne citée peut demander la correction ou le retrait d'une information en écrivant à l'adresse ci-dessous ; la demande sera traitée dans les meilleurs délais."),
-      h("h3", { text: "Contact", style: "margin-top:28px" }),
+      hh("Données personnelles"),
+      p([h("strong", { text: "Personnes citées. " }), "Le site mentionne les candidats au bâtonnat de Paris et, lorsqu\u2019ils l\u2019ont eux-mêmes rendu public, leurs soutiens. Ces informations proviennent exclusivement des sources publiques indiquées sur le site. Elles sont traitées par l\u2019éditeur, responsable de traitement, afin d\u2019informer les électeurs sur le scrutin de décembre 2026, sur le fondement de l\u2019intérêt légitime (art. 6, 1, f du RGPD). Elles sont conservées jusqu\u2019à trois mois après le scrutin. Toute personne concernée peut exercer ses droits d\u2019accès, de rectification, d\u2019effacement et d\u2019opposition en écrivant à l\u2019adresse ci-dessous. Elle peut aussi introduire une réclamation auprès de la CNIL (cnil.fr)."]),
+      p([h("strong", { text: "Visiteurs. " }), "Le site ne dépose aucun cookie et n\u2019utilise ni traceur ni outil de mesure d\u2019audience. L\u2019hébergeur enregistre, pour des raisons techniques et de sécurité, des journaux de connexion (notamment l\u2019adresse IP), conservés pour une durée limitée et susceptibles d\u2019être traités aux États-Unis."]),
+      hh("Droit de réponse"),
+      p("Toute personne nommée ou désignée sur le site dispose d\u2019un droit de réponse. Elle peut l\u2019exercer à l\u2019adresse ci-dessous ou par l\u2019intermédiaire de l\u2019hébergeur."),
+      hh("Contact"),
       h("p", { class: "note", style: "margin-top:10px" }, [h("a", { href: "mailto:programme.batonnat.2027@gmail.com", text: "programme.batonnat.2027@gmail.com" })])
     ]);
   }
