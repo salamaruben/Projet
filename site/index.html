@@ -1041,13 +1041,30 @@ footer { background:var(--deep); color:#fff; }
 
   function show() {
     var id = (location.hash || "").replace("#", "") || "apercu";
-    if (!TABS.some(function (t) { return t.id === id; })) id = "apercu";
+    if (id !== "mentions" && !TABS.some(function (t) { return t.id === id; })) id = "apercu";
     Array.prototype.forEach.call(viewsEl.querySelectorAll("section.view"), function (s) { s.hidden = s.id !== "v-" + id; });
     Array.prototype.forEach.call(tabsEl.querySelectorAll("a"), function (a) {
       if (a.getAttribute("data-id") === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     var nav = document.querySelector("nav.tabs");
     if (location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);
+  }
+
+  function viewMentions() {
+    function p(t) { return h("p", { class: "note", style: "margin-top:10px", text: t }); }
+    return h("section", { class: "view", id: "v-mentions" }, [
+      h("h2", { text: "Mentions légales", style: "margin-bottom:24px" }),
+      h("h3", { text: "Éditeur", style: "margin-top:28px" }),
+      p("Site édité à titre non professionnel par une personne physique qui a choisi de rester anonyme. Conformément à l'article 6 de la loi du 21 juin 2004 pour la confiance dans l'économie numérique, son identité a été communiquée à l'hébergeur."),
+      h("h3", { text: "Hébergeur", style: "margin-top:28px" }),
+      p("Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com)."),
+      h("h3", { text: "Nature du site", style: "margin-top:28px" }),
+      p("Ce site est indépendant. Il n'est lié ni à l'Ordre des avocats de Paris, ni à aucun candidat ni à aucune liste. Il présente côte à côte les programmes des candidats au bâtonnat de Paris pour le scrutin de décembre 2026. Les mesures sont reprises telles que les candidats les présentent dans leurs documents, sites et publications publics, dont les sources sont indiquées. Les regroupements par thème du comparatif et des diagrammes sont faits par ce site."),
+      h("h3", { text: "Données personnelles, rectification et retrait", style: "margin-top:28px" }),
+      p("Le site cite des personnes nommées (candidats et, lorsque les candidats les ont eux-mêmes rendus publics, des soutiens). Il ne collecte aucune donnée sur ses visiteurs, n'utilise aucun cookie et n'intègre aucun traceur. Toute personne citée peut demander la correction ou le retrait d'une information en écrivant à l'adresse ci-dessous ; la demande sera traitée dans les meilleurs délais."),
+      h("h3", { text: "Contact", style: "margin-top:28px" }),
+      h("p", { class: "note", style: "margin-top:10px" }, [h("a", { href: "mailto:programme.batonnat.2027@gmail.com", text: "programme.batonnat.2027@gmail.com" })])
+    ]);
   }
 
   function build(data) {
@@ -1062,7 +1079,11 @@ footer { background:var(--deep); color:#fff; }
     viewsEl.appendChild(viewApercu());
     data.candidats.forEach(function (c) { viewsEl.appendChild(viewCand(c)); });
     viewsEl.appendChild(viewComparatif());
+    viewsEl.appendChild(viewMentions());
     document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes. Site indépendant, sans lien avec l'Ordre des avocats de Paris.";
+    var ft = document.getElementById("foot");
+    ft.appendChild(document.createTextNode(" "));
+    ft.appendChild(h("a", { href: "#mentions", text: "Mentions légales" }));
     countdown();
     window.addEventListener("hashchange", show);
     show();
