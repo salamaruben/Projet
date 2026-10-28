@@ -1163,7 +1163,9 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     var hero = document.querySelector("header.hero2");
     if (hero) hero.hidden = id === "mentions";
     if (nav) nav.hidden = id === "mentions";
-    if (id !== "mentions" && location.hash && nav) window.scrollTo(0, nav.offsetTop); else window.scrollTo(0, 0);
+    var main = document.querySelector("main");
+    if (id !== "mentions" && location.hash && nav && main) window.scrollTo(0, main.getBoundingClientRect().top + window.scrollY - nav.offsetHeight);
+    else window.scrollTo(0, 0);
   }
 
   function viewMentions() {
