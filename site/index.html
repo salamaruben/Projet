@@ -1179,7 +1179,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
 <style id="mobile-css">
 /* ===== Mobile (≤ 700 px) : photos d'abord, passage d'un binôme à l'autre, thèmes ===== */
 .pbody { display: contents; }
-.pimg, .cnt, .tiles, .sechead, .pager, .legend-more { display: none; }
+.pimg, .cnt, .tiles, .sechead, .bnav, .cswitch, .legend-more { display: none; }
 @media (max-width: 700px) {
   html { font-size: 18px; }
   body { font-size: 18px; line-height: 1.55; padding-bottom: 104px; }
@@ -1242,6 +1242,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   .stamp, .pie-legend li { font-size: 16px; }
   .pie-legend:not(.open) li:nth-child(n+6) { display: none; }
   .legend-more { display: inline-flex; margin-top: 10px; }
+  .bnav { display: grid; } .cswitch { display: flex; }
   .toggle { font-size: 16px; padding: 12px 18px; }
   /* comparatif : thèmes à plier */
   .tools { padding: 6px 0; margin: 0 !important; gap: 8px !important; }
@@ -1253,12 +1254,14 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   .theme-block.open h3::after { content: "\2212"; background: var(--ink); color: #fff; }
   .theme-block .theme-cells { display: none; padding: 0 16px 16px; grid-template-columns: 1fr; }
   .theme-block.open .theme-cells { display: grid; }
-  /* barre du bas */
-  .pager { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 8px; }
-  .pager.home { grid-template-columns: 1fr; }
-  .pager::before { content: ""; position: absolute; z-index: -1; left: -12px; right: -12px; top: -28px; bottom: -12px; background: linear-gradient(180deg, rgba(241,239,245,0), rgba(241,239,245,.96) 46%); pointer-events: none; }
-  .pager a { display: flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 10px; border-radius: 999px; font-weight: 600; font-size: 16px; line-height: 1.15; text-align: center; text-decoration: none; color: #fff; background: #1b2447; box-shadow: 0 8px 24px rgba(27,36,71,.3); }
-  .pager a.mid { background: #fff; color: #1b2447; border: 2px solid #1b2447; }
+  /* barre du bas : Accueil, Binômes, Comparer, PDF */
+  .bnav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-top: 1px solid var(--line); border-radius: 24px 24px 0 0; box-shadow: 0 -6px 24px rgba(27,36,71,.12); }
+  .bnav a, .bnav button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border: 0; background: none; font: inherit; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 16px; cursor: pointer; }
+  .bnav svg { width: 28px; height: 28px; }
+  .bnav .on { color: var(--ink); background: #ebe9f3; }
+  .cswitch { position: sticky; top: 0; z-index: 40; display: flex; gap: 10px; justify-content: center; padding: 12px 10px; margin: -24px 0 16px; border-radius: 0 0 22px 22px; background: rgba(241,239,245,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .cswitch a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 20px; color: #fff; text-decoration: none; opacity: .55; border: 3px solid transparent; }
+  .cswitch a.on { opacity: 1; border-color: var(--ink); }
 }
 </style>
 <script id="mobile-js">
@@ -1330,14 +1333,32 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     /* programmes repliés sur mobile */
     function collapse() { if (MQ.matches) document.querySelectorAll("#views details").forEach(function (d) { d.open = false; }); }
     collapse();
-    /* barre du bas : binôme précédent / comparer / binôme suivant */
-    var pg = mk("nav", "pager"); pg.setAttribute("aria-label", "Navigation"); document.body.appendChild(pg);
+    /* barre du bas + sélecteur de binôme */
+    var IC = {
+      home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
+      users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.9.6 3 2.3 3.4 5.2"/></svg>',
+      cmp: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+      pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>'
+    };
+    var INI = { surin: "S", saada: "R", bouyssou: "B", fabiani: "F" };
+    var nav = mk("nav", "bnav", '<a href="#apercu" data-k="home">' + IC.home + 'Accueil</a><button type="button" data-k="bin">' + IC.users + 'Binômes</button><a href="#comparatif" data-k="cmp">' + IC.cmp + 'Comparer</a><button type="button" data-k="pdf">' + IC.pdf + 'PDF</button>');
+    nav.setAttribute("aria-label", "Navigation");
+    document.body.appendChild(nav);
+    var sw = mk("div", "cswitch");
+    ORDER.forEach(function (id) { var a = mk("a"); a.href = "#" + id; a.dataset.id = id; a.style.background = COL[id]; a.textContent = INI[id]; a.setAttribute("aria-label", NAME[id]); sw.appendChild(a); });
+    var main = document.querySelector("main"); main.insertBefore(sw, main.firstChild);
+    nav.querySelector("[data-k=pdf]").onclick = function () { var p = document.getElementById("pdf"); if (p) p.click(); };
+    nav.querySelector("[data-k=bin]").onclick = function () {
+      function go() { var st = document.querySelector(".strip"); window.scrollTo({ top: st.getBoundingClientRect().top + window.scrollY - 20, behavior: "smooth" }); }
+      if ((location.hash || "#apercu") !== "#apercu") { location.hash = "#apercu"; setTimeout(go, 150); } else go();
+    };
     function upd() {
-      var h = (location.hash || "#apercu").slice(1), i = ORDER.indexOf(h);
-      if (i < 0) { pg.className = "pager home"; pg.innerHTML = h === "comparatif" ? '<a href="#apercu">Retour aux binômes</a>' : '<a href="#comparatif">Comparer les 4 programmes</a>'; return; }
-      var pr = ORDER[(i + 3) % 4], nx = ORDER[(i + 1) % 4];
-      pg.className = "pager";
-      pg.innerHTML = '<a href="#' + pr + '">‹ ' + NAME[pr] + '</a><a class="mid" href="#comparatif">Comparer</a><a href="#' + nx + '">' + NAME[nx] + ' ›</a>';
+      var h = (location.hash || "#apercu").slice(1), cand = ORDER.indexOf(h) >= 0;
+      sw.style.display = cand ? "" : "none";
+      sw.querySelectorAll("a").forEach(function (a) { a.classList.toggle("on", a.dataset.id === h); });
+      nav.querySelectorAll("[data-k]").forEach(function (a) { a.classList.remove("on"); });
+      var k = h === "comparatif" ? "cmp" : (cand ? "bin" : "home");
+      nav.querySelector("[data-k=" + k + "]").classList.add("on");
     }
     window.addEventListener("hashchange", function () { setTimeout(upd, 0); }); upd();
   }
