@@ -1391,4 +1391,18 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   init();
 })();
 </script>
+<script id="retop-js">
+/* reclic sur l'onglet ou le binôme déjà affiché : retour en haut de sa page */
+document.addEventListener("click", function (e) {
+  var a = e.target.closest && e.target.closest('a[href^="#"]');
+  if (!a) return;
+  var cur = location.hash || "#apercu", target = a.getAttribute("href");
+  if (target !== cur && !(target === "#apercu" && !location.hash)) return;
+  e.preventDefault();
+  var nav = document.querySelector("nav.tabs"), main = document.querySelector("main");
+  var mobile = window.matchMedia("(max-width: 700px)").matches;
+  var top = mobile || !nav || !main ? 0 : main.getBoundingClientRect().top + window.scrollY - nav.offsetHeight;
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+});
+</script>
 </body></html>
