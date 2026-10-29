@@ -1261,6 +1261,14 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   .theme-block.open h3::after { content: "\2212"; background: var(--ink); color: #fff; }
   .theme-block .theme-cells { display: none; padding: 0 16px 16px; grid-template-columns: 1fr; }
   .theme-block.open .theme-cells { display: grid; }
+  /* accueil : sans PDF ni bouton Comparer (la barre du bas les remplace), plus aéré */
+  #pdf, .hfoot { display: none !important; }
+  body.m-home header.hero2 { min-height: 78vh; min-height: 78svh; }
+  body.m-home .frame2 { justify-content: space-between; padding: 24px 22px 34px; }
+  body.m-home .hbody { margin-top: auto; margin-bottom: auto; }
+  body.m-home header.hero2 h1 { font-size: 42px; }
+  body.m-home .chips { margin-bottom: 22px; }
+  body.m-home .chip2 { font-size: 16px; }
   /* une page à la fois */
   body:not(.m-home) header.hero2 { display: none !important; }
   body.m-home #v-apercu > :not(.sechead):not(.tiles) { display: none !important; }
