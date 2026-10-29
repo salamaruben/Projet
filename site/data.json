@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-28",
+ "maj": "2026-10-29",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -293,7 +293,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "140",
+    "nombre": "142",
     "notables": [
      "Jean-Louis Borie (ancien bâtonnier)",
      "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis)",
@@ -1057,7 +1057,7 @@
      "Jeanne-Zoé Targa"
     ]
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. Pages 2 et 3 des actualités : seule la page 2 a été relue ce jour.",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. Les trois pages de liste des actualités ont été parcourues ce jour (titres et résumés), sans ouvrir chaque article.",
    "evolutions": [],
    "sources": [
     {
@@ -1311,7 +1311,7 @@
     "nombre": "Aucun soutien listé",
     "notables": []
    },
-   "limites": "Le site est une page unique lue par résumés ; la section « convictions » n'a pas pu être lue. Les sous-mesures 2.5 (regroupement des cabinets), 2.7 (cellule d'appui géopolitique) et 4.2 (formation IA et cybersécurité) ne sont pas détaillées dans les mesures. Aucune actualité datée.  Aucun article de presse indépendant récent.",
+   "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
    "evolutions": [],
    "sources": [
     {
@@ -1641,6 +1641,10 @@
   {
    "date": "2026-10-28",
    "resume": "Détails rédigés pour 85 mesures sur 85 (les quatre binômes). Une nouvelle proposition chez Bouyssou–Pascarel (cellule de veille et de riposte pour avocats menacés, 22 oct.) et trois actualités ajoutées ; aucun autre changement de programme. Limites : sources lues par résumés (texte intégral non obtenu), PDF Fabiani–Naquet partiel, page des soutiens Bouyssou–Pascarel et section « convictions » Surin–Griguer non lues."
+  },
+  {
+   "date": "2026-10-29",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : 142 soutiens annoncés (140 la veille). Bouyssou–Pascarel : 32 entrées d'actualité lues sur la page unique, rien de nouveau depuis le 23 oct. Fabiani–Naquet : trois pages d'actualités parcourues, aucune nouvelle publication. Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; recherche de presse juridique sans article récent sur les candidats 2028."
   }
  ],
  "sources_calendrier": [

@@ -3,7 +3,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap">
 <style>
-/* Base layout; the second style block below sets the blue and turquoise identity. Candidate colours stay distinct. */
+/* Base layout; the later style blocks set the dusk identity. Candidate colours stay distinct. */
 :root {
   --bg: #f6eae0; --bg2: #efe0cb; --surface: #fbf5ee; --ink: #2b1710; --muted: #6b5446; --line: #dcc8b0;
   --accent: #bb4e2e; --on-accent: #ffffff; --deep: #3b1f17; --on-deep: #f6eae0; --deep-line: #6a4638; --seat: #dcc8b0; --seat-deep: #5d3a2d;
@@ -110,6 +110,8 @@ main { padding-block: 72px 112px; }
 .agenda li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; font-size: 15px; }
 .agenda li.past { opacity: .5; }
 .agenda .d { font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.agenda .who { display: flex; margin: 6px 0 0 !important; gap: 10px; }
+.agenda .who::before { flex: none; }
 .fig { padding-block: 20px; border-top: 1px solid var(--line); }
 .fig b { display: block; font-size: 48px; font-weight: 800; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
 .fig span { display: block; margin-top: 8px; font-size: 15px; color: var(--muted); }
