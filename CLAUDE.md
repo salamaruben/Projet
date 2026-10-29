@@ -16,3 +16,12 @@ dans la même opération :
 2. pousser les mêmes fichiers sur la branche `claude/site-vercel` (Vercel redéploie tout seul).
 
 Confirmer ensuite à l'utilisateur que les deux sont à jour. Ne jamais modifier une seule copie.
+
+## Attention : deux formes du fichier index.html
+
+- **Artifact** : publier `index.html` *sans* `<!doctype>`, `<html>`, `<head>` ni `<body>` (claude.ai les ajoute). Si on relit
+  l'artifact avec l'outil Artifact, le fichier enregistré est la version enrobée : retirer l'enrobage avant de republier.
+- **Vercel** (`site/index.html`) : il faut un document complet avec la balise `<meta name="viewport" ...>`, sinon les
+  téléphones affichent la page réduite (tout est trop petit). Générer ce fichier avec :
+  `python3 tools/wrap_site.py <index.html de l'artifact> site/index.html`.
+- `site/mentions.html` est un document complet autonome, identique sur les deux copies.
