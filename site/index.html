@@ -1176,4 +1176,172 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   });
 })();
 </script>
+<style id="mobile-css">
+/* ===== Mobile (≤ 700 px) : photos d'abord, passage d'un binôme à l'autre, thèmes ===== */
+.pbody { display: contents; }
+.pimg, .cnt, .tiles, .sechead, .pager, .legend-more { display: none; }
+@media (max-width: 700px) {
+  html { font-size: 18px; }
+  body { font-size: 18px; line-height: 1.55; padding-bottom: 104px; }
+  .wrap { padding-left: 20px; padding-right: 20px; }
+  nav.tabs { display: none !important; }
+  main { padding-block: 24px 40px !important; }
+  h2 { font-size: 30px !important; line-height: 1.12; }
+  .note { font-size: 17px; }
+  .lab { font-size: 12px; }
+  /* en-tête compact */
+  header.hero2 { min-height: auto; padding: 0; border-radius: 0 0 32px 32px; }
+  .tl, .tr, .glinks, .hfoot .gbtn, .chip2:not(#countdown), header.hero2 .lede { display: none !important; }
+  .frame2 { border: 0; padding: 20px 20px 26px; min-height: 0; }
+  .gnav { justify-content: space-between; gap: 12px; }
+  .logo2 { font-size: 17px; }
+  #pdf { font-size: 14px; padding: 8px 8px 8px 14px; }
+  .hbody { margin-top: 22px; max-width: 100%; }
+  .chips { margin-bottom: 14px; }
+  .chip2 { font-size: 15px; padding: .45em .9em; }
+  header.hero2 h1 { font-size: 36px; line-height: 1.1; }
+  .hfoot { padding-top: 24px; }
+  .wbtn.big { width: 100%; justify-content: space-between; font-size: 18px; padding: 16px 14px 16px 24px; }
+  .wbtn.big .sq { width: 42px; height: 42px; }
+  /* binômes : cartes avec photo */
+  .strip { gap: 22px; }
+  .panel { padding: 0 !important; overflow: hidden; gap: 0 !important; min-height: 0; border-width: 2px !important; }
+  .panel .pimg { display: flex; height: 230px; align-items: flex-end; justify-content: center; background: linear-gradient(180deg, color-mix(in srgb, var(--c) 22%, #fff), color-mix(in srgb, var(--c) 6%, #fff)); }
+  .panel .pimg img { height: 100%; width: auto; max-width: 92%; object-fit: contain; object-position: bottom; }
+  .panel .pbody { display: flex; flex-direction: column; gap: 10px; padding: 22px; }
+  .panel h3 { font-size: 26px !important; }
+  .panel .slogan { font-size: 19px; }
+  .panel .pos, .panel .stats { display: none !important; }
+  .panel .cnt { display: block; font-size: 16px; color: var(--muted); }
+  .panel .go { width: 100%; justify-content: space-between; font-size: 17px; padding: 14px 12px 14px 22px; margin-top: 6px; }
+  .panel .go::after { width: 34px; height: 34px; }
+  /* tuiles de thèmes */
+  .sechead { display: block; font-size: 24px; font-weight: 600; margin: 36px 0 0; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 8px; }
+  .tile { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; min-height: 108px; padding: 16px; text-align: left; font: inherit; color: var(--ink); background: #fff; border: 2px solid var(--line); border-radius: 20px; cursor: pointer; }
+  .tile b { font-size: 17px; font-weight: 600; line-height: 1.25; }
+  .tile i { display: flex; gap: 6px; }
+  .tile i span { width: 14px; height: 14px; border-radius: 50%; }
+  .tile.all { grid-column: 1 / -1; min-height: 0; }
+  /* fiche d'un binôme */
+  .cand-head.has-photo { display: flex !important; flex-direction: column-reverse; padding: 0 !important; gap: 0 !important; overflow: hidden; }
+  .cand-head .ch-photo { max-width: 340px !important; align-self: center; margin: 0 auto; border-radius: 0 !important; }
+  .cand-head .ch-text { padding: 22px !important; }
+  .cand-head h2 { font-size: 30px !important; }
+  .cand-head .slogan { font-size: 20px; }
+  .cand-head .pos { font-size: 17px; }
+  .ch-text .btn { width: 100%; justify-content: space-between; font-size: 17px; padding: 14px 12px 14px 22px; }
+  .person { padding: 22px; } .person h3 { font-size: 26px !important; } .person p { font-size: 17px; }
+  summary { flex-wrap: wrap; padding: 18px 20px; gap: 12px; min-height: 56px; }
+  summary .st { flex: 1 1 calc(100% - 64px); }
+  summary .tt { font-size: 20px; }
+  summary .rs { font-size: 16px; }
+  summary .n { order: 3; font-size: 13px; }
+  details ul { padding: 0 18px 20px 34px; gap: 14px; font-size: 18px; }
+  .mes { font-size: 18px; }
+  .stamp, .pie-legend li { font-size: 16px; }
+  .pie-legend:not(.open) li:nth-child(n+6) { display: none; }
+  .legend-more { display: inline-flex; margin-top: 10px; }
+  .toggle { font-size: 16px; padding: 12px 18px; }
+  /* comparatif : thèmes à plier */
+  .tools { padding: 6px 0; margin: 0 !important; gap: 8px !important; }
+  .tools input[type=search] { font-size: 17px; padding: 14px 20px; max-width: none; flex: 1 1 100%; }
+  .tools .toggle { font-size: 15px; padding: 10px 14px; }
+  .theme-block { border: 2px solid var(--line) !important; border-radius: 22px !important; margin-top: 12px !important; padding: 0 !important; background: rgba(255,255,255,.7); }
+  .theme-block h3 { margin: 0 !important; padding: 20px !important; font-size: 20px !important; text-transform: none !important; display: flex; justify-content: space-between; align-items: center; gap: 12px; cursor: pointer; }
+  .theme-block h3::after { content: "+"; flex: none; width: 36px; height: 36px; border: 2px solid var(--ink); border-radius: 50%; display: grid; place-items: center; font-size: 22px; }
+  .theme-block.open h3::after { content: "\2212"; background: var(--ink); color: #fff; }
+  .theme-block .theme-cells { display: none; padding: 0 16px 16px; grid-template-columns: 1fr; }
+  .theme-block.open .theme-cells { display: grid; }
+  /* barre du bas */
+  .pager { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 8px; }
+  .pager.home { grid-template-columns: 1fr; }
+  .pager::before { content: ""; position: absolute; z-index: -1; left: -12px; right: -12px; top: -28px; bottom: -12px; background: linear-gradient(180deg, rgba(241,239,245,0), rgba(241,239,245,.96) 46%); pointer-events: none; }
+  .pager a { display: flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 10px; border-radius: 999px; font-weight: 600; font-size: 16px; line-height: 1.15; text-align: center; text-decoration: none; color: #fff; background: #1b2447; box-shadow: 0 8px 24px rgba(27,36,71,.3); }
+  .pager a.mid { background: #fff; color: #1b2447; border: 2px solid #1b2447; }
+}
+</style>
+<script id="mobile-js">
+(function () {
+  var MQ = window.matchMedia("(max-width: 700px)");
+  var ORDER = ["surin", "saada", "bouyssou", "fabiani"];
+  var NAME = { surin: "Surin", saada: "Saada", bouyssou: "Bouyssou", fabiani: "Fabiani" };
+  var IMG = { surin: "img/surin-griguer.webp", saada: "img/saada-lagrue.webp", bouyssou: "img/bouyssou-pascarel.webp", fabiani: "img/fabiani-naquet.webp" };
+  var COL = { surin: "#4a63b8", saada: "#d9743f", bouyssou: "#7a5fb0", fabiani: "#c2587a" };
+  function mk(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+  function init() {
+    if (!document.querySelector("#views .strip") || !document.querySelector("#v-comparatif .theme-block")) return setTimeout(init, 150);
+    /* cartes des binômes : photo + corps */
+    document.querySelectorAll(".strip .panel").forEach(function (p) {
+      if (p.querySelector(".pbody")) return;
+      var id = (p.getAttribute("href") || "").slice(1), body = mk("div", "pbody");
+      while (p.firstChild) body.appendChild(p.firstChild);
+      var n = body.querySelector(".stats b"), cnt = mk("div", "cnt", (n ? n.textContent : "") + " mesures détaillées");
+      body.insertBefore(cnt, body.querySelector(".go"));
+      var im = mk("div", "pimg", '<img alt="" src="' + IMG[id] + '">');
+      p.appendChild(im); p.appendChild(body);
+    });
+    /* tuiles de thèmes sur l'accueil */
+    var v = document.getElementById("v-apercu"), strip = v.querySelector(".strip");
+    var blocks = [].slice.call(document.querySelectorAll("#v-comparatif .theme-block"));
+    var head = mk("h2", "sechead", "Que voulez-vous savoir ?"), tiles = mk("div", "tiles");
+    blocks.slice(0, 8).forEach(function (b) {
+      var dots = "";
+      b.querySelectorAll(".cell").forEach(function (c) { if (!c.classList.contains("empty")) { var m = c.className.match(/c-(\w+)/); if (m) dots += '<span style="background:' + COL[m[1]] + '"></span>'; } });
+      var t = mk("button", "tile", "<b></b><i>" + dots + "</i>"); t.type = "button";
+      t.querySelector("b").textContent = b.querySelector("h3").textContent;
+      var theme = b.querySelector("h3").textContent;
+      t.onclick = function () {
+        location.hash = "#comparatif";
+        setTimeout(function () {
+          var q = document.getElementById("cmp-q"); if (q) { q.value = ""; q.dispatchEvent(new Event("input")); }
+          setTimeout(function () {
+            var all = [].slice.call(document.querySelectorAll("#v-comparatif .theme-block")), hit = null;
+            all.forEach(function (x) { var is = x.querySelector("h3").textContent === theme; x.classList.toggle("open", is); if (is) hit = x; });
+            if (hit) window.scrollTo(0, hit.getBoundingClientRect().top + window.scrollY - 110);
+          }, 80);
+        }, 120);
+      };
+      tiles.appendChild(t);
+    });
+    var all = mk("button", "tile all", "<b>Voir les " + blocks.length + " thèmes</b>"); all.type = "button";
+    all.onclick = function () { location.hash = "#comparatif"; };
+    tiles.appendChild(all);
+    var anchor = v.querySelector(".sec");
+    v.insertBefore(head, anchor); v.insertBefore(tiles, anchor);
+    /* comparatif : thèmes à plier (délégation : la liste est reconstruite à chaque recherche) */
+    var out = document.getElementById("cmp-out");
+    function sync() {
+      var q = document.getElementById("cmp-q"), searching = q && q.value.trim() !== "";
+      [].slice.call(out.querySelectorAll(".theme-block")).forEach(function (b, i) { b.classList.toggle("open", searching || i === 0); });
+    }
+    out.addEventListener("click", function (e) {
+      var h = e.target.closest(".theme-block > h3"); if (h) h.parentNode.classList.toggle("open");
+    });
+    new MutationObserver(function () { if (!out.__busy) { out.__busy = true; sync(); out.__busy = false; } }).observe(out, { childList: true });
+    sync();
+    /* légende des camemberts : 5 premiers thèmes + bouton */
+    document.querySelectorAll(".pie-wrap").forEach(function (w) {
+      var lg = w.querySelector(".pie-legend"); if (!lg || lg.children.length <= 5) return;
+      var b = mk("button", "toggle legend-more", "Voir les " + (lg.children.length - 5) + " autres thèmes"); b.type = "button"; b.setAttribute("aria-pressed", "false");
+      b.onclick = function () { var o = lg.classList.toggle("open"); b.textContent = o ? "Réduire" : "Voir les " + (lg.children.length - 5) + " autres thèmes"; b.setAttribute("aria-pressed", o ? "true" : "false"); };
+      w.appendChild(b);
+    });
+    /* programmes repliés sur mobile */
+    function collapse() { if (MQ.matches) document.querySelectorAll("#views details").forEach(function (d) { d.open = false; }); }
+    collapse();
+    /* barre du bas : binôme précédent / comparer / binôme suivant */
+    var pg = mk("nav", "pager"); pg.setAttribute("aria-label", "Navigation"); document.body.appendChild(pg);
+    function upd() {
+      var h = (location.hash || "#apercu").slice(1), i = ORDER.indexOf(h);
+      if (i < 0) { pg.className = "pager home"; pg.innerHTML = h === "comparatif" ? '<a href="#apercu">Retour aux binômes</a>' : '<a href="#comparatif">Comparer les 4 programmes</a>'; return; }
+      var pr = ORDER[(i + 3) % 4], nx = ORDER[(i + 1) % 4];
+      pg.className = "pager";
+      pg.innerHTML = '<a href="#' + pr + '">‹ ' + NAME[pr] + '</a><a class="mid" href="#comparatif">Comparer</a><a href="#' + nx + '">' + NAME[nx] + ' ›</a>';
+    }
+    window.addEventListener("hashchange", function () { setTimeout(upd, 0); }); upd();
+  }
+  init();
+})();
+</script>
 </body></html>
