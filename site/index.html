@@ -1287,7 +1287,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   .bnav svg { width: 28px; height: 28px; }
   .bnav .on { color: var(--ink); background: #ebe9f3; }
   .cswitch { position: sticky; top: 0; z-index: 40; display: flex; gap: 10px; justify-content: center; padding: 12px 10px; margin: -24px 0 16px; border-radius: 0 0 22px 22px; background: rgba(241,239,245,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  .cswitch a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 20px; color: #fff; text-decoration: none; opacity: .55; border: 3px solid transparent; }
+  .cswitch a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 17px; letter-spacing: .02em; color: #fff; text-decoration: none; opacity: .55; border: 3px solid transparent; }
   .cswitch a.on { opacity: 1; border-color: var(--ink); }
 }
 </style>
@@ -1368,7 +1368,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       news: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>',
       pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>'
     };
-    var INI = { surin: "S", saada: "R", bouyssou: "B", fabiani: "F" };
+    var INI = { surin: "SG", saada: "SL", bouyssou: "BP", fabiani: "FN" };
     var nav = mk("nav", "bnav", '<a href="#apercu" data-k="home">' + IC.home + 'Accueil</a><a href="#binomes" data-k="bin">' + IC.users + 'Binômes</a><a href="#comparatif" data-k="cmp">' + IC.cmp + 'Comparer</a><a href="#actus" data-k="act">' + IC.news + 'Actus</a><button type="button" data-k="pdf">' + IC.pdf + 'PDF</button>');
     nav.setAttribute("aria-label", "Navigation");
     document.body.appendChild(nav);
