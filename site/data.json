@@ -83,12 +83,36 @@
     {
      "nom": "Rachel Saada",
      "role": "Candidate au bâtonnat",
-     "bio": "Avocate depuis 1985, droit du travail et sécurité sociale. Fondatrice de l'Atelier des droits (2007). Présidente du SAF Paris (2004-2007), Conseil de l'Ordre (2008-2010), CNB (2015-2020), CNBF jusqu'en 2023 dont vice-présidente. Membre de Défense sans frontières – Avocats solidaires."
+     "bio": "Avocate au barreau de Paris, en activité depuis janvier 1985, spécialiste du droit du travail et de la sécurité sociale. Elle exerce à L'Atelier des droits, cabinet qui défend surtout des salariés, leurs syndicats et leurs instances représentatives. Membre du Syndicat des avocats de France. Enseigne au CNAM (certificat d'études spécialisées de psychopathologie du travail) et a co-écrit « Travailler à armes égales » (Pearson, 2011).",
+     "sources": [
+      {
+       "label": "Annuaire keskeces (début d'activité, droit du travail)",
+       "url": "https://www.keskeces.fr/avocat/rachel-saada-75004-paris.html"
+      },
+      {
+       "label": "Cafés Thema (cabinet, enseignement, ouvrage)",
+       "url": "https://cafes-thema.com/events/souffrance-au-travail-se-defendre-dans-lentreprise/"
+      },
+      {
+       "label": "FNAS-FO, entretien de 2019 (SAF)",
+       "url": "https://www.fnasfo.fr/vie-syndicale/rachel-saada-avocate-specialiste-en-droit-du-travail-latelier-des-droits-les-ordonnances-macron-ont-detricote-le-droit-du-travail/"
+      }
+     ]
     },
     {
      "nom": "Marianne Lagrue",
      "role": "Candidate à la vice-présidence",
-     "bio": "Avocate depuis 1997, droit des étrangers et asile. Présidente du SAF Paris (2011-2017), Conseil de l'Ordre (2018-2020), CNB (2009-2014), experte CCBE (migration), fondatrice de Défense sans frontières."
+     "bio": "Avocate au barreau de Paris depuis son serment du 12 mars 1997, spécialisée en droit d'asile, droit des étrangers, droits de l'Homme et droit pénal ; cabinet rue Saint-Martin (Paris 3e). Présidente du SAF-Paris et d'Elena-France (2006 d'après son site), élue au CNB de 2009 à 2014 et au Conseil de l'Ordre de 2018 à 2020. Missions de défense d'avocats persécutés (2000-2020) pour ASF-France, la FIDH et DSF-Avocats solidaires ; ancienne membre du bureau et du conseil d'administration d'Avocats sans frontières France.",
+     "sources": [
+      {
+       "label": "Site du cabinet Marianne Lagrue",
+       "url": "https://www.marianne-lagrue-avocat.fr/"
+      },
+      {
+       "label": "Annuaire keskeces (serment du 12 mars 1997)",
+       "url": "https://www.keskeces.fr/avocat/marianne-lagrue-75003-paris.html"
+      }
+     ]
     }
    ],
    "site": "https://votezracheletmarianne.paris/",
@@ -360,7 +384,13 @@
     {
      "nom": "Carole Pascarel",
      "role": "Candidate à la vice-présidence",
-     "bio": "Serment en 2000, 13 ans au contentieux chez UGGC, cabinet depuis 2014 (famille, patrimoine, consommation, modes amiables). Conseil de l'Ordre 2015-2017, CNB 2018-2020, médiatrice nationale de la consommation de la profession 2020-2025. Vice-présidente de Lawyers 4 Women."
+     "bio": "Avocate au barreau de Paris, certificat d'aptitude en 1999 et serment en 2000. Treize ans dans un cabinet de droit des affaires, puis son propre cabinet depuis 2013, en droit des personnes et de la famille, avec une activité parallèle de médiatrice conventionnelle ou judiciaire (formée au processus collaboratif et à la médiation ; listes du CNMA et des cours d'appel de Paris et de Rouen). Conseil de l'Ordre de 2015 à 2017, CNB de 2018 à 2019. Médiatrice nationale de la consommation de la profession d'avocat depuis le 1er janvier 2020, mandat renouvelé pour trois ans.",
+     "sources": [
+      {
+       "label": "Médiateur de la consommation de la profession d'avocat, bilan 2023",
+       "url": "https://mediateur-consommation-avocat.fr/bilan_mediation_2023"
+      }
+     ]
     }
    ],
    "site": "https://bouyssoupascarel.fr/",
@@ -791,12 +821,28 @@
     {
      "nom": "Marie-Hélène Fabiani",
      "role": "Candidate au bâtonnat",
-     "bio": "Avocate depuis 2003, propriété intellectuelle. Conseil de l'Ordre 2021-2023, CNB, UJA de Paris, LICRA."
+     "bio": "Avocate à Paris, serment en 2003, en propriété intellectuelle et droit pénal de la propriété intellectuelle. Une dizaine d'années au cabinet de Serge Hoffman, puis son propre cabinet parisien (quatre collaboratrices) et une société de conseil en propriété industrielle à Genève (17 collaborateurs). Membre du Conseil de l'Ordre (liste UJA), puis deux mandats au CNB. Ancienne présidente de l'association des Corses du Palais, vice-présidente de la LICRA Corse.",
+     "sources": [
+      {
+       "label": "Le Monde du Droit, 29 septembre 2026",
+       "url": "https://www.lemondedudroit.fr/institutions/105940-marie-helene-fabiani-et-frederic-naquet-binome-barreaudeparis-plus-entrepreneurial.html"
+      }
+     ]
     },
     {
      "nom": "J. Frédéric Naquet",
      "role": "Candidat à la vice-présidence",
-     "bio": "Avocat depuis 1989, droit du travail. Conseil de l'Ordre 2020-2022, ancien secrétaire du CNB, président pendant 15 ans de l'ONG Action Education."
+     "bio": "Avocat à Paris, serment le 25 janvier 1989, en droit du travail (Selarl Naquet, Paris 16e), notamment pour de grandes entreprises américaines et des cadres dirigeants. Conseil de l'Ordre de 2020 à 2022, puis secrétaire général du CNB pendant deux ans (mandat jusqu'en décembre 2026). A présidé pendant quatorze ans l'ONG Aide et Action, consacrée au développement par l'éducation.",
+     "sources": [
+      {
+       "label": "Profession de foi CNB (collège ordinal Paris), 2023",
+       "url": "https://www.cnb.avocat.fr/sites/default/files/profession_de_foi_-_naquet_frederic.pdf"
+      },
+      {
+       "label": "Le Monde du Droit, 29 septembre 2026",
+       "url": "https://www.lemondedudroit.fr/institutions/105940-marie-helene-fabiani-et-frederic-naquet-binome-barreaudeparis-plus-entrepreneurial.html"
+      }
+     ]
     }
    ],
    "site": "https://www.fabiani-naquet.paris/",
@@ -1094,7 +1140,17 @@
     {
      "nom": "Clarisse Surin",
      "role": "Candidate au bâtonnat",
-     "bio": "Serment en 2008, droit du travail et pénal du travail. Conseil de l'Ordre 2020-2022, CNB 2021-2023 (vice-présidente des commissions Numérique et Prospective). Candidate au co-bâtonnat 2024 avec Thomas Baudesson, qualifiés pour le 2e tour, battus par Degos et Denoit-Benteux (46 % des suffrages)."
+     "bio": "Avocate à Paris, serment en 2008, associée du cabinet CLS Avocat (droit du travail et droit pénal du travail), qu'elle a fondé en juin 2013. DEA de droit social à Paris 1 Panthéon-Sorbonne ; débuts chez Levine & Blitt (New York) et Baker & McKenzie, puis dans des cabinets de droit du travail (Capstan, DS Avocats, Francis Lefebvre). Conseil de l'Ordre de 2020 à 2022 (coordinatrice de l'autorité de poursuite en 2022), CNB de 2021 à 2023 (vice-présidente des commissions Numérique et Prospective).",
+     "sources": [
+      {
+       "label": "Profession de foi CNB (collège ordinal Paris), 2023",
+       "url": "https://www.cnb.avocat.fr/sites/default/files/profession_de_foi_-_surin_clarisse_0.pdf"
+      },
+      {
+       "label": "Le Monde du Droit, 11 avril 2016",
+       "url": "https://www.lemondedudroit.fr/nominations/14403-clarisse-surin-rejoint-le-cabinet-walter-billet-avocats-en-qualite-dassociee-en-droit-social.html"
+      }
+     ]
     },
     {
      "nom": "Merav Griguer",

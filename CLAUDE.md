@@ -42,8 +42,8 @@ Confirmer ensuite à l'utilisateur que les deux sont à jour. Ne jamais modifier
 
 **Contenu**
 - Mentions légales : page séparée `mentions.html`, éditeur anonyme, hébergeur Vercel, contact programme.batonnat.2027@gmail.com, données personnelles retirées 3 mois après le scrutin (décembre 2026).
-- Soutiens : recopier la fonction exacte de la source ; nom seul si elle est incertaine. Xavier Delcros : la page lue indique « président émérite » (l'utilisateur avait dit « président » : à confirmer).
-- Biographies : à tirer des sites de cabinet ou de sources indépendantes, jamais des seuls sites de campagne, avec la source. Faites : Griguer, Bouyssou. À refaire : Surin, Pascarel, Saada, Lagrue, Fabiani, Naquet.
+- Soutiens : recopier la fonction exacte de la source ; nom seul si elle est incertaine. Xavier Delcros : la page de soutiens de Fabiani–Naquet indique « Président émérite de Section parisienne de l'Association nationale des avocats honoraires » (revérifié le 2026-10-29) ; garder « président émérite ».
+- Biographies : à tirer des sites de cabinet ou de sources indépendantes, jamais des seuls sites de campagne, avec la source. Les six binômes sont faits (2026-10-29), chaque personne a un champ `sources` affiché sous sa biographie. Non retrouvé hors site de campagne, donc non repris : mandats ordinaux et syndicaux de Saada (SAF, Conseil de l'Ordre, CNB, CNBF), SAF Paris 2011-2017 et rôle de fondatrice de DSF pour Lagrue, Lawyers 4 Women pour Pascarel, candidature 2024 de Surin ; à compléter si une source indépendante apparaît.
 - Évolutions de la page d'accueil : actualités, évolutions et historique limités (« Voir plus »).
 
 **Hébergement** : Vercel uniquement (plus de Netlify). Après chaque modification : artifact + branche `claude/site-vercel`, puis confirmer. Les tâches planifiées « Programmes bâtonnat » (10 h 01) et « Synchronisation Vercel » (10 h 35, heure de Paris) ne peuvent écrire dans le dépôt que si `salamaruben/Projet` leur est rattaché avec droit d'écriture ; à vérifier chaque jour.
