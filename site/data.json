@@ -296,13 +296,13 @@
     "nombre": "142",
     "notables": [
      "Jean-Louis Borie (ancien bâtonnier)",
-     "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis)",
-     "Dominique Clemang (ancienne bâtonnière de Dijon)",
-     "Valérie Grimaud (CNB)",
-     "David van der Vlist (CNB)",
-     "Alice Oriol (Conseil de l'Ordre)",
-     "Stéphane Maugendre (président du SAF)",
-     "Caroline Mecary",
+     "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis, ancien membre du CNB)",
+     "Dominique Clemang (ancienne bâtonnière de Dijon, 2018-2019)",
+     "Valérie Grimaud (membre du CNB)",
+     "David van der Vlist (avocat au barreau de Paris, élu au CNB)",
+     "Alice Oriol (avocate, membre du Conseil de l'Ordre)",
+     "Stéphane Maugendre (président du Syndicat des avocat.e.s de France)",
+     "Caroline Mecary (avocate au barreau de Paris, cabinet Mecary)",
      "Franceline Lepany (avocate honoraire)"
     ]
    },
@@ -355,7 +355,7 @@
     {
      "nom": "Jacques Bouyssou",
      "role": "Candidat au bâtonnat",
-     "bio": "Serment en janvier 1994, barreaux de Paris et Madrid. Lauréat de la Conférence 1998. Fondateur d'Alerion (2003). Conseil de l'Ordre 2014-2016, fondateur de l'Observatoire international des avocats en danger (2015), de Paris Place de Droit et de la Nuit du Droit. Co-président du Litigation Committee de l'IBA jusqu'au 8 octobre 2026, premier Français à ce poste."
+     "bio": "Avocat au barreau de Paris depuis 1994 (Gide Loyrette Nouel, Gomez-Acebo y Pombo à Madrid, August & Debouzy), secrétaire de la Conférence en 1999. Associé fondateur d'Alerion (2003), où il dirige le département Contentieux, arbitrage et pénal des affaires et le Spanish & Latam desk. Conseil de l'Ordre 2015-2017 (Commission internationale), fondateur de l'Observatoire international des avocats en danger et de Paris Place de Droit (secrétaire général). Délégué du barreau de Paris au CCBE, membre du groupe de travail de la CNUDCI (2021), co-président du Litigation Committee de l'IBA jusqu'au 8 octobre 2026."
     },
     {
      "nom": "Carole Pascarel",
@@ -1049,12 +1049,12 @@
    "soutiens": {
     "nombre": "~304 témoignages",
     "notables": [
-     "Mario Stasi (président de la LICRA)",
-     "Xavier Delcros (président de la section parisienne de l'Association nationale des avocats honoraires)",
-     "Vincent Maurel (associé KPMG)",
-     "Béatrice Weiss Gout",
-     "Marie-Hélène Cohen Guilleminet",
-     "Jeanne-Zoé Targa"
+     "Mario Stasi (associé, président de la LICRA)",
+     "Xavier Delcros (président émérite de la section parisienne de l'Association nationale des avocats honoraires)",
+     "Vincent Maurel (associé, KPMG)",
+     "Béatrice Weiss Gout (avocate honoraire)",
+     "Marie-Hélène Cohen Guilleminet (avocat honoraire)",
+     "Jeanne-Zoé Targa (honoraire, Targa)"
     ]
    },
    "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. Les trois pages de liste des actualités ont été parcourues ce jour (titres et résumés), sans ouvrir chaque article.",
