@@ -25,3 +25,25 @@ Confirmer ensuite à l'utilisateur que les deux sont à jour. Ne jamais modifier
   téléphones affichent la page réduite (tout est trop petit). Générer ce fichier avec :
   `python3 tools/wrap_site.py <index.html de l'artifact> site/index.html`.
 - `site/mentions.html` est un document complet autonome, identique sur les deux copies.
+
+## Décisions de l'utilisateur (à respecter)
+
+**Identité et style**
+- Accueil : grande image de Paris au crépuscule (silhouette dessinée, à remplacer par une photo libre de droits si l'utilisateur en fournit une), cadre fin arrondi, menu en verre dépoli, pastilles, bouton blanc.
+- Palette du crépuscule (bleu ardoise, lavande, pêche) ; fond clair uni `#f1eff5`, jamais de dégradé orangé en bas de page, jamais de fond sombre ni de blanc pur.
+- Formes arrondies partout (cartes 22 px, boutons en pilule). Police Inter.
+- Couleurs des binômes : Surin et Griguer `#4a63b8`, Saada et Lagrue `#d9743f`, Bouyssou et Pascarel `#7a5fb0`, Fabiani et Naquet `#c2587a`. Ordre d'affichage : Surin, Saada, Bouyssou, Fabiani.
+- Retiré à la demande : sièges/hémicycle, liens « Programme » par mesure, soulignements, mention « Ordre des avocats de Paris » en haut, phrase sur les 14 membres du Conseil, encadré « Limites de cette fiche » (ne plus l'afficher), bloc de découpage « en quatre thèmes » (entrée « Version initiale »).
+- Site indépendant et non officiel : le dire dans l'en-tête, le pied de page et le PDF. Ne jamais utiliser le logo ni l'identité de l'Ordre.
+
+**Mobile (≤ 700 px)** : une page à la fois, pas de longue page défilante. Barre du bas à 5 entrées (Accueil, Binômes, Comparer, Actus, PDF), ronds à deux initiales (SG, SL, BP, FN) sur les fiches, photos d'abord, tuiles de thèmes, comparatif à plier. L'accueil mobile n'a ni bouton PDF ni bouton « Comparer ». Le PDF s'ouvre dans un nouvel onglet. Après toute modification, vérifier que la version ordinateur est inchangée (comparaison de captures).
+
+**PDF** : synthétique (7 pages : couverture, vue d'ensemble, une page par binôme, tableau « en un coup d'œil »), aux couleurs du site. Pas de détail des mesures, de sources ni d'évolutions dans le PDF.
+
+**Contenu**
+- Mentions légales : page séparée `mentions.html`, éditeur anonyme, hébergeur Vercel, contact programme.batonnat.2027@gmail.com, données personnelles retirées 3 mois après le scrutin (décembre 2026).
+- Soutiens : recopier la fonction exacte de la source ; nom seul si elle est incertaine. Xavier Delcros : la page lue indique « président émérite » (l'utilisateur avait dit « président » : à confirmer).
+- Biographies : à tirer des sites de cabinet ou de sources indépendantes, jamais des seuls sites de campagne, avec la source. Faites : Griguer, Bouyssou. À refaire : Surin, Pascarel, Saada, Lagrue, Fabiani, Naquet.
+- Évolutions de la page d'accueil : actualités, évolutions et historique limités (« Voir plus »).
+
+**Hébergement** : Vercel uniquement (plus de Netlify). Après chaque modification : artifact + branche `claude/site-vercel`, puis confirmer. Les tâches planifiées « Programmes bâtonnat » (10 h 01) et « Synchronisation Vercel » (10 h 35, heure de Paris) ne peuvent écrire dans le dépôt que si `salamaruben/Projet` leur est rattaché avec droit d'écriture ; à vérifier chaque jour.
