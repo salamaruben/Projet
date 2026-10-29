@@ -1091,11 +1091,12 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     return doc.output("arraybuffer");
   }
 
-  function savePdf(buf, filename, dl) {
+  function savePdf(buf, filename, dl, pre) {
     if (dl) return dl.save({ filename: filename, data: buf });
     return new Promise(function (resolve, reject) {
       try {
         var url = URL.createObjectURL(new Blob([buf], { type: "application/pdf" }));
+        if (pre && !pre.closed) { pre.location.href = url; setTimeout(function () { URL.revokeObjectURL(url); }, 120000); resolve({ status: "saved" }); return; }
         var a = document.createElement("a");
         a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
         setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
@@ -1111,17 +1112,22 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     getDl.then(function (dl) {
       btn.hidden = false;
       btn.addEventListener("click", function () {
+        /* sur téléphone, le PDF s'ouvre dans un nouvel onglet : la page du site reste ouverte */
+        var pre = null;
+        if (!dl && window.matchMedia("(pointer: coarse)").matches) {
+          try { pre = window.open("", "_blank"); if (pre) pre.document.write("<p style='font:18px sans-serif;padding:24px'>Préparation du PDF\u2026</p>"); } catch (e) { pre = null; }
+        }
         btn.disabled = true; msg.textContent = "Préparation du PDF…";
         var lib = window.jspdf && window.jspdf.jsPDF;
         if (!lib) { msg.textContent = "Le générateur de PDF n'a pas pu se charger. Rechargez la page."; btn.disabled = false; return; }
         fetch("data.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(function () { return DATA; })
           .then(function (data) {
             return buildPdf(data, lib).then(function (buf) {
-              return savePdf(buf, "batonnat-paris-2027-programmes-" + (data.maj || todayISO()) + ".pdf", dl);
+              return savePdf(buf, "batonnat-paris-2027-programmes-" + (data.maj || todayISO()) + ".pdf", dl, pre);
             });
           })
-          .then(function () { msg.textContent = "PDF enregistré."; })
-          .catch(function (e) { msg.textContent = e && e.code === "declined" ? "" : "Le PDF n'a pas pu être enregistré. Réessayez."; })
+          .then(function () { msg.textContent = pre ? "PDF ouvert dans un nouvel onglet." : "PDF enregistré."; })
+          .catch(function (e) { if (pre && !pre.closed) pre.close(); msg.textContent = e && e.code === "declined" ? "" : "Le PDF n'a pas pu être enregistré. Réessayez."; })
           .then(function () { btn.disabled = false; });
       });
     });
@@ -1180,6 +1186,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
 /* ===== Mobile (≤ 700 px) : photos d'abord, passage d'un binôme à l'autre, thèmes ===== */
 .pbody { display: contents; }
 .pimg, .cnt, .tiles, .sechead, .bnav, .cswitch, .legend-more { display: none; }
+@media (min-width: 701px) { .bnav, .cswitch { display: none !important; } }
 @media (max-width: 700px) {
   html { font-size: 18px; }
   body { font-size: 18px; line-height: 1.55; padding-bottom: 104px; }
@@ -1254,9 +1261,21 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   .theme-block.open h3::after { content: "\2212"; background: var(--ink); color: #fff; }
   .theme-block .theme-cells { display: none; padding: 0 16px 16px; grid-template-columns: 1fr; }
   .theme-block.open .theme-cells { display: grid; }
-  /* barre du bas : Accueil, Binômes, Comparer, PDF */
-  .bnav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-top: 1px solid var(--line); border-radius: 24px 24px 0 0; box-shadow: 0 -6px 24px rgba(27,36,71,.12); }
-  .bnav a, .bnav button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border: 0; background: none; font: inherit; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 16px; cursor: pointer; }
+  /* une page à la fois */
+  body:not(.m-home) header.hero2 { display: none !important; }
+  body.m-home #v-apercu > :not(.sechead):not(.tiles) { display: none !important; }
+  body.m-home main { padding-top: 8px !important; }
+  body.m-bin #v-apercu > :not(.lab):not(h2):not(.strip) { display: none !important; }
+  body.m-bin #v-apercu > .lab { display: none !important; }
+  body.m-actus #v-apercu > :not(.sec):not(.cols) { display: none !important; }
+  body.m-actus #v-apercu > .sec { margin-top: 36px; }
+  body.m-actus #v-apercu > .sec:first-of-type { margin-top: 0; }
+  body.m-actus #v-apercu > .sec .lab:first-child { border-top: 0; }
+  body:not(.m-home):not(.m-bin):not(.m-actus) main { padding-top: 0 !important; }
+  body:not(.m-home) { background: #f1eff5 !important; }
+  /* barre du bas : Accueil, Binômes, Comparer, Actualités, PDF */
+  .bnav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(5, 1fr); padding: 8px 4px calc(8px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-top: 1px solid var(--line); border-radius: 24px 24px 0 0; box-shadow: 0 -6px 24px rgba(27,36,71,.12); }
+  .bnav a, .bnav button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 16px; cursor: pointer; }
   .bnav svg { width: 28px; height: 28px; }
   .bnav .on { color: var(--ink); background: #ebe9f3; }
   .cswitch { position: sticky; top: 0; z-index: 40; display: flex; gap: 10px; justify-content: center; padding: 12px 10px; margin: -24px 0 16px; border-radius: 0 0 22px 22px; background: rgba(241,239,245,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
@@ -1338,29 +1357,28 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
       users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.9.6 3 2.3 3.4 5.2"/></svg>',
       cmp: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+      news: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>',
       pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>'
     };
     var INI = { surin: "S", saada: "R", bouyssou: "B", fabiani: "F" };
-    var nav = mk("nav", "bnav", '<a href="#apercu" data-k="home">' + IC.home + 'Accueil</a><button type="button" data-k="bin">' + IC.users + 'Binômes</button><a href="#comparatif" data-k="cmp">' + IC.cmp + 'Comparer</a><button type="button" data-k="pdf">' + IC.pdf + 'PDF</button>');
+    var nav = mk("nav", "bnav", '<a href="#apercu" data-k="home">' + IC.home + 'Accueil</a><a href="#binomes" data-k="bin">' + IC.users + 'Binômes</a><a href="#comparatif" data-k="cmp">' + IC.cmp + 'Comparer</a><a href="#actus" data-k="act">' + IC.news + 'Actus</a><button type="button" data-k="pdf">' + IC.pdf + 'PDF</button>');
     nav.setAttribute("aria-label", "Navigation");
     document.body.appendChild(nav);
     var sw = mk("div", "cswitch");
     ORDER.forEach(function (id) { var a = mk("a"); a.href = "#" + id; a.dataset.id = id; a.style.background = COL[id]; a.textContent = INI[id]; a.setAttribute("aria-label", NAME[id]); sw.appendChild(a); });
     var main = document.querySelector("main"); main.insertBefore(sw, main.firstChild);
     nav.querySelector("[data-k=pdf]").onclick = function () { var p = document.getElementById("pdf"); if (p) p.click(); };
-    nav.querySelector("[data-k=bin]").onclick = function () {
-      function go() { var st = document.querySelector(".strip"); window.scrollTo({ top: st.getBoundingClientRect().top + window.scrollY - 20, behavior: "smooth" }); }
-      if ((location.hash || "#apercu") !== "#apercu") { location.hash = "#apercu"; setTimeout(go, 150); } else go();
-    };
     function upd() {
       var h = (location.hash || "#apercu").slice(1), cand = ORDER.indexOf(h) >= 0;
+      var mode = cand ? "cand" : (h === "comparatif" ? "cmp" : (h === "mentions" ? "x" : (h === "binomes" ? "bin" : (h === "actus" ? "act" : "home"))));
+      ["home", "bin", "act"].forEach(function (m) { document.body.classList.toggle("m-" + (m === "act" ? "actus" : m), mode === m); });
       sw.style.display = cand ? "" : "none";
       sw.querySelectorAll("a").forEach(function (a) { a.classList.toggle("on", a.dataset.id === h); });
       nav.querySelectorAll("[data-k]").forEach(function (a) { a.classList.remove("on"); });
-      var k = h === "comparatif" ? "cmp" : (cand ? "bin" : "home");
+      var k = mode === "cmp" ? "cmp" : (mode === "act" ? "act" : (mode === "bin" || cand ? "bin" : "home"));
       nav.querySelector("[data-k=" + k + "]").classList.add("on");
     }
-    window.addEventListener("hashchange", function () { setTimeout(upd, 0); }); upd();
+    window.addEventListener("hashchange", function () { setTimeout(function () { upd(); if (MQ.matches) window.scrollTo(0, 0); }, 0); }); upd();
   }
   init();
 })();
