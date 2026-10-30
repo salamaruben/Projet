@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-29",
+ "maj": "2026-10-30",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -1072,6 +1072,18 @@
    ],
    "nouveautes": [
     {
+     "date": "2026-10-29",
+     "titre": "Retour sur la soirée jeunes",
+     "resume": "Publication du binôme sur son site (rubrique « Instant ») revenant sur sa soirée jeunes du 28 octobre ; déclaration de campagne, sans nouvelle mesure de programme.",
+     "source": "https://www.fabiani-naquet.paris/actualite"
+    },
+    {
+     "date": "2026-10-27",
+     "titre": "Convention nationale des avocats",
+     "resume": "Publication du binôme sur son site (rubrique « Instant ») à propos de la Convention nationale des avocats ; déclaration de campagne, sans nouvelle mesure de programme.",
+     "source": "https://www.fabiani-naquet.paris/actualite"
+    },
+    {
      "date": "2026-09-30",
      "titre": "Article du Monde du Droit : « L'avocat est un entrepreneur citoyen »",
      "resume": "Présentation du binôme et de sa ligne entrepreneuriale."
@@ -1701,6 +1713,10 @@
   {
    "date": "2026-10-29",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : 142 soutiens annoncés (140 la veille). Bouyssou–Pascarel : 32 entrées d'actualité lues sur la page unique, rien de nouveau depuis le 23 oct. Fabiani–Naquet : trois pages d'actualités parcourues, aucune nouvelle publication. Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; recherche de presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-10-30",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Deux actualités ajoutées chez Fabiani–Naquet (27 et 29 oct.) ; Saada–Lagrue et Bouyssou–Pascarel : rien de nouveau depuis le 20 et le 23 oct. ; Surin–Griguer : aucune actualité datée. Recherche de presse juridique sans article récent sur les candidats 2028. Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; sources lues par résumés."
   }
  ],
  "sources_calendrier": [
