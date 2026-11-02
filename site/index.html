@@ -895,7 +895,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       var mine = accts.filter(function (x) { return x.c.id === c.id; });
       var body = mine.length ? mine.map(function (x) {
         return h("div", { class: "rs-acc" }, [
-          h("div", null, [h("a", { href: x.a.url, target: "_blank", rel: "noopener", text: x.a.plateforme }), x.a.label ? h("span", { class: "who2", text: x.a.label }) : null]),
+          h("div", null, [(x.a.url ? h("a", { href: x.a.url, target: "_blank", rel: "noopener", text: x.a.plateforme }) : h("span", { style: "font-weight:600", text: x.a.plateforme })), x.a.label ? h("span", { class: "who2", text: x.a.label }) : null]),
           x.last ? h("div", { class: "nb" }, [nf(x.last.abonnes), h("small", { text: "abonnés au " + fmt(x.last.date, true) })]) : h("div", { class: "nb" }, [h("small", { text: "pas de relevé" })])
         ]);
       }) : [h("p", { class: "rs-none", text: "Aucun compte officiel indiqué sur leurs sites." })];

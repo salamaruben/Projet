@@ -375,17 +375,35 @@
     {
      "label": "Rachel Saada",
      "url": "https://www.linkedin.com/in/rachel-saada-03800a438",
-     "plateforme": "LinkedIn"
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 379
+      }
+     ]
     },
     {
      "label": "Marianne Lagrue",
      "url": "https://www.linkedin.com/in/marianne-lagrue-a6074334",
-     "plateforme": "LinkedIn"
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 1981
+      }
+     ]
     },
     {
      "label": "Campagne",
      "url": "https://www.instagram.com/rachel_marianne_batonnat2026",
-     "plateforme": "Instagram"
+     "plateforme": "Instagram",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 1518
+      }
+     ]
     }
    ]
   },
@@ -834,7 +852,13 @@
     {
      "label": "Page de campagne",
      "url": "https://www.linkedin.com/company/bouyssou-pascarel-b%C3%A2tonnat-2028/",
-     "plateforme": "LinkedIn"
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 170
+      }
+     ]
     }
    ]
   },
@@ -1172,12 +1196,24 @@
     {
      "label": "Marie-Hélène Fabiani",
      "url": "https://www.linkedin.com/in/marie-h%C3%A9l%C3%A8ne-fabiani/",
-     "plateforme": "LinkedIn"
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 6756
+      }
+     ]
     },
     {
      "label": "Frédéric Naquet",
      "url": "https://www.linkedin.com/in/fredericnaquet/",
-     "plateforme": "LinkedIn"
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 3503
+      }
+     ]
     }
    ]
   },
@@ -1425,6 +1461,16 @@
     }
    ],
    "reseaux": [
+    {
+     "label": "Page de campagne",
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 1720
+      }
+     ]
+    },
     {
      "label": "Merav Griguer",
      "url": "https://www.linkedin.com/in/merav-griguer-01a66b2/",
