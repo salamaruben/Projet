@@ -643,7 +643,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     return h("li", { class: "has-detail" }, [btn, det]);
   }
   var PHOTOS = {
-    surin: { src: "img/surin-griguer.webp", w: 819, h: 733, framed: true },
+    surin: { src: "img/surin-griguer.webp", w: 819, h: 733 },
     saada: { src: "img/saada-lagrue.webp", w: 1000, h: 835 },
     bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 290 },
     fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
@@ -1408,8 +1408,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   .cswitch { position: sticky; top: 0; z-index: 40; display: flex; gap: 10px; justify-content: center; padding: 12px 10px; margin: -24px 0 16px; border-radius: 0 0 22px 22px; background: rgba(241,239,245,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .cswitch a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 17px; letter-spacing: .02em; color: #fff; text-decoration: none; opacity: .55; border: 3px solid transparent; }
   .cswitch a.on { opacity: 1; border-color: var(--ink); }
-  /* photo cadrée : le cadre ne s'applique qu'au bureau */
-  .cand-head.has-photo.framed .ch-photo { border: 0 !important; box-shadow: none !important; }
   /* pied de page compact */
   footer { padding-block: 16px 18px; margin-top: 8px; border-radius: 22px 22px 0 0; font-size: 12px; line-height: 1.45; }
 }
