@@ -830,7 +830,13 @@
      "type": "Site de campagne"
     }
    ],
-   "reseaux": []
+   "reseaux": [
+    {
+     "label": "Page de campagne",
+     "url": "https://www.linkedin.com/company/bouyssou-pascarel-b%C3%A2tonnat-2028/",
+     "plateforme": "LinkedIn"
+    }
+   ]
   },
   {
    "id": "fabiani",
