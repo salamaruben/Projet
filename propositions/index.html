@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Propositions de style — Surin & Griguer</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;font-family:Inter,Arial,sans-serif}
+a{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:clamp(28px,5vw,72px);color:#fff;text-decoration:none;overflow:hidden;transition:flex .5s}
+a::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--bg);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+a:hover::before{transform:scale(1.06)}
+a small{letter-spacing:.24em;text-transform:uppercase;font-size:11px;opacity:.75}
+a b{font-size:clamp(44px,7vw,110px);font-weight:300;letter-spacing:-.05em;line-height:.95}
+a span{max-width:28em;line-height:1.55;opacity:.85}
+.a{--bg:radial-gradient(90% 80% at 70% 80%,#a85a36,#3a1b10 70%)}
+.b{--bg:linear-gradient(160deg,#c9a690,#8e6a58);color:#fff}
+@media(max-width:800px){body{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}
+</style></head><body>
+<a class="a" href="/proposition-a/"><small>Proposition A</small><b>Atelier</b><span>Éditorial et chaleureux : titre monumental passant derrière le binôme, arche terracotta, grille bento. Inspirée d’Oura &amp; Co.</span></a>
+<a class="b" href="/proposition-b/"><small>Proposition B</small><b>Horizon</b><span>Lumineux et aérien : cadre arrondi, verre dépoli, pilules flottantes, rail d’icônes. Inspirée d’Evora Design.</span></a>
+</body></html>
