@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Surin / Griguer</title>
+  <rect width="64" height="64" rx="9" fill="#191817"/>
+  <g fill="none" stroke="#eeeae3" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 23.8C20.8 21.4 16.8 20.6 13.3 21.6C9.8 22.6 8.2 25.6 9.8 28.4C11.5 31.3 19.9 31 22.2 34C24.7 37.3 22.5 41.5 18.4 42.4C14.6 43.2 10.2 42 7.8 39.6"/>
+    <path d="M56 24.2C53.9 21.9 51.4 21 48.3 21C41.8 21 38.5 25.8 38.5 31.8C38.5 38 42.3 42.5 48.6 42.5C51.6 42.5 54 41.6 56 40V32.5H49.4"/>
+  </g>
+  <path d="M38 12L26.5 52" fill="none" stroke="#bf9c75" stroke-width="2.3"/>
+</svg>
