@@ -869,13 +869,12 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     var a = all[all.length - 2], b = all[all.length - 1], days = Math.max(1, dayDiff(a.date, b.date));
     return { delta: b.abonnes - a.abonnes, days: days, perDay: (b.abonnes - a.abonnes) / days, from: a.date };
   }
-  function weekOf(all) {
-    if (all.length < 2) return null;
-    var b = all[all.length - 1], ref = null;
-    for (var i = all.length - 2; i >= 0; i--) { if (dayDiff(all[i].date, b.date) >= 7) { ref = all[i]; break; } }
-    if (!ref) return null;
-    var span = dayDiff(ref.date, b.date);
-    return { delta: b.abonnes - ref.abonnes, span: span, perWeek: (b.abonnes - ref.abonnes) * 7 / span };
+  function mondayOf(iso) { var dow = new Date(iso + "T12:00:00Z").getUTCDay(); return shift(iso, -((dow + 6) % 7)); }
+  function lastUpTo(all, iso) { var r = null; all.forEach(function (x) { if (x.date <= iso) r = x; }); return r; }
+  function weekGainOf(all, mon) {
+    var a = lastUpTo(all, mon), b = lastUpTo(all, shift(mon, 6));
+    if (!a || !b || b.date <= a.date) return null;
+    return { delta: b.abonnes - a.abonnes, from: a.date, to: b.date };
   }
   function lineChart(series) {
     var NS2 = "http://www.w3.org/2000/svg", W = 600, H = 260, L = 64, R = 16, T = 16, B = 44;
@@ -904,7 +903,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   }
   function viewReseaux() {
     var accts = [];
-    DATA.candidats.forEach(function (c) { (c.reseaux || []).forEach(function (a) { var r = relevesOf(a); accts.push({ c: c, a: a, last: r.length ? r[r.length - 1] : null, all: r, gain: gainOf(r), week: weekOf(r) }); }); });
+    DATA.candidats.forEach(function (c) { (c.reseaux || []).forEach(function (a) { var r = relevesOf(a); accts.push({ c: c, a: a, last: r.length ? r[r.length - 1] : null, all: r, gain: gainOf(r) }); }); });
     var withNum = accts.filter(function (x) { return x.last; });
     var sec = [];
     if (withNum.length) {
@@ -928,10 +927,18 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
         return h("div", { class: "sec" }, [h("h2", { text: title }), h("p", { class: "note", style: "margin-top:12px", text: note }), barsBlock(rowsG), h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(byB)]);
       }
       var dayList = accts.filter(function (x) { return x.gain; });
-      var weekList = accts.filter(function (x) { return x.week; });
-      if (dayList.length) sec.push(gainBlock("Gain ou perte par jour", "Écart entre les deux derniers relevés de chaque compte, ramené à un jour. Un chiffre négatif est une perte d'abonnés.", dayList, function (x) { return x.gain.perDay; }, " par jour"));
-      if (weekList.length) sec.push(gainBlock("Gain ou perte sur 7 jours", "Écart entre le dernier relevé et un relevé d'au moins 7 jours plus tôt, ramené à 7 jours. Un chiffre négatif est une perte d'abonnés.", weekList, function (x) { return x.week.perWeek; }, " sur 7 jours"));
-      else if (dayList.length) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Gain ou perte sur 7 jours" }), h("p", { class: "note", style: "margin-top:12px", text: "Disponible dès qu'un compte a des relevés espacés d'au moins 7 jours." })]));
+      var latest = withNum.reduce(function (m, x) { return x.last.date > m ? x.last.date : m; }, "");
+      var mon0 = mondayOf(latest), weekShown = 0;
+      [mon0, shift(mon0, -7)].forEach(function (mon, wi) {
+        var sun = shift(mon, 6);
+        var wl = accts.map(function (x) { return { c: x.c, a: x.a, wg: weekGainOf(x.all, mon) }; }).filter(function (x) { return x.wg; });
+        if (!wl.length) return;
+        weekShown++;
+        sec.push(gainBlock("Gain ou perte, semaine du " + fmt(mon) + " au " + fmt(sun, true) + (wi === 0 && latest < sun ? " (en cours)" : ""),
+          "Du lundi au dimanche : écart entre le relevé du lundi (ou le dernier avant) et celui du dimanche (ou le dernier disponible). Un chiffre négatif est une perte d'abonnés.",
+          wl, function (x) { return x.wg.delta; }, " sur la semaine"));
+      });
+      if (!weekShown) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Gain ou perte par semaine" }), h("p", { class: "note", style: "margin-top:12px", text: "Semaines du lundi au dimanche. Disponible dès qu'un compte a deux relevés dans la même semaine." })]));
       var multi = accts.filter(function (x) { return x.all.length >= 2; });
       if (multi.length) {
         var series = multi.map(function (x) { return { id: x.c.id, pts: x.all }; });
