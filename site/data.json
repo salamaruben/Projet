@@ -1474,7 +1474,23 @@
     {
      "label": "Merav Griguer",
      "url": "https://www.linkedin.com/in/merav-griguer-01a66b2/",
-     "plateforme": "LinkedIn"
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 13301
+      }
+     ]
+    },
+    {
+     "label": "Clarisse Surin",
+     "plateforme": "LinkedIn",
+     "releves": [
+      {
+       "date": "2026-11-02",
+       "abonnes": 6368
+      }
+     ]
     }
    ]
   }
