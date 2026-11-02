@@ -869,6 +869,14 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     var a = all[all.length - 2], b = all[all.length - 1], days = Math.max(1, dayDiff(a.date, b.date));
     return { delta: b.abonnes - a.abonnes, days: days, perDay: (b.abonnes - a.abonnes) / days, from: a.date };
   }
+  function weekOf(all) {
+    if (all.length < 2) return null;
+    var b = all[all.length - 1], ref = null;
+    for (var i = all.length - 2; i >= 0; i--) { if (dayDiff(all[i].date, b.date) >= 7) { ref = all[i]; break; } }
+    if (!ref) return null;
+    var span = dayDiff(ref.date, b.date);
+    return { delta: b.abonnes - ref.abonnes, span: span, perWeek: (b.abonnes - ref.abonnes) * 7 / span };
+  }
   function lineChart(series) {
     var NS2 = "http://www.w3.org/2000/svg", W = 600, H = 260, L = 64, R = 16, T = 16, B = 44;
     var dates = [], vmax = 1;
@@ -896,7 +904,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   }
   function viewReseaux() {
     var accts = [];
-    DATA.candidats.forEach(function (c) { (c.reseaux || []).forEach(function (a) { var r = relevesOf(a); accts.push({ c: c, a: a, last: r.length ? r[r.length - 1] : null, all: r, gain: gainOf(r) }); }); });
+    DATA.candidats.forEach(function (c) { (c.reseaux || []).forEach(function (a) { var r = relevesOf(a); accts.push({ c: c, a: a, last: r.length ? r[r.length - 1] : null, all: r, gain: gainOf(r), week: weekOf(r) }); }); });
     var withNum = accts.filter(function (x) { return x.last; });
     var sec = [];
     if (withNum.length) {
@@ -907,20 +915,23 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       sec.push(h("div", { style: "margin-top:0" }, [h("h2", { text: "Abonnés par compte" }), h("p", { class: "note", style: "margin-top:12px", text: "Dernier relevé de chaque compte. Les nombres sont relevés à la main sur les profils publics, à la date indiquée : ils ne sont pas vérifiés et ne mesurent ni l'influence ni le soutien." }), barsBlock(rows), legend]));
       var tot = DATA.candidats.map(function (c) { return { id: c.id, label: c.binome, value: withNum.filter(function (x) { return x.c.id === c.id; }).reduce(function (s, x) { return s + x.last.abonnes; }, 0) }; }).filter(function (r) { return r.value > 0; }).sort(function (a, b) { return b.value - a.value; });
       if (tot.length) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Total par binôme" }), h("p", { class: "note", style: "margin-top:12px", text: "Somme des abonnés des comptes relevés ; un même abonné peut suivre plusieurs comptes." }), barsBlock(tot)]));
-      var gains = accts.filter(function (x) { return x.gain; });
-      if (gains.length) {
-        var gr = gains.slice().sort(function (x, y) { return y.gain.perDay - x.gain.perDay; }).map(function (x) {
-          var pd = Math.round(x.gain.perDay * 10) / 10;
-          return { id: x.c.id, label: x.c.binome + " \u00b7 " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : ""), value: Math.abs(pd), text: sgn(pd) + " par jour" };
+      function gainBlock(title, note, list, per, suffix) {
+        var rowsG = list.slice().sort(function (x, y) { return per(y) - per(x); }).map(function (x) {
+          var v = Math.round(per(x) * 10) / 10;
+          return { id: x.c.id, label: x.c.binome + " \u00b7 " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : ""), value: Math.abs(v), text: sgn(v) + suffix };
         });
-        var gt = DATA.candidats.map(function (c) {
-          var v = gains.filter(function (x) { return x.c.id === c.id; }).reduce(function (s2, x) { return s2 + x.gain.perDay; }, 0);
-          v = Math.round(v * 10) / 10;
-          return { id: c.id, label: c.binome, value: Math.abs(v), text: sgn(v) + " par jour", v: v, has: gains.some(function (x) { return x.c.id === c.id; }) };
-        }).filter(function (r) { return r.has; }).sort(function (a, b) { return b.v - a.v; });
-        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Abonnés gagnés par jour" }), h("p", { class: "note", style: "margin-top:12px", text: "Écart entre les deux derniers relevés de chaque compte, ramené à un jour. Un chiffre négatif est une perte d'abonnés." }), barsBlock(gr),
-          h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(gt)]));
+        var byB = DATA.candidats.map(function (c) {
+          var mine = list.filter(function (x) { return x.c.id === c.id; });
+          var v = Math.round(mine.reduce(function (s2, x) { return s2 + per(x); }, 0) * 10) / 10;
+          return { id: c.id, label: c.binome, value: Math.abs(v), text: sgn(v) + suffix, v: v, has: mine.length > 0 };
+        }).filter(function (r) { return r.has; }).sort(function (a2, b2) { return b2.v - a2.v; });
+        return h("div", { class: "sec" }, [h("h2", { text: title }), h("p", { class: "note", style: "margin-top:12px", text: note }), barsBlock(rowsG), h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(byB)]);
       }
+      var dayList = accts.filter(function (x) { return x.gain; });
+      var weekList = accts.filter(function (x) { return x.week; });
+      if (dayList.length) sec.push(gainBlock("Gain ou perte par jour", "Écart entre les deux derniers relevés de chaque compte, ramené à un jour. Un chiffre négatif est une perte d'abonnés.", dayList, function (x) { return x.gain.perDay; }, " par jour"));
+      if (weekList.length) sec.push(gainBlock("Gain ou perte sur 7 jours", "Écart entre le dernier relevé et un relevé d'au moins 7 jours plus tôt, ramené à 7 jours. Un chiffre négatif est une perte d'abonnés.", weekList, function (x) { return x.week.perWeek; }, " sur 7 jours"));
+      else if (dayList.length) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Gain ou perte sur 7 jours" }), h("p", { class: "note", style: "margin-top:12px", text: "Disponible dès qu'un compte a des relevés espacés d'au moins 7 jours." })]));
       var multi = accts.filter(function (x) { return x.all.length >= 2; });
       if (multi.length) {
         var series = multi.map(function (x) { return { id: x.c.id, pts: x.all }; });
