@@ -1424,7 +1424,13 @@
      "type": "Site de campagne"
     }
    ],
-   "reseaux": []
+   "reseaux": [
+    {
+     "label": "Merav Griguer",
+     "url": "https://www.linkedin.com/in/merav-griguer-01a66b2/",
+     "plateforme": "LinkedIn"
+    }
+   ]
   }
  ],
  "comparatif": [
