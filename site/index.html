@@ -845,106 +845,8 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     return h("section", { class: "view", id: "v-comparatif" }, [
       h("h2", { text: "Comparer les programmes" }),
       h("p", { class: "note", style: "margin-top:14px", text: "Les mesures sont reprises telles que les candidats les présentent. « Non précisé » signifie qu'aucune mesure n'a été trouvée sur ce thème." }),
-      tools, out,
-      h("p", { class: "note", style: "margin-top:40px" }, ["Voir aussi : ", h("a", { href: "#reseaux", text: "la présence des candidats sur les réseaux" }), "."])
+      tools, out
     ]);
-  }
-
-  /* ---------- Réseaux ---------- */
-  var RS_COL = { surin: "#4a63b8", saada: "#d9743f", bouyssou: "#7a5fb0", fabiani: "#c2587a" };
-  function relevesOf(a) { return (a.releves || []).filter(function (r) { return r && r.date && typeof r.abonnes === "number"; }).sort(function (x, y) { return x.date < y.date ? -1 : 1; }); }
-  function nf(n) { return n.toLocaleString("fr-FR"); }
-  function barsBlock(rows) {
-    var max = rows.reduce(function (m, r) { return Math.max(m, r.value); }, 1);
-    return h("div", { class: "bars" }, rows.map(function (r) {
-      return h("div", { class: "bar-row c-" + r.id }, [
-        h("div", { class: "bar-lab" }, [h("span", { text: r.label }), h("span", { text: r.text || nf(r.value) })]),
-        h("div", { class: "bar-track", role: "img", "aria-label": r.label + " : " + (r.text || nf(r.value)) }, [h("div", { class: "bar-fill", style: "width:" + Math.max(1, r.value / max * 100) + "%" })])
-      ]);
-    }));
-  }
-  function sgn(n) { return (n > 0 ? "+" : n < 0 ? "\u2212" : "") + nf(Math.abs(n)); }
-  function gainOf(all) {
-    if (all.length < 2) return null;
-    var a = all[all.length - 2], b = all[all.length - 1], days = Math.max(1, dayDiff(a.date, b.date));
-    return { delta: b.abonnes - a.abonnes, days: days, perDay: (b.abonnes - a.abonnes) / days, from: a.date };
-  }
-  function lineChart(series) {
-    var NS2 = "http://www.w3.org/2000/svg", W = 600, H = 260, L = 64, R = 16, T = 16, B = 44;
-    var dates = [], vmax = 1;
-    series.forEach(function (s) { s.pts.forEach(function (p) { if (dates.indexOf(p.date) < 0) dates.push(p.date); if (p.abonnes > vmax) vmax = p.abonnes; }); });
-    dates.sort();
-    function X(d) { return dates.length < 2 ? (L + W - R) / 2 : L + (dates.indexOf(d)) / (dates.length - 1) * (W - L - R); }
-    function Y(v) { return T + (1 - v / vmax) * (H - T - B); }
-    function el(n, a) { var e = document.createElementNS(NS2, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
-    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, class: "rs-line", role: "img", "aria-label": "Évolution du nombre d'abonnés par compte" });
-    [0, 0.5, 1].forEach(function (f) {
-      var y = Y(vmax * f);
-      svg.appendChild(el("line", { x1: L, x2: W - R, y1: y, y2: y, stroke: "#d6d4e2", "stroke-width": 1 }));
-      var t = el("text", { x: L - 8, y: y + 5, "text-anchor": "end" }); t.textContent = nf(Math.round(vmax * f)); svg.appendChild(t);
-    });
-    [dates[0], dates[dates.length - 1]].forEach(function (d, i) {
-      if (i && dates.length < 2) return;
-      var t = el("text", { x: X(d), y: H - 14, "text-anchor": i ? "end" : "start" }); t.textContent = fmt(d, true); svg.appendChild(t);
-    });
-    series.forEach(function (s) {
-      var col = RS_COL[s.id] || "#1b2447";
-      svg.appendChild(el("polyline", { points: s.pts.map(function (p) { return X(p.date) + "," + Y(p.abonnes); }).join(" "), fill: "none", stroke: col, "stroke-width": 3, "stroke-linejoin": "round", "stroke-linecap": "round" }));
-      s.pts.forEach(function (p) { svg.appendChild(el("circle", { cx: X(p.date), cy: Y(p.abonnes), r: 4.5, fill: col })); });
-    });
-    return svg;
-  }
-  function viewReseaux() {
-    var accts = [];
-    DATA.candidats.forEach(function (c) { (c.reseaux || []).forEach(function (a) { var r = relevesOf(a); accts.push({ c: c, a: a, last: r.length ? r[r.length - 1] : null, all: r, gain: gainOf(r) }); }); });
-    var cards = h("div", { class: "rs-grid" }, DATA.candidats.map(function (c) {
-      var mine = accts.filter(function (x) { return x.c.id === c.id; });
-      var body = mine.length ? mine.map(function (x) {
-        return h("div", { class: "rs-acc" }, [
-          h("div", null, [(x.a.url ? h("a", { href: x.a.url, target: "_blank", rel: "noopener", text: x.a.plateforme }) : h("span", { style: "font-weight:600", text: x.a.plateforme })), x.a.label ? h("span", { class: "who2", text: x.a.label }) : null]),
-          x.last ? h("div", { class: "nb" }, [nf(x.last.abonnes), h("small", { text: "abonnés au " + fmt(x.last.date, true) })].concat(x.gain ? [h("small", { text: sgn(x.gain.delta) + " en " + x.gain.days + (x.gain.days > 1 ? " jours" : " jour") })] : [])) : h("div", { class: "nb" }, [h("small", { text: "pas de relevé" })])
-        ]);
-      }) : [h("p", { class: "rs-none", text: "Aucun compte officiel indiqué sur leurs sites." })];
-      return h("div", { class: "rs-card c-" + c.id }, [h("h3", { text: c.binome })].concat(body));
-    }));
-    var withNum = accts.filter(function (x) { return x.last; });
-    var sec = [
-      h("h2", { text: "Présence sur les réseaux" }),
-      h("p", { class: "note", style: "margin-top:14px", text: "Comptes officiels indiqués sur les sites des candidats. Les nombres d'abonnés sont relevés à la main sur les profils publics, à la date indiquée : ils ne sont pas vérifiés et ne mesurent ni l'influence ni le soutien." }),
-      cards
-    ];
-    if (withNum.length) {
-      var rows = withNum.slice().sort(function (x, y) { return y.last.abonnes - x.last.abonnes; }).map(function (x) {
-        return { id: x.c.id, label: x.c.binome + " · " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : ""), value: x.last.abonnes };
-      });
-      var legend = h("ul", { class: "rs-legend" }, DATA.candidats.map(function (c) { return h("li", { class: "c-" + c.id, text: c.binome }); }));
-      sec.push(h("div", { class: "sec" }, [h("h2", { text: "Abonnés par compte" }), h("p", { class: "note", style: "margin-top:12px", text: "Dernier relevé de chaque compte." }), barsBlock(rows), legend]));
-      var tot = DATA.candidats.map(function (c) { return { id: c.id, label: c.binome, value: withNum.filter(function (x) { return x.c.id === c.id; }).reduce(function (s, x) { return s + x.last.abonnes; }, 0) }; }).filter(function (r) { return r.value > 0; }).sort(function (a, b) { return b.value - a.value; });
-      if (tot.length) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Total par binôme" }), h("p", { class: "note", style: "margin-top:12px", text: "Somme des abonnés des comptes relevés ; un même abonné peut suivre plusieurs comptes." }), barsBlock(tot)]));
-      var gains = accts.filter(function (x) { return x.gain; });
-      if (gains.length) {
-        var gr = gains.slice().sort(function (x, y) { return y.gain.perDay - x.gain.perDay; }).map(function (x) {
-          var pd = Math.round(x.gain.perDay * 10) / 10;
-          return { id: x.c.id, label: x.c.binome + " \u00b7 " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : ""), value: Math.abs(pd), text: sgn(pd) + " par jour" };
-        });
-        var gt = DATA.candidats.map(function (c) {
-          var v = gains.filter(function (x) { return x.c.id === c.id; }).reduce(function (s2, x) { return s2 + x.gain.perDay; }, 0);
-          v = Math.round(v * 10) / 10;
-          return { id: c.id, label: c.binome, value: Math.abs(v), text: sgn(v) + " par jour", v: v, has: gains.some(function (x) { return x.c.id === c.id; }) };
-        }).filter(function (r) { return r.has; }).sort(function (a, b) { return b.v - a.v; });
-        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Abonnés gagnés par jour" }), h("p", { class: "note", style: "margin-top:12px", text: "Écart entre les deux derniers relevés de chaque compte, ramené à un jour. Un chiffre négatif est une perte d'abonnés." }), barsBlock(gr),
-          h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(gt)]));
-      }
-      var multi = accts.filter(function (x) { return x.all.length >= 2; });
-      if (multi.length) {
-        var series = multi.map(function (x) { return { id: x.c.id, pts: x.all }; });
-        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Évolution" }), h("p", { class: "note", style: "margin-top:12px", text: "Une courbe par compte relevé au moins deux fois, à la couleur du binôme." }), lineChart(series),
-          h("ul", { class: "rs-legend" }, multi.map(function (x) { return h("li", { class: "c-" + x.c.id, text: x.c.binome + " · " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : "") }); }))]));
-      }
-    } else {
-      sec.push(h("div", { class: "sec" }, [h("h2", { text: "Abonnés" }), h("p", { class: "note", style: "margin-top:12px", text: "Aucun chiffre relevé pour l'instant : les graphiques apparaissent dès les premiers relevés." })]));
-    }
-    return h("section", { class: "view", id: "v-reseaux" }, sec);
   }
 
   /* ---------- PDF export ---------- */
@@ -1256,7 +1158,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     document.getElementById("contexte").textContent = String(data.contexte || "").replace(/Le scrutin de décembre 2026 désigne le bâtonnier[^.]*\.\s*/, "");
     data.candidats.forEach(function (c) { TABS.push({ id: c.id, label: c.binome, cls: "c-" + c.id }); });
     TABS.push({ id: "comparatif", label: "Comparatif" });
-    TABS.push({ id: "reseaux", label: "Réseaux" });
     TABS.forEach(function (t) {
       tabsEl.appendChild(h("a", { href: "#" + t.id, "data-id": t.id, class: t.cls || "" }, [t.cls ? h("span", { class: "dot" }) : null, t.label]));
     });
@@ -1264,7 +1165,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     viewsEl.appendChild(viewApercu());
     data.candidats.forEach(function (c) { viewsEl.appendChild(viewCand(c)); });
     viewsEl.appendChild(viewComparatif());
-    viewsEl.appendChild(viewReseaux());
     document.getElementById("foot").textContent = "Dernière mise à jour le " + fmt(data.maj, true) + ". Mise à jour automatique chaque jour à partir des sites de campagne et de l'Ordre. Ces contenus reflètent la présentation des candidats eux-mêmes. Site indépendant, sans lien avec l'Ordre des avocats de Paris.";
     var ft = document.getElementById("foot");
     ft.appendChild(document.createTextNode(" "));
@@ -1284,29 +1184,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   });
 })();
 </script>
-<style id="reseaux-css">
-/* ===== Onglet Réseaux ===== */
-.rs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; margin-top: 28px; }
-.rs-card { background: rgba(255,255,255,.72); border: 1.5px solid color-mix(in srgb, var(--c) 45%, #fff); border-top: 4px solid var(--c); border-radius: 22px; padding: 22px 24px; }
-.rs-card h3 { font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: -.02em; margin-bottom: 12px; }
-.rs-acc { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
-.rs-acc:first-of-type { border-top: 0; }
-.rs-acc a { color: #b4561f; font-weight: 600; text-decoration: none; }
-.rs-acc .who2 { display: block; font-size: 13px; color: var(--muted); font-weight: 400; }
-.rs-acc .nb { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
-.rs-acc .nb small { display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
-.rs-none { margin: 0; font-size: 15px; color: var(--muted); }
-.bars { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; max-width: 760px; }
-.bar-row { display: grid; gap: 6px; }
-.bar-lab { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; }
-.bar-lab span:last-child { font-weight: 700; font-variant-numeric: tabular-nums; }
-.bar-track { height: 16px; border-radius: 999px; background: rgba(27,36,71,.08); overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 999px; background: var(--c); min-width: 4px; }
-.rs-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 20px 0 0; padding: 0; list-style: none; font-size: 14px; }
-.rs-legend li::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); margin-right: 8px; }
-.rs-line { width: 100%; max-width: 720px; height: auto; margin-top: 24px; }
-.rs-line text { font-family: var(--f); font-size: 16px; fill: #58607f; }
-</style>
 <style id="mobile-css">
 /* ===== Mobile (≤ 700 px) : photos d'abord, passage d'un binôme à l'autre, thèmes ===== */
 .pbody { display: contents; }
@@ -1505,7 +1382,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     nav.querySelector("[data-k=pdf]").onclick = function () { var p = document.getElementById("pdf"); if (p) p.click(); };
     function upd() {
       var h = (location.hash || "#apercu").slice(1), cand = ORDER.indexOf(h) >= 0;
-      var mode = cand ? "cand" : (h === "comparatif" || h === "reseaux" ? "cmp" : (h === "mentions" ? "x" : (h === "binomes" ? "bin" : (h === "actus" ? "act" : "home"))));
+      var mode = cand ? "cand" : (h === "comparatif" ? "cmp" : (h === "mentions" ? "x" : (h === "binomes" ? "bin" : (h === "actus" ? "act" : "home"))));
       ["home", "bin", "act"].forEach(function (m) { document.body.classList.toggle("m-" + (m === "act" ? "actus" : m), mode === m); });
       sw.style.display = cand ? "" : "none";
       sw.querySelectorAll("a").forEach(function (a) { a.classList.toggle("on", a.dataset.id === h); });
