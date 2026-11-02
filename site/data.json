@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-30",
+ "maj": "2026-11-02",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -317,7 +317,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "142",
+    "nombre": "149",
     "notables": [
      "Jean-Louis Borie (ancien bâtonnier)",
      "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis, ancien membre du CNB)",
@@ -1717,6 +1717,14 @@
   {
    "date": "2026-10-30",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Deux actualités ajoutées chez Fabiani–Naquet (27 et 29 oct.) ; Saada–Lagrue et Bouyssou–Pascarel : rien de nouveau depuis le 20 et le 23 oct. ; Surin–Griguer : aucune actualité datée. Recherche de presse juridique sans article récent sur les candidats 2028. Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; sources lues par résumés."
+  },
+  {
+   "date": "2026-11-01",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : 149 soutiens annoncés (142 le 29 oct.), rien de nouveau en actualités depuis le 20 oct. Bouyssou–Pascarel : rien depuis le 23 oct. Fabiani–Naquet : rien depuis le 29 oct. (page 1 relue). Surin–Griguer : site inchangé, espaces de participation toujours « prochainement ». Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; recherche de presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-11-02",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : 149 soutiens (identique à la veille), dernières actualités le 20 oct. Bouyssou–Pascarel : rien depuis le 23 oct. Fabiani–Naquet : rien depuis le 29 oct. (page 1 relue ; pages 2 et 3 non rouvertes). Surin–Griguer : site inchangé, espaces de participation toujours « prochainement ». Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; recherche de presse juridique sans article récent sur les candidats 2028."
   }
  ],
  "sources_calendrier": [
