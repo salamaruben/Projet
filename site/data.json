@@ -370,6 +370,23 @@
      "url": "https://votezracheletmarianne.paris/actualites/",
      "type": "Site de campagne"
     }
+   ],
+   "reseaux": [
+    {
+     "label": "Rachel Saada",
+     "url": "https://www.linkedin.com/in/rachel-saada-03800a438",
+     "plateforme": "LinkedIn"
+    },
+    {
+     "label": "Marianne Lagrue",
+     "url": "https://www.linkedin.com/in/marianne-lagrue-a6074334",
+     "plateforme": "LinkedIn"
+    },
+    {
+     "label": "Campagne",
+     "url": "https://www.instagram.com/rachel_marianne_batonnat2026",
+     "plateforme": "Instagram"
+    }
    ]
   },
   {
@@ -812,7 +829,8 @@
      "url": "https://bouyssoupascarel.fr/tribunes",
      "type": "Site de campagne"
     }
-   ]
+   ],
+   "reseaux": []
   },
   {
    "id": "fabiani",
@@ -1143,6 +1161,18 @@
      "url": "https://www.lemondedudroit.fr/institutions/105940-marie-helene-fabiani-et-frederic-naquet-binome-barreaudeparis-plus-entrepreneurial.html",
      "type": "Presse"
     }
+   ],
+   "reseaux": [
+    {
+     "label": "Marie-Hélène Fabiani",
+     "url": "https://www.linkedin.com/in/marie-h%C3%A9l%C3%A8ne-fabiani/",
+     "plateforme": "LinkedIn"
+    },
+    {
+     "label": "Frédéric Naquet",
+     "url": "https://www.linkedin.com/in/fredericnaquet/",
+     "plateforme": "LinkedIn"
+    }
    ]
   },
   {
@@ -1387,7 +1417,8 @@
      "url": "https://www.batonnatsuringriguer.com/",
      "type": "Site de campagne"
     }
-   ]
+   ],
+   "reseaux": []
   }
  ],
  "comparatif": [
