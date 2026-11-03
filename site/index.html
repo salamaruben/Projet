@@ -845,7 +845,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     return h("section", { class: "view", id: "v-comparatif" }, [
       h("h2", { text: "Comparer les programmes" }),
       h("p", { class: "note", style: "margin-top:14px", text: "Les mesures sont reprises telles que les candidats les présentent. « Non précisé » signifie qu'aucune mesure n'a été trouvée sur ce thème." }),
-      h("a", { class: "rs-top", href: "#reseaux", text: "Suivi des abonnés des candidats" }),
       tools, out,
       h("p", { class: "note", style: "margin-top:40px" }, ["Voir aussi : ", h("a", { href: "#reseaux", text: "le suivi des abonnés des candidats" }), "."])
     ]);
@@ -1316,7 +1315,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
 <style id="mobile-css">
 /* ===== Mobile (≤ 700 px) : photos d'abord, passage d'un binôme à l'autre, thèmes ===== */
 .pbody { display: contents; }
-.rs-top { display: none; }
 .pimg, .cnt, .tiles, .sechead, .bnav, .cswitch, .legend-more { display: none; }
 @media (min-width: 701px) { .bnav, .cswitch { display: none !important; } }
 @media (max-width: 700px) {
@@ -1414,14 +1412,13 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
   body:not(.m-home):not(.m-bin):not(.m-actus) main { padding-top: 0 !important; }
   body:not(.m-home) { background: #f1eff5 !important; }
   /* barre du bas : Accueil, Binômes, Comparer, Actualités, PDF */
-  .bnav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(5, 1fr); padding: 8px 4px calc(8px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-top: 1px solid var(--line); border-radius: 24px 24px 0 0; box-shadow: 0 -6px 24px rgba(27,36,71,.12); }
-  .bnav a, .bnav button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 16px; cursor: pointer; }
-  .bnav svg { width: 28px; height: 28px; }
+  .bnav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(6, 1fr); padding: 8px 2px calc(8px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-top: 1px solid var(--line); border-radius: 24px 24px 0 0; box-shadow: 0 -6px 24px rgba(27,36,71,.12); }
+  .bnav a, .bnav button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border: 0; background: none; font: inherit; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 16px; cursor: pointer; }
+  .bnav svg { width: 26px; height: 26px; }
   .bnav .on { color: var(--ink); background: #ebe9f3; }
   .cswitch { position: sticky; top: 0; z-index: 40; display: flex; gap: 10px; justify-content: center; padding: 12px 10px; margin: -24px 0 16px; border-radius: 0 0 22px 22px; background: rgba(241,239,245,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .cswitch a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 17px; letter-spacing: .02em; color: #fff; text-decoration: none; opacity: .55; border: 3px solid transparent; }
   .cswitch a.on { opacity: 1; border-color: var(--ink); }
-  .rs-top { display: inline-flex; align-items: center; margin: 14px 0 6px; padding: 12px 20px; border: 2px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); font-size: 16px; font-weight: 600; text-decoration: none; }
   /* pied de page compact */
   footer { padding-block: 16px 18px; margin-top: 8px; border-radius: 22px 22px 0 0; font-size: 12px; line-height: 1.45; }
 }
@@ -1472,9 +1469,6 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     var all = mk("button", "tile all", "<b>Voir les " + blocks.length + " thèmes</b>"); all.type = "button";
     all.onclick = function () { location.hash = "#comparatif"; };
     tiles.appendChild(all);
-    var rsT = mk("button", "tile all", "<b>Suivi des abonnés des candidats</b>"); rsT.type = "button";
-    rsT.onclick = function () { location.hash = "#reseaux"; };
-    tiles.appendChild(rsT);
     var anchor = v.querySelector(".sec");
     v.insertBefore(head, anchor); v.insertBefore(tiles, anchor);
     /* comparatif : thèmes à plier (délégation : la liste est reconstruite à chaque recherche) */
@@ -1504,10 +1498,11 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.9.6 3 2.3 3.4 5.2"/></svg>',
       cmp: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
       news: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>',
+      rs: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>',
       pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>'
     };
     var INI = { surin: "SG", saada: "SL", bouyssou: "BP", fabiani: "FN" };
-    var nav = mk("nav", "bnav", '<a href="#apercu" data-k="home">' + IC.home + 'Accueil</a><a href="#binomes" data-k="bin">' + IC.users + 'Binômes</a><a href="#comparatif" data-k="cmp">' + IC.cmp + 'Comparer</a><a href="#actus" data-k="act">' + IC.news + 'Actus</a><button type="button" data-k="pdf">' + IC.pdf + 'PDF</button>');
+    var nav = mk("nav", "bnav", '<a href="#apercu" data-k="home">' + IC.home + 'Accueil</a><a href="#binomes" data-k="bin">' + IC.users + 'Binômes</a><a href="#comparatif" data-k="cmp">' + IC.cmp + 'Comparer</a><a href="#reseaux" data-k="rs">' + IC.rs + 'Réseaux</a><a href="#actus" data-k="act">' + IC.news + 'Actus</a><button type="button" data-k="pdf">' + IC.pdf + 'PDF</button>');
     nav.setAttribute("aria-label", "Navigation");
     document.body.appendChild(nav);
     var sw = mk("div", "cswitch");
@@ -1516,12 +1511,12 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     nav.querySelector("[data-k=pdf]").onclick = function () { var p = document.getElementById("pdf"); if (p) p.click(); };
     function upd() {
       var h = (location.hash || "#apercu").slice(1), cand = ORDER.indexOf(h) >= 0;
-      var mode = cand ? "cand" : (h === "comparatif" || h === "reseaux" ? "cmp" : (h === "mentions" ? "x" : (h === "binomes" ? "bin" : (h === "actus" ? "act" : "home"))));
+      var mode = cand ? "cand" : (h === "comparatif" ? "cmp" : (h === "reseaux" ? "rs" : (h === "mentions" ? "x" : (h === "binomes" ? "bin" : (h === "actus" ? "act" : "home")))));
       ["home", "bin", "act"].forEach(function (m) { document.body.classList.toggle("m-" + (m === "act" ? "actus" : m), mode === m); });
       sw.style.display = cand ? "" : "none";
       sw.querySelectorAll("a").forEach(function (a) { a.classList.toggle("on", a.dataset.id === h); });
       nav.querySelectorAll("[data-k]").forEach(function (a) { a.classList.remove("on"); });
-      var k = mode === "cmp" ? "cmp" : (mode === "act" ? "act" : (mode === "bin" || cand ? "bin" : "home"));
+      var k = mode === "cmp" ? "cmp" : (mode === "rs" ? "rs" : (mode === "act" ? "act" : (mode === "bin" || cand ? "bin" : "home")));
       nav.querySelector("[data-k=" + k + "]").classList.add("on");
     }
     window.addEventListener("hashchange", function () { setTimeout(function () { upd(); if (MQ.matches) window.scrollTo(0, 0); }, 0); }); upd();
