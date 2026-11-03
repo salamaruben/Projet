@@ -942,11 +942,19 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
           wl, function (x) { return x.wg.delta; }, " sur la semaine"));
       });
       if (!weekShown) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Gain ou perte par semaine" }), h("p", { class: "note", style: "margin-top:12px", text: "Semaines du lundi au dimanche. Disponible dès qu'un compte a deux relevés dans la même semaine." })]));
-      var multi = accts.filter(function (x) { return x.all.length >= 2; });
-      if (multi.length) {
-        var series = multi.map(function (x) { return { id: x.c.id, pts: x.all }; });
-        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Évolution" }), h("p", { class: "note", style: "margin-top:12px", text: "Une courbe par compte relevé au moins deux fois, à la couleur du binôme." }), lineChart(series),
-          h("ul", { class: "rs-legend" }, multi.map(function (x) { return h("li", { class: "c-" + x.c.id, text: x.c.binome + " · " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : "") }); }))]));
+      var evo = DATA.candidats.map(function (c) {
+        var mine = accts.filter(function (x) { return x.c.id === c.id && x.all.length; });
+        if (!mine.length) return null;
+        var start = mine.reduce(function (m, x) { return x.all[0].date > m ? x.all[0].date : m; }, "");
+        var ds = [];
+        mine.forEach(function (x) { x.all.forEach(function (r) { if (r.date >= start && ds.indexOf(r.date) < 0) ds.push(r.date); }); });
+        ds.sort();
+        var pts = ds.map(function (d) { return { date: d, abonnes: mine.reduce(function (s2, x) { var r = lastUpTo(x.all, d); return s2 + (r ? r.abonnes : 0); }, 0) }; });
+        return pts.length >= 2 ? { id: c.id, binome: c.binome, pts: pts } : null;
+      }).filter(Boolean);
+      if (evo.length) {
+        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Évolution" }), h("p", { class: "note", style: "margin-top:12px", text: "Total des abonnés de chaque binôme, relevé après relevé. Un point n'est tracé que lorsque tous les comptes du binôme ont déjà un relevé ; un compte non relevé un jour garde sa dernière valeur." }), lineChart(evo),
+          h("ul", { class: "rs-legend" }, evo.map(function (x) { return h("li", { class: "c-" + x.id, text: x.binome }); }))]));
       }
     } else {
       sec.push(h("div", { style: "margin-top:0" }, [h("h2", { text: "Abonnés" }), h("p", { class: "note", style: "margin-top:12px", text: "Aucun chiffre relevé pour l'instant : les graphiques apparaissent dès les premiers relevés." })]));
