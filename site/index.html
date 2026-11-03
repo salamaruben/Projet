@@ -927,6 +927,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
         return h("div", { class: "sec" }, [h("h2", { text: title }), h("p", { class: "note", style: "margin-top:12px", text: note }), barsBlock(rowsG), h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(byB)]);
       }
       var dayList = accts.filter(function (x) { return x.gain; });
+      if (dayList.length) sec.push(gainBlock("Gain ou perte par jour", "Écart entre les deux derniers relevés de chaque compte, ramené à un jour. Un chiffre négatif est une perte d'abonnés.", dayList, function (x) { return x.gain.perDay; }, " par jour"));
       var latest = withNum.reduce(function (m, x) { return x.last.date > m ? x.last.date : m; }, "");
       var mon0 = mondayOf(latest), weekShown = 0;
       [mon0, shift(mon0, -7)].forEach(function (mon, wi) {

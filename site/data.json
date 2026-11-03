@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-02",
+ "maj": "2026-11-03",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -56,6 +56,11 @@
    "date": "2026-11-17",
    "qui": "fabiani",
    "label": "Cocktail droit de la construction et de l'immobilier"
+  },
+  {
+   "date": "2026-11-23",
+   "qui": "fabiani",
+   "label": "Soirée « L'IA à la barre »"
   }
  ],
  "chiffres": [
@@ -319,18 +324,20 @@
    "soutiens": {
     "nombre": "149",
     "notables": [
-     "Jean-Louis Borie (ancien bâtonnier)",
-     "Amine Ghenim (ancien bâtonnier de Seine-Saint-Denis, ancien membre du CNB)",
-     "Dominique Clemang (ancienne bâtonnière de Dijon, 2018-2019)",
-     "Valérie Grimaud (membre du CNB)",
-     "David van der Vlist (avocat au barreau de Paris, élu au CNB)",
-     "Alice Oriol (avocate, membre du Conseil de l'Ordre)",
-     "Stéphane Maugendre (président du Syndicat des avocat.e.s de France)",
-     "Caroline Mecary (avocate au barreau de Paris, cabinet Mecary)",
-     "Franceline Lepany (avocate honoraire)"
+     "Jean-Louis Borie (ancien batonnier)",
+     "Amine Ghenim (Avocat au Barreau de S/S/Denis, ancien Bâtonnier et ancien membre du CNB)",
+     "Dominique Clemang (Ancienne bâtonnière Dijon 2018-2019)",
+     "Valerie Grimaud (membre du CNB)",
+     "David van der Vlist (Avocat au barreau de Paris - Elu CNB)",
+     "Alice Oriol (Avocate au Barreau de Paris - membre du Conseil de l'ordre)",
+     "Stéphane Maugendre (Président du Syndicat des avocat.e.s de France)",
+     "Fanny Gaillanne (Présidente de la Fondation Frédéric Gaillanne)",
+     "Dominique Giacobi (Avocat honoraire au Barreau de PARIS)",
+     "Caroline Mecary",
+     "Franceline Lepany"
     ]
    },
-   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide.",
+   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Caroline Mecary et Franceline Lepany, déjà listées, n'ont pas été retrouvées à la relecture de la page des soutiens de ce jour : leur fonction a été retirée faute de source relue.",
    "evolutions": [
     {
      "date": "2026-10-20",
@@ -380,6 +387,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 379
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 381
       }
      ]
     },
@@ -391,6 +402,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 1981
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 1987
       }
      ]
     },
@@ -401,6 +416,10 @@
      "releves": [
       {
        "date": "2026-11-02",
+       "abonnes": 1518
+      },
+      {
+       "date": "2026-11-03",
        "abonnes": 1518
       }
      ]
@@ -782,10 +801,17 @@
     }
    ],
    "soutiens": {
-    "nombre": "Non consultable",
-    "notables": []
+    "nombre": "307",
+    "notables": [
+     "Jean-Michel Darrois",
+     "Richard Malka",
+     "Matthias Fekl",
+     "François Zimeray",
+     "Bertrand Périer",
+     "Emmanuel Daoud"
+    ]
    },
-   "limites": "La page des soutiens (/soutiens) n'a pas été relue ce jour ; elle renvoyait une erreur d'accès. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour.",
+   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour.",
    "evolutions": [
     {
      "date": "2026-10-22",
@@ -857,6 +883,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 170
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 192
       }
      ]
     },
@@ -867,6 +897,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 8465
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 8500
       }
      ]
     },
@@ -877,6 +911,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 3192
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 3196
       }
      ]
     }
@@ -1141,6 +1179,12 @@
    "nouveautes": [
     {
      "date": "2026-10-29",
+     "titre": "Retour sur la soirée droit pénal",
+     "resume": "Le binôme publie, sur son site, un compte rendu de son cocktail consacré au droit pénal tenu le 29 octobre (déclaration du candidat ; contenu de l'article non détaillé ici, seul le titre de la page de liste a été lu).",
+     "source": "https://www.fabiani-naquet.paris/actualite"
+    },
+    {
+     "date": "2026-10-29",
      "titre": "Retour sur la soirée jeunes",
      "resume": "Publication du binôme sur son site (rubrique « Instant ») revenant sur sa soirée jeunes du 28 octobre ; déclaration de campagne, sans nouvelle mesure de programme.",
      "source": "https://www.fabiani-naquet.paris/actualite"
@@ -1183,7 +1227,7 @@
      "Jeanne-Zoé Targa (honoraire, Targa)"
     ]
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. Les trois pages de liste des actualités ont été parcourues ce jour (titres et résumés), sans ouvrir chaque article.",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un.",
    "evolutions": [],
    "sources": [
     {
@@ -1221,6 +1265,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 6756
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 6788
       }
      ]
     },
@@ -1232,6 +1280,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 3503
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 3508
       }
      ]
     }
@@ -1488,6 +1540,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 1720
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 1722
       }
      ]
     },
@@ -1499,6 +1555,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 13301
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 13301
       }
      ]
     },
@@ -1509,6 +1569,10 @@
       {
        "date": "2026-11-02",
        "abonnes": 6368
+      },
+      {
+       "date": "2026-11-03",
+       "abonnes": 6371
       }
      ]
     }
@@ -1850,6 +1914,10 @@
   {
    "date": "2026-11-02",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : 149 soutiens (identique à la veille), dernières actualités le 20 oct. Bouyssou–Pascarel : rien depuis le 23 oct. Fabiani–Naquet : rien depuis le 29 oct. (page 1 relue ; pages 2 et 3 non rouvertes). Surin–Griguer : site inchangé, espaces de participation toujours « prochainement ». Limites persistantes : page des soutiens Bouyssou–Pascarel inaccessible ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; recherche de presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-11-03",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Fabiani–Naquet : actualité « Retour sur notre soirée droit pénal » (29 oct.) et soirée « L'IA à la barre » (23 nov.) ajoutées. Saada–Lagrue : 149 soutiens ; fonctions des notables recopiées telles qu'écrites sur la page, deux nouveaux noms (Fanny Gaillanne, Dominique Giacobi), fonctions de Caroline Mecary et Franceline Lepany retirées faute de source relue. Bouyssou–Pascarel : page des soutiens désormais lisible (307 noms, sans fonctions). Surin–Griguer : site inchangé. Limites persistantes : pagination des actualités Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; presse juridique sans article récent sur les candidats 2028."
   }
  ],
  "sources_calendrier": [
