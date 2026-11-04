@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-03",
+ "maj": "2026-11-04",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -391,6 +391,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 381
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 388
       }
      ]
     },
@@ -406,6 +410,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 1987
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 1992
       }
      ]
     },
@@ -421,6 +429,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 1518
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 1517
       }
      ]
     }
@@ -738,6 +750,42 @@
    ],
    "nouveautes": [
     {
+     "date": "2026-10-30",
+     "titre": "Le 70e congrès de l'UIA à Marrakech",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou et Carole Pascarel ont participé au 70e congrès de l'Union internationale des avocats, à Marrakech, et à sa soirée de gala.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-29",
+     "titre": "La justice environnementale à la Maison du Barreau",
+     "resume": "Selon le site de campagne : colloque de l'International Association of Procedural Law sur les réponses du droit aux atteintes à l'environnement ; Jacques Bouyssou y voit de nouveaux champs d'intervention pour les avocats.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-28",
+     "titre": "L'Affaire Marie-Claire en avant-première",
+     "resume": "Selon le site de campagne : lors de l'avant-première du film, Carole Pascarel revient sur le procès de Bobigny de 1972 et sur le combat de Gisèle Halimi.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-28",
+     "titre": "Soirée pétanque place Dauphine",
+     "resume": "Selon le site de campagne : Jacques Bouyssou a participé à la soirée du Cercle Pétanque & Palais, en présence de candidats au Conseil de l'Ordre, au bâtonnat et au CNB.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-27",
+     "titre": "Soirée de présentation des candidats",
+     "resume": "Selon le site de campagne : Alerion Avocats et DWF ont accueilli la présentation des candidats au Conseil de l'Ordre et au bâtonnat (137 rue de l'Université) ; les deux colistiers y ont assisté.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-10-26",
+     "titre": "François Hollande au Cercle de Harlay",
+     "resume": "Selon le site de campagne : lors du dîner-débat du Cercle de Harlay, Jacques Bouyssou a interrogé François Hollande sur la place de l'avocat dans la société européenne.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
      "date": "2026-10-23",
      "titre": "Convention nationale des avocats à Toulouse",
      "resume": "Selon le site du binôme, Jacques Bouyssou et Carole Pascarel ont participé à trois jours de rencontres et de débats sur l'avenir de la profession. Aucune proposition nouvelle.",
@@ -811,7 +859,7 @@
      "Emmanuel Daoud"
     ]
    },
-   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour.",
+   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé.",
    "evolutions": [
     {
      "date": "2026-10-22",
@@ -887,6 +935,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 192
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 203
       }
      ]
     },
@@ -901,6 +953,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 8500
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 8530
       }
      ]
     },
@@ -915,6 +971,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 3196
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 3204
       }
      ]
     }
@@ -1269,6 +1329,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 6788
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 6811
       }
      ]
     },
@@ -1284,6 +1348,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 3508
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 3513
       }
      ]
     }
@@ -1544,6 +1612,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 1722
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 1725
       }
      ]
     },
@@ -1559,6 +1631,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 13301
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 13304
       }
      ]
     },
@@ -1573,6 +1649,10 @@
       {
        "date": "2026-11-03",
        "abonnes": 6371
+      },
+      {
+       "date": "2026-11-04",
+       "abonnes": 6380
       }
      ]
     }
@@ -1918,6 +1998,10 @@
   {
    "date": "2026-11-03",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Fabiani–Naquet : actualité « Retour sur notre soirée droit pénal » (29 oct.) et soirée « L'IA à la barre » (23 nov.) ajoutées. Saada–Lagrue : 149 soutiens ; fonctions des notables recopiées telles qu'écrites sur la page, deux nouveaux noms (Fanny Gaillanne, Dominique Giacobi), fonctions de Caroline Mecary et Franceline Lepany retirées faute de source relue. Bouyssou–Pascarel : page des soutiens désormais lisible (307 noms, sans fonctions). Surin–Griguer : site inchangé. Limites persistantes : pagination des actualités Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-11-04",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Bouyssou–Pascarel : six actualités ajoutées (26 au 30 oct.). Saada–Lagrue : rien depuis le 20 oct. Fabiani–Naquet : page 1 inchangée (pages 2 à 4 non lisibles). Surin–Griguer : site inchangé, vote les 15 et 17 décembre 2026. Détails complets : 85 mesures sur 85. Limites persistantes : pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; presse juridique sans article récent sur les candidats 2028."
   }
  ],
  "sources_calendrier": [
