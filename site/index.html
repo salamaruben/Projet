@@ -573,7 +573,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
 
     var feed = limited(all.slice(0, 12).map(function (x) {
       return newsItem(x.n, x.c, true, DATA.maj && x.n.date >= shift(DATA.maj, -3));
-    }), 4);
+    }), 3);
     var evos = [];
     DATA.candidats.forEach(function (c) { (c.evolutions || []).forEach(function (e) { evos.push({ e: e, c: c }); }); });
     evos.sort(function (a, b) { return a.e.date < b.e.date ? 1 : -1; });
@@ -788,9 +788,9 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     if ((c.evolutions || []).length) evo.appendChild(h("div", { class: "feed" }, c.evolutions.slice().sort(byDateDesc).map(function (e) { return evoItem(e, c, false); })));
     else evo.appendChild(h("p", { class: "note", text: "Aucune modification constatée depuis le début du suivi." }));
     var news = h("div", { class: "sec" }, [h("h2", { text: "Actualités", style: "margin-bottom:32px" })]);
-    if ((c.nouveautes || []).length) news.appendChild(h("div", { class: "feed" }, c.nouveautes.slice().sort(byDateDesc).map(function (n) {
+    if ((c.nouveautes || []).length) news.appendChild(limited(c.nouveautes.slice().sort(byDateDesc).map(function (n) {
       return newsItem(n, c, false, DATA.maj && n.date >= shift(DATA.maj, -3));
-    })));
+    }), 3));
     else news.appendChild(h("p", { class: "note", text: "Aucune actualité datée n'a été trouvée." }));
     if ((c.tribunes || []).length) {
       news.appendChild(h("h3", { text: "Tribunes", style: "margin-top:40px" }));
