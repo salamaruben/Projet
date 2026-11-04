@@ -335,7 +335,595 @@
      "Dominique Giacobi (Avocat honoraire au Barreau de PARIS)",
      "Caroline Mecary",
      "Franceline Lepany"
-    ]
+    ],
+    "liste": [
+     {
+      "nom": "Maxime ABDELAZIZ",
+      "fonction": "Avocat au Barreau de Paris, Dellien Associés"
+     },
+     {
+      "nom": "Nolwenn AGBOVOR",
+      "fonction": "Avocate"
+     },
+     {
+      "nom": "Haitz AGUIRREBARRENA MENDIBOURE",
+      "fonction": "Avocat"
+     },
+     {
+      "nom": "Claude AMARI-DE BEAUFORT",
+      "fonction": "Avocate au Barreau de Toulouse"
+     },
+     {
+      "nom": "Simon APPRIOU",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Francoise ARTUR",
+      "fonction": "avocate honoraire"
+     },
+     {
+      "nom": "Benoit ARVIS",
+      "fonction": "Avocat"
+     },
+     {
+      "nom": "Maëlle AUCHÉ",
+      "fonction": "Avocate au barreau de Paris, Auché Monforte Avocats"
+     },
+     {
+      "nom": "Emilien BATÔT",
+      "fonction": "Avocat associé, Melian Avocats AARPI"
+     },
+     {
+      "nom": "Smina BENNAI",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Patrick BERDUGO",
+      "fonction": "Avocat au Barreau de Paris, SELARL K&B"
+     },
+     {
+      "nom": "Camille BERLAN",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Manon BLANLEUIL",
+      "fonction": "Avocate"
+     },
+     {
+      "nom": "Justine BLOCH",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Jean-Louis BORIE",
+      "fonction": "ancien batonnier"
+     },
+     {
+      "nom": "Quitterie BOUCLY"
+     },
+     {
+      "nom": "Alima BOUMEDIENE THIERY",
+      "fonction": "Avocate au barreau du Val d’Oise"
+     },
+     {
+      "nom": "Suzanne BOUYSSOU",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Johanna BRAILLON",
+      "fonction": "Avocat au barreau de Paris, Cabinet Braillon"
+     },
+     {
+      "nom": "Delphine BRETON",
+      "fonction": "Avocate au Barreau de Nantes"
+     },
+     {
+      "nom": "Simone BRUNET",
+      "fonction": "Avocate honoraire. Poitiers."
+     },
+     {
+      "nom": "François BÉCHIEAU"
+     },
+     {
+      "nom": "Muhammed CANPOLAT",
+      "fonction": "Avocat"
+     },
+     {
+      "nom": "Alexandra CASENAVE-CAMGASTON",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Lol CAUDAN VILA",
+      "fonction": "Avocat au Barreau de PARIS, DELLIEN ASSOCIES"
+     },
+     {
+      "nom": "Aline CHANU",
+      "fonction": "Avocate au barreau de Paris, Lepany et Associés"
+     },
+     {
+      "nom": "Léa CHARBONNIER",
+      "fonction": "Avocate au barreau de Paris, MABILLE-SAUVADE-CHARBONNIER"
+     },
+     {
+      "nom": "Chahnaiz CHERIET"
+     },
+     {
+      "nom": "Agnès CITTADINI",
+      "fonction": "AARPI Cabinet Lanes & Cittadini"
+     },
+     {
+      "nom": "Dominique CLEMANG",
+      "fonction": "Ancienne bâtonnière Dijon 2018-2019"
+     },
+     {
+      "nom": "Sophie CLOCHER",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "David CONERARDY",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Jérôme CONSIGLI",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Louis CONSTANTIN",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Baptiste CUNY",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Marine D'ARANDA",
+      "fonction": "Avocat au barreau de Paris, Paris"
+     },
+     {
+      "nom": "Marie-Océane DAGO",
+      "fonction": "Étudiante en droit"
+     },
+     {
+      "nom": "Philippe DANDALEIX",
+      "fonction": "Avocat au Barreau de Paris, Dandaleix avocats"
+     },
+     {
+      "nom": "Benoît DAVID",
+      "fonction": "Avocat au barreau de paris"
+     },
+     {
+      "nom": "Louise DAVID",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Nadine DEBASC-ZAOUI",
+      "fonction": "Psychologue-psychanalyste"
+     },
+     {
+      "nom": "Anne DEGRÂCES",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Mamadou Samba DIALLO",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Marie DUHAYON",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Frederic DURIF JONSSON",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Neyla EL MECHAT",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Sophie ELIAS",
+      "fonction": "Avocate"
+     },
+     {
+      "nom": "Camille ELLAFI",
+      "fonction": "Elève-avocate HEDAC"
+     },
+     {
+      "nom": "Aude EVIN",
+      "fonction": "Avocate au Barreau de Paris, AARPI EVIN-BORG"
+     },
+     {
+      "nom": "Annabelle FACI",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Armelle FREUND",
+      "fonction": "Elève-avocate"
+     },
+     {
+      "nom": "Hélène GACON",
+      "fonction": "Ancienne avocate au barreau de Paris"
+     },
+     {
+      "nom": "Fanny GAILLANNE",
+      "fonction": "Présidente de la Fondation Frédéric Gaillanne"
+     },
+     {
+      "nom": "Clara GANDIN",
+      "fonction": "Avocate au barreau de Paris, 1948 Avocats"
+     },
+     {
+      "nom": "Mireille GARAIX",
+      "fonction": "Secrétaire Générale de Mairie retraitée"
+     },
+     {
+      "nom": "Amine GHENIM",
+      "fonction": "Avocat au Barreau de S/S/Denis, ancien Bâtonnier et ancien membre du CNB"
+     },
+     {
+      "nom": "Dominique GIACOBI",
+      "fonction": "Avocat honoraire au Barreau de PARIS"
+     },
+     {
+      "nom": "Marion GIARD",
+      "fonction": "Avocate au Barreau de Paris, TerraNostra Avocats"
+     },
+     {
+      "nom": "Emmanuelle GINTRAC",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Sophie GIROU",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Catherine GLON",
+      "fonction": "Avocate"
+     },
+     {
+      "nom": "Philippe GONZALEZ DE GASPARD",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Valerie GRIMAUD",
+      "fonction": "membre du CNB"
+     },
+     {
+      "nom": "Manuela GRÉVY",
+      "fonction": "Avocate aux Conseils"
+     },
+     {
+      "nom": "Raffaëlle GUY",
+      "fonction": "Avocate au Barreau de PARIS"
+     },
+     {
+      "nom": "Isabelle HAUTCOEUR",
+      "fonction": "Avocate"
+     },
+     {
+      "nom": "Florent HENNEQUIN",
+      "fonction": "Avocat au Barreau de Paris, Lepany & Associés"
+     },
+     {
+      "nom": "Fadela HOUARI",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Sophie HUMBERT",
+      "fonction": "Avocate, Humbert"
+     },
+     {
+      "nom": "Alain JANCOU",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Cécile JOUSSELIN",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Chloé JOUVIN",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Julie JUKIC",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Abdelaziz KACHIT"
+     },
+     {
+      "nom": "Stéphane KADRI"
+     },
+     {
+      "nom": "Jérôme KARSENTI"
+     },
+     {
+      "nom": "Raphaël KEMPF",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Théo KERMAGORET",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Erika KOENIG",
+      "fonction": "Avocate retraitée"
+     },
+     {
+      "nom": "Vanessa KOSZCZANSKI",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Judith KRIVINE",
+      "fonction": "avocate au Barreau de Paris, Dellien Associés"
+     },
+     {
+      "nom": "Mélodie KUDAR",
+      "fonction": "Avocate au Barreau de Versailles"
+     },
+     {
+      "nom": "Stephane LAGRUE"
+     },
+     {
+      "nom": "Sylvia LASFARGEAS"
+     },
+     {
+      "nom": "Isabelle LENDREVIE",
+      "fonction": "individuel CABINET LENDREVIE"
+     },
+     {
+      "nom": "Franceline LEPANY",
+      "fonction": "Avocate honoraire"
+     },
+     {
+      "nom": "Emmanuelle LEQUIEN"
+     },
+     {
+      "nom": "Audrey LEREIN",
+      "fonction": "avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Camille LOYER-LOZACH",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Mélanie LUCE",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Catherine MABILLE",
+      "fonction": "Avocate au Barreau de Paris et à la CPI, MABILLE-SAUVADE-CHARBONNIER"
+     },
+     {
+      "nom": "Léa MACAREZ",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Clarisse MACE",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Nadège MAGNON",
+      "fonction": "Avocate au Barreau de Paris, Cabinet d'avocat"
+     },
+     {
+      "nom": "Malvina MAJOUX",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Mélanie MANELPHE",
+      "fonction": "Avocate au barreau de Paris, CABINET AVOCAT"
+     },
+     {
+      "nom": "Adeline MANGOU",
+      "fonction": "Avocate au barreau de Paris, Dellien Associés"
+     },
+     {
+      "nom": "Emilia MAREL",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Louis MARTIN",
+      "fonction": "Praticien du droit international"
+     },
+     {
+      "nom": "Guillaume MARTINE",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Jean-François MARY",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Marie-Pierre MATHIEU",
+      "fonction": "Avocate au Barreau de PARIS"
+     },
+     {
+      "nom": "Stéphane MAUGENDRE",
+      "fonction": "Président du Syndicat des avocat.e.s de France"
+     },
+     {
+      "nom": "Gaelle MAUGIN",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Caroline MECARY",
+      "fonction": "Avocate au barreau de Paris, Cabinet Mecary"
+     },
+     {
+      "nom": "Raphael MOLENAT",
+      "fonction": "Avocat au barreau de Melun"
+     },
+     {
+      "nom": "Bérebgère MOULIN",
+      "fonction": "avocate au barreau de PARIS, LIBERLEX"
+     },
+     {
+      "nom": "Blanche MOURRE",
+      "fonction": "Avocate au Barreau de Paris, Me Blanche MOURRE"
+     },
+     {
+      "nom": "Emmanuelle NÉRAUDAU",
+      "fonction": "Avocate au Barreau de Nantes"
+     },
+     {
+      "nom": "Alice ORIOL",
+      "fonction": "Avocate au Barreau de Paris - membre du Conseil de l'ordre"
+     },
+     {
+      "nom": "Marie PAUNER",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Benoît PELLETIER",
+      "fonction": "Avocat au Barreau de Paris, Dellien Associés"
+     },
+     {
+      "nom": "Marc PITTI-FERRANDI",
+      "fonction": "TerraNostra Avocats"
+     },
+     {
+      "nom": "Mathilde PLACER",
+      "fonction": "Avocate au barreau de Seine-St-Denis"
+     },
+     {
+      "nom": "Annabelle PLEGAT",
+      "fonction": "Avocate au Barreau de Paris, Me Annabelle Plegat"
+     },
+     {
+      "nom": "Juliette POUYÉ"
+     },
+     {
+      "nom": "Juan PROSPER",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Matthieu QUINQUIS",
+      "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "François RABION",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Elise RALLE",
+      "fonction": "Avocate"
+     },
+     {
+      "nom": "Hélène RAMOND",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Daniel RAVEZ"
+     },
+     {
+      "nom": "Charlotte REDLER",
+      "fonction": "Avocate au Barreau de Paris, Cabinet Redler"
+     },
+     {
+      "nom": "Camille RENARD",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Juliette RENAULT",
+      "fonction": "Avocate associée, DELLIEN ASSOCIES"
+     },
+     {
+      "nom": "Emmanuelle RIVIER",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Vanina ROCHICCIOLI",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Augustin SAUVADET",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Didier SEBAN",
+      "fonction": "Avocat au barreau de Paris, Seban avocat"
+     },
+     {
+      "nom": "Claire SELVI",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Aleyna SEZEN",
+      "fonction": "avocate au Barreau d'Izmir"
+     },
+     {
+      "nom": "Carole SULLI",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "Léa TALRICH",
+      "fonction": "Avocate au Barreau de Marseille, Karaa"
+     },
+     {
+      "nom": "Isabelle THIEULEUX",
+      "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Marine THISSE",
+      "fonction": "Avocat"
+     },
+     {
+      "nom": "Bérenger TOURNÉ",
+      "fonction": "Avocat"
+     },
+     {
+      "nom": "François TUYAA BOUSTUGUE",
+      "fonction": "Avocat au Barreau d'Angers"
+     },
+     {
+      "nom": "Elise VAN BENEDEN",
+      "fonction": "Avocate au barreau de Paris"
+     },
+     {
+      "nom": "David VAN DER VLIST",
+      "fonction": "Avocat au barreau de Paris - Elu CNB"
+     },
+     {
+      "nom": "Nicolas VANDEN BOSSCHE",
+      "fonction": "VDB Avocats"
+     },
+     {
+      "nom": "Nicolas VIARD",
+      "fonction": "Avocat au barreau de Paris, L'atelier des droits"
+     },
+     {
+      "nom": "Christophe VIGNEAU"
+     },
+     {
+      "nom": "Vannina VINCENSINI",
+      "fonction": "Avocate au Barreau de Marseille"
+     },
+     {
+      "nom": "Emilien VINOT",
+      "fonction": "Avocat au barreau de Paris"
+     },
+     {
+      "nom": "Anais VISSCHER",
+      "fonction": "Avocate barreau de Paris"
+     },
+     {
+      "nom": "Ines WERTHEIMER",
+      "fonction": "Inspectrice du Travail"
+     },
+     {
+      "nom": "Esther ZAJDENWEBER",
+      "fonction": "AVOCATE AU BARREAU DE PARIS, ZAJDENWEBER"
+     },
+     {
+      "nom": "Cyril ZEKRI",
+      "fonction": "Avocat"
+     },
+     {
+      "nom": "Delphine ZOUGHEBI",
+      "fonction": "Avocate au Barreau de PARIS"
+     }
+    ],
+    "liste_source": "https://votezracheletmarianne.paris/soutiens/",
+    "liste_date": "2026-11-04"
    },
    "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Caroline Mecary et Franceline Lepany, déjà listées, n'ont pas été retrouvées à la relecture de la page des soutiens de ce jour : leur fonction a été retirée faute de source relue.",
    "evolutions": [
@@ -857,7 +1445,941 @@
      "François Zimeray",
      "Bertrand Périer",
      "Emmanuel Daoud"
-    ]
+    ],
+    "liste": [
+     {
+      "nom": "Abdelhak NACIRI BENNANI"
+     },
+     {
+      "nom": "Abderrazak Boudjelti"
+     },
+     {
+      "nom": "Agathe Lemaire"
+     },
+     {
+      "nom": "Agathe Levy-Sebaux"
+     },
+     {
+      "nom": "Agathe Martin"
+     },
+     {
+      "nom": "Agnès LEBOUBE"
+     },
+     {
+      "nom": "Alexandra Jongis"
+     },
+     {
+      "nom": "Alexandre Varaut"
+     },
+     {
+      "nom": "Alexia Germont"
+     },
+     {
+      "nom": "Ali Touhami Elouazzani"
+     },
+     {
+      "nom": "Anne Laure-Helene des Ylouses"
+     },
+     {
+      "nom": "Anne-Carine ROPARS-FURET"
+     },
+     {
+      "nom": "Anne-Carole Cremades"
+     },
+     {
+      "nom": "Anne-Claire JOSEPH"
+     },
+     {
+      "nom": "Antoine Chatain"
+     },
+     {
+      "nom": "Antoine Cotillon"
+     },
+     {
+      "nom": "Antoine Denis-Bertin"
+     },
+     {
+      "nom": "Antoine Fontaine"
+     },
+     {
+      "nom": "Arnaud Constans"
+     },
+     {
+      "nom": "Arnaud Constant"
+     },
+     {
+      "nom": "Arnaud Lizop"
+     },
+     {
+      "nom": "Arooj Ahsan"
+     },
+     {
+      "nom": "Arthur Dethomas"
+     },
+     {
+      "nom": "Arthur Rouyer"
+     },
+     {
+      "nom": "Asma Dodat Akhoun"
+     },
+     {
+      "nom": "Astrid Roger-Vasselin"
+     },
+     {
+      "nom": "Aude Lastes"
+     },
+     {
+      "nom": "Augustin Kemadjou"
+     },
+     {
+      "nom": "Augustin Nicolle"
+     },
+     {
+      "nom": "Aurèle Delors"
+     },
+     {
+      "nom": "Axelle Zenati"
+     },
+     {
+      "nom": "Aïcha Condé"
+     },
+     {
+      "nom": "Benjamin Louzier"
+     },
+     {
+      "nom": "Benjamin Pitcho"
+     },
+     {
+      "nom": "Benjamin Ross"
+     },
+     {
+      "nom": "Benoît Chabert"
+     },
+     {
+      "nom": "Bernard FAU"
+     },
+     {
+      "nom": "Bertrand Périer"
+     },
+     {
+      "nom": "Bruno Deffains"
+     },
+     {
+      "nom": "Bruno Richard"
+     },
+     {
+      "nom": "Béatrice Aumont"
+     },
+     {
+      "nom": "Béatrice Brugues-Reix"
+     },
+     {
+      "nom": "Camille Ogereau"
+     },
+     {
+      "nom": "Carmen Nuñez Lagos"
+     },
+     {
+      "nom": "Carole Delestrade"
+     },
+     {
+      "nom": "Caroline Toby"
+     },
+     {
+      "nom": "Catalina de la Sota"
+     },
+     {
+      "nom": "Catherine BOINEAU"
+     },
+     {
+      "nom": "Catherine Brun-Lorenzi"
+     },
+     {
+      "nom": "Catherine de Combret Thibierge"
+     },
+     {
+      "nom": "Catherine PORGE DORANGE"
+     },
+     {
+      "nom": "Cedric de Pouzilhac"
+     },
+     {
+      "nom": "Charles Morel"
+     },
+     {
+      "nom": "Charles Serres"
+     },
+     {
+      "nom": "Chloé Vialard"
+     },
+     {
+      "nom": "Christelle Verrecchia"
+     },
+     {
+      "nom": "Christian Calfayan"
+     },
+     {
+      "nom": "Christian Saint-Palais"
+     },
+     {
+      "nom": "Christophe Bouchez"
+     },
+     {
+      "nom": "Christophe Fichet"
+     },
+     {
+      "nom": "Christophe Gerschel"
+     },
+     {
+      "nom": "Christophe Jamin"
+     },
+     {
+      "nom": "clarisse brély"
+     },
+     {
+      "nom": "Clemence Lemetais"
+     },
+     {
+      "nom": "Clotilde Lepetit"
+     },
+     {
+      "nom": "Clément Dupoirier"
+     },
+     {
+      "nom": "Constance Benoist"
+     },
+     {
+      "nom": "Corinne Cherki"
+     },
+     {
+      "nom": "Cyril Aufrechter"
+     },
+     {
+      "nom": "cyril GOSSET"
+     },
+     {
+      "nom": "Cédric Alépée"
+     },
+     {
+      "nom": "Céline Chiche"
+     },
+     {
+      "nom": "Céline Lasek"
+     },
+     {
+      "nom": "Dalila Ahmedi"
+     },
+     {
+      "nom": "Daphné Bes de Berc"
+     },
+     {
+      "nom": "David Bellaiche"
+     },
+     {
+      "nom": "David Gordon-Krief"
+     },
+     {
+      "nom": "David Linglart"
+     },
+     {
+      "nom": "David Lutran"
+     },
+     {
+      "nom": "David Rozelmac"
+     },
+     {
+      "nom": "David Syed"
+     },
+     {
+      "nom": "Delphine Driguez"
+     },
+     {
+      "nom": "Denis Chemla"
+     },
+     {
+      "nom": "Dominique Holtzer"
+     },
+     {
+      "nom": "Dominique Inchauspé"
+     },
+     {
+      "nom": "Dominique PIAU"
+     },
+     {
+      "nom": "DYLAN SLAMA"
+     },
+     {
+      "nom": "Edouard Frizon"
+     },
+     {
+      "nom": "Elise Dufour"
+     },
+     {
+      "nom": "Elodie Valette Wlodkowski"
+     },
+     {
+      "nom": "Emile Troboul"
+     },
+     {
+      "nom": "Emilie Morel"
+     },
+     {
+      "nom": "Emilie Vasseur"
+     },
+     {
+      "nom": "Emmanuel Bouttier"
+     },
+     {
+      "nom": "Emmanuel Daoud"
+     },
+     {
+      "nom": "Emmanuel Fatôme"
+     },
+     {
+      "nom": "Emmanuel Kaspereit"
+     },
+     {
+      "nom": "Emmanuel Moyne"
+     },
+     {
+      "nom": "Emmanuel Noirot"
+     },
+     {
+      "nom": "Emmanuel Ravanas"
+     },
+     {
+      "nom": "Emmanuelle Chaille"
+     },
+     {
+      "nom": "Emmanuelle Goby"
+     },
+     {
+      "nom": "Emmanuelle Jardin-Lillo"
+     },
+     {
+      "nom": "Emmanuèle Pierroux"
+     },
+     {
+      "nom": "Eric FORESTIER"
+     },
+     {
+      "nom": "Eric Najsztat"
+     },
+     {
+      "nom": "Eva Touboul"
+     },
+     {
+      "nom": "Fabienne MOUREAU LEVY"
+     },
+     {
+      "nom": "Fabrice van Cauwelaert"
+     },
+     {
+      "nom": "Fanny VIAL"
+     },
+     {
+      "nom": "Flore Asselineau"
+     },
+     {
+      "nom": "florence achache"
+     },
+     {
+      "nom": "Florence Coussau"
+     },
+     {
+      "nom": "Florent Loyseau de Grandmaison"
+     },
+     {
+      "nom": "Florian Lastelle"
+     },
+     {
+      "nom": "Franck Valentin"
+     },
+     {
+      "nom": "François Inchauspé"
+     },
+     {
+      "nom": "François Molinié"
+     },
+     {
+      "nom": "François Veit"
+     },
+     {
+      "nom": "François Zimeray"
+     },
+     {
+      "nom": "Frederic Beaufils"
+     },
+     {
+      "nom": "Frédéric Lévy"
+     },
+     {
+      "nom": "Frédéric Maury"
+     },
+     {
+      "nom": "Félix de Belloy"
+     },
+     {
+      "nom": "Gaetan de Robillard"
+     },
+     {
+      "nom": "Geoffroy Canivet"
+     },
+     {
+      "nom": "GEORGES Lacoeuilhe"
+     },
+     {
+      "nom": "Grégoire Azzaro"
+     },
+     {
+      "nom": "Grégoire Bertrou"
+     },
+     {
+      "nom": "Grégoire Mangeat"
+     },
+     {
+      "nom": "Guillaume BARBE"
+     },
+     {
+      "nom": "Guillaume LE FOYER DE COSTIL"
+     },
+     {
+      "nom": "Gustave Noukague"
+     },
+     {
+      "nom": "Gwendoline CHAVIGNY"
+     },
+     {
+      "nom": "Gépy Koudadje"
+     },
+     {
+      "nom": "Géraud Riom"
+     },
+     {
+      "nom": "Henri de Veyrinas"
+     },
+     {
+      "nom": "Henri Larmaraud"
+     },
+     {
+      "nom": "Hubert d’Alverny"
+     },
+     {
+      "nom": "HUDINA Yves"
+     },
+     {
+      "nom": "Isabelle Armand"
+     },
+     {
+      "nom": "Isabelle Copé Bessis"
+     },
+     {
+      "nom": "Isabelle Rein Lescastéreyres"
+     },
+     {
+      "nom": "Iñaki Saint-Esteben"
+     },
+     {
+      "nom": "Jacques Buhart"
+     },
+     {
+      "nom": "Jean Moyart"
+     },
+     {
+      "nom": "Jean Poulou"
+     },
+     {
+      "nom": "Jean-Baptiste Moquet"
+     },
+     {
+      "nom": "Jean-Daniel Bretzner"
+     },
+     {
+      "nom": "Jean-Didier BELOT"
+     },
+     {
+      "nom": "Jean-Marc Fedida"
+     },
+     {
+      "nom": "Jean-Michel Darrois"
+     },
+     {
+      "nom": "Jean-Philippe GOSSET"
+     },
+     {
+      "nom": "Jean-Pierre Grandjean"
+     },
+     {
+      "nom": "Jean-Yves Le Borgne"
+     },
+     {
+      "nom": "Jessy Kemadjou"
+     },
+     {
+      "nom": "Jim Michel Gabriel"
+     },
+     {
+      "nom": "Joanna Farah"
+     },
+     {
+      "nom": "José Arilla"
+     },
+     {
+      "nom": "Joyce Pelen"
+     },
+     {
+      "nom": "Joëlle Muchada"
+     },
+     {
+      "nom": "Juan Diego Niño Vargas"
+     },
+     {
+      "nom": "Julie Clavel-Thoroval"
+     },
+     {
+      "nom": "Julie Pierrot Blondeau"
+     },
+     {
+      "nom": "Julien Horn"
+     },
+     {
+      "nom": "Julien Mayeras"
+     },
+     {
+      "nom": "Jérome Boursican"
+     },
+     {
+      "nom": "Jérémie Fierville"
+     },
+     {
+      "nom": "Jérôme Werner"
+     },
+     {
+      "nom": "Kami HAERI"
+     },
+     {
+      "nom": "Karim MORAND-LAHOUAZI"
+     },
+     {
+      "nom": "Karine Goulet-Nyssen"
+     },
+     {
+      "nom": "Karine Khau Castelle"
+     },
+     {
+      "nom": "Karine Mignon Louvet"
+     },
+     {
+      "nom": "Kathy Azevedo"
+     },
+     {
+      "nom": "Kathy Ribeiro Leite"
+     },
+     {
+      "nom": "Khadija Azougach"
+     },
+     {
+      "nom": "Kiymet KAYA"
+     },
+     {
+      "nom": "Kyum Lee"
+     },
+     {
+      "nom": "Laurence BOYER"
+     },
+     {
+      "nom": "Laurent Barbotin"
+     },
+     {
+      "nom": "Laurent Benoiton"
+     },
+     {
+      "nom": "Laurent Karila"
+     },
+     {
+      "nom": "Liam Hadhom"
+     },
+     {
+      "nom": "Lorraine Bertagna"
+     },
+     {
+      "nom": "Lou Penot"
+     },
+     {
+      "nom": "Louis Boré"
+     },
+     {
+      "nom": "Louis-Bernard Buchman"
+     },
+     {
+      "nom": "Luana Nilsen"
+     },
+     {
+      "nom": "Luca Di Maria"
+     },
+     {
+      "nom": "Lucas Mascarade"
+     },
+     {
+      "nom": "Lucas Nicolet-Serra"
+     },
+     {
+      "nom": "Lucile Gaillard"
+     },
+     {
+      "nom": "Luna Dumay"
+     },
+     {
+      "nom": "Maeliss Bourbon"
+     },
+     {
+      "nom": "Malka Marcinkowski"
+     },
+     {
+      "nom": "Manon Borde"
+     },
+     {
+      "nom": "Marc Susini"
+     },
+     {
+      "nom": "Marc-Antoine Ledieu"
+     },
+     {
+      "nom": "Margot Pugliese"
+     },
+     {
+      "nom": "Maria Bonon"
+     },
+     {
+      "nom": "Marianne Issa El-Khoury"
+     },
+     {
+      "nom": "Marie Davy"
+     },
+     {
+      "nom": "Marie-Alice Jourde"
+     },
+     {
+      "nom": "Marie-Helene Tonnellier"
+     },
+     {
+      "nom": "Marie-Hortense de Saint-Rémy"
+     },
+     {
+      "nom": "Marie-Hélène Bartoli Vallet"
+     },
+     {
+      "nom": "Marine Le Goff"
+     },
+     {
+      "nom": "Martin Pradel"
+     },
+     {
+      "nom": "Martine Bourry d'Antin"
+     },
+     {
+      "nom": "Martine Coquelle-Chappuis"
+     },
+     {
+      "nom": "Mathilde Jouanneau"
+     },
+     {
+      "nom": "Matteo Anchora"
+     },
+     {
+      "nom": "Matthias Fekl"
+     },
+     {
+      "nom": "Matthieu Brochier"
+     },
+     {
+      "nom": "Matthieu Chirez"
+     },
+     {
+      "nom": "Matthieu Guiraud-Chaumeil"
+     },
+     {
+      "nom": "Matthieu Ollivry"
+     },
+     {
+      "nom": "Matthieu Raoul"
+     },
+     {
+      "nom": "MBOUDA Daniel"
+     },
+     {
+      "nom": "Merabi MURGULIA"
+     },
+     {
+      "nom": "Michel Lévy"
+     },
+     {
+      "nom": "Michele Brault"
+     },
+     {
+      "nom": "Michelle Dayan"
+     },
+     {
+      "nom": "Miguel Angel Davila"
+     },
+     {
+      "nom": "Monika Morawska"
+     },
+     {
+      "nom": "Monique Boury"
+     },
+     {
+      "nom": "My-Kim Yang Paya"
+     },
+     {
+      "nom": "Nadina Darwazeh"
+     },
+     {
+      "nom": "Nathalie Dupuy-Loup"
+     },
+     {
+      "nom": "Nathalie Makowski"
+     },
+     {
+      "nom": "Nicolas Bichot"
+     },
+     {
+      "nom": "Nicolas Flachet"
+     },
+     {
+      "nom": "Nicolas FLORO"
+     },
+     {
+      "nom": "Nicolas Valluet"
+     },
+     {
+      "nom": "Nicolette Kost de Sèvres"
+     },
+     {
+      "nom": "Noam Vives"
+     },
+     {
+      "nom": "Olivier Aumont"
+     },
+     {
+      "nom": "Olivier Barrat"
+     },
+     {
+      "nom": "Olivier Cuperlier"
+     },
+     {
+      "nom": "Olivier Fréget"
+     },
+     {
+      "nom": "Olivier Gutkes"
+     },
+     {
+      "nom": "Olivier Loizon"
+     },
+     {
+      "nom": "Olivier Monange"
+     },
+     {
+      "nom": "Pascal Gourdault-Montagne"
+     },
+     {
+      "nom": "Pascal Wilhelm"
+     },
+     {
+      "nom": "Paul Nafilyan"
+     },
+     {
+      "nom": "Pauline Breuzet-richard"
+     },
+     {
+      "nom": "Philippe Assor"
+     },
+     {
+      "nom": "Philippe Cavalieros"
+     },
+     {
+      "nom": "Philippe Métais"
+     },
+     {
+      "nom": "Philippe Rossignol"
+     },
+     {
+      "nom": "Philippe Touzet"
+     },
+     {
+      "nom": "Pierre-André Netter"
+     },
+     {
+      "nom": "Pierre-Ann Laugery"
+     },
+     {
+      "nom": "Pierre-Antoine Dubecq"
+     },
+     {
+      "nom": "Pierre-Grégoire Marly"
+     },
+     {
+      "nom": "Pierre-Henri Baert"
+     },
+     {
+      "nom": "Pierre-Olivier Brouard"
+     },
+     {
+      "nom": "Pierrick Bouchard"
+     },
+     {
+      "nom": "Rabah HACHED"
+     },
+     {
+      "nom": "Rama Chalak"
+     },
+     {
+      "nom": "Renaud Semerdjian"
+     },
+     {
+      "nom": "Richard Gauvain"
+     },
+     {
+      "nom": "Richard Malka"
+     },
+     {
+      "nom": "Richard Sedillot"
+     },
+     {
+      "nom": "Rusen Aytac"
+     },
+     {
+      "nom": "Salma KHALED"
+     },
+     {
+      "nom": "Salomé Bloch-Berthié"
+     },
+     {
+      "nom": "Samia Azzouz"
+     },
+     {
+      "nom": "Samuel Schmidt"
+     },
+     {
+      "nom": "Sandra VIZZAVONA"
+     },
+     {
+      "nom": "Sandrine Giroud"
+     },
+     {
+      "nom": "Sarah Copeland"
+     },
+     {
+      "nom": "Sarah Hafsa"
+     },
+     {
+      "nom": "schéhérazade ABBOUB"
+     },
+     {
+      "nom": "Serge Bakoa Tonye"
+     },
+     {
+      "nom": "Sibylle Mareau"
+     },
+     {
+      "nom": "Sofia Bougrine"
+     },
+     {
+      "nom": "Sophie Sarre"
+     },
+     {
+      "nom": "Sophie Soubiran"
+     },
+     {
+      "nom": "Stanislas Vailhen"
+     },
+     {
+      "nom": "Stéphane Bonifassi"
+     },
+     {
+      "nom": "Stéphane Malmonté"
+     },
+     {
+      "nom": "Stéphane Sebag"
+     },
+     {
+      "nom": "Stéphanie ROY"
+     },
+     {
+      "nom": "Sébastien Fleury"
+     },
+     {
+      "nom": "Sébastien Segard"
+     },
+     {
+      "nom": "Thibaud d’Alès"
+     },
+     {
+      "nom": "Thierry Aballea"
+     },
+     {
+      "nom": "Thierry Marembert"
+     },
+     {
+      "nom": "Thierry MONTERAN"
+     },
+     {
+      "nom": "Thomas Amico"
+     },
+     {
+      "nom": "Thomas Clay"
+     },
+     {
+      "nom": "Thomas Pontacq"
+     },
+     {
+      "nom": "Thomas Ramonatxo"
+     },
+     {
+      "nom": "Valence Borgia"
+     },
+     {
+      "nom": "Valérie Morales"
+     },
+     {
+      "nom": "Vincent Asselineau"
+     },
+     {
+      "nom": "Vincent Courcelle-Labrousse"
+     },
+     {
+      "nom": "Virginie DELESTRE"
+     },
+     {
+      "nom": "WARTEL Brice"
+     },
+     {
+      "nom": "Xavier Argenton"
+     },
+     {
+      "nom": "Xavier Autain"
+     },
+     {
+      "nom": "Xavier Pernot"
+     },
+     {
+      "nom": "Xavier Silva"
+     },
+     {
+      "nom": "Yann Le Bras"
+     },
+     {
+      "nom": "Yazid gherarmi"
+     },
+     {
+      "nom": "Yohanna Weizmann"
+     },
+     {
+      "nom": "Zoé Royaux"
+     }
+    ],
+    "liste_source": "https://bouyssoupascarel.fr/soutiens",
+    "liste_date": "2026-11-04"
    },
    "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé.",
    "evolutions": [
@@ -1285,7 +2807,1446 @@
      "Béatrice Weiss Gout (avocate honoraire)",
      "Marie-Hélène Cohen Guilleminet (avocat honoraire)",
      "Jeanne-Zoé Targa (honoraire, Targa)"
-    ]
+    ],
+    "liste": [
+     {
+      "nom": "Mathieu Aboulfaraj",
+      "fonction": "Collaborateur - Herbert Smith Freehills Kramer"
+     },
+     {
+      "nom": "Franz Achache",
+      "fonction": "Collaborateur — AVA Law"
+     },
+     {
+      "nom": "Marie Agnese",
+      "fonction": "Collaboratrice - DMMS & Associés"
+     },
+     {
+      "nom": "Eleonore Favero Agostini",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Baptiste Agostini-Croce",
+      "fonction": "Associé - ACBA"
+     },
+     {
+      "nom": "Joëlle AKNIN",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Alexia Alfonsi",
+      "fonction": "Of Counsel"
+     },
+     {
+      "nom": "Michaël AMADO",
+      "fonction": "Associé — AMADO AVOCATS"
+     },
+     {
+      "nom": "Diane Amado",
+      "fonction": "Collaboratrice — Elvinger Hoss Prussen"
+     },
+     {
+      "nom": "Jean-Victor Annicchiarico",
+      "fonction": "Associé — Annicchiarico Avocats"
+     },
+     {
+      "nom": "Laure Ansquer",
+      "fonction": "Collaboratrice — Gondard Associés"
+     },
+     {
+      "nom": "Elise Arfi",
+      "fonction": "Individuelle — Cabinet Elise Arfi"
+     },
+     {
+      "nom": "Sarah Aroudj",
+      "fonction": "Associée"
+     },
+     {
+      "nom": "Guillaume Arrighi",
+      "fonction": "Collaborateur — Bretlim fortuny"
+     },
+     {
+      "nom": "Rachid EL ASRI",
+      "fonction": "Individuel — Rachid EL ASRI"
+     },
+     {
+      "nom": "Géraldine ASTRUP",
+      "fonction": "Associée — Valmy avocats"
+     },
+     {
+      "nom": "Alexandra Atlan-Elhaik",
+      "fonction": "Associée — Atlan & Boksenbaum Avocats,"
+     },
+     {
+      "nom": "Nathalie Attias",
+      "fonction": "Associée - Wan Avocats"
+     },
+     {
+      "nom": "Cyrille Auché",
+      "fonction": "Associé — VERBATEAM AVOCATS"
+     },
+     {
+      "nom": "Karine Audouze",
+      "fonction": "Associée — Watson Farley & Williams"
+     },
+     {
+      "nom": "Laurence Azoux-Bacrie",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Yasmine Bakhoum",
+      "fonction": "Individuelle - TIYI AVOCAT"
+     },
+     {
+      "nom": "Zakia BAKI",
+      "fonction": "Collaboratrice — SIMON ASSOCIES"
+     },
+     {
+      "nom": "Maja Rocco Bancilhon",
+      "fonction": "Associée — Wilma associés"
+     },
+     {
+      "nom": "Eric Barbolosi",
+      "fonction": "Individuel — Barbolosi"
+     },
+     {
+      "nom": "Julie Bariani",
+      "fonction": "EFB"
+     },
+     {
+      "nom": "ALICE MUNCK BARRAUD",
+      "fonction": "Associée — Res Familiae avocats"
+     },
+     {
+      "nom": "Jean-Baptiste Barsi",
+      "fonction": "Associé — RSM avocats"
+     },
+     {
+      "nom": "Bruno Basuyaux",
+      "fonction": "Avocat omis"
+     },
+     {
+      "nom": "Anne Battini",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Céline Cadars Beaufour",
+      "fonction": "Associé(e) — Cadars-Beaufour,Quer,Billaud et associés"
+     },
+     {
+      "nom": "Joséphine Beaufour",
+      "fonction": "Collaboratrice — Hogan Lovells Paris (LLP)"
+     },
+     {
+      "nom": "Jean-Claude Beaujour",
+      "fonction": "Of Counsel — Harlay avocats"
+     },
+     {
+      "nom": "Alessandra Bédot",
+      "fonction": "Collaboratrice"
+     },
+     {
+      "nom": "Chloe Belloy",
+      "fonction": "Individuelle — Cabinet Belloy"
+     },
+     {
+      "nom": "Valérie Benchetrit",
+      "fonction": "Associée — Stone Avocats"
+     },
+     {
+      "nom": "Emily Benedetti",
+      "fonction": "Collaboratrice — Keels Avocats"
+     },
+     {
+      "nom": "Inès Benhassine",
+      "fonction": "Collaboratrice — Blum Legal"
+     },
+     {
+      "nom": "Corine De Bernardi",
+      "fonction": "Individuelle — Corine De Bernardi"
+     },
+     {
+      "nom": "Niels BERNARDINI",
+      "fonction": "Associé — Dorean Avocats"
+     },
+     {
+      "nom": "capucine bernier",
+      "fonction": "Associée — Gide"
+     },
+     {
+      "nom": "Jérôme Le Berre",
+      "fonction": "Associé — Mada"
+     },
+     {
+      "nom": "Marie-Aleth Bertail",
+      "fonction": "Médiatrice en disponibilité du barreau"
+     },
+     {
+      "nom": "Henriette Bertrand",
+      "fonction": "Individuelle — HB-AVOCAT"
+     },
+     {
+      "nom": "Robin Binsard",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Marina Blum",
+      "fonction": "Associée - Blum Legal"
+     },
+     {
+      "nom": "Nathalie Boksenbaum",
+      "fonction": "Associée — Atlan Boksenbaum avocats"
+     },
+     {
+      "nom": "Hélène Bornstein",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Vanessa Bouchara",
+      "fonction": "Associée — BOUCHARA AVOCATS"
+     },
+     {
+      "nom": "Louise BOULET",
+      "fonction": "Individuelle - Louise Boulet avocat"
+     },
+     {
+      "nom": "Angélique Boulloche",
+      "fonction": "Élève avocate — BIGOTS AVOCATS"
+     },
+     {
+      "nom": "Louis-Marie Bourgeois",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Henri Bousseau",
+      "fonction": "Collaborateur/trice — White & Case"
+     },
+     {
+      "nom": "Alexandre M. BRAUN",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Pierre Bregou",
+      "fonction": "Assoucié - CARAVAGE Avocats"
+     },
+     {
+      "nom": "Julien BROCHOT",
+      "fonction": "Associé — DOUMIC AVOCATS"
+     },
+     {
+      "nom": "Géraldine BRUN",
+      "fonction": "Associée — DIAMETIS AARPI"
+     },
+     {
+      "nom": "Patrick Brunot",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Pierre Brunstein-Compard",
+      "fonction": "Collaborateur"
+     },
+     {
+      "nom": "Aurore Buquet",
+      "fonction": "Associée — Cabinet Renaudier"
+     },
+     {
+      "nom": "Baptiste Buresi",
+      "fonction": "Associé — Buresi + Codou AARPI"
+     },
+     {
+      "nom": "Pierre Camadini",
+      "fonction": "Collaborateur — Armengaud Guerlain"
+     },
+     {
+      "nom": "Marie-Alix Canu-Bernard",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Romain CARLES",
+      "fonction": "Associé — TRC ASSOCIES"
+     },
+     {
+      "nom": "Erwan Carpentier",
+      "fonction": "Of Counsel"
+     },
+     {
+      "nom": "Dominique CASANOVA",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Luc Castagnet",
+      "fonction": "Associé - LÉRINS"
+     },
+     {
+      "nom": "Isabel Cavanna",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Renaud Cavoizy",
+      "fonction": "Associé - CBDA Avocats"
+     },
+     {
+      "nom": "Paul Cesar",
+      "fonction": "Associé — sbkg & associés"
+     },
+     {
+      "nom": "Ines CHAABA",
+      "fonction": "Associée — Archipel"
+     },
+     {
+      "nom": "Jean-Yves Chabanne",
+      "fonction": "Associé — Pégand & Chabanne"
+     },
+     {
+      "nom": "Chloé CHANUT",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Marie-Alix Chanut",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Thomas Charat",
+      "fonction": "Associé — RCCL Avocat"
+     },
+     {
+      "nom": "Olivia RISPAL CHATELLE",
+      "fonction": "Associée - Cabinet AUBER"
+     },
+     {
+      "nom": "Marie-Laetitia Chaussy",
+      "fonction": "Associée — Chaussy Avocats"
+     },
+     {
+      "nom": "Ghislaine Chauvet-Leca",
+      "fonction": "Associée — ALTEVA AVOCATS"
+     },
+     {
+      "nom": "Audrey CHEMOULI",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Karim Chentoufi",
+      "fonction": "Collaborateur — De Gaulle Fleurance"
+     },
+     {
+      "nom": "Frédéric Chevallier",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Thierry Cheymol",
+      "fonction": "Associé — Lmt Avocats"
+     },
+     {
+      "nom": "Xavier Chiloux",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Tommaso Cigaina",
+      "fonction": "Associé — Librato avocats"
+     },
+     {
+      "nom": "Inès de CIRUGEDA",
+      "fonction": "Associée — WILHELM & ASSOCIÉS"
+     },
+     {
+      "nom": "Philip Cohen",
+      "fonction": "Associé - Selarl Cabinet Auber"
+     },
+     {
+      "nom": "Fanny Colin",
+      "fonction": "Associée - Versini-Campinchi"
+     },
+     {
+      "nom": "Anne constance Coll",
+      "fonction": "Associée — Cabinet Coll"
+     },
+     {
+      "nom": "Gabriel Colombani",
+      "fonction": "Collaborateur"
+     },
+     {
+      "nom": "Adélaïde Condroyer",
+      "fonction": "Collaboratrice — GMR Avocats"
+     },
+     {
+      "nom": "Jean Claude Cotoni",
+      "fonction": "Honoraire"
+     },
+     {
+      "nom": "thierry cotty",
+      "fonction": "Associé — CVML"
+     },
+     {
+      "nom": "Charles CUNY",
+      "fonction": "Associé — PHI AVOCATS"
+     },
+     {
+      "nom": "Henri d'Armagnac",
+      "fonction": "Associé - d'Armagnac Société d'Avocats"
+     },
+     {
+      "nom": "Elsa Dacol",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Noël DALUS",
+      "fonction": "Collaborateur"
+     },
+     {
+      "nom": "Sylvie Le Damany",
+      "fonction": "Associée - Adaltys Avocats"
+     },
+     {
+      "nom": "Georges DECOCQ",
+      "fonction": "Individuel — Georges Decocq"
+     },
+     {
+      "nom": "Hirbod Dehghani-Azar",
+      "fonction": "Associé — Rsda"
+     },
+     {
+      "nom": "Maxime DELACARTE",
+      "fonction": "Associée - Bourgeois Itzkovitch & Delacarte"
+     },
+     {
+      "nom": "ISABELLE DELAGE",
+      "fonction": "Individuelle — Delage - Phygitalaw Paris"
+     },
+     {
+      "nom": "Florence REBUT DELANOE",
+      "fonction": "Associée — L & Associés"
+     },
+     {
+      "nom": "Xavier Delcros",
+      "fonction": "Président émérite de Section parisienne de l’Association nationale des avocats honoraires"
+     },
+     {
+      "nom": "Jack DEMAISON",
+      "fonction": "Associé - Simon associes"
+     },
+     {
+      "nom": "Damien Devot",
+      "fonction": "Associé — Meyer Fabre Avocats"
+     },
+     {
+      "nom": "Régis Dexant",
+      "fonction": "Avocat Honoraire"
+     },
+     {
+      "nom": "Olivia Dhordain",
+      "fonction": "Individuelle - Outboxing IP"
+     },
+     {
+      "nom": "Mbaye DIAGNE",
+      "fonction": "Associé — SALIMTO AVOCAT"
+     },
+     {
+      "nom": "Alexia DOMARCHI",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Salomé Donsimoni",
+      "fonction": "Collaboratrice"
+     },
+     {
+      "nom": "Solange Doumic",
+      "fonction": "Associée - DOUMIC AVOCATS"
+     },
+     {
+      "nom": "Sandrine DRAGHI-ALONSO",
+      "fonction": "Associée - CABINET CDA DRAGHI-ALONSO"
+     },
+     {
+      "nom": "Rémi-Pierre Drai",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Baudouin Dubelloy",
+      "fonction": "Associé - Antes Avocats"
+     },
+     {
+      "nom": "Kelly-Ann Algar Dubos",
+      "fonction": "Individuelle — Cabinet KORE"
+     },
+     {
+      "nom": "Valérie Duez-Ruff",
+      "fonction": "Individuelle — Dr Avocats"
+     },
+     {
+      "nom": "Karine Clolus Dupont",
+      "fonction": "Associé - LEXINGTON Avocats"
+     },
+     {
+      "nom": "Nicolas DURAND-GASSELIN",
+      "fonction": "Associé - TNDA Avocats"
+     },
+     {
+      "nom": "Loïc DUSSEAU",
+      "fonction": "Associé - DUSSEAU Avocats"
+     },
+     {
+      "nom": "Galina Elbaz",
+      "fonction": "Associée - Cabinet Elbaz et associés"
+     },
+     {
+      "nom": "François Xavier Emmanuelli",
+      "fonction": "Associé — Serre Odin Emmanuelli"
+     },
+     {
+      "nom": "Françoise FABIANI-BRAIBANT",
+      "fonction": "Associée — SCP FABIANI-PINATEL Avocat au Conseil d'Etat et à la Cour de cassation"
+     },
+     {
+      "nom": "Fabienne Fajgenbaum",
+      "fonction": "Associée - cabinet Fajgenbaum"
+     },
+     {
+      "nom": "Camille FAVIER",
+      "fonction": "Associée — RMF"
+     },
+     {
+      "nom": "Laetitia Fayon",
+      "fonction": "Associée - Topaze Avocats"
+     },
+     {
+      "nom": "Saveriu Felli",
+      "fonction": "Individuel - Felli Avocats"
+     },
+     {
+      "nom": "Daniel FELLOUS",
+      "fonction": "Individuel - FELLOUS"
+     },
+     {
+      "nom": "Marie-Veronique Le FEVRE",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Cédric Fischer",
+      "fonction": "Associé - FTMS Avocats"
+     },
+     {
+      "nom": "Gwenaelle Fouler",
+      "fonction": "Associée - LETANG AVOCATS"
+     },
+     {
+      "nom": "Audrey FRADE-GOUILLY",
+      "fonction": "Collaboratrice - Jean-Claude Coulon & Associés"
+     },
+     {
+      "nom": "Pierre Philippe Franc",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Luc Franceschetti",
+      "fonction": "Collaborateur - cabinet LPA Law"
+     },
+     {
+      "nom": "Catherine FRANCESCHI",
+      "fonction": "Associée — ALTEVA AVOCATS"
+     },
+     {
+      "nom": "Angel-Nina FRANCISCI-ACQUAVIVA",
+      "fonction": "Collaboratrice"
+     },
+     {
+      "nom": "Benjamin Gallo",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Nathalie GANIER-RAYMOND",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Pascal-Pierre Garbarini",
+      "fonction": "Associé — Garbarini & Associes"
+     },
+     {
+      "nom": "Julien Gasbaoui",
+      "fonction": "Associé — Gasbaoui avocats"
+     },
+     {
+      "nom": "Anne Georgeon",
+      "fonction": "Associée"
+     },
+     {
+      "nom": "Pascal-André GÉRINIER",
+      "fonction": "Associé — MOSAIK"
+     },
+     {
+      "nom": "Karine Geronimi",
+      "fonction": "Associé — ALTERJURIS AVOCATS"
+     },
+     {
+      "nom": "Jérôme Giannesini",
+      "fonction": "Associé — Grimaldi France"
+     },
+     {
+      "nom": "Côme de Girval",
+      "fonction": "Individuel — Solens avocats"
+     },
+     {
+      "nom": "Thomas Godey",
+      "fonction": "Associé - cabinet Aerige"
+     },
+     {
+      "nom": "Justine Godey",
+      "fonction": "Associée — La Garanderie"
+     },
+     {
+      "nom": "Gilles Godignon-Santoni",
+      "fonction": "Associé — Dolla-Vial"
+     },
+     {
+      "nom": "Pearl GOURDON",
+      "fonction": "Associée — SOURCE AVOCATS"
+     },
+     {
+      "nom": "Béatrice Weiss Gout",
+      "fonction": "Avocate honoraire"
+     },
+     {
+      "nom": "Olivia Granit",
+      "fonction": "Associée — HOFFMAN"
+     },
+     {
+      "nom": "Magali GREINER",
+      "fonction": "Associée - PANTALONI GREINER RACHWAN - AARPI"
+     },
+     {
+      "nom": "Alizée Guena",
+      "fonction": "Collaboratrice"
+     },
+     {
+      "nom": "Jean-Christophe Guerrini",
+      "fonction": "Associé — LexCase"
+     },
+     {
+      "nom": "Emmanuelle GUIARD-SCHMID",
+      "fonction": "Associée — GUIARD-SCHMID"
+     },
+     {
+      "nom": "Marie-Hélène COHEN GUILLEMINET",
+      "fonction": "Avocat Honoraire"
+     },
+     {
+      "nom": "Maryne Guyot",
+      "fonction": "Collaboratrice — Gsmart-Avocats"
+     },
+     {
+      "nom": "Fabienne Haas",
+      "fonction": "Associée — August Debouzy"
+     },
+     {
+      "nom": "Safine HADRI",
+      "fonction": "Associé(e) - Kennedys"
+     },
+     {
+      "nom": "Juliette Halbout",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Charlotte HAMMELRATH",
+      "fonction": "Associée - BFPL-law"
+     },
+     {
+      "nom": "Thomas Heintz",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Emmanuelle Hoffman",
+      "fonction": "Associée - cabinet Hoffman"
+     },
+     {
+      "nom": "Marianne Hutin",
+      "fonction": "Collaboratrice - Cabinet Renaudier"
+     },
+     {
+      "nom": "Gilles Huvelin",
+      "fonction": "Honoraire"
+     },
+     {
+      "nom": "François ILLOUZ",
+      "fonction": "Associé — ILLOUZ AVOCATS"
+     },
+     {
+      "nom": "Marie-Laure Ingouf",
+      "fonction": "Ing & olf"
+     },
+     {
+      "nom": "Pauline Ivaldi",
+      "fonction": "Collaboratrice — DGFLA"
+     },
+     {
+      "nom": "Arnaud JAMBON",
+      "fonction": "Collaborateur — SELARL Valérie GONDARD"
+     },
+     {
+      "nom": "Bertrand JANSSENS",
+      "fonction": "Associé — APG Avocats"
+     },
+     {
+      "nom": "Dominic Jensen",
+      "fonction": "Associé — Jensen & Schweblin"
+     },
+     {
+      "nom": "Emmanuel JEZ",
+      "fonction": "Associé — SAJET"
+     },
+     {
+      "nom": "Aliénor Kamara-Cavarroc",
+      "fonction": "Individuelle — Aliénor Kamara-Cavarroc"
+     },
+     {
+      "nom": "Nissrine Kassase",
+      "fonction": "Associée - Lawlines"
+     },
+     {
+      "nom": "Amale Kenbib",
+      "fonction": "Individuelle — Amale Kenbib"
+     },
+     {
+      "nom": "Ronan Kervadec",
+      "fonction": "Associé — Atypia"
+     },
+     {
+      "nom": "Anass khafif",
+      "fonction": "Collaborateur - LPA Law"
+     },
+     {
+      "nom": "Karim Ben Khamsa",
+      "fonction": "Of Counsel - LPA Law"
+     },
+     {
+      "nom": "Nejma Labidi",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Marianne LABORDE",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Antoine Lafon",
+      "fonction": "Associé — Dorean Avocats"
+     },
+     {
+      "nom": "Manon Lamotte",
+      "fonction": "Associée — Eversheds Sutherland"
+     },
+     {
+      "nom": "Elisabeth Lançon",
+      "fonction": "Collaboratrice — Osborne Clarke"
+     },
+     {
+      "nom": "Albane Lancrenon",
+      "fonction": "Associée — De Gaule Fleurance"
+     },
+     {
+      "nom": "Thibault Lancrenon",
+      "fonction": "Associé — TRIPTYQUE LAW"
+     },
+     {
+      "nom": "Emmanuel Larere",
+      "fonction": "Associé - Gide"
+     },
+     {
+      "nom": "Sophia Lassègue",
+      "fonction": "Collaboratrice"
+     },
+     {
+      "nom": "Maël Brat Latour",
+      "fonction": "Élève avocat — Loulière Avocat"
+     },
+     {
+      "nom": "François LAUGIER",
+      "fonction": "Associé - cabinet Ropers"
+     },
+     {
+      "nom": "Caroline Laverdet",
+      "fonction": "Avocate Individuelle"
+     },
+     {
+      "nom": "Séverine Leca",
+      "fonction": "Client — Bain & Company"
+     },
+     {
+      "nom": "Catherine Leclercq",
+      "fonction": "Associée - Tosca Avocats"
+     },
+     {
+      "nom": "Hélène POIVEY LECLERCQ",
+      "fonction": "Of Counsel — CADIOU POIVEY-LECLERCQ"
+     },
+     {
+      "nom": "Delphine Lefaucheux",
+      "fonction": "Associée — SELARL KOHN ET ASSOCIES"
+     },
+     {
+      "nom": "Thomas Lemarié",
+      "fonction": "Associé - L&P Association d'avocats"
+     },
+     {
+      "nom": "Virginie Lemeulle",
+      "fonction": "Associée — L & associés"
+     },
+     {
+      "nom": "Léopold LEMIALE",
+      "fonction": "Associé - ARCEAU AVOCATS"
+     },
+     {
+      "nom": "Jean-Claude Lemoine",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Jérémy Lereau-Colonna",
+      "fonction": "Collaborateur — Gide Loyrette Nouel"
+     },
+     {
+      "nom": "Maud LETELLIER",
+      "fonction": "Cabinet — Maud LETELLIER"
+     },
+     {
+      "nom": "Jean-Paul Levy",
+      "fonction": "Avocat Honoraire"
+     },
+     {
+      "nom": "Laurence MARTINET LONGEANIE",
+      "fonction": "Individuelle — SELARL MARTINET LONGEANIE"
+     },
+     {
+      "nom": "bertrand Loubeyre",
+      "fonction": "Individuel — cabinet Loubeyre"
+     },
+     {
+      "nom": "Patrick Maisonneuve",
+      "fonction": "Cabinet Maisonneuve"
+     },
+     {
+      "nom": "Laura Mancini",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Charles-Stéphane Marchiani",
+      "fonction": "Associé — Kimia Avocats Aarpi"
+     },
+     {
+      "nom": "Gina Maruani",
+      "fonction": "Associé - Jacquin-Maruani"
+     },
+     {
+      "nom": "Pierre Masquart",
+      "fonction": "Associé — Kimia Avocats"
+     },
+     {
+      "nom": "Paul-Philippe Massoni",
+      "fonction": "Individuel - Massoni Avocats"
+     },
+     {
+      "nom": "Simona MATTA",
+      "fonction": "Individuelle - ZSCHUNKE"
+     },
+     {
+      "nom": "Vincent Maurel",
+      "fonction": "Associé — KPMG"
+     },
+     {
+      "nom": "Lucie Méfano",
+      "fonction": "Individuelle — Lucie Méfano"
+     },
+     {
+      "nom": "Emmanuel Mercinier",
+      "fonction": "Associé — Vigo Avocats"
+     },
+     {
+      "nom": "Thomas Méric",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Katia Merten-Lentz",
+      "fonction": "Associée"
+     },
+     {
+      "nom": "Bertrand Merville",
+      "fonction": "Associé - LA GARANDERIE AVOCATS"
+     },
+     {
+      "nom": "Corinne Metzger",
+      "fonction": "Individuelle - MBDA Associes"
+     },
+     {
+      "nom": "Marie-Estelle Taudou Miquelard",
+      "fonction": "Associée — Source Avocats"
+     },
+     {
+      "nom": "Alexandra Mirabelli",
+      "fonction": "Individuelle — GSMART AVOCATS"
+     },
+     {
+      "nom": "Jean-Hyacinthe De Mitry",
+      "fonction": "Associé - Gide Loyrette Nouel"
+     },
+     {
+      "nom": "Sandy Mockel",
+      "fonction": "Individuelle — Acaffi Avocats"
+     },
+     {
+      "nom": "Élisabeth Moiron-Braud",
+      "fonction": "Honoraire"
+     },
+     {
+      "nom": "yves monerris",
+      "fonction": "Individuel — Yramis Pénal Avocats"
+     },
+     {
+      "nom": "Constance MONOD",
+      "fonction": "Associée — VALMY AVOCATS"
+     },
+     {
+      "nom": "Éric Morain",
+      "fonction": "Avocat honoraire"
+     },
+     {
+      "nom": "Nicolas Moreau",
+      "fonction": "Associé — Bignon Lebray"
+     },
+     {
+      "nom": "Caroline Moreau-Didier",
+      "fonction": "Associée - SELARL MOREAU DIDIER"
+     },
+     {
+      "nom": "Gaëlle MORGERE",
+      "fonction": "Individuelle — Cabinet MORGERE"
+     },
+     {
+      "nom": "Eric Moutet",
+      "fonction": "Individuel — Cabinet Eric Moutet"
+     },
+     {
+      "nom": "Jessica Mrejen",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Elodie Mulon",
+      "fonction": "Associée - CM&A"
+     },
+     {
+      "nom": "Mylène MULQUIN",
+      "fonction": "Associée — ALTEVA AVOCATS"
+     },
+     {
+      "nom": "Catherine MUTELET",
+      "fonction": "Associée — LP-CM Avocats"
+     },
+     {
+      "nom": "Alizée Negroni",
+      "fonction": "Collaboratrice"
+     },
+     {
+      "nom": "Gaspard Neuhoff",
+      "fonction": "Individuel — Tribeca Avocat"
+     },
+     {
+      "nom": "Sébastien NIVAULT",
+      "fonction": "Associé - CELEXANSE"
+     },
+     {
+      "nom": "Karen NOBLINSKI",
+      "fonction": "Associé - NOBLINSKI & AVOCATS"
+     },
+     {
+      "nom": "Stanislas Offroy",
+      "fonction": "Of Counsel - McDermott Will & Schulte"
+     },
+     {
+      "nom": "Hervé OLIEL",
+      "fonction": "Associé - WAN AVOCATS"
+     },
+     {
+      "nom": "Matthieu Ollivry",
+      "fonction": "Associé - Ollivry Avocats"
+     },
+     {
+      "nom": "Elizabeth OSTER",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Valérie Ouazan",
+      "fonction": "Associée — Jacquin-Maruani Associés"
+     },
+     {
+      "nom": "Constance Pacquement",
+      "fonction": "Individuelle — Constance Pacquement"
+     },
+     {
+      "nom": "Marie -Marthe Padovani",
+      "fonction": "Associée — Artois avocats"
+     },
+     {
+      "nom": "Clara Paetzold",
+      "fonction": "Collaboratrice — Orsan"
+     },
+     {
+      "nom": "Florian Palmieri",
+      "fonction": "Associé — ALTEVA AVOCATS"
+     },
+     {
+      "nom": "Loris Palumbo",
+      "fonction": "Associé — ACD AVOCATS"
+     },
+     {
+      "nom": "Pierre-Louis Paoli",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Muriel Pariente",
+      "fonction": "Associée - Ashurst Perkins Coie"
+     },
+     {
+      "nom": "Jérôme Passa",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Christian PAUTONNIER",
+      "fonction": "Associé — SELARL Pautonnier & Associés"
+     },
+     {
+      "nom": "Lauris Pelleautier",
+      "fonction": "Collaborateur — Cousin & Associés"
+     },
+     {
+      "nom": "Stéphane Perfettini",
+      "fonction": "Associé - ASCODE AVOCATS"
+     },
+     {
+      "nom": "Philippe PERICAUD",
+      "fonction": "Associé - AARPI PERICAUD AVOCATS"
+     },
+     {
+      "nom": "Nadia Perlaut",
+      "fonction": "Of Counsel - La Garanderie Avocats"
+     },
+     {
+      "nom": "Pierre Pérot",
+      "fonction": "Associé - Hoyng Rokh Monegier"
+     },
+     {
+      "nom": "Bérangère Peyrat",
+      "fonction": "Associée"
+     },
+     {
+      "nom": "Théo Piazza",
+      "fonction": "Collaborateur — Clifford Chance Europe LLP"
+     },
+     {
+      "nom": "Louis-Marie Pillebout",
+      "fonction": "Associé — Simmons & Simmons France"
+     },
+     {
+      "nom": "Nicolas Pillet",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Sébastien Pitoun",
+      "fonction": "Associé — Société d’avocats Sebastien Pitoun"
+     },
+     {
+      "nom": "Dominique PIWNICA",
+      "fonction": "Associée — PIWNICA & COLIN"
+     },
+     {
+      "nom": "Marie-Ange Pozzo di Borgo",
+      "fonction": "Collaboratrice — Gide Loyrette Nouel"
+     },
+     {
+      "nom": "Tristan de Puget",
+      "fonction": "Associé - FTMS"
+     },
+     {
+      "nom": "Manuel Quesnot-Filippi",
+      "fonction": "MQF AVOCATS"
+     },
+     {
+      "nom": "Bruno Questel",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Margot Questel",
+      "fonction": "Collaboratrice — CDP AVOCATS"
+     },
+     {
+      "nom": "Elsa QUIBEL",
+      "fonction": "Individuel/le — Maître Elsa QUIBEL"
+     },
+     {
+      "nom": "Laetitia RABOURDIN",
+      "fonction": "Collaboratrice — ALTEVA AVOCATS"
+     },
+     {
+      "nom": "Léa Rameau",
+      "fonction": "Associée — Littler France"
+     },
+     {
+      "nom": "Marie Ramos",
+      "fonction": "Collaboratrice — GSMART-AVOCATS"
+     },
+     {
+      "nom": "Emmanuel Raskin",
+      "fonction": "Associé — SEFJ Avocats"
+     },
+     {
+      "nom": "Nicolas Rebbot",
+      "fonction": "Individuel — Nicolas Rebbot"
+     },
+     {
+      "nom": "Guillaume Reboul",
+      "fonction": "Associé - Reboul & Associés"
+     },
+     {
+      "nom": "Richard Renaudier",
+      "fonction": "Associé - Cabinet Renaudier"
+     },
+     {
+      "nom": "Henri Michel Reynaud",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Bruno Richard",
+      "fonction": "Associé - DWF"
+     },
+     {
+      "nom": "Diane Richebourg",
+      "fonction": "Collaboratrice - Morgan Lewis"
+     },
+     {
+      "nom": "Sébastien Rideau-Valentini",
+      "fonction": "Individuel — Rideau Valentini"
+     },
+     {
+      "nom": "Jean-Baptiste Riolacci",
+      "fonction": "Associé - BHR Avocats"
+     },
+     {
+      "nom": "Etienne RIONDET",
+      "fonction": "Of Counsel — SELARL RIONDET ASSOCIES"
+     },
+     {
+      "nom": "Malaury RIPERT",
+      "fonction": "Associée — Lecat & Associés"
+     },
+     {
+      "nom": "LAURENT RIQUELME",
+      "fonction": "Associé — RIQUELME AVOCATS ASSOCIES"
+     },
+     {
+      "nom": "Delphine Roblin-Lapparra",
+      "fonction": "Associée - ARENAIRE AVOCATS"
+     },
+     {
+      "nom": "Julie RODRIGUE",
+      "fonction": "Individuelle — Julie RODRIGUE"
+     },
+     {
+      "nom": "Antonin Gravelin - Rodriguez",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Kate Romain",
+      "fonction": "Associée — Bredin Prat"
+     },
+     {
+      "nom": "Mathilde ROY-MASUREL",
+      "fonction": "Associée — RMF"
+     },
+     {
+      "nom": "Kyra Rubinstein",
+      "fonction": "Individuelle — Rubinstein"
+     },
+     {
+      "nom": "Pierre-Olivier Sur",
+      "fonction": "Associé — FTMS"
+     },
+     {
+      "nom": "Yannick sala",
+      "fonction": "Individuel — Yannick Sala"
+     },
+     {
+      "nom": "Jane Salmon-Fabiani",
+      "fonction": "Associée - Gramond"
+     },
+     {
+      "nom": "Antoine SAPPIN",
+      "fonction": "Individuel — Ascent Avocats"
+     },
+     {
+      "nom": "Nathalie Schmelck",
+      "fonction": "Associée — Schmelck Avocats"
+     },
+     {
+      "nom": "Roxane Schmid",
+      "fonction": "Associée - Num & Lex"
+     },
+     {
+      "nom": "Juliette schweblin",
+      "fonction": "Associée - Jensen & Schweblin"
+     },
+     {
+      "nom": "Pierre-Philippe Sechi",
+      "fonction": "Associé - Vilôme"
+     },
+     {
+      "nom": "Blanche SENECHAL",
+      "fonction": "Individuel/le — Blanche Senechal Avocat"
+     },
+     {
+      "nom": "Seyed Siavash SHAHRJERDI",
+      "fonction": "Individuel — Elegantia Juris"
+     },
+     {
+      "nom": "Patrick SICSIC",
+      "fonction": "Associé(e) — DMMS"
+     },
+     {
+      "nom": "Valérie de Sigoyer",
+      "fonction": "Associée - VDS Avocats"
+     },
+     {
+      "nom": "Patricia Simo",
+      "fonction": "Associée — Cabinet Patricia Simo"
+     },
+     {
+      "nom": "Caroline SIMON-PROVO",
+      "fonction": "Collaborateur/trice — SCP SOULIE COSTE FLORET ET ASSOCIÉS"
+     },
+     {
+      "nom": "Claire Simonin",
+      "fonction": "Individuelle — Cabinet Claire Simonin"
+     },
+     {
+      "nom": "Farah Slimani",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Anna-Maria SOLLACARO",
+      "fonction": "Individuelle — Cabinet SOLLACARO"
+     },
+     {
+      "nom": "Amaury SONET",
+      "fonction": "Associé — VALMY AVOCATS"
+     },
+     {
+      "nom": "Sandy Sorba",
+      "fonction": "Individuelle - Sorba Avocat"
+     },
+     {
+      "nom": "Denis Monégier du Sorbier",
+      "fonction": "Hoyng Rokh Monegier"
+     },
+     {
+      "nom": "Diana Stanciu",
+      "fonction": "Collaboratrice — Simmons & Simmons"
+     },
+     {
+      "nom": "Mario Stasi",
+      "fonction": "Associé — Président de la Licra"
+     },
+     {
+      "nom": "Michel Stefani",
+      "fonction": "Élève avocat — DWF"
+     },
+     {
+      "nom": "Marion Stumm",
+      "fonction": "Associée — Dantès Law"
+     },
+     {
+      "nom": "Marie Subreville",
+      "fonction": "Associée — Source Avocats"
+     },
+     {
+      "nom": "Jeanne-zoe Targa",
+      "fonction": "Honoraire - Targa"
+     },
+     {
+      "nom": "Margaux Tassel",
+      "fonction": "Collaboratrice — Bigot Avocats"
+     },
+     {
+      "nom": "Georges Teboul",
+      "fonction": "Individuel — Cabinet Georges Teboul"
+     },
+     {
+      "nom": "Loïc TECHE",
+      "fonction": "Of Counsel — Simmons & Simmons"
+     },
+     {
+      "nom": "Charles Terdjman",
+      "fonction": "Of Counsel — Gide"
+     },
+     {
+      "nom": "Georges TERRIER",
+      "fonction": "Individuel"
+     },
+     {
+      "nom": "Virginie Tesniere",
+      "fonction": "Associée — Cabinet Nouvelles"
+     },
+     {
+      "nom": "Mythili Thaya",
+      "fonction": "Collaboratrice — Cabinet Arénaire"
+     },
+     {
+      "nom": "Christophe Thévenet",
+      "fonction": "Associé — LIBRATO Avocats"
+     },
+     {
+      "nom": "Edouard Thomas",
+      "fonction": "Associée — Herbert Smith Freehills"
+     },
+     {
+      "nom": "Antoine Tregant",
+      "fonction": "Collaborateur"
+     },
+     {
+      "nom": "Laure Tric",
+      "fonction": "Individuelle — Laure Tric"
+     },
+     {
+      "nom": "Jérôme TRICOT",
+      "fonction": "Associé - cabinet Jacquin Maruani & Associés"
+     },
+     {
+      "nom": "Ugo Valls",
+      "fonction": "Associé - VALLS - Avocats"
+     },
+     {
+      "nom": "Ronald VARDAGUER",
+      "fonction": "Individuel — Cabinet VARDAGUER"
+     },
+     {
+      "nom": "Serge Vatine",
+      "fonction": "Associé"
+     },
+     {
+      "nom": "Montaine Guesdon Vennerie",
+      "fonction": "Associé - CHAINTRIER by COGEP"
+     },
+     {
+      "nom": "Faustine Viala",
+      "fonction": "Associée - Willkie Farr and Gallagher"
+     },
+     {
+      "nom": "Marie-Laetitia de La Ville-Baugé",
+      "fonction": "Associée — Valmy Avocats"
+     },
+     {
+      "nom": "Edgard VINCENSINI",
+      "fonction": "Associé - VINCENSINI BONIN AVOCATS"
+     },
+     {
+      "nom": "Alexis Werl",
+      "fonction": "Associé — Ashurst"
+     },
+     {
+      "nom": "Alexandre Wibaux",
+      "fonction": "Associé — Jones Day"
+     },
+     {
+      "nom": "Cécile Yvorra",
+      "fonction": "Collaboratrice - Cheysson Marchadier et associes"
+     },
+     {
+      "nom": "Ingrid Zafrani",
+      "fonction": "Individuelle - Zafrani avocat"
+     },
+     {
+      "nom": "Renaud Zeitoun",
+      "fonction": "Associé — RENAUD ZEITOUN"
+     },
+     {
+      "nom": "Bouchra Zerouali",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Marielle Andreani",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Françoise LE BARBIER",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Françoise MATHEU-DE LA BEAUJARDIÈRE",
+      "fonction": "Individuelle - MATHEU-DE LA BEAUJARDIÈRE"
+     },
+     {
+      "nom": "Eloïse Bigard-Prunet",
+      "fonction": "Individuelle — Eloïse Bigard-Prunet"
+     },
+     {
+      "nom": "Véronique COUTURIER-CHOLLET",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "VIRGINIE DOMAIN",
+      "fonction": "Individuelle - Cabinet VIRGINIE DOMAIN"
+     },
+     {
+      "nom": "Stéphanie Doré",
+      "fonction": "Associée"
+     },
+     {
+      "nom": "Mathieu FABIANI",
+      "fonction": "Individuel — Mathieu FABIANI"
+     },
+     {
+      "nom": "Léon Lef Forster",
+      "fonction": "Avocat honoraire"
+     },
+     {
+      "nom": "Jean-Etienne GIAMARCHI",
+      "fonction": "Individuel - cabinet DREYFUS-GIAMARCHI"
+     },
+     {
+      "nom": "Alejandra Gomez"
+     },
+     {
+      "nom": "Annabelle LIAUTARD",
+      "fonction": "Associée"
+     },
+     {
+      "nom": "Aurélia Moracchini",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Stéphanie Nicoli",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Paulu Santu Parigi",
+      "fonction": "Sénateur"
+     },
+     {
+      "nom": "Dominique PROUST-BONNIN",
+      "fonction": "President at DPB Société d'avocats"
+     },
+     {
+      "nom": "Muriel HAZIZA SEDBON",
+      "fonction": "Individuelle - SEDBON"
+     },
+     {
+      "nom": "Marie Pierre LEMAS SICSIC",
+      "fonction": "Individuelle"
+     },
+     {
+      "nom": "Apoline Thiolon",
+      "fonction": "Collaboratrice - AXIPITER"
+     },
+     {
+      "nom": "Eric VIGY",
+      "fonction": "Individuel — Cabinet Eric VIGY"
+     }
+    ],
+    "liste_source": "https://www.fabiani-naquet.paris/soutiens",
+    "liste_date": "2026-11-04"
    },
    "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un.",
    "evolutions": [],
@@ -1589,7 +4550,11 @@
    "nouveautes": [],
    "soutiens": {
     "nombre": "Aucun soutien listé",
-    "notables": []
+    "notables": [],
+    "liste": [],
+    "liste_source": "https://www.batonnatsuringriguer.com/",
+    "liste_date": "2026-11-04",
+    "liste_note": "Aucune liste publiée : leur site propose seulement un formulaire pour apporter son soutien."
    },
    "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
    "evolutions": [],
