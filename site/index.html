@@ -877,19 +877,19 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     if (!a || !b || b.date <= a.date) return null;
     return { delta: b.abonnes - a.abonnes, from: a.date, to: b.date };
   }
-  function lineChart(series) {
+  function lineChart(series, fmtY, label) {
     var NS2 = "http://www.w3.org/2000/svg", W = 600, H = 260, L = 64, R = 16, T = 16, B = 44;
-    var dates = [], vmax = 1;
-    series.forEach(function (s) { s.pts.forEach(function (p) { if (dates.indexOf(p.date) < 0) dates.push(p.date); if (p.abonnes > vmax) vmax = p.abonnes; }); });
+    var dates = [], vmax = 1, vmin = 0;
+    series.forEach(function (s) { s.pts.forEach(function (p) { if (dates.indexOf(p.date) < 0) dates.push(p.date); if (p.abonnes > vmax) vmax = p.abonnes; if (p.abonnes < vmin) vmin = p.abonnes; }); });
     dates.sort();
     function X(d) { return dates.length < 2 ? (L + W - R) / 2 : L + (dates.indexOf(d)) / (dates.length - 1) * (W - L - R); }
-    function Y(v) { return T + (1 - v / vmax) * (H - T - B); }
+    function Y(v) { return T + (vmax - v) / (vmax - vmin) * (H - T - B); }
     function el(n, a) { var e = document.createElementNS(NS2, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
-    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, class: "rs-line", role: "img", "aria-label": "Évolution du nombre d'abonnés par compte" });
-    [0, 0.5, 1].forEach(function (f) {
-      var y = Y(vmax * f);
-      svg.appendChild(el("line", { x1: L, x2: W - R, y1: y, y2: y, stroke: "#d6d4e2", "stroke-width": 1 }));
-      var t = el("text", { x: L - 8, y: y + 5, "text-anchor": "end" }); t.textContent = nf(Math.round(vmax * f)); svg.appendChild(t);
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, class: "rs-line", role: "img", "aria-label": label || "Évolution du nombre d'abonnés par binôme" });
+    (vmin < 0 ? [vmin, 0, vmax] : [0, vmax / 2, vmax]).forEach(function (v) {
+      var y = Y(v);
+      svg.appendChild(el("line", { x1: L, x2: W - R, y1: y, y2: y, stroke: v === 0 && vmin < 0 ? "#58607f" : "#d6d4e2", "stroke-width": 1 }));
+      var t = el("text", { x: L - 8, y: y + 5, "text-anchor": "end" }); t.textContent = (fmtY || nf)(Math.round(v)); svg.appendChild(t);
     });
     [dates[0], dates[dates.length - 1]].forEach(function (d, i) {
       if (i && dates.length < 2) return;
@@ -954,7 +954,24 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
         return pts.length >= 2 ? { id: c.id, binome: c.binome, pts: pts } : null;
       }).filter(Boolean);
       if (evo.length) {
-        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Évolution" }), h("p", { class: "note", style: "margin-top:12px", text: "Total des abonnés de chaque binôme, relevé après relevé. Un point n'est tracé que lorsque tous les comptes du binôme ont déjà un relevé ; un compte non relevé un jour garde sa dernière valeur." }), lineChart(evo),
+        var gainSeries = evo.map(function (x) { var b0 = x.pts[0].abonnes; return { id: x.id, binome: x.binome, pts: x.pts.map(function (q) { return { date: q.date, abonnes: q.abonnes - b0 }; }) }; });
+        var svgGain = lineChart(gainSeries, function (v) { return (v > 0 ? "+" : v < 0 ? "\u2212" : "") + nf(Math.abs(v)); }, "Abonnés gagnés ou perdus par binôme depuis le premier relevé");
+        var svgTot = lineChart(evo, null, "Total des abonnés par binôme");
+        svgTot.setAttribute("hidden", "");
+        var noteEvo = h("p", { class: "note", style: "margin-top:12px" });
+        var NOTE_GAIN = "Abonnés gagnés (ou perdus) par chaque binôme depuis le premier relevé : toutes les courbes partent de zéro, ce qui permet de comparer leur progression. Un point n'est tracé que lorsque tous les comptes du binôme ont déjà un relevé.";
+        var NOTE_TOT = "Total des abonnés de chaque binôme, relevé après relevé. Un point n'est tracé que lorsque tous les comptes du binôme ont déjà un relevé ; un compte non relevé un jour garde sa dernière valeur.";
+        noteEvo.textContent = NOTE_GAIN;
+        var bGain = h("button", { type: "button", class: "toggle", style: "--c:#1b2447", "aria-pressed": "true", text: "Gain depuis le premier relevé" });
+        var bTot = h("button", { type: "button", class: "toggle", style: "--c:#1b2447", "aria-pressed": "false", text: "Total des abonnés" });
+        function setEvo(gain) {
+          svgGain.toggleAttribute("hidden", !gain); svgTot.toggleAttribute("hidden", gain); noteEvo.textContent = gain ? NOTE_GAIN : NOTE_TOT;
+          bGain.setAttribute("aria-pressed", gain ? "true" : "false"); bTot.setAttribute("aria-pressed", gain ? "false" : "true");
+        }
+        bGain.addEventListener("click", function () { setEvo(true); });
+        bTot.addEventListener("click", function () { setEvo(false); });
+        sec.push(h("div", { class: "sec" }, [h("h2", { text: "Évolution" }), noteEvo,
+          h("div", { class: "tools", style: "margin:20px 0 0" }, [bGain, bTot]), svgGain, svgTot,
           h("ul", { class: "rs-legend" }, evo.map(function (x) { return h("li", { class: "c-" + x.id, text: x.binome }); }))]));
       }
     } else {
