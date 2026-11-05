@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-04",
+ "maj": "2026-11-05",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -983,6 +983,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 388
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 401
       }
      ]
     },
@@ -1002,6 +1006,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 1992
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 1995
       }
      ]
     },
@@ -1021,6 +1029,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 1517
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 1515
       }
      ]
     }
@@ -2461,6 +2473,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 203
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 218
       }
      ]
     },
@@ -2479,6 +2495,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 8530
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 8542
       }
      ]
     },
@@ -2497,6 +2517,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 3204
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 3220
       }
      ]
     }
@@ -4294,6 +4318,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 6811
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 6830
       }
      ]
     },
@@ -4313,6 +4341,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 3513
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 3547
       }
      ]
     }
@@ -4581,6 +4613,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 1725
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 1724
       }
      ]
     },
@@ -4600,6 +4636,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 13304
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 13310
       }
      ]
     },
@@ -4618,6 +4658,10 @@
       {
        "date": "2026-11-04",
        "abonnes": 6380
+      },
+      {
+       "date": "2026-11-05",
+       "abonnes": 6387
       }
      ]
     }
@@ -4967,6 +5011,10 @@
   {
    "date": "2026-11-04",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Bouyssou–Pascarel : six actualités ajoutées (26 au 30 oct.). Saada–Lagrue : rien depuis le 20 oct. Fabiani–Naquet : page 1 inchangée (pages 2 à 4 non lisibles). Surin–Griguer : site inchangé, vote les 15 et 17 décembre 2026. Détails complets : 85 mesures sur 85. Limites persistantes : pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-11-05",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : toujours 2 actualités, la dernière le 20 oct. Bouyssou–Pascarel : rien après le 30 oct. (38 actualités listées). Fabiani–Naquet : page 1 inchangée, rien après le 29 oct. (pages 2 à 4 non lisibles). Surin–Griguer : site inchangé, vote les 15 et 17 décembre 2026. Détails complets : 85 mesures sur 85. Limites persistantes : pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; presse juridique sans article récent sur les candidats 2028."
   }
  ],
  "sources_calendrier": [
