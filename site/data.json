@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-05",
+ "maj": "2026-11-06",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -56,6 +56,11 @@
    "date": "2026-11-17",
    "qui": "fabiani",
    "label": "Cocktail droit de la construction et de l'immobilier"
+  },
+  {
+   "date": "2026-11-20",
+   "qui": "bouyssou",
+   "label": "Projection « Un bon avocat », Cinéma du Panthéon"
   },
   {
    "date": "2026-11-23",
@@ -923,7 +928,7 @@
      }
     ],
     "liste_source": "https://votezracheletmarianne.paris/soutiens/",
-    "liste_date": "2026-11-04"
+    "liste_date": "2026-11-06"
    },
    "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Caroline Mecary et Franceline Lepany, déjà listées, n'ont pas été retrouvées à la relecture de la page des soutiens de ce jour : leur fonction a été retirée faute de source relue.",
    "evolutions": [
@@ -1010,6 +1015,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 1995
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 2005
       }
      ]
     },
@@ -1033,6 +1042,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 1515
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 1516
       }
      ]
     }
@@ -1350,6 +1363,12 @@
    ],
    "nouveautes": [
     {
+     "date": "2026-11-06",
+     "titre": "Projection « Un bon avocat » (20 novembre)",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou et Carole Pascarel invitent le 20 novembre 2026 au Cinéma du Panthéon à la projection du film « Un bon avocat », en présence de Mélanie Laurent, Tristan Séguéla et Stéphane Sebag, suivie d'un échange avec l'équipe du film sur l'image de l'avocat (héroïsme, solitude, doute, éthique). Heure non indiquée.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
      "date": "2026-10-30",
      "titre": "Le 70e congrès de l'UIA à Marrakech",
      "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou et Carole Pascarel ont participé au 70e congrès de l'Union internationale des avocats, à Marrakech, et à sa soirée de gala.",
@@ -1449,7 +1468,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "307",
+    "nombre": "322",
     "notables": [
      "Jean-Michel Darrois",
      "Richard Malka",
@@ -1476,6 +1495,9 @@
      },
      {
       "nom": "Agnès LEBOUBE"
+     },
+     {
+      "nom": "Alain FENEON"
      },
      {
       "nom": "Alexandra Jongis"
@@ -1550,6 +1572,9 @@
       "nom": "Aurèle Delors"
      },
      {
+      "nom": "Aurélien Boulanger"
+     },
+     {
       "nom": "Axelle Zenati"
      },
      {
@@ -1563,6 +1588,9 @@
      },
      {
       "nom": "Benjamin Ross"
+     },
+     {
+      "nom": "Benoit DIETSCH"
      },
      {
       "nom": "Benoît Chabert"
@@ -1614,6 +1642,9 @@
      },
      {
       "nom": "Cedric de Pouzilhac"
+     },
+     {
+      "nom": "Charles DECAP"
      },
      {
       "nom": "Charles Morel"
@@ -1707,6 +1738,9 @@
      },
      {
       "nom": "Denis Chemla"
+     },
+     {
+      "nom": "Diesbecq Antoine"
      },
      {
       "nom": "Dominique Holtzer"
@@ -1872,6 +1906,9 @@
      },
      {
       "nom": "Henri Larmaraud"
+     },
+     {
+      "nom": "houria si ali"
      },
      {
       "nom": "Hubert d’Alverny"
@@ -2135,6 +2172,9 @@
       "nom": "Miguel Angel Davila"
      },
      {
+      "nom": "Miguel Ángel DÁVILA VALDIVIA"
+     },
+     {
       "nom": "Monika Morawska"
      },
      {
@@ -2246,6 +2286,9 @@
       "nom": "Rama Chalak"
      },
      {
+      "nom": "Renan Budet"
+     },
+     {
       "nom": "Renaud Semerdjian"
      },
      {
@@ -2294,6 +2337,9 @@
       "nom": "Sibylle Mareau"
      },
      {
+      "nom": "Simon Olivennes"
+     },
+     {
       "nom": "Sofia Bougrine"
      },
      {
@@ -2339,9 +2385,6 @@
       "nom": "Thomas Amico"
      },
      {
-      "nom": "Thomas Clay"
-     },
-     {
       "nom": "Thomas Pontacq"
      },
      {
@@ -2355,6 +2398,9 @@
      },
      {
       "nom": "Vincent Asselineau"
+     },
+     {
+      "nom": "Vincent Cohen-Steiner"
      },
      {
       "nom": "Vincent Courcelle-Labrousse"
@@ -2378,6 +2424,9 @@
       "nom": "Xavier Silva"
      },
      {
+      "nom": "Yanis Souhaili"
+     },
+     {
       "nom": "Yann Le Bras"
      },
      {
@@ -2388,12 +2437,18 @@
      },
      {
       "nom": "Zoé Royaux"
+     },
+     {
+      "nom": "Franck Cecen"
+     },
+     {
+      "nom": "Hajar Abdollahi Mandolkani"
      }
     ],
     "liste_source": "https://bouyssoupascarel.fr/soutiens",
-    "liste_date": "2026-11-04"
+    "liste_date": "2026-11-06"
    },
-   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé.",
+   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 6 nov., la liste des soutiens n'a pu être relue que par résumé (téléchargement direct bloqué) : liste enregistrée conservée.",
    "evolutions": [
     {
      "date": "2026-10-22",
@@ -2477,6 +2532,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 218
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 229
       }
      ]
     },
@@ -2499,6 +2558,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 8542
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 8553
       }
      ]
     },
@@ -2521,6 +2584,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 3220
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 3234
       }
      ]
     }
@@ -2823,7 +2890,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "~304 témoignages",
+    "nombre": "360",
     "notables": [
      "Mario Stasi (associé, président de la LICRA)",
      "Xavier Delcros (président émérite de la section parisienne de l'Association nationale des avocats honoraires)",
@@ -3602,6 +3669,10 @@
       "fonction": "Of Counsel — CADIOU POIVEY-LECLERCQ"
      },
      {
+      "nom": "Cédric Lecomte-Swetchine",
+      "fonction": "Indépendant"
+     },
+     {
       "nom": "Delphine Lefaucheux",
       "fonction": "Associée — SELARL KOHN ET ASSOCIES"
      },
@@ -4270,9 +4341,9 @@
      }
     ],
     "liste_source": "https://www.fabiani-naquet.paris/soutiens",
-    "liste_date": "2026-11-04"
+    "liste_date": "2026-11-06"
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un.",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Le 6 nov., la page des soutiens lue était tronquée (302 noms visibles) : liste enregistrée (359) conservée.",
    "evolutions": [],
    "sources": [
     {
@@ -4322,6 +4393,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 6830
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 6861
       }
      ]
     },
@@ -4345,6 +4420,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 3547
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 3615
       }
      ]
     }
@@ -4585,7 +4664,7 @@
     "notables": [],
     "liste": [],
     "liste_source": "https://www.batonnatsuringriguer.com/",
-    "liste_date": "2026-11-04",
+    "liste_date": "2026-11-06",
     "liste_note": "Aucune liste publiée : leur site propose seulement un formulaire pour apporter son soutien."
    },
    "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
@@ -4617,6 +4696,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 1724
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 1747
       }
      ]
     },
@@ -4640,6 +4723,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 13310
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 13322
       }
      ]
     },
@@ -4662,6 +4749,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 6387
+      },
+      {
+       "date": "2026-11-06",
+       "abonnes": 6401
       }
      ]
     }
@@ -5015,6 +5106,14 @@
   {
    "date": "2026-11-05",
    "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Saada–Lagrue : toujours 2 actualités, la dernière le 20 oct. Bouyssou–Pascarel : rien après le 30 oct. (38 actualités listées). Fabiani–Naquet : page 1 inchangée, rien après le 29 oct. (pages 2 à 4 non lisibles). Surin–Griguer : site inchangé, vote les 15 et 17 décembre 2026. Détails complets : 85 mesures sur 85. Limites persistantes : pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; sources lues par résumés ; presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-11-06",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes. Bouyssou–Pascarel : une actualité ajoutée (projection « Un bon avocat », 20 nov., Cinéma du Panthéon), page lue par résumé, sans pagination. Saada–Lagrue : toujours 2 actualités (dernière le 20 oct.), 149 soutiens, aucun nouveau soutien ni retrait. Bouyssou–Pascarel : environ 307 noms lus, aucun nouveau soutien notable repéré, liste enregistrée conservée. Fabiani–Naquet : page 1 d'actualités inchangée ; la liste de soutiens lue ce jour est tronquée (302 noms visibles sur 359 enregistrés) : ancienne liste conservée, aucun nouveau soutien établi. Surin–Griguer : site inchangé, aucun soutien listé, vote les 15 et 17 décembre 2026. Détails complets : 85 mesures sur 85. Limites persistantes : téléchargement direct des pages bloqué par le réseau (curl refusé), sources lues par résumés ; pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; réseaux sociaux non relus ; presse juridique sans article récent sur les candidats 2028."
+  },
+  {
+   "date": "2026-11-06",
+   "resume": "Soutiens, relevé complet des pages du 6 novembre : Fabiani–Naquet 1 nouveau soutien (360 noms listés, aucun retrait) ; Bouyssou–Pascarel 13 nouveaux soutiens et 1 retrait (322 noms listés) ; Saada–Lagrue aucun changement (149) ; Surin–Griguer toujours aucune liste publiée. Le nouveau soutien de Fabiani–Naquet est indiqué « Indépendant » ; la page de Bouyssou–Pascarel ne donne pas de fonction. Aucun nouveau soutien notable. Cette liste complète remplace celle du matin, qui n'avait pu lire que 302 noms sur 359 chez Fabiani–Naquet."
   }
  ],
  "sources_calendrier": [

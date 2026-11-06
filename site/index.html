@@ -907,13 +907,16 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     DATA.candidats.forEach(function (c) { (c.reseaux || []).forEach(function (a) { var r = relevesOf(a); accts.push({ c: c, a: a, last: r.length ? r[r.length - 1] : null, all: r, gain: gainOf(r) }); }); });
     var withNum = accts.filter(function (x) { return x.last; });
     var sec = [];
+    var latestAll = withNum.reduce(function (m, x) { return x.last.date > m ? x.last.date : m; }, "");
+    var stale = function (x) { return x.last && x.last.date < latestAll; };
     if (withNum.length) {
       var rows = withNum.slice().sort(function (x, y) { return y.last.abonnes - x.last.abonnes; }).map(function (x) {
-        return { id: x.c.id, label: x.c.binome + " · " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : ""), value: x.last.abonnes };
+        return { id: x.c.id, label: x.c.binome + " · " + x.a.plateforme + (x.a.label ? " (" + x.a.label + ")" : ""), value: x.last.abonnes, text: stale(x) ? nf(x.last.abonnes) + " (au " + fmt(x.last.date) + ")" : null };
       });
       var legend = h("ul", { class: "rs-legend" }, DATA.candidats.map(function (c) { return h("li", { class: "c-" + c.id, text: c.binome }); }));
-      sec.push(h("div", { style: "margin-top:0" }, [h("h2", { text: "Abonnés par compte" }), h("p", { class: "note", style: "margin-top:12px", text: "Dernier relevé de chaque compte. Les nombres sont relevés à la main sur les profils publics, à la date indiquée : ils ne sont pas vérifiés et ne mesurent ni l'influence ni le soutien." }), barsBlock(rows), legend]));
-      var tot = DATA.candidats.map(function (c) { return { id: c.id, label: c.binome, value: withNum.filter(function (x) { return x.c.id === c.id; }).reduce(function (s, x) { return s + x.last.abonnes; }, 0) }; }).filter(function (r) { return r.value > 0; }).sort(function (a, b) { return b.value - a.value; });
+      sec.push(h("div", { style: "margin-top:0" }, [h("h2", { text: "Abonnés par compte" }), h("p", { class: "note", style: "margin-top:12px", text: "Dernier relevé de chaque compte (la date est indiquée quand un compte n'a pas été relevé le dernier jour). Les nombres sont relevés à la main sur les profils publics, à la date indiquée : ils ne sont pas vérifiés et ne mesurent ni l'influence ni le soutien." }), barsBlock(rows), legend]));
+      var tot = DATA.candidats.map(function (c) { return { id: c.id, label: c.binome, value: withNum.filter(function (x) { return x.c.id === c.id; }).reduce(function (s, x) { return s + x.last.abonnes; }, 0), text: null, nStale: withNum.filter(function (x) { return x.c.id === c.id && stale(x); }).length }; }).filter(function (r) { return r.value > 0; }).sort(function (a, b) { return b.value - a.value; });
+      tot.forEach(function (r) { if (r.nStale) r.text = nf(r.value) + " (dont " + r.nStale + (r.nStale > 1 ? " comptes" : " compte") + " à sa dernière valeur connue)"; });
       if (tot.length) sec.push(h("div", { class: "sec" }, [h("h2", { text: "Total par binôme" }), h("p", { class: "note", style: "margin-top:12px", text: "Somme des abonnés des comptes relevés ; un même abonné peut suivre plusieurs comptes." }), barsBlock(tot)]));
       function gainBlock(title, note, list, per, suffix, rowSuffix, binSuffix) {
         var rowsG = list.slice().sort(function (x, y) { return per(y) - per(x); }).map(function (x) {
@@ -927,10 +930,16 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
         }).filter(function (r) { return r.has; }).sort(function (a2, b2) { return b2.v - a2.v; });
         return h("div", { class: "sec" }, [h("h2", { text: title }), h("p", { class: "note", style: "margin-top:12px", text: note }), barsBlock(rowsG), h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(byB)]);
       }
-      var dayList = accts.filter(function (x) { return x.gain; });
+      var dayList = accts.filter(function (x) { return x.gain && !stale(x); });
+      var dayOut = accts.filter(function (x) { return x.last && stale(x); });
+      var dayOutIds = {}; dayOut.forEach(function (x) { dayOutIds[x.c.id] = true; });
       if (dayList.length) sec.push(gainBlock("Gain ou perte depuis hier", "Écart entre le dernier relevé de chaque compte et celui de la veille. Si un compte n'a pas été relevé la veille, l'écart part de son relevé précédent et la durée est indiquée. Un chiffre négatif est une perte d'abonnés.", dayList, function (x) { return x.gain.delta; }, " depuis hier",
         function (x) { return x.gain.days === 1 ? " depuis hier" : " en " + x.gain.days + " jours"; },
-        function (m) { return m.every(function (x) { return x.gain.days === 1; }) ? " depuis hier" : " depuis le relevé précédent"; }));
+        function (m) { return dayOutIds[m[0].c.id] ? " depuis hier, comptes relevés seulement" : (m.every(function (x) { return x.gain.days === 1; }) ? " depuis hier" : " depuis le relevé précédent"); }));
+      if (dayList.length && dayOut.length) {
+        var blocDay = sec[sec.length - 1];
+        blocDay.appendChild(h("p", { class: "note", style: "margin-top:18px", text: "Non relevé le " + fmt(latestAll) + ", donc absent de ce calcul : " + dayOut.map(function (x) { return x.a.label + " (" + x.c.binome + ")"; }).join(", ") + "." }));
+      }
       var latest = withNum.reduce(function (m, x) { return x.last.date > m ? x.last.date : m; }, "");
       var mon0 = mondayOf(latest), weekShown = 0;
       [mon0, shift(mon0, -7)].forEach(function (mon, wi) {
