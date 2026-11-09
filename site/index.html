@@ -972,9 +972,10 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
         var svgGain = lineChart(gainSeries, function (v) { return (v > 0 ? "+" : v < 0 ? "\u2212" : "") + nf(Math.abs(v)); }, "Abonnés gagnés ou perdus par binôme depuis le premier relevé");
         var svgTot = lineChart(evo, null, "Total des abonnés par binôme");
         svgTot.setAttribute("hidden", "");
-        var noteEvo = h("p", { class: "note", style: "margin-top:12px" });
+        var noteEvo = h("p", { class: "note evo-note", style: "margin-top:12px" });
         var NOTE_GAIN = "Abonnés gagnés (ou perdus) par chaque binôme depuis le premier relevé de chacun de ses comptes : toutes les courbes partent de zéro, ce qui permet de comparer leur progression. Un compte ajouté plus tard compte à partir de son propre premier relevé, sans faire sauter la courbe.";
         var NOTE_TOT = "Total des abonnés de chaque binôme, relevé après relevé. Un compte non relevé un jour garde sa dernière valeur ; l'ajout d'un nouveau compte fait monter le total d'un coup, à la date de son premier relevé.";
+        svgGain.setAttribute("data-note", NOTE_GAIN); svgTot.setAttribute("data-note", NOTE_TOT); svgGain.setAttribute("data-title", "Gain depuis le premier relev\u00e9"); svgTot.setAttribute("data-title", "Total des abonn\u00e9s");
         noteEvo.textContent = NOTE_GAIN;
         var bGain = h("button", { type: "button", class: "toggle", style: "--c:#1b2447", "aria-pressed": "true", text: "Gain depuis le premier relevé" });
         var bTot = h("button", { type: "button", class: "toggle", style: "--c:#1b2447", "aria-pressed": "false", text: "Total des abonnés" });
@@ -991,7 +992,13 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     } else {
       sec.push(h("div", { style: "margin-top:0" }, [h("h2", { text: "Abonnés" }), h("p", { class: "note", style: "margin-top:12px", text: "Aucun chiffre relevé pour l'instant : les graphiques apparaissent dès les premiers relevés." })]));
     }
-    return h("section", { class: "view", id: "v-reseaux" }, sec);
+    if (withNum.length) {
+      var pdfBtn = h("button", { type: "button", class: "rs-pdf" }, ["T\u00e9l\u00e9charger en PDF"]);
+      var pdfMsg = h("span", { class: "rs-pdf-msg", role: "status" });
+      setupReseauxPdf(pdfBtn, pdfMsg);
+      sec.unshift(h("div", { class: "rs-pdfrow" }, [pdfBtn, pdfMsg]));
+    }
+    return h("section", { class: "view", id: "v-reseaux", "data-date": latestAll }, sec);
   }
 
   /* ---------- Soutiens ---------- */
@@ -1036,6 +1043,185 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       h("div", { class: "tools" }, [q]),
       wrap, none
     ]);
+  }
+
+  /* ---------- PDF de l'onglet Réseaux ---------- */
+  function rsModel() {
+    var v = document.getElementById("v-reseaux"), secs = [], cur = null;
+    function txt(e) { return (e.textContent || "").replace(/\s+/g, " ").trim(); }
+    [].forEach.call(v.children, function (el) {
+      if (el.classList.contains("rs-pdfrow")) return;
+      [].forEach.call(el.children, function (n) {
+        var tag = n.tagName.toLowerCase();
+        if (tag === "h2") { cur = { title: txt(n), items: [] }; secs.push(cur); return; }
+        if (!cur || n.classList.contains("evo-note") || n.classList.contains("tools")) return;
+        if (tag === "h3") cur.items.push({ t: "h3", text: txt(n) });
+        else if (tag === "p") cur.items.push({ t: "p", text: txt(n) });
+        else if (n.classList.contains("bars")) {
+          cur.items.push({ t: "bars", rows: [].map.call(n.querySelectorAll(".bar-row"), function (r) {
+            var m = r.className.match(/c-(\w+)/), sp = r.querySelectorAll(".bar-lab span"), f = r.querySelector(".bar-fill");
+            return { id: m ? m[1] : "", label: txt(sp[0]), value: txt(sp[1]), w: f ? parseFloat(f.style.width) || 0 : 0 };
+          }) });
+        } else if (n.classList.contains("rs-legend")) {
+          cur.items.push({ t: "legend", rows: [].map.call(n.querySelectorAll("li"), function (li) { var m = li.className.match(/c-(\w+)/); return { id: m ? m[1] : "", text: txt(li) }; }) });
+        } else if (tag === "svg") cur.items.push({ t: "chart", title: n.getAttribute("data-title") || n.getAttribute("aria-label") || "", note: n.getAttribute("data-note") || "", el: n });
+      });
+    });
+    return { secs: secs, date: v.getAttribute("data-date") || todayISO() };
+  }
+  function drawReseauxPdf(jsPDF, fonts) {
+    var model = rsModel();
+    var doc = new jsPDF({ unit: "mm", format: "a4" });
+    var F = { reg: ["helvetica", "normal"], bold: ["helvetica", "bold"], xb: ["helvetica", "bold"] };
+    if (fonts) {
+      fonts.forEach(function (f) { doc.addFileToVFS(f[0], f[1]); });
+      doc.addFont("Montserrat-Regular.ttf", "Mont", "normal");
+      doc.addFont("Montserrat-Bold.ttf", "Mont", "bold");
+      doc.addFont("Montserrat-ExtraBold.ttf", "MontXB", "normal");
+      F = { reg: ["Mont", "normal"], bold: ["Mont", "bold"], xb: ["MontXB", "normal"] };
+    }
+    var W = 210, H = 297, M = 18, CW = W - 2 * M, TOP = 26, BOT = H - 22, y = TOP;
+    var INK = [27, 36, 71], MUTED = [88, 96, 127], ACC = [201, 98, 46], LINE = [214, 212, 226], TRACK = [232, 230, 240];
+    function font(k) { doc.setFont(F[k][0], F[k][1]); }
+    function color(c) { doc.setTextColor(c[0], c[1], c[2]); }
+    function lh(size, k) { return size * 0.3528 * (k || 1.45); }
+    function wrap(t, size, w, fk) { font(fk || "reg"); doc.setFontSize(size); return doc.splitTextToSize(pt(t), w); }
+    function put(lines, x, yy, size, fk, col, k) {
+      font(fk); doc.setFontSize(size); color(col);
+      var l = lh(size, k);
+      lines.forEach(function (t, i) { doc.text(t, x, yy + l * i + size * 0.3528 * 0.82); });
+      return lines.length * l;
+    }
+    function newPage() { doc.addPage(); y = TOP; }
+    function ensure(hh) { if (y + hh > BOT) newPage(); }
+    function keep(hh) { if (hh <= BOT - TOP && y + hh > BOT) newPage(); }
+    function col(id) { return rgb(RS_COL[id] || "#1b2447"); }
+
+    /* en-tête du document */
+    font("bold"); doc.setFontSize(8); color(ACC); doc.text(pt("SITE INDÉPENDANT, NON OFFICIEL"), M, y + 2, { charSpace: 0.8 });
+    y += 8;
+    y += put([pt("Suivi des abonnés")], M, y, 24, "xb", INK, 1.2) + 1;
+    y += put([pt("Bâtonnat de Paris 2027 · relevé du " + fmt(model.date, true))], M, y, 10.5, "reg", MUTED, 1.3) + 2;
+    y += put(wrap("Comptes des binômes sur LinkedIn et Instagram. Les nombres sont relevés à la main sur les profils publics : ils ne sont pas vérifiés et ne mesurent ni l'influence ni le soutien.", 8.5, CW), M, y, 8.5, "reg", MUTED, 1.45) + 3;
+    doc.setDrawColor(LINE[0], LINE[1], LINE[2]); doc.setLineWidth(0.3); doc.line(M, y, W - M, y); y += 8;
+
+    function bars(rows) {
+      var ROW = 9.4;
+      keep(rows.length * ROW + 2);
+      rows.forEach(function (r) {
+        font("bold"); doc.setFontSize(8.4);
+        var vw = doc.getTextWidth(pt(r.value));
+        var ll = wrap(r.label, 8.2, Math.max(40, CW - vw - 6), "reg");
+        var hh = ll.length * lh(8.2, 1.3) + 2.4 + 3.4;
+        ensure(hh);
+        put(ll, M, y, 8.2, "reg", INK, 1.3);
+        font("bold"); doc.setFontSize(8.4); color(INK); doc.text(pt(r.value), W - M, y + 8.4 * 0.3528 * 0.82, { align: "right" });
+        var by = y + ll.length * lh(8.2, 1.3) + 0.8;
+        doc.setFillColor(TRACK[0], TRACK[1], TRACK[2]); doc.roundedRect(M, by, CW, 2.4, 1.2, 1.2, "F");
+        var c = col(r.id); doc.setFillColor(c[0], c[1], c[2]); doc.roundedRect(M, by, Math.max(2.4, CW * r.w / 100), 2.4, 1.2, 1.2, "F");
+        y += hh;
+      });
+      y += 2;
+    }
+    function legend(rows) {
+      font("reg"); doc.setFontSize(8);
+      keep(8);
+      var x = M;
+      rows.forEach(function (r) {
+        var tw = doc.getTextWidth(pt(r.text)) + 8;
+        if (x + tw > W - M) { x = M; y += 5; }
+        var c = col(r.id); doc.setFillColor(c[0], c[1], c[2]); doc.circle(x + 1.1, y + 1.7, 1.1, "F");
+        color(INK); doc.text(pt(r.text), x + 4, y + 2.7); x += tw + 4;
+      });
+      y += 9;
+    }
+    function chart(it) {
+      var cw = CW, chh = 62;
+      var nl = it.note ? wrap(it.note, 8, CW, "reg") : [];
+      keep(8 + nl.length * lh(8, 1.4) + chh + 6);
+      y += put([pt(it.title)], M, y, 10, "bold", INK, 1.3) + 1;
+      if (nl.length) y += put(nl, M, y, 8, "reg", MUTED, 1.4) + 3;
+      var svg = it.el, vb = svg.viewBox.baseVal, sx = cw / vb.width, sy = chh / vb.height;
+      function X(u) { return M + u * sx; } function Y(u) { return y + u * sy; }
+      function hex(c, d) { try { return rgb(c); } catch (e) { return d; } }
+      [].forEach.call(svg.querySelectorAll("line"), function (l) {
+        var c = hex(l.getAttribute("stroke"), LINE); doc.setDrawColor(c[0], c[1], c[2]); doc.setLineWidth(0.25);
+        doc.line(X(+l.getAttribute("x1")), Y(+l.getAttribute("y1")), X(+l.getAttribute("x2")), Y(+l.getAttribute("y2")));
+      });
+      [].forEach.call(svg.querySelectorAll("polyline"), function (pl) {
+        var c = hex(pl.getAttribute("stroke"), INK); doc.setDrawColor(c[0], c[1], c[2]); doc.setLineWidth(0.8); doc.setLineCap(1); doc.setLineJoin(1);
+        var pts = pl.getAttribute("points").split(" ").map(function (q) { var a = q.split(","); return [X(+a[0]), Y(+a[1])]; });
+        for (var i = 1; i < pts.length; i++) doc.line(pts[i - 1][0], pts[i - 1][1], pts[i][0], pts[i][1]);
+      });
+      [].forEach.call(svg.querySelectorAll("circle"), function (ci) {
+        var c = hex(ci.getAttribute("fill"), INK); doc.setFillColor(c[0], c[1], c[2]);
+        doc.circle(X(+ci.getAttribute("cx")), Y(+ci.getAttribute("cy")), 1, "F");
+      });
+      font("reg"); doc.setFontSize(7.5); color(MUTED);
+      [].forEach.call(svg.querySelectorAll("text"), function (t) {
+        var an = t.getAttribute("text-anchor");
+        doc.text(pt(t.textContent), X(+t.getAttribute("x")), Y(+t.getAttribute("y")), { align: an === "end" ? "right" : an === "middle" ? "center" : "left" });
+      });
+      y += chh + 6;
+    }
+
+    function firstNeed(sec) {
+      var need = 12;
+      for (var k = 0; k < sec.items.length; k++) {
+        var it = sec.items[k];
+        if (it.t === "p") need += wrap(it.text, 8.5, CW).length * lh(8.5, 1.45) + 3;
+        else if (it.t === "bars") return need + Math.min(it.rows.length * 9.4 + 2, BOT - TOP - need);
+        else if (it.t === "chart") return need + 8 + (it.note ? wrap(it.note, 8, CW).length * lh(8, 1.4) : 0) + 62 + 6;
+        else if (it.t === "h3") need += 8;
+      }
+      return need;
+    }
+    model.secs.forEach(function (sec, si) {
+      if (si) y += 10;
+      keep(firstNeed(sec));
+      y += put(wrap(sec.title, 15, CW, "xb"), M, y, 15, "xb", INK, 1.2) + 2;
+      sec.items.forEach(function (it) {
+        if (it.t === "p") y += put(wrap(it.text, 8.5, CW), M, y, 8.5, "reg", MUTED, 1.45) + 3;
+        else if (it.t === "h3") { ensure(16); y += 3; y += put([pt(it.text)], M, y, 10.5, "bold", INK, 1.3) + 2; }
+        else if (it.t === "bars") bars(it.rows);
+        else if (it.t === "legend") legend(it.rows);
+        else if (it.t === "chart") chart(it);
+      });
+    });
+
+    /* en-tête et pied de page courants */
+    var n = doc.getNumberOfPages();
+    for (var i = 1; i <= n; i++) {
+      doc.setPage(i);
+      font("bold"); doc.setFontSize(6.8); color(MUTED);
+      doc.text(pt("BÂTONNAT DE PARIS 2027"), M, 11, { charSpace: 0.7 });
+      doc.text(pt("SUIVI DES ABONNÉS"), W - M, 11, { charSpace: 0.7, align: "right" });
+      doc.setDrawColor(LINE[0], LINE[1], LINE[2]); doc.setLineWidth(0.2); doc.line(M, 15, W - M, 15); doc.line(M, H - 16, W - M, H - 16);
+      font("reg"); doc.setFontSize(7.5); color(MUTED);
+      doc.text(pt("Relevé du " + fmt(model.date, true) + "  ·  Site indépendant, non officiel  ·  Chiffres relevés à la main, non vérifiés"), M, H - 11);
+      doc.text(i + " / " + n, W - M, H - 11, { align: "right" });
+    }
+    return doc.output("arraybuffer");
+  }
+  function setupReseauxPdf(btn, msg) {
+    var dlRef = null;
+    var getDl = (window.claude && window.claude.use) ? window.claude.use("downloads").catch(function () { return null; }) : Promise.resolve(null);
+    getDl.then(function (d) { dlRef = d; });
+    btn.addEventListener("click", function () {
+      var pre = null;
+      if (!dlRef && window.matchMedia("(pointer: coarse)").matches) {
+        try { pre = window.open("", "_blank"); if (pre) pre.document.write("<p style='font:18px sans-serif;padding:24px'>Préparation du PDF…</p>"); } catch (e) { pre = null; }
+      }
+      btn.disabled = true; msg.textContent = "Préparation du PDF…";
+      var lib = window.jspdf && window.jspdf.jsPDF;
+      if (!lib) { msg.textContent = "Le générateur de PDF n'a pas pu se charger. Rechargez la page."; btn.disabled = false; return; }
+      var date = (document.getElementById("v-reseaux").getAttribute("data-date")) || todayISO();
+      loadFonts().then(function (fonts) {
+        return savePdf(drawReseauxPdf(lib, fonts), "batonnat-paris-2027-suivi-abonnes-" + date + ".pdf", dlRef, pre);
+      }).then(function () { msg.textContent = pre ? "PDF ouvert dans un nouvel onglet." : "PDF enregistré."; })
+        .catch(function (e) { if (pre && !pre.closed) pre.close(); msg.textContent = e && e.code === "declined" ? "" : "Le PDF n'a pas pu être enregistré. Réessayez."; })
+        .then(function () { btn.disabled = false; });
+    });
   }
 
   /* ---------- PDF export ---------- */
@@ -1388,6 +1574,11 @@ details.sup .sup-src { padding: 6px 24px 22px; margin: 0; }
 </style>
 <style id="reseaux-css">
 /* ===== Onglet Réseaux ===== */
+.rs-pdfrow { display: flex; align-items: center; gap: 8px 16px; flex-wrap: wrap; margin: 0 0 30px; }
+.rs-pdf { display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 20px; border: 0; border-radius: 999px; background: #1b2447; color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.rs-pdf::after { content: "\2193"; display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #f4b98a; color: #1b2447; font-size: 15px; }
+.rs-pdf:disabled { opacity: .6; cursor: progress; }
+.rs-pdf-msg { font-size: 14px; color: var(--muted); }
 .bars { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; max-width: 760px; }
 .bar-row { display: grid; gap: 6px; }
 .bar-lab { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; }
@@ -1506,6 +1697,8 @@ details.sup .sup-src { padding: 6px 24px 22px; margin: 0; }
   .cswitch { position: sticky; top: 0; z-index: 40; display: flex; gap: 10px; justify-content: center; padding: 12px 10px; margin: -24px 0 16px; border-radius: 0 0 22px 22px; background: rgba(241,239,245,.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .cswitch a { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 17px; letter-spacing: .02em; color: #fff; text-decoration: none; opacity: .55; border: 3px solid transparent; }
   .cswitch a.on { opacity: 1; border-color: var(--ink); }
+  .rs-pdf { font-size: 16px; padding: 12px 12px 12px 22px; }
+  .rs-pdf-msg { font-size: 15px; }
   /* pied de page compact */
   footer { padding-block: 16px 18px; margin-top: 8px; border-radius: 22px 22px 0 0; font-size: 12px; line-height: 1.45; }
 }
