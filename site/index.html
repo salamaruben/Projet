@@ -931,14 +931,18 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
         return h("div", { class: "sec" }, [h("h2", { text: title }), h("p", { class: "note", style: "margin-top:12px", text: note }), barsBlock(rowsG), h("h3", { text: "Par binôme", style: "margin-top:32px" }), barsBlock(byB)]);
       }
       var dayList = accts.filter(function (x) { return x.gain && !stale(x); });
-      var dayOut = accts.filter(function (x) { return x.last && stale(x); });
-      var dayOutIds = {}; dayOut.forEach(function (x) { dayOutIds[x.c.id] = true; });
+      var dayStale = accts.filter(function (x) { return x.last && stale(x); });
+      var dayNew = accts.filter(function (x) { return x.last && !stale(x) && !x.gain; });
+      var dayOutIds = {}; dayStale.concat(dayNew).forEach(function (x) { dayOutIds[x.c.id] = true; });
+      var nomCompte = function (x) { return x.a.plateforme + (x.a.label ? " " + x.a.label : "") + " (" + x.c.binome + ")"; };
       if (dayList.length) sec.push(gainBlock("Gain ou perte depuis hier", "Écart entre le dernier relevé de chaque compte et celui de la veille. Si un compte n'a pas été relevé la veille, l'écart part de son relevé précédent et la durée est indiquée. Un chiffre négatif est une perte d'abonnés.", dayList, function (x) { return x.gain.delta; }, " depuis hier",
         function (x) { return x.gain.days === 1 ? " depuis hier" : " en " + x.gain.days + " jours"; },
-        function (m) { return dayOutIds[m[0].c.id] ? " depuis hier, comptes relevés seulement" : (m.every(function (x) { return x.gain.days === 1; }) ? " depuis hier" : " depuis le relevé précédent"); }));
-      if (dayList.length && dayOut.length) {
-        var blocDay = sec[sec.length - 1];
-        blocDay.appendChild(h("p", { class: "note", style: "margin-top:18px", text: "Non relevé le " + fmt(latestAll) + ", donc absent de ce calcul : " + dayOut.map(function (x) { return x.a.label + " (" + x.c.binome + ")"; }).join(", ") + "." }));
+        function (m) { return (m.every(function (x) { return x.gain.days === 1; }) ? " depuis hier" : " depuis le relevé précédent") + (dayOutIds[m[0].c.id] ? " (partiel)" : ""); }));
+      if (dayList.length && (dayStale.length || dayNew.length)) {
+        var partsDay = [];
+        if (dayStale.length) partsDay.push("Non relevé le " + fmt(latestAll) + ", donc absent de ce calcul : " + dayStale.map(nomCompte).join(", ") + ".");
+        if (dayNew.length) partsDay.push("Premier relevé le " + fmt(latestAll) + ", pas encore de comparaison possible : " + dayNew.map(nomCompte).join(", ") + ".");
+        sec[sec.length - 1].appendChild(h("p", { class: "note", style: "margin-top:18px", text: partsDay.join(" ") }));
       }
       var latest = withNum.reduce(function (m, x) { return x.last.date > m ? x.last.date : m; }, "");
       var mon0 = mondayOf(latest), weekShown = 0;
@@ -955,21 +959,22 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
       var evo = DATA.candidats.map(function (c) {
         var mine = accts.filter(function (x) { return x.c.id === c.id && x.all.length; });
         if (!mine.length) return null;
-        var start = mine.reduce(function (m, x) { return x.all[0].date > m ? x.all[0].date : m; }, "");
         var ds = [];
-        mine.forEach(function (x) { x.all.forEach(function (r) { if (r.date >= start && ds.indexOf(r.date) < 0) ds.push(r.date); }); });
+        mine.forEach(function (x) { x.all.forEach(function (r) { if (ds.indexOf(r.date) < 0) ds.push(r.date); }); });
         ds.sort();
-        var pts = ds.map(function (d) { return { date: d, abonnes: mine.reduce(function (s2, x) { var r = lastUpTo(x.all, d); return s2 + (r ? r.abonnes : 0); }, 0) }; });
-        return pts.length >= 2 ? { id: c.id, binome: c.binome, pts: pts } : null;
+        function at(x, d) { return x.all[0].date <= d ? lastUpTo(x.all, d) : null; }
+        var pts = ds.map(function (d) { return { date: d, abonnes: mine.reduce(function (s2, x) { var r = at(x, d); return s2 + (r ? r.abonnes : 0); }, 0) }; });
+        var gpts = ds.map(function (d) { return { date: d, abonnes: mine.reduce(function (s2, x) { var r = at(x, d); return s2 + (r ? r.abonnes - x.all[0].abonnes : 0); }, 0) }; });
+        return pts.length >= 2 ? { id: c.id, binome: c.binome, pts: pts, gpts: gpts } : null;
       }).filter(Boolean);
       if (evo.length) {
-        var gainSeries = evo.map(function (x) { var b0 = x.pts[0].abonnes; return { id: x.id, binome: x.binome, pts: x.pts.map(function (q) { return { date: q.date, abonnes: q.abonnes - b0 }; }) }; });
+        var gainSeries = evo.map(function (x) { return { id: x.id, binome: x.binome, pts: x.gpts }; });
         var svgGain = lineChart(gainSeries, function (v) { return (v > 0 ? "+" : v < 0 ? "\u2212" : "") + nf(Math.abs(v)); }, "Abonnés gagnés ou perdus par binôme depuis le premier relevé");
         var svgTot = lineChart(evo, null, "Total des abonnés par binôme");
         svgTot.setAttribute("hidden", "");
         var noteEvo = h("p", { class: "note", style: "margin-top:12px" });
-        var NOTE_GAIN = "Abonnés gagnés (ou perdus) par chaque binôme depuis le premier relevé : toutes les courbes partent de zéro, ce qui permet de comparer leur progression. Un point n'est tracé que lorsque tous les comptes du binôme ont déjà un relevé.";
-        var NOTE_TOT = "Total des abonnés de chaque binôme, relevé après relevé. Un point n'est tracé que lorsque tous les comptes du binôme ont déjà un relevé ; un compte non relevé un jour garde sa dernière valeur.";
+        var NOTE_GAIN = "Abonnés gagnés (ou perdus) par chaque binôme depuis le premier relevé de chacun de ses comptes : toutes les courbes partent de zéro, ce qui permet de comparer leur progression. Un compte ajouté plus tard compte à partir de son propre premier relevé, sans faire sauter la courbe.";
+        var NOTE_TOT = "Total des abonnés de chaque binôme, relevé après relevé. Un compte non relevé un jour garde sa dernière valeur ; l'ajout d'un nouveau compte fait monter le total d'un coup, à la date de son premier relevé.";
         noteEvo.textContent = NOTE_GAIN;
         var bGain = h("button", { type: "button", class: "toggle", style: "--c:#1b2447", "aria-pressed": "true", text: "Gain depuis le premier relevé" });
         var bTot = h("button", { type: "button", class: "toggle", style: "--c:#1b2447", "aria-pressed": "false", text: "Total des abonnés" });

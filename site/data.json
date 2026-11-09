@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-06",
+ "maj": "2026-11-09",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -155,7 +155,7 @@
       },
       {
        "texte": "Cotisations d'assurance proportionnées au chiffre d'affaires et cotisation ordinale progressive (aujourd'hui plafonnée au-delà de 350 000 € de revenu).",
-       "detail": "Le programme propose deux changements de cotisations.\nD'abord, individualiser les cotisations d'assurance responsabilité civile professionnelle : elles dépendraient du chiffre d'affaires de chaque avocat et des risques réellement encourus, au lieu d'être identiques pour tous.\nEnsuite, instaurer une véritable progressivité de la cotisation ordinale (la cotisation versée à l'Ordre) : aujourd'hui elle est plafonnée à partir d'un revenu annuel de 350 000 €, ce qui signifie que les revenus plus élevés ne paient pas davantage. Le programme veut supprimer cet effet de plafond.\nLe manifeste ne donne ni taux, ni seuils de progressivité, ni mode de calcul, ni délai.",
+       "detail": "Le programme propose deux changements de cotisations.\nD'abord, individualiser les cotisations d'assurance responsabilité civile professionnelle : elles dépendraient du chiffre d'affaires de chaque avocat et des risques réellement encourus, au lieu d'être identiques pour tous.\nEnsuite, instaurer une véritable progressivité de la cotisation ordinale (la cotisation versée à l'Ordre) : aujourd'hui elle est plafonnée à partir d'un revenu annuel de 350 000 €, ce qui signifie que les revenus plus élevés ne paient pas davantage. Le programme veut supprimer cet effet de plafond.\nLe manifeste ne donne ni taux, ni seuils de progressivité, ni mode de calcul, ni délai.\nPrécision de l'article du 6 novembre 2026 : selon les candidates, le barème actuel plafonne à 310 626 € de revenus annuels, pour une cotisation maximale de 6 249 € par an ; l'article ne donne pas de nouveau barème.",
        "source": "https://votezracheletmarianne.paris/#manifeste"
       },
       {
@@ -215,6 +215,13 @@
        "texte": "Deux représentants du jeune barreau avec voix consultative.",
        "detail": "Le programme prévoit l'élection de deux représentants du jeune barreau, qui auraient voix consultative (ils donnent leur avis mais ne votent pas) au sein de l'Ordre.\nLe manifeste ne donne pas d'autre précision (mode d'élection, âge ou ancienneté retenus).",
        "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Place des collaborateurs et collaboratrices au Conseil de l'Ordre, avec voix consultative.",
+       "detail": "Selon l'article du 27 octobre 2026, les candidates veulent donner davantage de place aux collaborateurs et collaboratrices au sein du Conseil de l'Ordre, avec une voix consultative (non décisionnelle).\nL'article ne précise ni le nombre de sièges ni le calendrier.",
+       "points": [],
+       "source": "https://votezracheletmarianne.paris/actualites/70-d-abstention-aux-elections-au-batonnat/",
+       "date": "2026-10-27"
       }
      ],
      "resume": "Ouvrir le fonctionnement de l'Ordre : transparence, consultation des avocats et plafonnement des dépenses de campagne."
@@ -268,6 +275,24 @@
        "texte": "Renégociation de la prévoyance pour financer un congé de naissance supplémentaire de deux mois.",
        "detail": "Le programme propose de renégocier le contrat de prévoyance (l'assurance qui protège les avocats en cas d'arrêt ou d'événement de vie) afin que chacun puisse bénéficier d'un congé supplémentaire de naissance de deux mois.\nLe manifeste ne donne ni montant de cotisation, ni calendrier.",
        "source": "https://votezracheletmarianne.paris/#manifeste"
+      },
+      {
+       "texte": "Prévention collective des risques psychosociaux, formation des cabinets à la santé au travail et réflexion sur les rythmes de travail.",
+       "detail": "Selon les articles des candidates (3 novembre 2026), elles veulent faire de la prévention des risques psychosociaux un enjeu collectif, en tenant compte des modes d'exercice, y compris pour les avocats qui travaillent seuls.\nElles proposent aussi de former les cabinets aux fondamentaux de la santé au travail et d'interroger, avec la profession, les rythmes de travail et les effets du statut libéral.\nL'article ne donne ni chiffre, ni calendrier, ni format de formation.",
+       "points": [
+        "Prévention des risques psychosociaux comme enjeu collectif",
+        "Formation des cabinets aux fondamentaux de la santé au travail",
+        "Réflexion avec la profession sur les rythmes de travail et le statut libéral"
+       ],
+       "source": "https://votezracheletmarianne.paris/actualites/notre-sante-une-cause-a-defendre/",
+       "date": "2026-11-03"
+      },
+      {
+       "texte": "Supervisions cliniques avec des cliniciens pour limiter les effets des traumatismes vicariants.",
+       "detail": "Selon l'article du 3 novembre 2026, les candidates proposent des séances de supervision clinique, dans le cadre d'un partenariat avec des cliniciens, afin de limiter les effets des traumatismes vicariants (retentissement des dossiers difficiles sur l'avocat). Elles parlent d'« un réseau solide », sans en donner la taille.\nL'article ne précise ni calendrier ni financement.",
+       "points": [],
+       "source": "https://votezracheletmarianne.paris/actualites/notre-sante-une-cause-a-defendre/",
+       "date": "2026-11-03"
       }
      ],
      "resume": "Soutien moral et financier aux avocats en difficulté, et congé de naissance supplémentaire."
@@ -316,6 +341,24 @@
    ],
    "nouveautes": [
     {
+     "date": "2026-11-06",
+     "titre": "Pour plus de justice économique au sein du Barreau",
+     "resume": "Article thématique des candidates : elles citent 13 % des avocats concentrant 50 % des revenus de la profession et un avocat sur quatre déclarant moins de 28 000 € par an. Elles proposent de reprendre la gestion de la pépinière du boulevard Sébastopol, de créer de nouveaux espaces d'exercice à loyers plafonnés avec la Ville de Paris et de renforcer la progressivité des cotisations ordinales (barème plafonné selon elles à 310 626 € de revenus annuels, soit 6 249 € de cotisation maximale).",
+     "source": "https://votezracheletmarianne.paris/actualites/pour-plus-de-justice-economique-au-sein-du-barreau/"
+    },
+    {
+     "date": "2026-11-03",
+     "titre": "Notre santé, une cause à défendre",
+     "resume": "Article thématique des candidates sur la santé au travail des avocats : prévention collective des risques psychosociaux, formation des cabinets, « cafés-boulot », groupes de parole, supervisions cliniques, soutien aux confrères agressés et renégociation de la prévoyance pour un congé de naissance supplémentaire de deux mois.",
+     "source": "https://votezracheletmarianne.paris/actualites/notre-sante-une-cause-a-defendre/"
+    },
+    {
+     "date": "2026-10-27",
+     "titre": "70 % d'abstention aux élections au bâtonnat",
+     "resume": "Article thématique des candidates : elles voient dans l'abstention une alerte sur la démocratie de l'institution et proposent quatre mesures (collaborateurs avec voix consultative au Conseil de l'Ordre, rencontres professionnelles sur le modèle des conférences citoyennes, séances du Conseil ouvertes au public et comptes rendus publiés, assemblée générale annuelle à l'ordre du jour participatif).",
+     "source": "https://votezracheletmarianne.paris/actualites/70-d-abstention-aux-elections-au-batonnat/"
+    },
+    {
      "date": "2026-10-20",
      "titre": "Lettre ouverte au Bâtonnier sur les gardes à vue de lycéens",
      "resume": "Elles s'appuient sur l'article 719 du CPP (loi du 9 mai 2026, droit de visite du Bâtonnier ou d'un délégué) et formulent quatre demandes : visites sans préavis dans les commissariats parisiens les jours de mobilisation, délégués désignés pour visiter plusieurs lieux à la fois, constats rendus publics et transmis si besoin au CGLPL, au Défenseur des droits ou au procureur, permanence renforcée pour l'assistance des mineurs. Chiffres cités : plus de 8 000 interpellations en France dont plus de 85 % de mineurs, 855 interpellations à Paris le 17 octobre (préfecture), 24 enquêtes IGPN ouvertes. Elles reprochent au Bâtonnier d'avoir réagi aux dégradations subies par des commerçants mais pas aux gardes à vue massives."
@@ -327,7 +370,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "149",
+    "nombre": 153,
     "notables": [
      "Jean-Louis Borie (ancien batonnier)",
      "Amine Ghenim (Avocat au Barreau de S/S/Denis, ancien Bâtonnier et ancien membre du CNB)",
@@ -373,6 +416,10 @@
      {
       "nom": "Maëlle AUCHÉ",
       "fonction": "Avocate au barreau de Paris, Auché Monforte Avocats"
+     },
+     {
+      "nom": "Régine BARTHÉLÉMY",
+      "fonction": "Avocate honoraire"
      },
      {
       "nom": "Emilien BATÔT",
@@ -620,6 +667,10 @@
       "fonction": "Avocat au barreau de Paris"
      },
      {
+      "nom": "Vincent JARRIGE",
+      "fonction": "Avocat au Barreau de Paris, M&J Avocats"
+     },
+     {
       "nom": "Cécile JOUSSELIN",
       "fonction": "Avocate au Barreau de Paris"
      },
@@ -694,6 +745,10 @@
       "fonction": "Avocate au barreau de Paris"
      },
      {
+      "nom": "Annette LYDIENNE YEN EYOUM",
+      "fonction": "Avocat Barreau Paris"
+     },
+     {
       "nom": "Catherine MABILLE",
       "fonction": "Avocate au Barreau de Paris et à la CPI, MABILLE-SAUVADE-CHARBONNIER"
      },
@@ -740,6 +795,10 @@
      {
       "nom": "Marie-Pierre MATHIEU",
       "fonction": "Avocate au Barreau de PARIS"
+     },
+     {
+      "nom": "Francis MATTERN",
+      "fonction": "AGENT IMMOBILIER"
      },
      {
       "nom": "Stéphane MAUGENDRE",
@@ -928,9 +987,9 @@
      }
     ],
     "liste_source": "https://votezracheletmarianne.paris/soutiens/",
-    "liste_date": "2026-11-06"
+    "liste_date": "2026-11-09"
    },
-   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Caroline Mecary et Franceline Lepany, déjà listées, n'ont pas été retrouvées à la relecture de la page des soutiens de ce jour : leur fonction a été retirée faute de source relue.",
+   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour.",
    "evolutions": [
     {
      "date": "2026-10-20",
@@ -947,6 +1006,33 @@
      "titre": "Six engagements contre les LGBTQIA+phobies",
      "detail": "Prénom d'usage dans l'annuaire et la carte professionnelle, rapport annuel anonymisé des saisines, charte LGBT+ annexée aux contrats de collaboration.",
      "source": "https://votezracheletmarianne.paris/actualites/lutter-contre-les-lgbtqiaphobies-au-sein-de-notre-profession/"
+    },
+    {
+     "date": "2026-11-06",
+     "constat": "2026-11-08",
+     "constat_heure": "10:00",
+     "type": "Publication",
+     "titre": "Justice économique : pépinière, loyers plafonnés, progressivité des cotisations",
+     "detail": "Reprend trois mesures déjà au manifeste (pépinière du boulevard Sébastopol, locaux à loyers plafonnés avec la Ville de Paris, cotisation ordinale plus progressive) et donne un chiffre nouveau : selon les candidates, le barème plafonne à 310 626 € de revenus annuels (cotisation maximale 6 249 €). Aucun calendrier ni nouveau barème.",
+     "source": "https://votezracheletmarianne.paris/actualites/pour-plus-de-justice-economique-au-sein-du-barreau/"
+    },
+    {
+     "date": "2026-11-03",
+     "constat": "2026-11-08",
+     "constat_heure": "10:00",
+     "type": "Nouvelle proposition",
+     "titre": "Santé au travail : prévention des risques psychosociaux, formation des cabinets, supervisions cliniques",
+     "detail": "Nouveau : faire de la prévention des risques psychosociaux un enjeu collectif, former les cabinets aux fondamentaux de la santé au travail, interroger avec la profession les rythmes de travail, supervisions cliniques avec des cliniciens contre les traumatismes vicariants. Précise aussi les cafés-boulot, groupes de parole, soutien aux confrères agressés et la prévoyance (congé de naissance supplémentaire de deux mois).",
+     "source": "https://votezracheletmarianne.paris/actualites/notre-sante-une-cause-a-defendre/"
+    },
+    {
+     "date": "2026-10-27",
+     "constat": "2026-11-08",
+     "constat_heure": "10:00",
+     "type": "Nouvelle proposition",
+     "titre": "Collaborateurs avec voix consultative au Conseil de l'Ordre",
+     "detail": "Nouveau : plus de place aux collaborateurs au Conseil de l'Ordre, avec voix consultative. Rappel de mesures déjà au manifeste : séances du Conseil ouvertes au public, assemblée générale annuelle participative, conférences citoyennes.",
+     "source": "https://votezracheletmarianne.paris/actualites/70-d-abstention-aux-elections-au-batonnat/"
     }
    ],
    "sources": [
@@ -992,6 +1078,10 @@
       {
        "date": "2026-11-05",
        "abonnes": 401
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 421
       }
      ]
     },
@@ -1019,6 +1109,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 2005
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 2023
       }
      ]
     },
@@ -1046,6 +1140,12 @@
       {
        "date": "2026-11-06",
        "abonnes": 1516
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 1527,
+       "suivis": 153,
+       "publications": 13
       }
      ]
     }
@@ -1468,7 +1568,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "322",
+    "nombre": "341",
     "notables": [
      "Jean-Michel Darrois",
      "Richard Malka",
@@ -1515,6 +1615,9 @@
       "nom": "Anne Laure-Helene des Ylouses"
      },
      {
+      "nom": "Anne Severin"
+     },
+     {
       "nom": "Anne-Carine ROPARS-FURET"
      },
      {
@@ -1551,6 +1654,9 @@
       "nom": "Arthur Dethomas"
      },
      {
+      "nom": "Arthur Merle-Beral"
+     },
+     {
       "nom": "Arthur Rouyer"
      },
      {
@@ -1579,6 +1685,9 @@
      },
      {
       "nom": "Aïcha Condé"
+     },
+     {
+      "nom": "Benjamin Chouai"
      },
      {
       "nom": "Benjamin Louzier"
@@ -1614,9 +1723,6 @@
       "nom": "Béatrice Brugues-Reix"
      },
      {
-      "nom": "Camille Ogereau"
-     },
-     {
       "nom": "Carmen Nuñez Lagos"
      },
      {
@@ -1636,6 +1742,9 @@
      },
      {
       "nom": "Catherine de Combret Thibierge"
+     },
+     {
+      "nom": "Catherine Pompidou"
      },
      {
       "nom": "Catherine PORGE DORANGE"
@@ -1677,6 +1786,9 @@
       "nom": "Christophe Jamin"
      },
      {
+      "nom": "Claire Bouscatel"
+     },
+     {
       "nom": "clarisse brély"
      },
      {
@@ -1699,6 +1811,9 @@
      },
      {
       "nom": "cyril GOSSET"
+     },
+     {
+      "nom": "Cyrille André"
      },
      {
       "nom": "Cédric Alépée"
@@ -1741,6 +1856,9 @@
      },
      {
       "nom": "Diesbecq Antoine"
+     },
+     {
+      "nom": "Dominique Beyreuther-Minkov"
      },
      {
       "nom": "Dominique Holtzer"
@@ -1801,6 +1919,9 @@
      },
      {
       "nom": "Emmanuelle Jardin-Lillo"
+     },
+     {
+      "nom": "Emmanuelle Sapène"
      },
      {
       "nom": "Emmanuèle Pierroux"
@@ -1870,6 +1991,9 @@
      },
      {
       "nom": "Geoffroy Canivet"
+     },
+     {
+      "nom": "George Rigo"
      },
      {
       "nom": "GEORGES Lacoeuilhe"
@@ -1989,6 +2113,9 @@
       "nom": "Julie Pierrot Blondeau"
      },
      {
+      "nom": "Julien Dreyfus"
+     },
+     {
       "nom": "Julien Horn"
      },
      {
@@ -2061,6 +2188,9 @@
       "nom": "Louis-Bernard Buchman"
      },
      {
+      "nom": "Louis-Romain Riché"
+     },
+     {
       "nom": "Luana Nilsen"
      },
      {
@@ -2118,6 +2248,9 @@
       "nom": "Marie-Hélène Bartoli Vallet"
      },
      {
+      "nom": "Marie-Laure Barré"
+     },
+     {
       "nom": "Marine Le Goff"
      },
      {
@@ -2128,6 +2261,9 @@
      },
      {
       "nom": "Martine Coquelle-Chappuis"
+     },
+     {
+      "nom": "Masao YAMAMOTO"
      },
      {
       "nom": "Mathilde Jouanneau"
@@ -2143,6 +2279,9 @@
      },
      {
       "nom": "Matthieu Chirez"
+     },
+     {
+      "nom": "Matthieu de Vallois"
      },
      {
       "nom": "Matthieu Guiraud-Chaumeil"
@@ -2169,6 +2308,9 @@
       "nom": "Michelle Dayan"
      },
      {
+      "nom": "Michèle Jaudel"
+     },
+     {
       "nom": "Miguel Angel Davila"
      },
      {
@@ -2179,6 +2321,9 @@
      },
      {
       "nom": "Monique Boury"
+     },
+     {
+      "nom": "Muriel Laroque"
      },
      {
       "nom": "My-Kim Yang Paya"
@@ -2244,10 +2389,16 @@
       "nom": "Pauline Breuzet-richard"
      },
      {
+      "nom": "Pauline Chanel"
+     },
+     {
       "nom": "Philippe Assor"
      },
      {
       "nom": "Philippe Cavalieros"
+     },
+     {
+      "nom": "Philippe Ginestié"
      },
      {
       "nom": "Philippe Métais"
@@ -2343,6 +2494,9 @@
       "nom": "Sofia Bougrine"
      },
      {
+      "nom": "Sophie Baudet"
+     },
+     {
       "nom": "Sophie Sarre"
      },
      {
@@ -2368,6 +2522,9 @@
      },
      {
       "nom": "Sébastien Segard"
+     },
+     {
+      "nom": "Thi My Hanh Ngo-Folliot"
      },
      {
       "nom": "Thibaud d’Alès"
@@ -2446,7 +2603,7 @@
      }
     ],
     "liste_source": "https://bouyssoupascarel.fr/soutiens",
-    "liste_date": "2026-11-06"
+    "liste_date": "2026-11-09"
    },
    "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 6 nov., la liste des soutiens n'a pu être relue que par résumé (téléchargement direct bloqué) : liste enregistrée conservée.",
    "evolutions": [
@@ -2536,6 +2693,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 229
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 257
       }
      ]
     },
@@ -2562,6 +2723,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 8553
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 8628
       }
      ]
     },
@@ -2588,6 +2753,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 3234
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 3262
       }
      ]
     }
@@ -2890,7 +3059,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "360",
+    "nombre": "404",
     "notables": [
      "Mario Stasi (associé, président de la LICRA)",
      "Xavier Delcros (président émérite de la section parisienne de l'Association nationale des avocats honoraires)",
@@ -2943,6 +3112,10 @@
      {
       "nom": "Laure Ansquer",
       "fonction": "Collaboratrice — Gondard Associés"
+     },
+     {
+      "nom": "Céline Arcivos",
+      "fonction": "Associée - LEXT AVOCATS"
      },
      {
       "nom": "Elise Arfi",
@@ -3021,6 +3194,10 @@
       "fonction": "Individuelle"
      },
      {
+      "nom": "Carole-Anne Bauer",
+      "fonction": "Collaboratrice - Gide Loyrette Nouel"
+     },
+     {
       "nom": "Céline Cadars Beaufour",
       "fonction": "Associé(e) — Cadars-Beaufour,Quer,Billaud et associés"
      },
@@ -3049,6 +3226,10 @@
       "fonction": "Collaboratrice — Keels Avocats"
      },
      {
+      "nom": "Anne-Laure Bénet",
+      "fonction": "Associée - BL & Associés"
+     },
+     {
       "nom": "Inès Benhassine",
       "fonction": "Collaboratrice — Blum Legal"
      },
@@ -3075,6 +3256,14 @@
      {
       "nom": "Henriette Bertrand",
       "fonction": "Individuelle — HB-AVOCAT"
+     },
+     {
+      "nom": "Caroline Bettati",
+      "fonction": "Individuelle - Cabinet Bettati"
+     },
+     {
+      "nom": "Anne-Charlotte Le Bihan",
+      "fonction": "Associée - bird & bird"
      },
      {
       "nom": "Robin Binsard",
@@ -3113,6 +3302,10 @@
       "fonction": "Collaborateur/trice — White & Case"
      },
      {
+      "nom": "Emmanuel Brancaleoni",
+      "fonction": "Individuel"
+     },
+     {
       "nom": "Alexandre M. BRAUN",
       "fonction": "Individuel"
      },
@@ -3145,6 +3338,10 @@
       "fonction": "Associé — Buresi + Codou AARPI"
      },
      {
+      "nom": "Hedwige Caldairou",
+      "fonction": "Associée - Carbonnier Lamaze Rasle"
+     },
+     {
       "nom": "Pierre Camadini",
       "fonction": "Collaborateur — Armengaud Guerlain"
      },
@@ -3175,6 +3372,10 @@
      {
       "nom": "Renaud Cavoizy",
       "fonction": "Associé - CBDA Avocats"
+     },
+     {
+      "nom": "Livia Ceccaldi-Volpei",
+      "fonction": "Individuelle"
      },
      {
       "nom": "Paul Cesar",
@@ -3229,6 +3430,10 @@
       "fonction": "Associé — Lmt Avocats"
      },
      {
+      "nom": "Dylan Chicano",
+      "fonction": "Collaborateur - CMS Francis Lefebvre"
+     },
+     {
       "nom": "Xavier Chiloux",
       "fonction": "Individuel"
      },
@@ -3267,6 +3472,14 @@
      {
       "nom": "thierry cotty",
       "fonction": "Associé — CVML"
+     },
+     {
+      "nom": "Hervé-Antoine Couderc",
+      "fonction": "Associé - Couderc"
+     },
+     {
+      "nom": "Adrien Coulaud",
+      "fonction": "Associé - Cezium Avocats"
      },
      {
       "nom": "Charles CUNY",
@@ -3353,8 +3566,16 @@
       "fonction": "Individuel"
      },
      {
+      "nom": "Laurence Dreyfuss-Bechmann",
+      "fonction": "Associée - FIDAL Avocats"
+     },
+     {
       "nom": "Baudouin Dubelloy",
       "fonction": "Associé - Antes Avocats"
+     },
+     {
+      "nom": "Maxence Dubois",
+      "fonction": "Associé - Cezium Avocats"
      },
      {
       "nom": "Kelly-Ann Algar Dubos",
@@ -3363,6 +3584,10 @@
      {
       "nom": "Valérie Duez-Ruff",
       "fonction": "Individuelle — Dr Avocats"
+     },
+     {
+      "nom": "Julia-Marie Dulau",
+      "fonction": "Collaboratrice"
      },
      {
       "nom": "Karine Clolus Dupont",
@@ -3383,6 +3608,10 @@
      {
       "nom": "François Xavier Emmanuelli",
       "fonction": "Associé — Serre Odin Emmanuelli"
+     },
+     {
+      "nom": "Maxime Eppler",
+      "fonction": "Associé - DBO AVOCATS"
      },
      {
       "nom": "Françoise FABIANI-BRAIBANT",
@@ -3409,8 +3638,16 @@
       "fonction": "Individuel - FELLOUS"
      },
      {
+      "nom": "Aymard de la Ferté-Sénectère",
+      "fonction": "Associé - Cabinet Buès et associés"
+     },
+     {
       "nom": "Marie-Veronique Le FEVRE",
       "fonction": "Individuelle"
+     },
+     {
+      "nom": "Anne Fichot",
+      "fonction": "Associée"
      },
      {
       "nom": "Cédric Fischer",
@@ -3441,6 +3678,14 @@
       "fonction": "Collaboratrice"
      },
      {
+      "nom": "Audrey Franco",
+      "fonction": "Associée - Wilhelm & Associés"
+     },
+     {
+      "nom": "Pierre-Emmanuel Frogé",
+      "fonction": "Of counsel - Bryan Cave Leighton Paisner"
+     },
+     {
       "nom": "Benjamin Gallo",
       "fonction": "Individuel"
      },
@@ -3451,6 +3696,10 @@
      {
       "nom": "Pascal-Pierre Garbarini",
       "fonction": "Associé — Garbarini & Associes"
+     },
+     {
+      "nom": "Ornella Gardien",
+      "fonction": "Elève avocate"
      },
      {
       "nom": "Julien Gasbaoui",
@@ -3521,6 +3770,10 @@
       "fonction": "Avocat Honoraire"
      },
      {
+      "nom": "Jacques-Philippe Gunther",
+      "fonction": "Associé - Latham & Watkins"
+     },
+     {
       "nom": "Maryne Guyot",
       "fonction": "Collaboratrice — Gsmart-Avocats"
      },
@@ -3545,8 +3798,16 @@
       "fonction": "Associé"
      },
      {
+      "nom": "Saskia Henninger",
+      "fonction": "Associée - La Garanderie Avocats"
+     },
+     {
       "nom": "Emmanuelle Hoffman",
       "fonction": "Associée - cabinet Hoffman"
+     },
+     {
+      "nom": "Benjamin Huglo",
+      "fonction": "Associé - Huglo Lepage Avocats"
      },
      {
       "nom": "Marianne Hutin",
@@ -3585,6 +3846,14 @@
       "fonction": "Associé — SAJET"
      },
      {
+      "nom": "Renee Kaddouch-Kulbach",
+      "fonction": "Associé - Squair"
+     },
+     {
+      "nom": "Michel El Kaim",
+      "fonction": "Associé - Bell Avocats"
+     },
+     {
       "nom": "Aliénor Kamara-Cavarroc",
       "fonction": "Individuelle — Aliénor Kamara-Cavarroc"
      },
@@ -3595,6 +3864,10 @@
      {
       "nom": "Amale Kenbib",
       "fonction": "Individuelle — Amale Kenbib"
+     },
+     {
+      "nom": "William Kender",
+      "fonction": "Collaborateur - Cabinet Vaillant et Associés"
      },
      {
       "nom": "Ronan Kervadec",
@@ -3619,6 +3892,10 @@
      {
       "nom": "Antoine Lafon",
       "fonction": "Associé — Dorean Avocats"
+     },
+     {
+      "nom": "Laurence Dumure Lambert",
+      "fonction": "Associée - Fieldfisher"
      },
      {
       "nom": "Manon Lamotte",
@@ -3677,6 +3954,10 @@
       "fonction": "Associée — SELARL KOHN ET ASSOCIES"
      },
      {
+      "nom": "Christophe Leguevaques",
+      "fonction": "Associée - CLÉ avocats"
+     },
+     {
       "nom": "Thomas Lemarié",
       "fonction": "Associé - L&P Association d'avocats"
      },
@@ -3705,6 +3986,10 @@
       "fonction": "Avocat Honoraire"
      },
      {
+      "nom": "Danielle Partouche Levy",
+      "fonction": "Individuelle"
+     },
+     {
       "nom": "Laurence MARTINET LONGEANIE",
       "fonction": "Individuelle — SELARL MARTINET LONGEANIE"
      },
@@ -3721,8 +4006,16 @@
       "fonction": "Individuelle"
      },
      {
+      "nom": "Dominique Many",
+      "fonction": "Associée"
+     },
+     {
       "nom": "Charles-Stéphane Marchiani",
       "fonction": "Associé — Kimia Avocats Aarpi"
+     },
+     {
+      "nom": "Emmanuel Marsigny",
+      "fonction": "Associé - Skadden"
      },
      {
       "nom": "Gina Maruani",
@@ -3737,6 +4030,10 @@
       "fonction": "Individuel - Massoni Avocats"
      },
      {
+      "nom": "Pierre Massot",
+      "fonction": "Associé - ARENAIRE AVOCATS"
+     },
+     {
       "nom": "Simona MATTA",
       "fonction": "Individuelle - ZSCHUNKE"
      },
@@ -3745,8 +4042,16 @@
       "fonction": "Associé — KPMG"
      },
      {
+      "nom": "Matthieu Mazo",
+      "fonction": "Associé - Epigraphe Avocats"
+     },
+     {
       "nom": "Lucie Méfano",
       "fonction": "Individuelle — Lucie Méfano"
+     },
+     {
+      "nom": "Johan Menu-Alberici",
+      "fonction": "Associé - Panthéon Avocats"
      },
      {
       "nom": "Emmanuel Mercinier",
@@ -3831,6 +4136,10 @@
      {
       "nom": "Catherine MUTELET",
       "fonction": "Associée — LP-CM Avocats"
+     },
+     {
+      "nom": "Catherine Nahmias-Ferrandini",
+      "fonction": "Associée - MERMOZ AVOCATS"
      },
      {
       "nom": "Alizée Negroni",
@@ -3929,6 +4238,10 @@
       "fonction": "Associée"
      },
      {
+      "nom": "Bérengère Peyrat",
+      "fonction": "Individuelle - Cézane"
+     },
+     {
       "nom": "Théo Piazza",
       "fonction": "Collaborateur — Clifford Chance Europe LLP"
      },
@@ -3949,12 +4262,20 @@
       "fonction": "Associée — PIWNICA & COLIN"
      },
      {
+      "nom": "Gilles de Poix",
+      "fonction": "Associé - Harbour avocats"
+     },
+     {
       "nom": "Marie-Ange Pozzo di Borgo",
       "fonction": "Collaboratrice — Gide Loyrette Nouel"
      },
      {
       "nom": "Tristan de Puget",
       "fonction": "Associé - FTMS"
+     },
+     {
+      "nom": "Isabelle Quenet-Chabrun",
+      "fonction": "Associée - LEXT AVOCAT AARPI"
      },
      {
       "nom": "Manuel Quesnot-Filippi",
@@ -4053,6 +4374,10 @@
       "fonction": "Associée — RMF"
      },
      {
+      "nom": "Steeve Ruben",
+      "fonction": "Associé - RUBEN & ASSOCIES"
+     },
+     {
       "nom": "Kyra Rubinstein",
       "fonction": "Individuelle — Rubinstein"
      },
@@ -4067,6 +4392,10 @@
      {
       "nom": "Jane Salmon-Fabiani",
       "fonction": "Associée - Gramond"
+     },
+     {
+      "nom": "Horen Sant-Yrian",
+      "fonction": "Juriste"
      },
      {
       "nom": "Antoine SAPPIN",
@@ -4091,6 +4420,10 @@
      {
       "nom": "Blanche SENECHAL",
       "fonction": "Individuel/le — Blanche Senechal Avocat"
+     },
+     {
+      "nom": "Caroline Yvernault de la Ferté Sénectère",
+      "fonction": "Associée - SCP SUR MAUVENU"
      },
      {
       "nom": "Seyed Siavash SHAHRJERDI",
@@ -4173,6 +4506,10 @@
       "fonction": "Of Counsel — Simmons & Simmons"
      },
      {
+      "nom": "Frédéric Teper",
+      "fonction": "Associé - Arsene"
+     },
+     {
       "nom": "Charles Terdjman",
       "fonction": "Of Counsel — Gide"
      },
@@ -4213,6 +4550,10 @@
       "fonction": "Associé - VALLS - Avocats"
      },
      {
+      "nom": "Adrian Vangheli-Stavila",
+      "fonction": "Individuel - AVA ( Adrian Vangheli Avocat )"
+     },
+     {
       "nom": "Ronald VARDAGUER",
       "fonction": "Individuel — Cabinet VARDAGUER"
      },
@@ -4227,6 +4568,10 @@
      {
       "nom": "Faustine Viala",
       "fonction": "Associée - Willkie Farr and Gallagher"
+     },
+     {
+      "nom": "Jean Marie Viala",
+      "fonction": "Associé - Cabinet VIALA"
      },
      {
       "nom": "Marie-Laetitia de La Ville-Baugé",
@@ -4341,9 +4686,9 @@
      }
     ],
     "liste_source": "https://www.fabiani-naquet.paris/soutiens",
-    "liste_date": "2026-11-06"
+    "liste_date": "2026-11-09"
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Le 6 nov., la page des soutiens lue était tronquée (302 noms visibles) : liste enregistrée (359) conservée.",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6 et 7 nov., la page des soutiens n'a pu être lue que tronquée (environ 301 noms visibles sur 360 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis.",
    "evolutions": [],
    "sources": [
     {
@@ -4397,6 +4742,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 6861
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 6894
       }
      ]
     },
@@ -4424,6 +4773,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 3615
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 3652
       }
      ]
     }
@@ -4664,7 +5017,7 @@
     "notables": [],
     "liste": [],
     "liste_source": "https://www.batonnatsuringriguer.com/",
-    "liste_date": "2026-11-06",
+    "liste_date": "2026-11-09",
     "liste_note": "Aucune liste publiée : leur site propose seulement un formulaire pour apporter son soutien."
    },
    "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
@@ -4700,6 +5053,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 1747
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 1757
       }
      ]
     },
@@ -4727,6 +5084,10 @@
       {
        "date": "2026-11-06",
        "abonnes": 13322
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 13339
       }
      ]
     },
@@ -4753,6 +5114,22 @@
       {
        "date": "2026-11-06",
        "abonnes": 6401
+      },
+      {
+       "date": "2026-11-09",
+       "abonnes": 6412
+      }
+     ]
+    },
+    {
+     "label": "Campagne",
+     "plateforme": "Instagram",
+     "releves": [
+      {
+       "date": "2026-11-09",
+       "abonnes": 597,
+       "suivis": 27,
+       "publications": 11
       }
      ]
     }
@@ -4877,7 +5254,8 @@
      "Plafonnement des dépenses de campagne et appels d'offres publics pour les dépenses de l'Ordre.",
      "Conseils ouverts au public, publication systématique des rapports, assemblée générale annuelle, référendums sur les grandes questions.",
      "Conférences citoyennes non élues et tirage au sort de membres dans certaines commissions.",
-     "Deux représentants du jeune barreau avec voix consultative."
+     "Deux représentants du jeune barreau avec voix consultative.",
+     "Place des collaborateurs et collaboratrices au Conseil de l'Ordre, avec voix consultative."
     ],
     "fabiani": [
      "Comptes de l'Ordre et de la CARPA publics, rapport annuel sur l'usage des cotisations.",
@@ -4926,7 +5304,9 @@
    "items": {
     "saada": [
      "« Cafés-boulot » et groupes de parole avec des professionnels de santé.",
-     "Soutien aux confrères agressés ou discriminés."
+     "Soutien aux confrères agressés ou discriminés.",
+     "Prévention collective des risques psychosociaux, formation des cabinets à la santé au travail et réflexion sur les rythmes de travail.",
+     "Supervisions cliniques avec des cliniciens pour limiter les effets des traumatismes vicariants."
     ],
     "bouyssou": [
      "États généraux de la santé au travail et lignes d'écoute anonymes.",
@@ -5114,6 +5494,22 @@
   {
    "date": "2026-11-06",
    "resume": "Soutiens, relevé complet des pages du 6 novembre : Fabiani–Naquet 1 nouveau soutien (360 noms listés, aucun retrait) ; Bouyssou–Pascarel 13 nouveaux soutiens et 1 retrait (322 noms listés) ; Saada–Lagrue aucun changement (149) ; Surin–Griguer toujours aucune liste publiée. Le nouveau soutien de Fabiani–Naquet est indiqué « Indépendant » ; la page de Bouyssou–Pascarel ne donne pas de fonction. Aucun nouveau soutien notable. Cette liste complète remplace celle du matin, qui n'avait pu lire que 302 noms sur 359 chez Fabiani–Naquet."
+  },
+  {
+   "date": "2026-11-07",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure chez les quatre binômes (aucune nouvelle actualité chez Saada–Lagrue, dernière le 20 oct. ; Bouyssou–Pascarel, dernière le 20 nov. à venir/30 oct. ; Fabiani–Naquet page 1 inchangée ; Surin–Griguer site inchangé, vote les 15 et 17 décembre 2026, débat des candidats le 1er décembre selon l'Ordre). Soutiens : Saada–Lagrue 4 nouveaux soutiens (Régine Barthélémy, Vincent Jarrige, Annette Lydienne Yen Eyoum, Francis Mattern : avocate honoraire, avocat au Barreau de Paris M&J Avocats, avocat Barreau Paris, agent immobilier), 0 retrait, 153 listés ; Bouyssou–Pascarel 8 nouveaux soutiens (Benjamin Chouai, Claire Bouscatel, Emmanuelle Sapène, Julien Dreyfus, Marie-Laure Barré, Masao Yamamoto, Michèle Jaudel, Philippe Ginestié), aucune fonction publiée, 0 retrait, 330 listés ; Fabiani–Naquet page lue tronquée (301 noms sur 360) : liste conservée, nouveaux soutiens non établis ; Surin–Griguer toujours aucune liste. Aucun nouveau soutien notable. Détails complets : 85 mesures sur 85. Limites persistantes : téléchargement direct (curl) bloqué, sources lues par résumés ; pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; réseaux sociaux et presse juridique non relus."
+  },
+  {
+   "date": "2026-11-08",
+   "resume": "Saada–Lagrue : 3 articles thématiques publiés par les candidates (6 nov. justice économique, 3 nov. santé au travail, 27 oct. 70 % d'abstention) ; 3 nouvelles mesures ajoutées (prévention des risques psychosociaux et formation des cabinets, supervisions cliniques, collaborateurs avec voix consultative au Conseil) ; les autres mesures citées figuraient déjà. Bouyssou–Pascarel, Fabiani–Naquet (page 1 inchangée, dernière publication 29 oct.), Surin–Griguer : aucun changement de programme ; l'Ordre confirme débat des candidats le 1er décembre et vote les 15 et 17 décembre 2026. Soutiens : Saada–Lagrue 153 listés, aucun nouveau soutien ni retrait ; Bouyssou–Pascarel 330 listés, aucun nouveau soutien ni retrait (seules différences : apostrophes typographiques) ; Fabiani–Naquet page à nouveau tronquée (301 noms sur 360) : liste conservée, nouveaux soutiens non établis ; Surin–Griguer aucune liste. Aucun nouveau soutien notable. Détails complets : 88 mesures sur 88 (dont les 3 nouvelles). Limites persistantes : curl bloqué, sources lues par résumés ; pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; réseaux sociaux et presse juridique non relus."
+  },
+  {
+   "date": "2026-11-09",
+   "resume": "Aucun changement de programme : aucune nouvelle mesure ni nouvelle publication chez les quatre binômes (Saada–Lagrue : dernière publication le 6 nov. ; Bouyssou–Pascarel : dernière actualité le 30 oct., seule entrée plus récente = projection du 20 nov. déjà à l'agenda ; Fabiani–Naquet : page 1 des actualités inchangée, dernière publication le 29 oct. ; Surin–Griguer : site inchangé). L'Ordre confirme débat des candidats le 1er décembre, vote les 15 et 17 décembre 2026. Soutiens : Saada–Lagrue 153 annoncés et 153 listés, aucun nouveau soutien ni retrait ; Bouyssou–Pascarel 330 listés (comptage identique), aucun nouveau soutien ni retrait ; Fabiani–Naquet page à nouveau tronquée (environ 302 noms sur 360) : liste conservée, nouveaux soutiens non établis ; Surin–Griguer aucune liste. Aucun nouveau soutien notable. Détails complets : 88 mesures sur 88. Limites persistantes : curl bloqué par le réseau, sources lues par résumés (WebFetch) ; pagination Fabiani–Naquet non suivie ; PDF Fabiani–Naquet partiel ; réseaux sociaux et presse juridique non relus ce jour (recherche presse sans résultat nouveau)."
+  },
+  {
+   "date": "2026-11-09",
+   "resume": "Soutiens, relevé complet des pages du 9 novembre (le précédent datait du 6) : Fabiani–Naquet 44 nouveaux soutiens, 404 noms listés (un nom que la page liste deux fois a été gardé une seule fois), soit 31 associés, 4 collaborateurs, 6 « individuels », 1 of counsel, 1 juriste et 1 élève avocate, d'après les fonctions écrites par la source ; Bouyssou–Pascarel 12 nouveaux soutiens et 1 retrait, 341 noms listés (la page ne donne pas de fonction) ; Saada–Lagrue aucun nouveau soutien, 153 noms (trois fonctions réécrites par la source : apostrophes et ponctuation) ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. Les 44 nouveaux soutiens de Fabiani–Naquet n'avaient pas été vus par la mise à jour automatique, qui ne lit qu'environ 301 noms sur cette page."
   }
  ],
  "sources_calendrier": [
