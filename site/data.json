@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-09",
+ "maj": "2026-11-12",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -370,7 +370,7 @@
     }
    ],
    "soutiens": {
-    "nombre": 153,
+    "nombre": "155",
     "notables": [
      "Jean-Louis Borie (ancien batonnier)",
      "Amine Ghenim (Avocat au Barreau de S/S/Denis, ancien Bâtonnier et ancien membre du CNB)",
@@ -525,6 +525,10 @@
      {
       "nom": "Baptiste CUNY",
       "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Delphine D'ALLIVY KELLY",
+      "fonction": "Avocate au barreau de Paris"
      },
      {
       "nom": "Marine D'ARANDA",
@@ -702,6 +706,10 @@
      {
       "nom": "Erika KOENIG",
       "fonction": "Avocate retraitée"
+     },
+     {
+      "nom": "Maud KORNMAN",
+      "fonction": "Avocate au Barreau de Paris"
      },
      {
       "nom": "Vanessa KOSZCZANSKI",
@@ -987,9 +995,9 @@
      }
     ],
     "liste_source": "https://votezracheletmarianne.paris/soutiens/",
-    "liste_date": "2026-11-09"
+    "liste_date": "2026-11-12"
    },
-   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour.",
+   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour. Le 11 nov., la page des soutiens n'a été lue que par résumé : 155 annoncés contre 153 listés, liste nominative non mise à jour.",
    "evolutions": [
     {
      "date": "2026-10-20",
@@ -1082,6 +1090,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 421
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 438
       }
      ]
     },
@@ -1113,6 +1125,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 2023
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 2035
       }
      ]
     },
@@ -1145,6 +1161,12 @@
        "date": "2026-11-09",
        "abonnes": 1527,
        "suivis": 153,
+       "publications": 13
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 1544,
+       "suivis": 154,
        "publications": 13
       }
      ]
@@ -1469,6 +1491,42 @@
      "source": "https://bouyssoupascarel.fr/actualite"
     },
     {
+     "date": "2026-11-06",
+     "titre": "Vernissage de l'exposition de Thomas Klotz",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou a assisté au vernissage d'une exposition sur la foi et la lumière. Aucune mesure annoncée.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-05",
+     "titre": "Justice Quizz à l'Incubateur du Barreau",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Les candidats ont participé à un quiz sur un ton humoristique consacré à l'avenir de la profession et à ses modes d'exercice. Aucune mesure annoncée.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-04",
+     "titre": "La jeunesse au cœur du Barreau",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Les deux candidats ont écouté les jeunes avocats qui les soutiennent (difficultés, fierté d'appartenir au Barreau) et ont rappelé la charte « Équilibre et réussite », déjà présente dans leur programme.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-04",
+     "titre": "Dîner des Bretons du Barreau",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Carole Pascarel a assisté au dîner traditionnel de l'association. Aucune mesure annoncée.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-03",
+     "titre": "Table ronde chez Femmes et Droit",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Invités par l'association Femmes et Droit, les candidats ont réaffirmé leur engagement pour l'égalité entre femmes et hommes, simple rappel d'un axe de leur programme.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-02",
+     "titre": "50, 60 et 70 ans au Barreau",
+     "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou était à la Maison du Barreau pour honorer les avocats ayant 50, 60 et 70 ans d'exercice. Aucune mesure annoncée.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
      "date": "2026-10-30",
      "titre": "Le 70e congrès de l'UIA à Marrakech",
      "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou et Carole Pascarel ont participé au 70e congrès de l'Union internationale des avocats, à Marrakech, et à sa soirée de gala.",
@@ -1568,7 +1626,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "341",
+    "nombre": "354",
     "notables": [
      "Jean-Michel Darrois",
      "Richard Malka",
@@ -1637,6 +1695,9 @@
      },
      {
       "nom": "Antoine Fontaine"
+     },
+     {
+      "nom": "Antoine-Audoin Maggiar"
      },
      {
       "nom": "Arnaud Constans"
@@ -1714,6 +1775,9 @@
       "nom": "Bruno Deffains"
      },
      {
+      "nom": "Bruno Hické"
+     },
+     {
       "nom": "Bruno Richard"
      },
      {
@@ -1750,6 +1814,9 @@
       "nom": "Catherine PORGE DORANGE"
      },
      {
+      "nom": "Catherine Robin"
+     },
+     {
       "nom": "Cedric de Pouzilhac"
      },
      {
@@ -1781,6 +1848,9 @@
      },
      {
       "nom": "Christophe Gerschel"
+     },
+     {
+      "nom": "Christophe HERY"
      },
      {
       "nom": "Christophe Jamin"
@@ -1858,6 +1928,9 @@
       "nom": "Diesbecq Antoine"
      },
      {
+      "nom": "Dilan Firat"
+     },
+     {
       "nom": "Dominique Beyreuther-Minkov"
      },
      {
@@ -1874,6 +1947,9 @@
      },
      {
       "nom": "Edouard Frizon"
+     },
+     {
+      "nom": "Eliot Dhuy"
      },
      {
       "nom": "Elise Dufour"
@@ -1933,9 +2009,6 @@
       "nom": "Eric Najsztat"
      },
      {
-      "nom": "Eva Touboul"
-     },
-     {
       "nom": "Fabienne MOUREAU LEVY"
      },
      {
@@ -1990,6 +2063,9 @@
       "nom": "Gaetan de Robillard"
      },
      {
+      "nom": "Gautier Kaufman"
+     },
+     {
       "nom": "Geoffroy Canivet"
      },
      {
@@ -2041,6 +2117,12 @@
       "nom": "HUDINA Yves"
      },
      {
+      "nom": "Héléna Christidis"
+     },
+     {
+      "nom": "Ibrahim Dogan"
+     },
+     {
       "nom": "Isabelle Armand"
      },
      {
@@ -2084,6 +2166,9 @@
      },
      {
       "nom": "Jean-Yves Le Borgne"
+     },
+     {
+      "nom": "Jessica Finelle"
      },
      {
       "nom": "Jessy Kemadjou"
@@ -2183,6 +2268,9 @@
      },
      {
       "nom": "Louis Boré"
+     },
+     {
+      "nom": "Louis DRUART"
      },
      {
       "nom": "Louis-Bernard Buchman"
@@ -2383,6 +2471,9 @@
       "nom": "Pascal Wilhelm"
      },
      {
+      "nom": "Patrick Klugman"
+     },
+     {
       "nom": "Paul Nafilyan"
      },
      {
@@ -2393,6 +2484,9 @@
      },
      {
       "nom": "Philippe Assor"
+     },
+     {
+      "nom": "PHILIPPE BLANCHETIER"
      },
      {
       "nom": "Philippe Cavalieros"
@@ -2533,6 +2627,9 @@
       "nom": "Thierry Aballea"
      },
      {
+      "nom": "Thierry Herzog"
+     },
+     {
       "nom": "Thierry Marembert"
      },
      {
@@ -2603,9 +2700,9 @@
      }
     ],
     "liste_source": "https://bouyssoupascarel.fr/soutiens",
-    "liste_date": "2026-11-09"
+    "liste_date": "2026-11-12"
    },
-   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 6 nov., la liste des soutiens n'a pu être relue que par résumé (téléchargement direct bloqué) : liste enregistrée conservée.",
+   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 6 nov., la liste des soutiens n'a pu être relue que par résumé (téléchargement direct bloqué) : liste enregistrée conservée. Le 11 nov., la page des soutiens n'a été lue que par résumé : environ 352 noms contre 341 listés, liste nominative non mise à jour.",
    "evolutions": [
     {
      "date": "2026-10-22",
@@ -2697,6 +2794,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 257
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 290
       }
      ]
     },
@@ -2727,6 +2828,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 8628
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 8708
       }
      ]
     },
@@ -2757,6 +2862,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 3262
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 3298
       }
      ]
     }
@@ -3059,7 +3168,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "404",
+    "nombre": "420",
     "notables": [
      "Mario Stasi (associé, président de la LICRA)",
      "Xavier Delcros (président émérite de la section parisienne de l'Association nationale des avocats honoraires)",
@@ -3140,6 +3249,10 @@
      {
       "nom": "Alexandra Atlan-Elhaik",
       "fonction": "Associée — Atlan & Boksenbaum Avocats,"
+     },
+     {
+      "nom": "Audrey Atsain",
+      "fonction": "Associée - AGN Avocats"
      },
      {
       "nom": "Nathalie Attias",
@@ -3262,6 +3375,14 @@
       "fonction": "Individuelle - Cabinet Bettati"
      },
      {
+      "nom": "Christophe Bigot",
+      "fonction": "Associé - Bigot Avocats"
+     },
+     {
+      "nom": "Soliman Le Bigot",
+      "fonction": "Associé - LBM Avocats / ALW (Association Legal Link Worldwide)"
+     },
+     {
       "nom": "Anne-Charlotte Le Bihan",
       "fonction": "Associée - bird & bird"
      },
@@ -3298,10 +3419,6 @@
       "fonction": "Associé"
      },
      {
-      "nom": "Henri Bousseau",
-      "fonction": "Collaborateur/trice — White & Case"
-     },
-     {
       "nom": "Emmanuel Brancaleoni",
       "fonction": "Individuel"
      },
@@ -3316,6 +3433,10 @@
      {
       "nom": "Julien BROCHOT",
       "fonction": "Associé — DOUMIC AVOCATS"
+     },
+     {
+      "nom": "Jean-Pascal Brun",
+      "fonction": "Associé - DIAMETIS"
      },
      {
       "nom": "Géraldine BRUN",
@@ -3474,6 +3595,10 @@
       "fonction": "Associé — CVML"
      },
      {
+      "nom": "Christian Couderc",
+      "fonction": "Associé - Couderc Dinh & Associés"
+     },
+     {
       "nom": "Hervé-Antoine Couderc",
       "fonction": "Associé - Couderc"
      },
@@ -3484,6 +3609,10 @@
      {
       "nom": "Charles CUNY",
       "fonction": "Associé — PHI AVOCATS"
+     },
+     {
+      "nom": "Olivier d'Abo",
+      "fonction": "Associé - EBL LEXINGTON AVOCATS"
      },
      {
       "nom": "Henri d'Armagnac",
@@ -3570,10 +3699,6 @@
       "fonction": "Associée - FIDAL Avocats"
      },
      {
-      "nom": "Baudouin Dubelloy",
-      "fonction": "Associé - Antes Avocats"
-     },
-     {
       "nom": "Maxence Dubois",
       "fonction": "Associé - Cezium Avocats"
      },
@@ -3644,6 +3769,10 @@
      {
       "nom": "Marie-Veronique Le FEVRE",
       "fonction": "Individuelle"
+     },
+     {
+      "nom": "Judith Samantha Fezeu",
+      "fonction": "Individuelle - F&P"
      },
      {
       "nom": "Anne Fichot",
@@ -3722,6 +3851,10 @@
       "fonction": "Associé — Grimaldi France"
      },
      {
+      "nom": "Bernard Giansily",
+      "fonction": "Individuel - Cabinet Bernard Giansily"
+     },
+     {
       "nom": "Côme de Girval",
       "fonction": "Individuel — Solens avocats"
      },
@@ -3744,6 +3877,10 @@
      {
       "nom": "Béatrice Weiss Gout",
       "fonction": "Avocate honoraire"
+     },
+     {
+      "nom": "Aude de Graaf",
+      "fonction": "Individuelle - Cabinet AGPG"
      },
      {
       "nom": "Olivia Granit",
@@ -3838,6 +3975,10 @@
       "fonction": "Associé — APG Avocats"
      },
      {
+      "nom": "Pierre Léo Jeanmougin",
+      "fonction": "Associé - SPARK AVOCATS"
+     },
+     {
       "nom": "Dominic Jensen",
       "fonction": "Associé — Jensen & Schweblin"
      },
@@ -3846,8 +3987,12 @@
       "fonction": "Associé — SAJET"
      },
      {
+      "nom": "Vincent Julé-Parade",
+      "fonction": "Associé - VJP AVOCATS"
+     },
+     {
       "nom": "Renee Kaddouch-Kulbach",
-      "fonction": "Associé - Squair"
+      "fonction": "Associé - Couderc Dinh et associés"
      },
      {
       "nom": "Michel El Kaim",
@@ -3916,6 +4061,10 @@
      {
       "nom": "Emmanuel Larere",
       "fonction": "Associé - Gide"
+     },
+     {
+      "nom": "Sophie-Jeanne Laroche",
+      "fonction": "Associée - Kairos Avocats"
      },
      {
       "nom": "Sophia Lassègue",
@@ -3992,6 +4141,10 @@
      {
       "nom": "Laurence MARTINET LONGEANIE",
       "fonction": "Individuelle — SELARL MARTINET LONGEANIE"
+     },
+     {
+      "nom": "Brigitte Longuet",
+      "fonction": "Associée - LRS Avocats Associés"
      },
      {
       "nom": "bertrand Loubeyre",
@@ -4146,6 +4299,10 @@
       "fonction": "Collaboratrice"
      },
      {
+      "nom": "Jean Néret",
+      "fonction": "Associé - FTMS"
+     },
+     {
       "nom": "Gaspard Neuhoff",
       "fonction": "Individuel — Tribeca Avocat"
      },
@@ -4168,6 +4325,10 @@
      {
       "nom": "Matthieu Ollivry",
       "fonction": "Associé - Ollivry Avocats"
+     },
+     {
+      "nom": "Fabrice Orlandi",
+      "fonction": "Associé - Scp Orlandi Maillard"
      },
      {
       "nom": "Elizabeth OSTER",
@@ -4386,6 +4547,10 @@
       "fonction": "Associé — FTMS"
      },
      {
+      "nom": "Joseph Cohen Sabban",
+      "fonction": "Associé - Cohen Sabban et Nicolaï"
+     },
+     {
       "nom": "Yannick sala",
       "fonction": "Individuel — Yannick Sala"
      },
@@ -4436,6 +4601,10 @@
      {
       "nom": "Valérie de Sigoyer",
       "fonction": "Associée - VDS Avocats"
+     },
+     {
+      "nom": "Grégoire Silhol",
+      "fonction": "Collaborateur"
      },
      {
       "nom": "Patricia Simo",
@@ -4532,6 +4701,10 @@
      {
       "nom": "Edouard Thomas",
       "fonction": "Associée — Herbert Smith Freehills"
+     },
+     {
+      "nom": "Eva Touboul",
+      "fonction": "Individuelle"
      },
      {
       "nom": "Antoine Tregant",
@@ -4686,7 +4859,7 @@
      }
     ],
     "liste_source": "https://www.fabiani-naquet.paris/soutiens",
-    "liste_date": "2026-11-09"
+    "liste_date": "2026-11-12"
    },
    "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6 et 7 nov., la page des soutiens n'a pu être lue que tronquée (environ 301 noms visibles sur 360 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis.",
    "evolutions": [],
@@ -4746,6 +4919,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 6894
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 6976
       }
      ]
     },
@@ -4777,6 +4954,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 3652
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 3775
       }
      ]
     }
@@ -5017,7 +5198,7 @@
     "notables": [],
     "liste": [],
     "liste_source": "https://www.batonnatsuringriguer.com/",
-    "liste_date": "2026-11-09",
+    "liste_date": "2026-11-12",
     "liste_note": "Aucune liste publiée : leur site propose seulement un formulaire pour apporter son soutien."
    },
    "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
@@ -5057,6 +5238,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 1757
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 1761
       }
      ]
     },
@@ -5088,6 +5273,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 13339
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 13353
       }
      ]
     },
@@ -5118,6 +5307,10 @@
       {
        "date": "2026-11-09",
        "abonnes": 6412
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 6421
       }
      ]
     },
@@ -5130,6 +5323,12 @@
        "abonnes": 597,
        "suivis": 27,
        "publications": 11
+      },
+      {
+       "date": "2026-11-12",
+       "abonnes": 618,
+       "suivis": 6,
+       "publications": 19
       }
      ]
     }
@@ -5510,6 +5709,22 @@
   {
    "date": "2026-11-09",
    "resume": "Soutiens, relevé complet des pages du 9 novembre (le précédent datait du 6) : Fabiani–Naquet 44 nouveaux soutiens, 404 noms listés (un nom que la page liste deux fois a été gardé une seule fois), soit 31 associés, 4 collaborateurs, 6 « individuels », 1 of counsel, 1 juriste et 1 élève avocate, d'après les fonctions écrites par la source ; Bouyssou–Pascarel 12 nouveaux soutiens et 1 retrait, 341 noms listés (la page ne donne pas de fonction) ; Saada–Lagrue aucun nouveau soutien, 153 noms (trois fonctions réécrites par la source : apostrophes et ponctuation) ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. Les 44 nouveaux soutiens de Fabiani–Naquet n'avaient pas été vus par la mise à jour automatique, qui ne lit qu'environ 301 noms sur cette page."
+  },
+  {
+   "date": "2026-11-10",
+   "resume": "Aucune nouvelle mesure ni évolution de programme chez les quatre binômes. Bouyssou–Pascarel : 6 actualités du 2 au 6 novembre ajoutées (aucune mesure nouvelle ; celle du 4 nov. rappelle la charte « Équilibre et réussite » déjà au programme). Saada–Lagrue : dernière publication le 6 nov. ; Fabiani–Naquet : page 1 des actualités inchangée (dernière publication le 29 oct.) ; Surin–Griguer : site inchangé, aucune liste de soutiens. Soutiens : Saada–Lagrue 153 noms relevés sur la page (total annoncé 153), aucun nouveau soutien ni retrait constaté ; Bouyssou–Pascarel, Fabiani–Naquet : pages de soutiens non relues ce jour (accès direct bloqué), listes conservées (341 et 404) ; aucun nouveau soutien notable. Détails complets : 88 mesures sur 88. Limites persistantes : téléchargement direct (curl) bloqué, sources lues par résumés ; pagination Fabiani–Naquet (pages 2 à 4) non suivie ; PDF Fabiani–Naquet partiel ; réseaux sociaux non relus ; recherche presse juridique sans article récent sur les binômes."
+  },
+  {
+   "date": "2026-11-11",
+   "resume": "Aucune nouvelle mesure ni évolution de programme chez les quatre binômes. Saada–Lagrue : dernière publication le 6 nov. ; Bouyssou–Pascarel : dernière actualité le 6 nov., liste des actualités inchangée ; Fabiani–Naquet : page 1 des actualités inchangée (dernière publication le 29 oct.) ; Surin–Griguer : site inchangé, aucune liste de soutiens. Soutiens (lecture par résumé WebFetch, curl bloqué par le réseau, donc listes nominatives non remplacées) : Saada–Lagrue la page annonce désormais 155 soutiens contre 153 enregistrés (environ 2 nouveaux, noms non identifiés) ; Bouyssou–Pascarel environ 352 noms comptés contre 341 enregistrés (environ 11 nouveaux, noms non identifiés) ; Fabiani–Naquet page non relue en entier ; Surin–Griguer aucune liste. Listes enregistrées conservées, nouveaux soutiens notables non établis. Détails complets : 88 mesures sur 88. Limites persistantes : curl bloqué, pagination Fabiani–Naquet non suivie, PDF Fabiani–Naquet partiel, réseaux sociaux et presse juridique non relus (recherche presse sans résultat nouveau)."
+  },
+  {
+   "date": "2026-11-12",
+   "resume": "Aucune nouvelle mesure ni évolution de programme chez les quatre binômes. Saada–Lagrue : dernière publication le 6 nov. (5 actualités, sans pagination) ; Bouyssou–Pascarel : dernière actualité le 6 nov. (listing complet de 45 entrées lu par résumé, jusqu'au 25 sept.) ; Fabiani–Naquet : page 1 des actualités inchangée (dernière publication le 29 oct.), pages 2 à 4 non lues ; Surin–Griguer : site inchangé, aucune liste de soutiens. Soutiens (curl bloqué par le réseau, lecture par résumé WebFetch) : Saada–Lagrue la page annonce 155 soutiens contre 153 enregistrés (≈2 nouveaux, noms non identifiés, liste nominative non remplacée) ; Bouyssou–Pascarel et Fabiani–Naquet pages non relues en entier ; Surin–Griguer aucune liste. Aucun nouveau soutien notable établi. Détails complets : 88 mesures sur 88. Limites persistantes : curl bloqué, pagination Fabiani–Naquet non suivie, PDF Fabiani–Naquet partiel, réseaux sociaux non relus, recherche presse juridique sans article nouveau sur les binômes."
+  },
+  {
+   "date": "2026-11-12",
+   "resume": "Soutiens, relevé complet des pages du 12 novembre (le précédent datait du 9) : Fabiani–Naquet 18 nouveaux soutiens (13 associés, 4 « individuels », 1 collaborateur, d'après les fonctions écrites par la source), 2 retraits et une fonction modifiée, 420 noms listés (un nom que la page liste deux fois n'est gardé qu'une fois) ; Bouyssou–Pascarel 14 nouveaux soutiens et 1 retrait, 354 noms listés (la page ne donne pas de fonction) ; Saada–Lagrue 2 nouveaux soutiens, tous deux « avocate au barreau de Paris », 155 noms listés comme la page l'annonce ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. La mise à jour automatique ne lit pas ces listes en entier (page par résumé) : elle n'avait pas vu ces changements."
   }
  ],
  "sources_calendrier": [
