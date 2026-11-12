@@ -1,0 +1,10 @@
+{"meta":{"updated":"2026-11-12T00:00:00Z","region":"FR","demo":true},
+"providers":[{"id":8,"name":"Netflix","color":"#e50914"},{"id":119,"name":"Prime Video","color":"#00a8e1"},{"id":381,"name":"Canal+","color":"#111111"},{"id":350,"name":"Apple TV+","color":"#555555"},{"id":337,"name":"Disney+","color":"#113ccf"}],
+"items":[
+{"id":1,"type":"tv","title":"Série démo A","overview":"Exemple de série affichée en attendant le vrai catalogue.","year":"2024","rating":8.1,"providers":[8]},
+{"id":2,"type":"movie","title":"Film démo B","overview":"Exemple de film disponible sur plusieurs plateformes.","year":"2023","rating":7.4,"providers":[119,381]},
+{"id":3,"type":"tv","title":"Série démo C","overview":"Autre exemple.","year":"2022","rating":7.9,"providers":[350]},
+{"id":4,"type":"movie","title":"Film démo D","overview":"Autre exemple.","year":"2021","rating":6.8,"providers":[337,8]},
+{"id":5,"type":"tv","title":"Série démo E","overview":"Autre exemple.","year":"2025","rating":8.5,"providers":[381]},
+{"id":6,"type":"movie","title":"Film démo F","overview":"Autre exemple.","year":"2020","rating":7.0,"providers":[119]}
+]}
