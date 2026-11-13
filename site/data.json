@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-12",
+ "maj": "2026-11-13",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -995,9 +995,9 @@
      }
     ],
     "liste_source": "https://votezracheletmarianne.paris/soutiens/",
-    "liste_date": "2026-11-12"
+    "liste_date": "2026-11-13"
    },
-   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour. Le 11 nov., la page des soutiens n'a été lue que par résumé : 155 annoncés contre 153 listés, liste nominative non mise à jour.",
+   "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour.",
    "evolutions": [
     {
      "date": "2026-10-20",
@@ -1094,6 +1094,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 438
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 439
       }
      ]
     },
@@ -1129,6 +1133,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 2035
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 2044
       }
      ]
     },
@@ -1166,6 +1174,12 @@
       {
        "date": "2026-11-12",
        "abonnes": 1544,
+       "suivis": 154,
+       "publications": 13
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 1546,
        "suivis": 154,
        "publications": 13
       }
@@ -1626,7 +1640,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "354",
+    "nombre": "362",
     "notables": [
      "Jean-Michel Darrois",
      "Richard Malka",
@@ -1779,6 +1793,9 @@
      },
      {
       "nom": "Bruno Richard"
+     },
+     {
+      "nom": "Bruno Roca Grau"
      },
      {
       "nom": "Béatrice Aumont"
@@ -2051,6 +2068,9 @@
       "nom": "Frederic Beaufils"
      },
      {
+      "nom": "Frédéric Jeannin"
+     },
+     {
       "nom": "Frédéric Lévy"
      },
      {
@@ -2153,6 +2173,9 @@
       "nom": "Jean-Didier BELOT"
      },
      {
+      "nom": "Jean-Luc Larribau"
+     },
+     {
       "nom": "Jean-Marc Fedida"
      },
      {
@@ -2181,6 +2204,12 @@
      },
      {
       "nom": "José Arilla"
+     },
+     {
+      "nom": "José Ibanez"
+     },
+     {
+      "nom": "José Michel Garcia"
      },
      {
       "nom": "Joyce Pelen"
@@ -2312,6 +2341,9 @@
       "nom": "Marc-Antoine Ledieu"
      },
      {
+      "nom": "Marcos Barradas"
+     },
+     {
       "nom": "Margot Pugliese"
      },
      {
@@ -2399,9 +2431,6 @@
       "nom": "Michèle Jaudel"
      },
      {
-      "nom": "Miguel Angel Davila"
-     },
-     {
       "nom": "Miguel Ángel DÁVILA VALDIVIA"
      },
      {
@@ -2409,6 +2438,9 @@
      },
      {
       "nom": "Monique Boury"
+     },
+     {
+      "nom": "Munia El Harti Alonso"
      },
      {
       "nom": "Muriel Laroque"
@@ -2477,9 +2509,6 @@
       "nom": "Paul Nafilyan"
      },
      {
-      "nom": "Pauline Breuzet-richard"
-     },
-     {
       "nom": "Pauline Chanel"
      },
      {
@@ -2531,6 +2560,9 @@
       "nom": "Rama Chalak"
      },
      {
+      "nom": "Raphaelle Varaut"
+     },
+     {
       "nom": "Renan Budet"
      },
      {
@@ -2559,6 +2591,9 @@
      },
      {
       "nom": "Samuel Schmidt"
+     },
+     {
+      "nom": "Sandra Noyelle"
      },
      {
       "nom": "Sandra VIZZAVONA"
@@ -2651,6 +2686,9 @@
       "nom": "Valérie Morales"
      },
      {
+      "nom": "Vandrille Spire"
+     },
+     {
       "nom": "Vincent Asselineau"
      },
      {
@@ -2700,9 +2738,9 @@
      }
     ],
     "liste_source": "https://bouyssoupascarel.fr/soutiens",
-    "liste_date": "2026-11-12"
+    "liste_date": "2026-11-13"
    },
-   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 6 nov., la liste des soutiens n'a pu être relue que par résumé (téléchargement direct bloqué) : liste enregistrée conservée. Le 11 nov., la page des soutiens n'a été lue que par résumé : environ 352 noms contre 341 listés, liste nominative non mise à jour.",
+   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 13 nov., la liste des soutiens a été relevée par lecture automatique de la page (362 noms distincts, un nom listé deux fois) ; un retrait (Pauline Breuzet-richard) est à confirmer.",
    "evolutions": [
     {
      "date": "2026-10-22",
@@ -2798,6 +2836,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 290
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 295
       }
      ]
     },
@@ -2832,6 +2874,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 8708
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 8736
       }
      ]
     },
@@ -2866,6 +2912,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 3298
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 3303
       }
      ]
     }
@@ -4859,9 +4909,9 @@
      }
     ],
     "liste_source": "https://www.fabiani-naquet.paris/soutiens",
-    "liste_date": "2026-11-12"
+    "liste_date": "2026-11-13"
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6 et 7 nov., la page des soutiens n'a pu être lue que tronquée (environ 301 noms visibles sur 360 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis.",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6 et 7 nov., la page des soutiens n'a pu être lue que tronquée (environ 301 noms visibles sur 360 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis. Le 13 nov., la page des soutiens n'a été lue que tronquée (296 fiches visibles, arrêt à Loris Palumbo, sur 420 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis.",
    "evolutions": [],
    "sources": [
     {
@@ -4923,6 +4973,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 6976
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 6985
       }
      ]
     },
@@ -4958,6 +5012,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 3775
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 3783
       }
      ]
     }
@@ -5198,7 +5256,7 @@
     "notables": [],
     "liste": [],
     "liste_source": "https://www.batonnatsuringriguer.com/",
-    "liste_date": "2026-11-12",
+    "liste_date": "2026-11-13",
     "liste_note": "Aucune liste publiée : leur site propose seulement un formulaire pour apporter son soutien."
    },
    "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
@@ -5242,6 +5300,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 1761
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 1769
       }
      ]
     },
@@ -5277,6 +5339,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 13353
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 13357
       }
      ]
     },
@@ -5311,6 +5377,10 @@
       {
        "date": "2026-11-12",
        "abonnes": 6421
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 6424
       }
      ]
     },
@@ -5328,6 +5398,11 @@
        "date": "2026-11-12",
        "abonnes": 618,
        "suivis": 6,
+       "publications": 19
+      },
+      {
+       "date": "2026-11-13",
+       "abonnes": 618,
        "publications": 19
       }
      ]
@@ -5725,6 +5800,14 @@
   {
    "date": "2026-11-12",
    "resume": "Soutiens, relevé complet des pages du 12 novembre (le précédent datait du 9) : Fabiani–Naquet 18 nouveaux soutiens (13 associés, 4 « individuels », 1 collaborateur, d'après les fonctions écrites par la source), 2 retraits et une fonction modifiée, 420 noms listés (un nom que la page liste deux fois n'est gardé qu'une fois) ; Bouyssou–Pascarel 14 nouveaux soutiens et 1 retrait, 354 noms listés (la page ne donne pas de fonction) ; Saada–Lagrue 2 nouveaux soutiens, tous deux « avocate au barreau de Paris », 155 noms listés comme la page l'annonce ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. La mise à jour automatique ne lit pas ces listes en entier (page par résumé) : elle n'avait pas vu ces changements."
+  },
+  {
+   "date": "2026-11-13",
+   "resume": "Aucune nouvelle mesure ni évolution de programme chez les quatre binômes. Actualités : Saada–Lagrue dernière publication le 6 nov. ; Bouyssou–Pascarel 45 entrées, rien après le 6 nov. (projection du 20 nov. déjà listée) ; Fabiani–Naquet page 1 inchangée (dernière publication le 29 oct., événements des 17 et 23 nov. déjà à l'agenda), pages 2 à 4 non lues ; Surin–Griguer site inchangé, aucune liste de soutiens ; calendrier de l'Ordre inchangé (débat le 1er déc., scrutin les 15 et 17 déc.). Soutiens : Saada–Lagrue aucun nouveau soutien, aucun retrait, 155 noms listés, comme annoncé ; Bouyssou–Pascarel 10 nouveaux soutiens (relevé par lecture automatique de la page, sans fonction), 1 retrait (Pauline Breuzet-richard, à confirmer), 362 noms distincts listés (un nom figure deux fois sur la page), aucun nouveau soutien notable ; Fabiani–Naquet page lue tronquée (296 fiches sur 420), liste conservée, nouveaux soutiens non établis ; Surin–Griguer aucune liste. Détails complets : 88 mesures sur 88. Limites persistantes : téléchargement direct bloqué par le réseau, pagination Fabiani–Naquet non suivie, PDF Fabiani–Naquet partiel, réseaux sociaux non relus, presse juridique sans article nouveau sur les binômes."
+  },
+  {
+   "date": "2026-11-13",
+   "resume": "Soutiens, relevé complet des pages du 13 novembre : Bouyssou–Pascarel 10 nouveaux soutiens et 2 retraits depuis hier, 362 noms listés (la page ne donne pas de fonction) ; Fabiani–Naquet (420 noms) et Saada–Lagrue (155 noms) sans aucun changement ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. La mise à jour automatique avait cette fois relevé la liste de Bouyssou–Pascarel ; deux noms à apostrophe typographique ont été remis comme sur la page."
   }
  ],
  "sources_calendrier": [
