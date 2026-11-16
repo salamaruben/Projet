@@ -1119,6 +1119,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 439
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 462
       }
      ]
     },
@@ -1158,6 +1162,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 2044
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 2070
       }
      ]
     },
@@ -1203,6 +1211,12 @@
        "abonnes": 1546,
        "suivis": 154,
        "publications": 13
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 1550,
+       "suivis": 153,
+       "publications": 15
       }
      ]
     }
@@ -2897,6 +2911,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 295
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 318
       }
      ]
     },
@@ -2935,6 +2953,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 8736
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 8772
       }
      ]
     },
@@ -2973,6 +2995,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 3303
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 3313
       }
      ]
     }
@@ -5034,6 +5060,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 6985
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 7030
       }
      ]
     },
@@ -5073,6 +5103,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 3783
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 3808
       }
      ]
     }
@@ -5361,6 +5395,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 1769
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 1801
       }
      ]
     },
@@ -5400,6 +5438,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 13357
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 13375
       }
      ]
     },
@@ -5438,6 +5480,10 @@
       {
        "date": "2026-11-13",
        "abonnes": 6424
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 6440
       }
      ]
     },
@@ -5461,6 +5507,12 @@
        "date": "2026-11-13",
        "abonnes": 618,
        "publications": 19
+      },
+      {
+       "date": "2026-11-16",
+       "abonnes": 633,
+       "suivis": 8,
+       "publications": 23
       }
      ]
     }
@@ -5868,7 +5920,7 @@
   },
   {
    "date": "2026-11-16",
-   "resume": "Mise à jour du 16 novembre. Soutiens, relevé complet des trois pages : Saada–Lagrue 4 nouveaux soutiens (4 avocates, dont une du barreau de Montpellier), aucun retrait, 159 noms listés (total annoncé par la page : 159) ; Bouyssou–Pascarel 13 nouveaux soutiens et 1 retrait, 374 noms listés (la page ne donne pas de fonction) ; Fabiani–Naquet sans changement (420 noms) ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. Chez Saada–Lagrue, la page affiche désormais des citations de soutiens à la place de la fonction pour quatre personnes : elles n'ont pas été reprises. Actualités : rien de nouveau depuis le 6 novembre sur les pages d'actualités ; Fabiani–Naquet annonce une soirée « L'Avocat dans la crise » le 3 décembre à 19 h 30 (ajoutée à l'agenda). Aucun relevé d'abonnés pour le 16 novembre (non transmis)."
+   "resume": "Mise à jour du 16 novembre. Soutiens, relevé complet des trois pages : Saada–Lagrue 4 nouveaux soutiens (4 avocates, dont une du barreau de Montpellier), aucun retrait, 159 noms listés (total annoncé par la page : 159) ; Bouyssou–Pascarel 13 nouveaux soutiens et 1 retrait, 374 noms listés (la page ne donne pas de fonction) ; Fabiani–Naquet sans changement (420 noms) ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. Chez Saada–Lagrue, la page affiche désormais des citations de soutiens à la place de la fonction pour quatre personnes : elles n'ont pas été reprises. Actualités : rien de nouveau depuis le 6 novembre sur les pages d'actualités ; Fabiani–Naquet annonce une soirée « L'Avocat dans la crise » le 3 décembre à 19 h 30 (ajoutée à l'agenda). Relevés d'abonnés du 16 novembre ajoutés (12 comptes, aucun « non relevé » ; les 14 et 15 novembre n'ont pas été relevés : « depuis hier » est calculé depuis le relevé du 13)."
   }
  ],
  "sources_calendrier": [
