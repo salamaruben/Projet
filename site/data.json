@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-16",
+ "maj": "2026-11-17",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -375,7 +375,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "159",
+    "nombre": "161",
     "notables": [
      "Jean-Louis Borie (ancien batonnier)",
      "Amine Ghenim (Avocat au Barreau de S/S/Denis, ancien Bâtonnier et ancien membre du CNB)",
@@ -387,7 +387,8 @@
      "Fanny Gaillanne (Présidente de la Fondation Frédéric Gaillanne)",
      "Dominique Giacobi (Avocat honoraire au Barreau de PARIS)",
      "Caroline Mecary",
-     "Franceline Lepany"
+     "Franceline Lepany",
+     "Aurélie Lebel (Avocat au Barreau de Lille, ancien membre du conseil de l'ordre, Lebel Avocats)"
     ],
     "liste": [
      {
@@ -735,6 +736,10 @@
       "nom": "Sylvia LASFARGEAS"
      },
      {
+      "nom": "Aurélie LEBEL",
+      "fonction": "Avocat au Barreau de Lille, ancien membre du conseil de l’ordre, Lebel Avocats"
+     },
+     {
       "nom": "Isabelle LENDREVIE",
       "fonction": "individuel CABINET LENDREVIE"
      },
@@ -808,6 +813,9 @@
      {
       "nom": "Jean-François MARY",
       "fonction": "Avocat au Barreau de Paris"
+     },
+     {
+      "nom": "Hélène MASSE-DESSEN"
      },
      {
       "nom": "Marie-Pierre MATHIEU",
@@ -1016,7 +1024,7 @@
      }
     ],
     "liste_source": "https://votezracheletmarianne.paris/soutiens/",
-    "liste_date": "2026-11-16"
+    "liste_date": "2026-11-17"
    },
    "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour.",
    "evolutions": [
@@ -1123,6 +1131,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 462
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 469
       }
      ]
     },
@@ -1166,6 +1178,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 2070
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 2074
       }
      ]
     },
@@ -1217,6 +1233,12 @@
        "abonnes": 1550,
        "suivis": 153,
        "publications": 15
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 1552,
+       "suivis": 153,
+       "publications": 14
       }
      ]
     }
@@ -1675,7 +1697,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "374",
+    "nombre": "379",
     "notables": [
      "Jean-Michel Darrois",
      "Richard Malka",
@@ -1932,6 +1954,9 @@
       "nom": "Clotilde Lepetit"
      },
      {
+      "nom": "Clémence Cottineau"
+     },
+     {
       "nom": "Clément Dupoirier"
      },
      {
@@ -1939,6 +1964,9 @@
      },
      {
       "nom": "Corinne Cherki"
+     },
+     {
+      "nom": "Corinne Demazure-Thomas"
      },
      {
       "nom": "Cyril Aufrechter"
@@ -2211,6 +2239,9 @@
       "nom": "Jacques Buhart"
      },
      {
+      "nom": "Jacques Goyet"
+     },
+     {
       "nom": "Jean Moyart"
      },
      {
@@ -2439,6 +2470,9 @@
       "nom": "Martin Pradel"
      },
      {
+      "nom": "Martine Baragan"
+     },
+     {
       "nom": "Martine Bourry d'Antin"
      },
      {
@@ -2455,6 +2489,9 @@
      },
      {
       "nom": "Matthias Fekl"
+     },
+     {
+      "nom": "Matthieu BOISSAVY"
      },
      {
       "nom": "Matthieu Brochier"
@@ -2809,7 +2846,7 @@
      }
     ],
     "liste_source": "https://bouyssoupascarel.fr/soutiens",
-    "liste_date": "2026-11-16"
+    "liste_date": "2026-11-17"
    },
    "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 13 nov., la liste des soutiens a été relevée par lecture automatique de la page (362 noms distincts, un nom listé deux fois) ; un retrait (Pauline Breuzet-richard) est à confirmer.",
    "evolutions": [
@@ -2915,6 +2952,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 318
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 323
       }
      ]
     },
@@ -2957,6 +2998,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 8772
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 8868
       }
      ]
     },
@@ -2999,6 +3044,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 3313
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 3321
       }
      ]
     }
@@ -3174,6 +3223,12 @@
         "Maison de santé sans cotisation supplémentaire",
         "EHPAD inspiré de la Maison Nationale des Artistes"
        ]
+      },
+      {
+       "texte": "Retraites des avocats : veiller à l'indexation des pensions, défendre l'équité entre générations, étudier un régime complémentaire par capitalisation à moindre coût ; commission intergénérationnelle sur la préparation à la retraite ; projet à long terme d'une Maison de santé des avocats de Paris et d'un lieu de vie.",
+       "detail": "Les candidats proposent de veiller à l'indexation des pensions, de défendre l'équité entre générations, d'analyser en profondeur les régimes de retraite (CNBF) et d'étudier un régime complémentaire par capitalisation à moindre coût. Ils notent que les échéances électorales de 2027 pourraient apporter des réformes et veulent que les avocats se fassent entendre en amont ; la SPANAH serait associée à ces travaux.\nIls annoncent une commission intergénérationnelle sur l'information et la préparation à la retraite.\nÀ long terme, ils envisagent une Maison de santé des avocats de Paris et un lieu de vie, sur le modèle de la Maison nationale des artistes, destiné aux avocats, à leurs conjoints et à leurs familles, avec la participation de la SPANAH. Aucun calendrier ni financement n'est précisé.",
+       "source": "https://www.fabiani-naquet.paris/actualite/reponse-a-la-motion-de-la-spanah",
+       "date": "2026-11-16"
       }
      ],
      "resume": "Écoute d'urgence, mutuelle facultative, avance des congés de parentalité et maison de santé."
@@ -3209,6 +3264,17 @@
         "Places pour assister au Conseil",
         "Refus d'un déontologue non avocat"
        ]
+      },
+      {
+       "texte": "Honorariat automatique pour tout confrère qui remplit les conditions en quittant la profession, sauf renonciation ; deux représentants des avocats honoraires au Conseil de l'Ordre et ouverture aux honoraires de la discipline, des jurys de spécialisation et de la gouvernance de la CARPA.",
+       "detail": "Dans leur réponse à la motion de la SPANAH (association des avocats honoraires), les candidats disent adhérer à ses six vœux et rappellent qu'il y a plus de 2 500 avocats honoraires à Paris. Ils proposent que l'honorariat soit accordé par principe à tout confrère qui remplit les conditions en quittant la profession, sauf s'il y renonce ; aujourd'hui, il doit être demandé.\nIls s'engagent à pérenniser deux représentants au Conseil de l'Ordre, avec voix consultative, et à demander au CNB la désignation de deux représentants de la SPANAH. Ils veulent ouvrir aux honoraires la discipline, les formations administratives, les jurys de spécialisation, la gouvernance de la CARPA et sa commission de contrôle, et remplacer la limite d'âge de 75 ans par une désignation annuelle renouvelable, avec l'appui de la Chancellerie si besoin.\nLes honoraires seraient aussi associés aux commissions et délégations du Bâtonnier (fixation des honoraires, aide aux confrères en difficulté, médiation entre associés, transmission des cabinets, formation). Il s'agit d'une déclaration de campagne, non d'une décision de l'Ordre.",
+       "points": [
+        "Plus de 2 500 avocats honoraires à Paris (chiffre cité par les candidats)",
+        "Deux représentants au Conseil de l'Ordre, voix consultative",
+        "Limite d'âge de 75 ans remplacée par une désignation annuelle renouvelable"
+       ],
+       "source": "https://www.fabiani-naquet.paris/actualite/reponse-a-la-motion-de-la-spanah",
+       "date": "2026-11-16"
       }
      ],
      "resume": "Comptes publics, publication des sanctions disciplinaires et avis déontologiques accessibles."
@@ -3255,12 +3321,24 @@
         "G7 des grands barreaux",
         "Centre international de médiation à Paris"
        ]
+      },
+      {
+       "texte": "Réseau d'avocats référents auprès de la Chancellerie, d'autres ministères, des ambassades, des consulats, de Business France et d'organismes comme la CNAM, la CNAV ou l'URSSAF, pouvant être confiés à des avocats honoraires.",
+       "detail": "Selon l'article des candidats, un réseau d'avocats référents serait mis en place auprès de la Chancellerie, d'autres ministères, des ambassades, des consulats, de Business France et d'organismes comme la CNAM, la CNAV ou l'URSSAF. Ces postes pourraient être confiés à des avocats honoraires. Le texte ne précise ni le nombre de référents ni le calendrier.",
+       "source": "https://www.fabiani-naquet.paris/actualite/reponse-a-la-motion-de-la-spanah",
+       "date": "2026-11-16"
       }
      ],
      "resume": "Veille sur les lois, accompagnement des avocats en garde à vue, relations avec les magistrats et ouverture à l'international."
     }
    ],
    "nouveautes": [
+    {
+     "date": "2026-11-16",
+     "titre": "Réponse à la motion de la SPANAH : propositions pour les avocats honoraires",
+     "resume": "Déclaration du binôme sur son site (« Instant de campagne ») : adhésion aux six vœux de la SPANAH, honorariat automatique, deux représentants au Conseil de l'Ordre, réseau de référents, pistes sur les retraites et Maison de santé des avocats.",
+     "source": "https://www.fabiani-naquet.paris/actualite/reponse-a-la-motion-de-la-spanah"
+    },
     {
      "date": "2026-10-29",
      "titre": "Retour sur la soirée droit pénal",
@@ -4992,10 +5070,20 @@
      }
     ],
     "liste_source": "https://www.fabiani-naquet.paris/soutiens",
-    "liste_date": "2026-11-16"
+    "liste_date": "2026-11-17"
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6 et 7 nov., la page des soutiens n'a pu être lue que tronquée (environ 301 noms visibles sur 360 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis. Le 13 nov., la page des soutiens n'a été lue que tronquée (296 fiches visibles, arrêt à Loris Palumbo, sur 420 enregistrés) : liste enregistrée conservée, nouveaux soutiens éventuels non établis.",
-   "evolutions": [],
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6, 7, 13 et 17 nov., la page des soutiens n'a été lue que tronquée par la mise à jour automatique (environ 300 noms sur 420) ; le relevé complet des 420 noms a été fait le 17 nov. par téléchargement direct, sans nouveau soutien.",
+   "evolutions": [
+    {
+     "date": "2026-11-16",
+     "constat": "2026-11-17",
+     "constat_heure": "09:00",
+     "type": "Nouvelle proposition",
+     "titre": "Avocats honoraires : honorariat automatique, représentation à l'Ordre et retraites",
+     "detail": "En réponse à une motion de la SPANAH, le binôme propose l'honorariat par principe, deux représentants des honoraires au Conseil de l'Ordre, l'ouverture de la discipline et de la CARPA aux honoraires, un réseau de référents, des pistes sur les retraites et, à long terme, une Maison de santé des avocats (déclaration de campagne).",
+     "source": "https://www.fabiani-naquet.paris/actualite/reponse-a-la-motion-de-la-spanah"
+    }
+   ],
    "sources": [
     {
      "label": "Programme détaillé (PDF, cinq piliers)",
@@ -5021,6 +5109,11 @@
      "label": "« L'avocat est un entrepreneur citoyen », Le Monde du Droit",
      "url": "https://www.lemondedudroit.fr/institutions/105940-marie-helene-fabiani-et-frederic-naquet-binome-barreaudeparis-plus-entrepreneurial.html",
      "type": "Presse"
+    },
+    {
+     "label": "Réponse à la motion de la SPANAH (16 nov.)",
+     "url": "https://www.fabiani-naquet.paris/actualite/reponse-a-la-motion-de-la-spanah",
+     "type": "Site de campagne"
     }
    ],
    "reseaux": [
@@ -5064,6 +5157,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 7030
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 7066
       }
      ]
     },
@@ -5107,6 +5204,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 3808
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 3812
       }
      ]
     }
@@ -5399,6 +5500,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 1801
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 1812
       }
      ]
     },
@@ -5442,6 +5547,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 13375
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 13377
       }
      ]
     },
@@ -5484,6 +5593,10 @@
       {
        "date": "2026-11-16",
        "abonnes": 6440
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 6445
       }
      ]
     },
@@ -5512,6 +5625,12 @@
        "date": "2026-11-16",
        "abonnes": 633,
        "suivis": 8,
+       "publications": 23
+      },
+      {
+       "date": "2026-11-17",
+       "abonnes": 633,
+       "suivis": 31,
        "publications": 23
       }
      ]
@@ -5643,7 +5762,8 @@
     "fabiani": [
      "Comptes de l'Ordre et de la CARPA publics, rapport annuel sur l'usage des cotisations.",
      "Publication des sanctions disciplinaires et des statistiques, avis déontologiques anonymisés en open data, assistant déontologique IA.",
-     "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat."
+     "Permanences mensuelles. Position affirmée : pas de tiers extérieur ni de déontologue non avocat.",
+     "Honorariat automatique pour tout confrère qui remplit les conditions en quittant la profession, sauf renonciation ; deux représentants des avocats honoraires au Conseil de l'Ordre et ouverture aux honoraires de la discipline, des jurys de spécialisation et de la gouvernance de la CARPA."
     ],
     "surin": [
      "Travaux du Conseil ouverts (sous réserve de confidentialité), audit des services, réflexion sur le plafonnement des frais de campagne."
@@ -5698,7 +5818,8 @@
     "fabiani": [
      "Hotline d'écoute d'urgence par des confrères formés, supervision entre pairs, référent handicap avec une place au Conseil.",
      "Contrat ordinal facultatif de mutuelle et prévoyance sans hausse des cotisations de base.",
-     "Maison de santé des avocats de Paris et EHPAD dédié."
+     "Maison de santé des avocats de Paris et EHPAD dédié.",
+     "Retraites des avocats : veiller à l'indexation des pensions, défendre l'équité entre générations, étudier un régime complémentaire par capitalisation à moindre coût ; commission intergénérationnelle sur la préparation à la retraite ; projet à long terme d'une Maison de santé des avocats de Paris et d'un lieu de vie."
     ],
     "surin": [
      "AVOCATCARE : pause de 3 mois une fois par carrière, modalités à définir. Guichet santé et prévoyance, bilans de santé."
@@ -5800,6 +5921,9 @@
     "bouyssou": [
      "Référents par domaine, publication anonymisée des décisions disciplinaires, retour du rescrit déontologique.",
      "R.ia.BP : réseau d'IA servant de point d'entrée unique, avec suivi des demandes et supervision humaine pour toute réponse substantielle."
+    ],
+    "fabiani": [
+     "Réseau d'avocats référents auprès de la Chancellerie, d'autres ministères, des ambassades, des consulats, de Business France et d'organismes comme la CNAM, la CNAV ou l'URSSAF, pouvant être confiés à des avocats honoraires."
     ]
    }
   },
@@ -5921,6 +6045,10 @@
   {
    "date": "2026-11-16",
    "resume": "Mise à jour du 16 novembre. Soutiens, relevé complet des trois pages : Saada–Lagrue 4 nouveaux soutiens (4 avocates, dont une du barreau de Montpellier), aucun retrait, 159 noms listés (total annoncé par la page : 159) ; Bouyssou–Pascarel 13 nouveaux soutiens et 1 retrait, 374 noms listés (la page ne donne pas de fonction) ; Fabiani–Naquet sans changement (420 noms) ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable. Chez Saada–Lagrue, la page affiche désormais des citations de soutiens à la place de la fonction pour quatre personnes : elles n'ont pas été reprises. Actualités : rien de nouveau depuis le 6 novembre sur les pages d'actualités ; Fabiani–Naquet annonce une soirée « L'Avocat dans la crise » le 3 décembre à 19 h 30 (ajoutée à l'agenda). Relevés d'abonnés du 16 novembre ajoutés (12 comptes, aucun « non relevé » ; les 14 et 15 novembre n'ont pas été relevés : « depuis hier » est calculé depuis le relevé du 13)."
+  },
+  {
+   "date": "2026-11-17",
+   "resume": "Mise à jour du 17 novembre. Programme : Fabiani–Naquet publie le 16 nov. une réponse à la motion de la SPANAH (honorariat automatique, deux représentants des honoraires au Conseil de l'Ordre, réseau de référents, pistes sur les retraites, Maison de santé des avocats) : 3 mesures ajoutées, avec détail ; aucune nouvelle mesure chez Saada–Lagrue (dernière publication le 6 nov.), Bouyssou–Pascarel (rien après le 6 nov., projection du 20 nov. déjà listée) ni Surin–Griguer. Soutiens : Saada–Lagrue 2 nouveaux soutiens (Aurélie Lebel, « Avocat au Barreau de Lille, ancien membre du conseil de l'ordre, Lebel Avocats », notable ; Hélène Masse-Dessen, sans fonction), aucun retrait, 161 noms listés (total annoncé : 161) ;  Surin–Griguer toujours aucune liste. Détails complets : 91 mesures sur 91. Limites persistantes : téléchargement direct bloqué par le réseau, pagination Fabiani–Naquet non suivie, PDF Fabiani–Naquet partiel, réseaux sociaux non relus, presse juridique sans article nouveau. Complément du 17 nov. (relevé complet par téléchargement direct) : Saada–Lagrue 161 noms (inchangé) ; Bouyssou–Pascarel 5 nouveaux soutiens (Clémence Cottineau, Corinne Demazure-Thomas, Jacques Goyet, Martine Baragan, Matthieu Boissavy), aucun retrait, 379 noms listés (pas de fonction sur la page) ; Fabiani–Naquet aucun changement, 420 noms lus en entier. Relevés d'abonnés du 17 novembre ajoutés (12 comptes ; le total de Saada–Lagrue dépend du chiffre de Rachel Saada tiré de la section « Activité » de son profil)."
   }
  ],
  "sources_calendrier": [
