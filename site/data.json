@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-17",
+ "maj": "2026-11-18",
  "contexte": "Le scrutin de décembre 2026 désigne le bâtonnier du mandat 2028-2029 et 14 membres du Conseil de l'Ordre pour 2027-2029. Les chiffres et engagements ci-dessous viennent des sites de campagne : ils reflètent la présentation des candidats eux-mêmes.",
  "calendrier": [
   {
@@ -63,9 +63,19 @@
    "label": "Projection « Un bon avocat », Cinéma du Panthéon"
   },
   {
+   "date": "2026-11-20",
+   "qui": "bouyssou",
+   "label": "Petit-déjeuner droit de la concurrence (8 h 30), cabinet Alerion"
+  },
+  {
    "date": "2026-11-23",
    "qui": "fabiani",
    "label": "Soirée « L'IA à la barre »"
+  },
+  {
+   "date": "2026-11-24",
+   "qui": "bouyssou",
+   "label": "Petit-déjeuner droit du travail (8 h 30), cabinet Weizmann Borzakian"
   },
   {
    "date": "2026-12-03",
@@ -375,7 +385,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "161",
+    "nombre": "163",
     "notables": [
      "Jean-Louis Borie (ancien batonnier)",
      "Amine Ghenim (Avocat au Barreau de S/S/Denis, ancien Bâtonnier et ancien membre du CNB)",
@@ -388,7 +398,8 @@
      "Dominique Giacobi (Avocat honoraire au Barreau de PARIS)",
      "Caroline Mecary",
      "Franceline Lepany",
-     "Aurélie Lebel (Avocat au Barreau de Lille, ancien membre du conseil de l'ordre, Lebel Avocats)"
+     "Aurélie Lebel (Avocat au Barreau de Lille, ancien membre du conseil de l'ordre, Lebel Avocats)",
+     "Nathalie Tehio (Présidente de la LDH et avocate au barreau de Paris)"
     ],
     "liste": [
      {
@@ -555,6 +566,10 @@
      {
       "nom": "Louise DAVID",
       "fonction": "Avocate au Barreau de Paris"
+     },
+     {
+      "nom": "Luis-Carlos DAVILA",
+      "fonction": "Psychologue clinicien du travail"
      },
      {
       "nom": "Nadine DEBASC-ZAOUI",
@@ -941,7 +956,7 @@
      },
      {
       "nom": "Didier SEBAN",
-      "fonction": "Avocat au barreau de Paris, Seban avocat"
+      "fonction": "Avocat au barreau de Paris, Seban Avocats"
      },
      {
       "nom": "Claire SELVI",
@@ -958,6 +973,10 @@
      {
       "nom": "Léa TALRICH",
       "fonction": "Avocate au Barreau de Marseille, Karaa"
+     },
+     {
+      "nom": "Nathalie TEHIO",
+      "fonction": "Présidente de la LDH et avocate au barreau de Paris"
      },
      {
       "nom": "Isabelle THIEULEUX",
@@ -1024,7 +1043,7 @@
      }
     ],
     "liste_source": "https://votezracheletmarianne.paris/soutiens/",
-    "liste_date": "2026-11-17"
+    "liste_date": "2026-11-18"
    },
    "limites": "Le manifeste n'a été lu que par résumés ciblés (texte mot à mot non obtenu). L'agenda de campagne est vide. Réseaux sociaux non relus ce jour.",
    "evolutions": [
@@ -1135,6 +1154,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 469
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 478
       }
      ]
     },
@@ -1182,6 +1205,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 2074
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 2078
       }
      ]
     },
@@ -1239,6 +1266,12 @@
        "abonnes": 1552,
        "suivis": 153,
        "publications": 14
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 1550,
+       "suivis": 154,
+       "publications": 15
       }
      ]
     }
@@ -1556,6 +1589,72 @@
    ],
    "nouveautes": [
     {
+     "date": "2026-11-16",
+     "titre": "Le programme en cinq minutes",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou et Carole Pascarel présentent en cinq minutes ce qu'ils souhaitent mettre en œuvre pour le Barreau de Paris. La vidéo est en ligne sur LinkedIn.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-14",
+     "titre": "Congrès du SAF",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a assisté aux débats du congrès du Syndicat des avocats de France. La table ronde a souligné combien la démocratie est précieuse et fragile, et combien il est essentiel de défendre l'État de droit, l'indépendance du juge et celle de l'avocat.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-13",
+     "titre": "« Libres de tout dire »",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a assisté à la matinée « Libres de tout dire », organisée dans le cadre de la Journée des pénalistes du Barreau de Paris. Les échanges ont porté sur la liberté de parole de l'avocat, qui doit pouvoir porter une parole offensive sans qu'elle devienne offensante.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-12",
+     "titre": "Dîner des Bretons du Palais",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a retrouvé les Bretons du Palais pour leur dîner annuel, une soirée de confraternité sur la péniche des Maquereaux.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-12",
+     "titre": "Quel avenir pour le barreau de Paris ?",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a participé au débat organisé par l'Institut Choiseul et Doctrine sur l'avenir du barreau de Paris. Il y a rappelé que donner la vie ne devrait jamais fragiliser une carrière d'avocat ni faire supporter à un cabinet le coût de la maternité, et que la prise effective du congé paternité est indispensable à l'égalité professionnelle.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-12",
+     "titre": "Les avocats français de Londres",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a rencontré à Londres des avocats français qui exercent à l'étranger, à l'invitation de l'APPEAL-E (Association pour la promotion de l'exercice des avocats à l'étranger). Les échanges ont porté sur l'accès à la clé RPVA depuis l'étranger, la prise en compte par l'Ordre des spécificités de leur exercice et les cotisations.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-10",
+     "titre": "Dîner des hispanophones du Palais",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a participé au dîner annuel des hispanophones et hispanophiles du Palais, une soirée de discours, de chansons et de poèmes en hommage à la culture hispanique.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-10",
+     "titre": "Réfléchir sur l'association",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a salué une réflexion sur l'association : « Réfléchir sur l'association est un bon moyen de pérenniser notre exercice. »",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-10",
+     "titre": "Une élection plus importante que jamais",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou a remercié Le Monde du Droit : « cette élection est plus importante que jamais ».",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-09",
+     "titre": "Dîners du RAJF et de l'UAFA",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Jacques Bouyssou et Carole Pascarel ont retrouvé leurs consœurs et confrères au dîner annuel du Rassemblement des Avocats Juifs de France, où la mémoire du capitaine Dreyfus a été évoquée avec émotion. Ils se sont également rendus au dîner de rentrée de l'Union des Avocats Franco-Algériens.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
+     "date": "2026-11-09",
+     "titre": "La parentalité de demain, au Sénat",
+     "resume": "Publication du binôme sur son site (déclaration de campagne) : Carole Pascarel a participé au Sénat au colloque « Femmes & Droit : La parentalité de demain », qui réunissait avocats, parlementaires et acteurs de la société civile. Avec Jacques Bouyssou, elle propose de garantir l'exercice réel des congés de parentalité, d'inciter les pères à prendre leur congé paternité et de remettre à plat la prévoyance collective.",
+     "source": "https://bouyssoupascarel.fr/actualite"
+    },
+    {
      "date": "2026-11-06",
      "titre": "Projection « Un bon avocat » (20 novembre)",
      "resume": "Selon le site de campagne (déclaration du binôme) : Jacques Bouyssou et Carole Pascarel invitent le 20 novembre 2026 au Cinéma du Panthéon à la projection du film « Un bon avocat », en présence de Mélanie Laurent, Tristan Séguéla et Stéphane Sebag, suivie d'un échange avec l'équipe du film sur l'image de l'avocat (héroïsme, solitude, doute, éthique). Heure non indiquée.",
@@ -1697,7 +1796,7 @@
     }
    ],
    "soutiens": {
-    "nombre": "379",
+    "nombre": "384",
     "notables": [
      "Jean-Michel Darrois",
      "Richard Malka",
@@ -1712,6 +1811,9 @@
      },
      {
       "nom": "Abderrazak Boudjelti"
+     },
+     {
+      "nom": "Adèle Canus-Lacoste"
      },
      {
       "nom": "Agathe Lemaire"
@@ -1774,6 +1876,9 @@
       "nom": "Antoine Fontaine"
      },
      {
+      "nom": "Antoine Rousseau"
+     },
+     {
       "nom": "Antoine Sèbe"
      },
      {
@@ -1829,6 +1934,9 @@
      },
      {
       "nom": "Benjamin Chouai"
+     },
+     {
+      "nom": "Benjamin Krief"
      },
      {
       "nom": "Benjamin Louzier"
@@ -2021,6 +2129,9 @@
      },
      {
       "nom": "Dilan Firat"
+     },
+     {
+      "nom": "Djazia Tiourtite"
      },
      {
       "nom": "Dominique Beyreuther-Minkov"
@@ -2782,6 +2893,9 @@
       "nom": "Thomas Ramonatxo"
      },
      {
+      "nom": "Thomas Rouhette"
+     },
+     {
       "nom": "Valence Borgia"
      },
      {
@@ -2846,9 +2960,9 @@
      }
     ],
     "liste_source": "https://bouyssoupascarel.fr/soutiens",
-    "liste_date": "2026-11-17"
+    "liste_date": "2026-11-18"
    },
-   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 13 nov., la liste des soutiens a été relevée par lecture automatique de la page (362 noms distincts, un nom listé deux fois) ; un retrait (Pauline Breuzet-richard) est à confirmer.",
+   "limites": "La page des soutiens (307 noms) ne mentionne aucune fonction, seulement un nombre non expliqué à côté de la plupart des noms ; les noms notables sont donc donnés sans fonction. Le site n'offre pas de lien individuel par article ; la page /tribunes n'a pas été relue ce jour. Le site n'offre pas d'URL propre par actualité du 26 au 30 oct. : la source citée est la page de liste, lue par résumé. Le 13 nov., la liste des soutiens a été relevée par lecture automatique de la page (362 noms distincts, un nom listé deux fois) ; un retrait (Pauline Breuzet-richard) est à confirmer. Le 18 nov., la page des soutiens et la page des actualités n'ont pu être relues que par une lecture résumée peu fiable (374 noms, sans les 5 ajouts du 17 nov.) : la liste du 17 nov. (379 noms) est conservée sans modification ., projection du 20 nov. déjà listée). Le 18 nov., la page /actualite a été lue en entier par téléchargement direct : les publications du 9 au 16 nov., absentes jusque-là, ont été ajoutées.",
    "evolutions": [
     {
      "date": "2026-10-22",
@@ -2956,6 +3070,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 323
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 334
       }
      ]
     },
@@ -3002,6 +3120,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 8868
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 8892
       }
      ]
     },
@@ -3048,6 +3170,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 3321
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 3343
       }
      ]
     }
@@ -5070,9 +5196,9 @@
      }
     ],
     "liste_source": "https://www.fabiani-naquet.paris/soutiens",
-    "liste_date": "2026-11-17"
+    "liste_date": "2026-11-18"
    },
-   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6, 7, 13 et 17 nov., la page des soutiens n'a été lue que tronquée par la mise à jour automatique (environ 300 noms sur 420) ; le relevé complet des 420 noms a été fait le 17 nov. par téléchargement direct, sans nouveau soutien.",
+   "limites": "Le PDF de programme n'a pu être lu que par extraits paraphrasés (téléchargement direct bloqué) ; la page 17 (conclusion) n'a pas été lue en détail et les ancres de page sont à vérifier. La pagination de la liste des actualités (?page=2 à 4) renvoie la même première page : les pages suivantes n'ont pas pu être parcourues ; les articles n'ont pas été ouverts un à un. Les 6, 7, 13 et 17 nov., la page des soutiens n'a été lue que tronquée par la mise à jour automatique (environ 300 noms sur 420) ; le relevé complet des 420 noms a été fait le 17 nov. par téléchargement direct, sans nouveau soutien. Le 18 nov., la page des soutiens n'a été lue que tronquée (environ 296 noms sur 420) : la liste du 17 nov. (420 noms) est conservée sans modification. Page des actualités : première page seule lue, aucune publication après le 16 nov.",
    "evolutions": [
     {
      "date": "2026-11-16",
@@ -5161,6 +5287,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 7066
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 7084
       }
      ]
     },
@@ -5208,6 +5338,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 3812
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 3819
       }
      ]
     }
@@ -5448,7 +5582,7 @@
     "notables": [],
     "liste": [],
     "liste_source": "https://www.batonnatsuringriguer.com/",
-    "liste_date": "2026-11-16",
+    "liste_date": "2026-11-18",
     "liste_note": "Aucune liste publiée : leur site propose seulement un formulaire pour apporter son soutien."
    },
    "limites": "Le site est une page unique lue par résumés ; aucun bloc « convictions » distinct n'apparaît dans le contenu lu (seule une phrase de conviction et le manifeste). Les sous-mesures 2.5, 2.7 et 4.2 ne sont pas détaillées dans les mesures. Aucune actualité datée. Aucun article de presse indépendant récent.",
@@ -5504,6 +5638,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 1812
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 1816
       }
      ]
     },
@@ -5551,6 +5689,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 13377
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 13388
       }
      ]
     },
@@ -5597,6 +5739,10 @@
       {
        "date": "2026-11-17",
        "abonnes": 6445
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 6453
       }
      ]
     },
@@ -5632,6 +5778,12 @@
        "abonnes": 633,
        "suivis": 31,
        "publications": 23
+      },
+      {
+       "date": "2026-11-18",
+       "abonnes": 635,
+       "suivis": 34,
+       "publications": 25
       }
      ]
     }
@@ -6049,6 +6201,10 @@
   {
    "date": "2026-11-17",
    "resume": "Mise à jour du 17 novembre. Programme : Fabiani–Naquet publie le 16 nov. une réponse à la motion de la SPANAH (honorariat automatique, deux représentants des honoraires au Conseil de l'Ordre, réseau de référents, pistes sur les retraites, Maison de santé des avocats) : 3 mesures ajoutées, avec détail ; aucune nouvelle mesure chez Saada–Lagrue (dernière publication le 6 nov.), Bouyssou–Pascarel (rien après le 6 nov., projection du 20 nov. déjà listée) ni Surin–Griguer. Soutiens : Saada–Lagrue 2 nouveaux soutiens (Aurélie Lebel, « Avocat au Barreau de Lille, ancien membre du conseil de l'ordre, Lebel Avocats », notable ; Hélène Masse-Dessen, sans fonction), aucun retrait, 161 noms listés (total annoncé : 161) ;  Surin–Griguer toujours aucune liste. Détails complets : 91 mesures sur 91. Limites persistantes : téléchargement direct bloqué par le réseau, pagination Fabiani–Naquet non suivie, PDF Fabiani–Naquet partiel, réseaux sociaux non relus, presse juridique sans article nouveau. Complément du 17 nov. (relevé complet par téléchargement direct) : Saada–Lagrue 161 noms (inchangé) ; Bouyssou–Pascarel 5 nouveaux soutiens (Clémence Cottineau, Corinne Demazure-Thomas, Jacques Goyet, Martine Baragan, Matthieu Boissavy), aucun retrait, 379 noms listés (pas de fonction sur la page) ; Fabiani–Naquet aucun changement, 420 noms lus en entier. Relevés d'abonnés du 17 novembre ajoutés (12 comptes ; le total de Saada–Lagrue dépend du chiffre de Rachel Saada tiré de la section « Activité » de son profil)."
+  },
+  {
+   "date": "2026-11-18",
+   "resume": "Mise à jour du 18 novembre. Programme : aucune nouvelle mesure ni modification chez les quatre binômes (dernières publications : Saada–Lagrue 6 nov. ; Bouyssou–Pascarel 6 nov. ; Fabiani–Naquet 16 nov. ; Surin–Griguer sans actualité datée). Soutiens : Saada–Lagrue aucun nouveau soutien, aucun retrait, 161 noms listés (total annoncé : 161), page lue en entier ; Bouyssou–Pascarel et Fabiani–Naquet : pages relues de façon incomplète ou peu fiable (téléchargement direct bloqué par le réseau, lecture résumée tronquée), listes du 17 nov. conservées (379 et 420 noms), nouveaux soutiens et retraits non déterminés ; Surin–Griguer toujours aucune liste publiée. Aucun nouveau soutien notable constaté. Détails complets : 91 mesures sur 91. Limites persistantes : téléchargement direct bloqué, pagination Fabiani–Naquet non suivie, PDF Fabiani–Naquet partiel, page /actualite de Bouyssou–Pascarel en erreur, réseaux sociaux non relus, presse juridique sans article nouveau sur le scrutin de décembre 2026 (relevés d'abonnés du jour non effectués). Complément du 18 nov. (relevé complet par téléchargement direct) : soutiens, Saada–Lagrue 2 nouveaux (Luis-Carlos Davila, psychologue clinicien du travail ; Nathalie Tehio, « Présidente de la LDH et avocate au barreau de Paris », ajoutée aux notables), 163 noms ; Bouyssou–Pascarel 5 nouveaux (Adèle Canus-Lacoste, Antoine Rousseau, Benjamin Krief, Djazia Tiourtite, Thomas Rouhette), 384 noms ; Fabiani–Naquet aucun changement, 420 noms. Actualités : la page /actualite de Bouyssou–Pascarel, en erreur pour la mise à jour automatique, a été lue : 11 publications du 9 au 16 nov. ajoutées (aucune nouvelle mesure de programme), et deux petits-déjeuners (20 et 24 nov.) à l'agenda. Relevés d'abonnés du 18 novembre ajoutés (12 comptes ; Rachel Saada : chiffre du profil)."
   }
  ],
  "sources_calendrier": [
