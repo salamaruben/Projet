@@ -36,7 +36,9 @@ Confirmer ensuite à l'utilisateur que les deux sont à jour. Ne jamais modifier
 - Retiré à la demande : sièges/hémicycle, liens « Programme » par mesure, soulignements, mention « Ordre des avocats de Paris » en haut, phrase sur les 14 membres du Conseil, encadré « Limites de cette fiche » (ne plus l'afficher), bloc de découpage « en quatre thèmes » (entrée « Version initiale »).
 - Site indépendant et non officiel : le dire dans l'en-tête, le pied de page et le PDF. Ne jamais utiliser le logo ni l'identité de l'Ordre.
 
-**Mobile (≤ 700 px)** : une page à la fois, pas de longue page défilante. Barre du bas à 6 entrées (Accueil, Binômes, Comparer, Réseaux, Actus, PDF), ronds à deux initiales (SG, SL, BP, FN) sur les fiches, photos d'abord, tuiles de thèmes, comparatif à plier. L'accueil mobile n'a ni bouton PDF ni bouton « Comparer ». Le PDF s'ouvre dans un nouvel onglet. Après toute modification, vérifier que la version ordinateur est inchangée (comparaison de captures).
+**Photos des candidats : RETIRÉES le 2026-11-19 à la demande de l'utilisateur** (fiches, cartes de l'accueil, fichiers `site/img/*.webp` supprimés ; `PHOTOS = {}`). Ne pas les remettre sans demande. Les silhouettes et l'image de Paris de l'accueil restent.
+
+**Mobile (≤ 700 px)** : une page à la fois, pas de longue page défilante. Barre du bas à 6 entrées (Accueil, Binômes, Comparer, Réseaux, Actus, PDF), ronds à deux initiales (SG, SL, BP, FN) sur les fiches, tuiles de thèmes, comparatif à plier. L'accueil mobile n'a ni bouton PDF ni bouton « Comparer ». Le PDF s'ouvre dans un nouvel onglet. Après toute modification, vérifier que la version ordinateur est inchangée (comparaison de captures).
 
 **PDF** : synthétique (7 pages : couverture, vue d'ensemble, une page par binôme, tableau « en un coup d'œil »), aux couleurs du site. Pas de détail des mesures, de sources ni d'évolutions dans le PDF.
 
