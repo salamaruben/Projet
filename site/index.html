@@ -642,12 +642,7 @@ footer { border-radius:36px 36px 0 0; margin-top:24px; }
     });
     return h("li", { class: "has-detail" }, [btn, det]);
   }
-  var PHOTOS = {
-    surin: { src: "img/surin-griguer.webp", w: 819, h: 733 },
-    saada: { src: "img/saada-lagrue.webp", w: 1000, h: 835 },
-    bouyssou: { src: "img/bouyssou-pascarel.webp", w: 723, h: 900, maxw: 290 },
-    fabiani: { src: "img/fabiani-naquet.webp", w: 1000, h: 760 }
-  };
+  var PHOTOS = {};
   var PIE_COLORS = ["#4a63b8", "#d9743f", "#7a5fb0", "#c2587a", "#1b2447", "#7c8db3", "#f0a97a"];
   var PIE_OTHER = "#c4c0d4";
   function themeShares(c) {
@@ -1727,8 +1722,7 @@ details.sup .sup-src { padding: 6px 24px 22px; margin: 0; }
       while (p.firstChild) body.appendChild(p.firstChild);
       var n = body.querySelector(".stats b"), cnt = mk("div", "cnt", (n ? n.textContent : "") + " mesures détaillées");
       body.insertBefore(cnt, body.querySelector(".go"));
-      var im = mk("div", "pimg", '<img alt="" src="' + IMG[id] + '">');
-      p.appendChild(im); p.appendChild(body);
+      p.appendChild(body);
     });
     /* tuiles de thèmes sur l'accueil */
     var v = document.getElementById("v-apercu"), strip = v.querySelector(".strip");
